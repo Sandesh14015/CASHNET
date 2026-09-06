@@ -793,3 +793,984 @@ export const GetReportResponse = zod.object({
 })
 
 
+/**
+ * @summary List cases accessible to the authenticated development actor
+ */
+export const ListPersistentCasesResponseItem = zod.object({
+  "id": zod.string(),
+  "caseNumber": zod.string(),
+  "title": zod.string(),
+  "description": zod.string(),
+  "fraudType": zod.string(),
+  "reportedAmount": zod.string(),
+  "status": zod.enum(['OPEN', 'IN_PROGRESS', 'ON_HOLD', 'CLOSED', 'ARCHIVED']),
+  "priority": zod.string(),
+  "investigationAuthorizationStatus": zod.enum(['PENDING', 'APPROVED', 'REJECTED']),
+  "createdBy": zod.string().nullish(),
+  "assignedTo": zod.string().nullish(),
+  "closedAt": zod.coerce.date().nullish(),
+  "createdAt": zod.coerce.date(),
+  "updatedAt": zod.coerce.date()
+})
+export const ListPersistentCasesResponse = zod.array(ListPersistentCasesResponseItem)
+
+
+/**
+ * @summary Create a persistent case
+ */
+export const CreatePersistentCaseBody = zod.object({
+  "caseNumber": zod.string(),
+  "title": zod.string(),
+  "description": zod.string(),
+  "fraudType": zod.string(),
+  "reportedAmount": zod.string(),
+  "priority": zod.string().optional()
+})
+
+export const CreatePersistentCaseResponse = zod.object({
+  "id": zod.string(),
+  "caseNumber": zod.string(),
+  "title": zod.string(),
+  "description": zod.string(),
+  "fraudType": zod.string(),
+  "reportedAmount": zod.string(),
+  "status": zod.enum(['OPEN', 'IN_PROGRESS', 'ON_HOLD', 'CLOSED', 'ARCHIVED']),
+  "priority": zod.string(),
+  "investigationAuthorizationStatus": zod.enum(['PENDING', 'APPROVED', 'REJECTED']),
+  "createdBy": zod.string().nullish(),
+  "assignedTo": zod.string().nullish(),
+  "closedAt": zod.coerce.date().nullish(),
+  "createdAt": zod.coerce.date(),
+  "updatedAt": zod.coerce.date()
+})
+
+
+export const GetPersistentCaseParams = zod.object({
+  "id": zod.coerce.string()
+})
+
+export const GetPersistentCaseResponse = zod.object({
+  "id": zod.string(),
+  "caseNumber": zod.string(),
+  "title": zod.string(),
+  "description": zod.string(),
+  "fraudType": zod.string(),
+  "reportedAmount": zod.string(),
+  "status": zod.enum(['OPEN', 'IN_PROGRESS', 'ON_HOLD', 'CLOSED', 'ARCHIVED']),
+  "priority": zod.string(),
+  "investigationAuthorizationStatus": zod.enum(['PENDING', 'APPROVED', 'REJECTED']),
+  "createdBy": zod.string().nullish(),
+  "assignedTo": zod.string().nullish(),
+  "closedAt": zod.coerce.date().nullish(),
+  "createdAt": zod.coerce.date(),
+  "updatedAt": zod.coerce.date()
+})
+
+
+export const UpdatePersistentCaseParams = zod.object({
+  "id": zod.coerce.string()
+})
+
+export const UpdatePersistentCaseBody = zod.object({
+  "title": zod.string().optional(),
+  "description": zod.string().optional(),
+  "priority": zod.string().optional(),
+  "status": zod.enum(['OPEN', 'IN_PROGRESS', 'ON_HOLD', 'CLOSED', 'ARCHIVED']).optional(),
+  "assignedTo": zod.string().nullish(),
+  "investigationAuthorizationStatus": zod.enum(['PENDING', 'APPROVED', 'REJECTED']).optional()
+})
+
+export const UpdatePersistentCaseResponse = zod.object({
+  "id": zod.string(),
+  "caseNumber": zod.string(),
+  "title": zod.string(),
+  "description": zod.string(),
+  "fraudType": zod.string(),
+  "reportedAmount": zod.string(),
+  "status": zod.enum(['OPEN', 'IN_PROGRESS', 'ON_HOLD', 'CLOSED', 'ARCHIVED']),
+  "priority": zod.string(),
+  "investigationAuthorizationStatus": zod.enum(['PENDING', 'APPROVED', 'REJECTED']),
+  "createdBy": zod.string().nullish(),
+  "assignedTo": zod.string().nullish(),
+  "closedAt": zod.coerce.date().nullish(),
+  "createdAt": zod.coerce.date(),
+  "updatedAt": zod.coerce.date()
+})
+
+
+export const ListCaseAuditEventsParams = zod.object({
+  "id": zod.coerce.string()
+})
+
+export const ListCaseAuditEventsResponseItem = zod.object({
+  "id": zod.string(),
+  "caseId": zod.string().nullish(),
+  "actorId": zod.string().nullish(),
+  "action": zod.string(),
+  "resourceType": zod.string(),
+  "resourceId": zod.string().nullish(),
+  "requestId": zod.string().nullish(),
+  "result": zod.enum(['SUCCESS', 'DENIED', 'FAILURE']),
+  "metadata": zod.record(zod.string(), zod.unknown()),
+  "createdAt": zod.coerce.date()
+})
+export const ListCaseAuditEventsResponse = zod.array(ListCaseAuditEventsResponseItem)
+
+
+export const createPersistentInvestigationBodyInvestigationDepthMax = 10;
+
+
+
+export const CreatePersistentInvestigationBody = zod.object({
+  "caseId": zod.string(),
+  "chain": zod.string().optional(),
+  "walletAddress": zod.string().optional(),
+  "investigationDepth": zod.number().min(1).max(createPersistentInvestigationBodyInvestigationDepthMax).optional(),
+  "startTime": zod.coerce.date().optional(),
+  "endTime": zod.coerce.date().optional()
+})
+
+export const CreatePersistentInvestigationResponse = zod.object({
+  "id": zod.string(),
+  "caseId": zod.string(),
+  "status": zod.enum(['CREATED', 'AUTHORIZED', 'RUNNING', 'COMPLETED', 'PARTIAL', 'FAILED', 'CANCELLED']),
+  "chain": zod.string().nullish(),
+  "walletAddress": zod.string().nullish(),
+  "investigationDepth": zod.number(),
+  "startTime": zod.coerce.date().nullish(),
+  "endTime": zod.coerce.date().nullish(),
+  "createdBy": zod.string().nullish(),
+  "createdAt": zod.coerce.date(),
+  "updatedAt": zod.coerce.date()
+})
+
+
+export const createWalletSubjectInvestigationBodyOneInvestigationDepthMax = 10;
+
+
+
+export const CreateWalletSubjectInvestigationBody = zod.object({
+  "caseId": zod.string(),
+  "chain": zod.string(),
+  "walletAddress": zod.string(),
+  "investigationDepth": zod.number().min(1).max(createWalletSubjectInvestigationBodyOneInvestigationDepthMax).optional(),
+  "startTime": zod.coerce.date().optional(),
+  "endTime": zod.coerce.date().optional()
+}).and(zod.object({
+  "label": zod.enum(['REPORTED', 'SUSPECT', 'SUBJECT', 'OBSERVED', 'UNKNOWN']).optional()
+}))
+
+export const CreateWalletSubjectInvestigationResponse = zod.object({
+  "investigation": zod.object({
+  "id": zod.string(),
+  "caseId": zod.string(),
+  "status": zod.enum(['CREATED', 'AUTHORIZED', 'RUNNING', 'COMPLETED', 'PARTIAL', 'FAILED', 'CANCELLED']),
+  "chain": zod.string().nullish(),
+  "walletAddress": zod.string().nullish(),
+  "investigationDepth": zod.number(),
+  "startTime": zod.coerce.date().nullish(),
+  "endTime": zod.coerce.date().nullish(),
+  "createdBy": zod.string().nullish(),
+  "createdAt": zod.coerce.date(),
+  "updatedAt": zod.coerce.date()
+}),
+  "walletSubject": zod.object({
+  "id": zod.string(),
+  "caseId": zod.string(),
+  "investigationId": zod.string(),
+  "chain": zod.string(),
+  "walletAddress": zod.string(),
+  "label": zod.string(),
+  "createdAt": zod.coerce.date()
+})
+})
+
+
+export const GetPersistentInvestigationParams = zod.object({
+  "id": zod.coerce.string()
+})
+
+export const GetPersistentInvestigationResponse = zod.object({
+  "id": zod.string(),
+  "caseId": zod.string(),
+  "status": zod.enum(['CREATED', 'AUTHORIZED', 'RUNNING', 'COMPLETED', 'PARTIAL', 'FAILED', 'CANCELLED']),
+  "chain": zod.string().nullish(),
+  "walletAddress": zod.string().nullish(),
+  "investigationDepth": zod.number(),
+  "startTime": zod.coerce.date().nullish(),
+  "endTime": zod.coerce.date().nullish(),
+  "createdBy": zod.string().nullish(),
+  "createdAt": zod.coerce.date(),
+  "updatedAt": zod.coerce.date()
+})
+
+
+export const TransitionPersistentInvestigationParams = zod.object({
+  "id": zod.coerce.string()
+})
+
+export const TransitionPersistentInvestigationBody = zod.object({
+  "status": zod.enum(['AUTHORIZED', 'RUNNING', 'COMPLETED', 'PARTIAL', 'FAILED', 'CANCELLED'])
+})
+
+export const TransitionPersistentInvestigationResponse = zod.object({
+  "id": zod.string(),
+  "caseId": zod.string(),
+  "status": zod.enum(['CREATED', 'AUTHORIZED', 'RUNNING', 'COMPLETED', 'PARTIAL', 'FAILED', 'CANCELLED']),
+  "chain": zod.string().nullish(),
+  "walletAddress": zod.string().nullish(),
+  "investigationDepth": zod.number(),
+  "startTime": zod.coerce.date().nullish(),
+  "endTime": zod.coerce.date().nullish(),
+  "createdBy": zod.string().nullish(),
+  "createdAt": zod.coerce.date(),
+  "updatedAt": zod.coerce.date()
+})
+
+
+/**
+ * @summary Collect authorized live blockchain facts and persist normalized results
+ */
+export const CollectInvestigationProviderDataParams = zod.object({
+  "id": zod.coerce.string()
+})
+
+export const CollectInvestigationProviderDataResponse = zod.object({
+  "investigationId": zod.string(),
+  "status": zod.string(),
+  "provider": zod.string(),
+  "transactionCount": zod.number(),
+  "tokenTransferCount": zod.number()
+})
+
+
+/**
+ * @summary Execute bounded AML/risk analysis over stored case-scoped facts
+ */
+export const ExecuteInvestigationRiskAnalysisParams = zod.object({
+  "id": zod.coerce.string().uuid()
+})
+
+export const ExecuteInvestigationRiskAnalysisResponse = zod.object({
+  "run": zod.record(zod.string(), zod.unknown()),
+  "indicators": zod.array(zod.object({
+  "id": zod.string().uuid(),
+  "caseId": zod.string().uuid(),
+  "investigationId": zod.string().uuid(),
+  "indicatorType": zod.string(),
+  "category": zod.string(),
+  "severity": zod.enum(['LOW', 'MEDIUM', 'HIGH', 'CRITICAL']),
+  "scoreContribution": zod.number(),
+  "scoreSemantics": zod.enum(['HEURISTIC_SCORE_NOT_PROBABILITY']),
+  "confidenceLevel": zod.string().nullish(),
+  "evidence": zod.array(zod.record(zod.string(), zod.unknown())).optional(),
+  "provenance": zod.record(zod.string(), zod.unknown()),
+  "method": zod.string(),
+  "methodVersion": zod.string(),
+  "createdAt": zod.coerce.date()
+})),
+  "typologies": zod.array(zod.record(zod.string(), zod.unknown())),
+  "scoreSemantics": zod.enum(['HEURISTIC_SCORE_NOT_PROBABILITY'])
+})
+
+
+/**
+ * @summary List case-scoped persisted risk indicators
+ */
+export const ListInvestigationRiskIndicatorsParams = zod.object({
+  "id": zod.coerce.string().uuid()
+})
+
+export const listInvestigationRiskIndicatorsQueryLimitDefault = 100;
+export const listInvestigationRiskIndicatorsQueryLimitMax = 100;
+
+
+
+export const ListInvestigationRiskIndicatorsQueryParams = zod.object({
+  "limit": zod.coerce.number().int().min(1).max(listInvestigationRiskIndicatorsQueryLimitMax).default(listInvestigationRiskIndicatorsQueryLimitDefault)
+})
+
+export const ListInvestigationRiskIndicatorsResponseItem = zod.object({
+  "id": zod.string().uuid(),
+  "caseId": zod.string().uuid(),
+  "investigationId": zod.string().uuid(),
+  "indicatorType": zod.string(),
+  "category": zod.string(),
+  "severity": zod.enum(['LOW', 'MEDIUM', 'HIGH', 'CRITICAL']),
+  "scoreContribution": zod.number(),
+  "scoreSemantics": zod.enum(['HEURISTIC_SCORE_NOT_PROBABILITY']),
+  "confidenceLevel": zod.string().nullish(),
+  "evidence": zod.array(zod.record(zod.string(), zod.unknown())).optional(),
+  "provenance": zod.record(zod.string(), zod.unknown()),
+  "method": zod.string(),
+  "methodVersion": zod.string(),
+  "createdAt": zod.coerce.date()
+})
+export const ListInvestigationRiskIndicatorsResponse = zod.array(ListInvestigationRiskIndicatorsResponseItem)
+
+
+/**
+ * @summary Get one case-scoped risk indicator
+ */
+export const GetInvestigationRiskIndicatorParams = zod.object({
+  "id": zod.coerce.string().uuid(),
+  "resourceId": zod.coerce.string().uuid()
+})
+
+export const GetInvestigationRiskIndicatorResponse = zod.object({
+  "id": zod.string().uuid(),
+  "caseId": zod.string().uuid(),
+  "investigationId": zod.string().uuid(),
+  "indicatorType": zod.string(),
+  "category": zod.string(),
+  "severity": zod.enum(['LOW', 'MEDIUM', 'HIGH', 'CRITICAL']),
+  "scoreContribution": zod.number(),
+  "scoreSemantics": zod.enum(['HEURISTIC_SCORE_NOT_PROBABILITY']),
+  "confidenceLevel": zod.string().nullish(),
+  "evidence": zod.array(zod.record(zod.string(), zod.unknown())).optional(),
+  "provenance": zod.record(zod.string(), zod.unknown()),
+  "method": zod.string(),
+  "methodVersion": zod.string(),
+  "createdAt": zod.coerce.date()
+})
+
+
+/**
+ * @summary Compute bounded graph features from stored relationships
+ */
+export const ComputeInvestigationGraphFeaturesParams = zod.object({
+  "id": zod.coerce.string().uuid()
+})
+
+export const computeInvestigationGraphFeaturesBodyMaxEdgesDefault = 10000;
+export const computeInvestigationGraphFeaturesBodyMaxEdgesMax = 10000;
+
+
+
+export const ComputeInvestigationGraphFeaturesBody = zod.object({
+  "max_edges": zod.number().int().min(1).max(computeInvestigationGraphFeaturesBodyMaxEdgesMax).default(computeInvestigationGraphFeaturesBodyMaxEdgesDefault)
+})
+
+export const ComputeInvestigationGraphFeaturesResponse = zod.object({
+  "features": zod.array(zod.record(zod.string(), zod.unknown())),
+  "edgeCount": zod.number().int(),
+  "method": zod.string(),
+  "methodVersion": zod.string(),
+  "maxEdges": zod.number().int()
+})
+
+
+/**
+ * @summary Run bounded structural community detection over stored relationships
+ */
+export const DetectInvestigationCommunitiesParams = zod.object({
+  "id": zod.coerce.string().uuid()
+})
+
+export const detectInvestigationCommunitiesBodyMaxNodesDefault = 10000;
+export const detectInvestigationCommunitiesBodyMaxNodesMax = 10000;
+
+export const detectInvestigationCommunitiesBodyMaxEdgesDefault = 10000;
+export const detectInvestigationCommunitiesBodyMaxEdgesMax = 10000;
+
+export const detectInvestigationCommunitiesBodyMaxRuntimeMsDefault = 5000;
+export const detectInvestigationCommunitiesBodyMaxRuntimeMsMin = 100;
+export const detectInvestigationCommunitiesBodyMaxRuntimeMsMax = 5000;
+
+export const detectInvestigationCommunitiesBodyMaxCommunitiesDefault = 100;
+export const detectInvestigationCommunitiesBodyMaxCommunitiesMax = 500;
+
+
+
+export const DetectInvestigationCommunitiesBody = zod.object({
+  "max_nodes": zod.number().int().min(1).max(detectInvestigationCommunitiesBodyMaxNodesMax).default(detectInvestigationCommunitiesBodyMaxNodesDefault),
+  "max_edges": zod.number().int().min(1).max(detectInvestigationCommunitiesBodyMaxEdgesMax).default(detectInvestigationCommunitiesBodyMaxEdgesDefault),
+  "max_runtime_ms": zod.number().int().min(detectInvestigationCommunitiesBodyMaxRuntimeMsMin).max(detectInvestigationCommunitiesBodyMaxRuntimeMsMax).default(detectInvestigationCommunitiesBodyMaxRuntimeMsDefault),
+  "max_communities": zod.number().int().min(1).max(detectInvestigationCommunitiesBodyMaxCommunitiesMax).default(detectInvestigationCommunitiesBodyMaxCommunitiesDefault)
+})
+
+export const DetectInvestigationCommunitiesResponse = zod.object({
+  "run": zod.record(zod.string(), zod.unknown()),
+  "communities": zod.array(zod.record(zod.string(), zod.unknown())),
+  "totalNodes": zod.number().int(),
+  "totalEdges": zod.number().int(),
+  "limits": zod.record(zod.string(), zod.unknown())
+})
+
+
+/**
+ * @summary Run historical DeFi and MEV-candidate analysis over stored facts
+ */
+export const AnalyzeInvestigationDefiMevParams = zod.object({
+  "id": zod.coerce.string().uuid()
+})
+
+export const AnalyzeInvestigationDefiMevResponse = zod.object({
+  "interactions": zod.array(zod.record(zod.string(), zod.unknown())),
+  "mev": zod.record(zod.string(), zod.unknown()),
+  "historicalOnly": zod.literal(true),
+  "disclaimer": zod.string()
+})
+
+
+/**
+ * @summary Generate and persist a case-scoped forensic report
+ */
+export const GenerateInvestigationForensicReportParams = zod.object({
+  "id": zod.coerce.string().uuid()
+})
+
+export const generateInvestigationForensicReportBodyReportTypeDefault = `INVESTIGATION_SUMMARY`;
+
+export const GenerateInvestigationForensicReportBody = zod.object({
+  "report_type": zod.enum(['INVESTIGATION_SUMMARY', 'RISK_ASSESSMENT', 'GRAPH_ANALYSIS', 'FULL_FORENSIC']).default(generateInvestigationForensicReportBodyReportTypeDefault)
+})
+
+export const GenerateInvestigationForensicReportResponse = zod.object({
+  "id": zod.string().uuid(),
+  "caseId": zod.string().uuid(),
+  "investigationId": zod.string().uuid(),
+  "reportType": zod.string(),
+  "content": zod.record(zod.string(), zod.unknown()),
+  "methodVersions": zod.record(zod.string(), zod.string()),
+  "createdAt": zod.coerce.date()
+})
+
+
+/**
+ * @summary Read one case-scoped persisted forensic report
+ */
+export const GetInvestigationForensicReportParams = zod.object({
+  "id": zod.coerce.string().uuid(),
+  "resourceId": zod.coerce.string().uuid()
+})
+
+export const GetInvestigationForensicReportResponse = zod.object({
+  "id": zod.string().uuid(),
+  "caseId": zod.string().uuid(),
+  "investigationId": zod.string().uuid(),
+  "reportType": zod.string(),
+  "content": zod.record(zod.string(), zod.unknown()),
+  "methodVersions": zod.record(zod.string(), zod.string()),
+  "createdAt": zod.coerce.date()
+})
+
+
+/**
+ * @summary Trace stored blockchain relationships with bounded BFS
+ */
+export const TraceInvestigationGraphZodParams = zod.object({
+  "id": zod.coerce.string()
+})
+
+export const traceInvestigationGraphQueryDepthDefault = 2;
+export const traceInvestigationGraphQueryDepthMax = 5;
+
+export const traceInvestigationGraphQueryDirectionDefault = `OUTGOING`;
+export const traceInvestigationGraphQueryMaxNeighborsDefault = 25;
+export const traceInvestigationGraphQueryMaxNeighborsMax = 100;
+
+export const traceInvestigationGraphQueryMaxNodesDefault = 250;
+export const traceInvestigationGraphQueryMaxNodesMax = 1000;
+
+export const traceInvestigationGraphQueryMaxEdgesDefault = 500;
+export const traceInvestigationGraphQueryMaxEdgesMax = 2000;
+
+export const traceInvestigationGraphQueryMinAmountRegExp = new RegExp('^\\\\d+(\\\\.\\\\d+)?$');
+export const traceInvestigationGraphQueryMaxAmountRegExp = new RegExp('^\\\\d+(\\\\.\\\\d+)?$');
+
+
+export const TraceInvestigationGraphZodQueryParams = zod.object({
+  "depth": zod.coerce.number().int().min(1).max(traceInvestigationGraphQueryDepthMax).default(traceInvestigationGraphQueryDepthDefault),
+  "direction": zod.enum(['OUTGOING', 'INCOMING', 'BOTH']).default(traceInvestigationGraphQueryDirectionDefault),
+  "max_neighbors": zod.coerce.number().int().min(1).max(traceInvestigationGraphQueryMaxNeighborsMax).default(traceInvestigationGraphQueryMaxNeighborsDefault),
+  "max_nodes": zod.coerce.number().int().min(1).max(traceInvestigationGraphQueryMaxNodesMax).default(traceInvestigationGraphQueryMaxNodesDefault),
+  "max_edges": zod.coerce.number().int().min(1).max(traceInvestigationGraphQueryMaxEdgesMax).default(traceInvestigationGraphQueryMaxEdgesDefault),
+  "min_amount": zod.coerce.string().regex(traceInvestigationGraphQueryMinAmountRegExp).optional(),
+  "max_amount": zod.coerce.string().regex(traceInvestigationGraphQueryMaxAmountRegExp).optional(),
+  "asset": zod.coerce.string().optional(),
+  "start_time": zod.date().optional(),
+  "end_time": zod.date().optional()
+})
+
+
+export const traceInvestigationGraphResponsePathsItemHopCountMin = 0;
+
+
+
+export const TraceInvestigationGraphZodResponse = zod.object({
+  "status": zod.enum(['OK', 'INSUFFICIENT_DATA']),
+  "nodes": zod.array(zod.object({
+  "id": zod.string(),
+  "chain": zod.string(),
+  "address": zod.string(),
+  "nodeType": zod.enum(['EOA', 'ADDRESS', 'CONTRACT', 'UNKNOWN']),
+  "firstSeen": zod.coerce.date().nullish(),
+  "lastSeen": zod.coerce.date().nullish()
+})),
+  "edges": zod.array(zod.object({
+  "id": zod.string(),
+  "chain": zod.string(),
+  "transactionHash": zod.string(),
+  "fromAddress": zod.string(),
+  "toAddress": zod.string(),
+  "relationshipType": zod.enum(['TRANSFER', 'TOKEN_TRANSFER', 'INTERNAL_TRANSFER', 'CONTRACT_INTERACTION', 'UTXO_SPEND']),
+  "asset": zod.string(),
+  "amount": zod.string(),
+  "tokenContract": zod.string().nullish(),
+  "timestamp": zod.coerce.date().nullish(),
+  "blockNumber": zod.string().nullish(),
+  "status": zod.string().nullish(),
+  "evidence": zod.object({
+  "transactionHash": zod.string(),
+  "provider": zod.string().nullish(),
+  "sourceReference": zod.string().nullish(),
+  "rawReference": zod.string().nullish(),
+  "retrievedAt": zod.coerce.date().nullish(),
+  "method": zod.string(),
+  "derivationSourceType": zod.enum(['API', 'INFERENCE'])
+})
+})),
+  "paths": zod.array(zod.object({
+  "rank": zod.number().min(1),
+  "nodes": zod.array(zod.object({
+  "chain": zod.string(),
+  "address": zod.string()
+})),
+  "edgeIds": zod.array(zod.string()),
+  "hopCount": zod.number().min(traceInvestigationGraphResponsePathsItemHopCountMin),
+  "evidenceComplete": zod.boolean()
+})),
+  "metadata": zod.record(zod.string(), zod.unknown()),
+  "limitsApplied": zod.record(zod.string(), zod.unknown()),
+  "evidenceReferences": zod.array(zod.object({
+  "transactionHash": zod.string(),
+  "provider": zod.string().nullish(),
+  "sourceReference": zod.string().nullish(),
+  "rawReference": zod.string().nullish(),
+  "retrievedAt": zod.coerce.date().nullish(),
+  "method": zod.string(),
+  "derivationSourceType": zod.enum(['API', 'INFERENCE'])
+}))
+})
+
+
+/**
+ * @summary Look up approved, case-scoped address intelligence observations
+ */
+export const LookupInvestigationAddressIntelligenceParams = zod.object({
+  "id": zod.coerce.string(),
+  "chain": zod.enum(['BITCOIN', 'ETHEREUM', 'TRON']),
+  "address": zod.coerce.string()
+})
+
+export const lookupInvestigationAddressIntelligenceResponseObservationsItemConfidenceMin = 0;
+export const lookupInvestigationAddressIntelligenceResponseObservationsItemConfidenceMax = 1;
+
+
+
+export const LookupInvestigationAddressIntelligenceResponse = zod.object({
+  "status": zod.enum(['SUCCESS', 'NOT_CONFIGURED', 'UNAVAILABLE']),
+  "observations": zod.array(zod.object({
+  "id": zod.string(),
+  "chain": zod.string(),
+  "address": zod.string(),
+  "label": zod.string().nullish(),
+  "entityName": zod.string().nullish(),
+  "entityType": zod.enum(['EXCHANGE', 'VASP', 'CUSTODIAL_SERVICE', 'DEX', 'BRIDGE', 'MIXER', 'MINING_POOL', 'DEFI', 'SCAM', 'PHISHING', 'SANCTIONED_ENTITY', 'OTHER', 'UNKNOWN']),
+  "source": zod.string(),
+  "sourceReference": zod.string().nullish(),
+  "sourceUrl": zod.string().nullish(),
+  "datasetName": zod.string().nullish(),
+  "datasetVersion": zod.string().nullish(),
+  "license": zod.string().nullish(),
+  "retrievedAt": zod.coerce.date(),
+  "freshnessStatus": zod.enum(['FRESH', 'STALE', 'EXPIRED', 'UNKNOWN']),
+  "confidence": zod.number().min(lookupInvestigationAddressIntelligenceResponseObservationsItemConfidenceMin).max(lookupInvestigationAddressIntelligenceResponseObservationsItemConfidenceMax),
+  "status": zod.enum(['UNKNOWN', 'ACTIVE', 'STALE', 'CONFLICTING', 'REVIEW_REQUIRED'])
+})),
+  "conflicts": zod.array(zod.record(zod.string(), zod.unknown()))
+})
+
+
+/**
+ * @summary Run bounded, explainable Bitcoin cluster inference over stored facts
+ */
+export const AnalyzeInvestigationBitcoinClustersParams = zod.object({
+  "id": zod.coerce.string()
+})
+
+export const analyzeInvestigationBitcoinClustersBodyMaxTransactionsDefault = 50;
+export const analyzeInvestigationBitcoinClustersBodyMaxTransactionsMax = 100;
+
+
+
+export const AnalyzeInvestigationBitcoinClustersBody = zod.object({
+  "max_transactions": zod.number().int().min(1).max(analyzeInvestigationBitcoinClustersBodyMaxTransactionsMax).default(analyzeInvestigationBitcoinClustersBodyMaxTransactionsDefault)
+})
+
+export const analyzeInvestigationBitcoinClustersResponseInferencesItemNumericScoreMin = 0;
+export const analyzeInvestigationBitcoinClustersResponseInferencesItemNumericScoreMax = 100;
+
+
+
+export const AnalyzeInvestigationBitcoinClustersResponse = zod.object({
+  "status": zod.enum(['OK', 'INSUFFICIENT_DATA']),
+  "analyzedTransactions": zod.number().int(),
+  "inferences": zod.array(zod.object({
+  "id": zod.string(),
+  "clusterKey": zod.string(),
+  "chain": zod.enum(['BITCOIN']),
+  "method": zod.string(),
+  "methodVersion": zod.string(),
+  "confidenceLevel": zod.enum(['UNKNOWN', 'POSSIBLE', 'LIKELY']),
+  "numericScore": zod.number().min(analyzeInvestigationBitcoinClustersResponseInferencesItemNumericScoreMin).max(analyzeInvestigationBitcoinClustersResponseInferencesItemNumericScoreMax),
+  "reviewStatus": zod.enum(['PENDING_REVIEW', 'ACCEPTED', 'REJECTED']),
+  "ambiguityReason": zod.string().nullish(),
+  "evidence": zod.array(zod.record(zod.string(), zod.unknown())),
+  "members": zod.array(zod.record(zod.string(), zod.unknown()))
+})),
+  "truncated": zod.boolean()
+})
+
+
+export const ListInvestigationClustersParams = zod.object({
+  "id": zod.coerce.string()
+})
+
+export const listInvestigationClustersQueryLimitDefault = 50;
+export const listInvestigationClustersQueryLimitMax = 100;
+
+
+
+export const ListInvestigationClustersQueryParams = zod.object({
+  "limit": zod.coerce.number().int().min(1).max(listInvestigationClustersQueryLimitMax).default(listInvestigationClustersQueryLimitDefault)
+})
+
+export const listInvestigationClustersResponseNumericScoreMin = 0;
+export const listInvestigationClustersResponseNumericScoreMax = 100;
+
+
+
+export const ListInvestigationClustersResponseItem = zod.object({
+  "id": zod.string(),
+  "clusterKey": zod.string(),
+  "chain": zod.enum(['BITCOIN']),
+  "method": zod.string(),
+  "methodVersion": zod.string(),
+  "confidenceLevel": zod.enum(['UNKNOWN', 'POSSIBLE', 'LIKELY']),
+  "numericScore": zod.number().min(listInvestigationClustersResponseNumericScoreMin).max(listInvestigationClustersResponseNumericScoreMax),
+  "reviewStatus": zod.enum(['PENDING_REVIEW', 'ACCEPTED', 'REJECTED']),
+  "ambiguityReason": zod.string().nullish(),
+  "evidence": zod.array(zod.record(zod.string(), zod.unknown())),
+  "members": zod.array(zod.record(zod.string(), zod.unknown()))
+})
+export const ListInvestigationClustersResponse = zod.array(ListInvestigationClustersResponseItem)
+
+
+/**
+ * @summary Run deterministic evidence fusion for service and VASP candidates
+ */
+export const AnalyzeInvestigationVaspCandidatesParams = zod.object({
+  "id": zod.coerce.string()
+})
+
+export const analyzeInvestigationVaspCandidatesBodyMaxAddressesDefault = 100;
+export const analyzeInvestigationVaspCandidatesBodyMaxAddressesMax = 250;
+
+export const analyzeInvestigationVaspCandidatesBodyMaxCandidatesDefault = 50;
+export const analyzeInvestigationVaspCandidatesBodyMaxCandidatesMax = 250;
+
+
+
+export const AnalyzeInvestigationVaspCandidatesBody = zod.object({
+  "max_addresses": zod.number().int().min(1).max(analyzeInvestigationVaspCandidatesBodyMaxAddressesMax).default(analyzeInvestigationVaspCandidatesBodyMaxAddressesDefault),
+  "max_candidates": zod.number().int().min(1).max(analyzeInvestigationVaspCandidatesBodyMaxCandidatesMax).default(analyzeInvestigationVaspCandidatesBodyMaxCandidatesDefault)
+})
+
+export const analyzeInvestigationVaspCandidatesResponseCandidatesItemNumericScoreMin = 0;
+export const analyzeInvestigationVaspCandidatesResponseCandidatesItemNumericScoreMax = 100;
+
+
+
+export const AnalyzeInvestigationVaspCandidatesResponse = zod.object({
+  "status": zod.enum(['OK', 'INSUFFICIENT_EVIDENCE']),
+  "candidates": zod.array(zod.object({
+  "id": zod.string(),
+  "chain": zod.string(),
+  "address": zod.string(),
+  "entityName": zod.string().nullish(),
+  "entityType": zod.string(),
+  "confidenceLevel": zod.enum(['UNKNOWN', 'POSSIBLE', 'LIKELY', 'CONFIRMED']),
+  "numericScore": zod.number().min(analyzeInvestigationVaspCandidatesResponseCandidatesItemNumericScoreMin).max(analyzeInvestigationVaspCandidatesResponseCandidatesItemNumericScoreMax),
+  "status": zod.enum(['PENDING_REVIEW', 'CONFLICTING_EVIDENCE', 'INSUFFICIENT_EVIDENCE', 'CONFIRMED_BY_REVIEW']),
+  "reason": zod.string(),
+  "contradictions": zod.array(zod.record(zod.string(), zod.unknown())),
+  "method": zod.string(),
+  "methodVersion": zod.string(),
+  "evidence": zod.array(zod.object({
+  "category": zod.enum(['DIRECT_BLOCKCHAIN_FACT', 'GRAPH_EVIDENCE', 'ADDRESS_INTELLIGENCE', 'CLUSTER_INFERENCE', 'ABUSE_INTELLIGENCE', 'SOURCE_AGREEMENT', 'SOURCE_QUALITY']),
+  "evidenceType": zod.string(),
+  "subjectType": zod.string(),
+  "subjectId": zod.string(),
+  "polarity": zod.enum(['SUPPORTING', 'NEGATIVE', 'CONTRADICTORY']),
+  "contribution": zod.number(),
+  "source": zod.string().nullish(),
+  "sourceReference": zod.string().nullish(),
+  "sourceUrl": zod.string().nullish(),
+  "retrievedAt": zod.coerce.date().nullish(),
+  "method": zod.string(),
+  "methodVersion": zod.string(),
+  "rawReference": zod.string().nullish(),
+  "details": zod.record(zod.string(), zod.unknown()).optional()
+}))
+})),
+  "truncated": zod.boolean()
+})
+
+
+export const ListInvestigationVaspCandidatesParams = zod.object({
+  "id": zod.coerce.string()
+})
+
+export const listInvestigationVaspCandidatesQueryLimitDefault = 50;
+export const listInvestigationVaspCandidatesQueryLimitMax = 100;
+
+
+
+export const ListInvestigationVaspCandidatesQueryParams = zod.object({
+  "limit": zod.coerce.number().int().min(1).max(listInvestigationVaspCandidatesQueryLimitMax).default(listInvestigationVaspCandidatesQueryLimitDefault)
+})
+
+export const listInvestigationVaspCandidatesResponseNumericScoreMin = 0;
+export const listInvestigationVaspCandidatesResponseNumericScoreMax = 100;
+
+
+
+export const ListInvestigationVaspCandidatesResponseItem = zod.object({
+  "id": zod.string(),
+  "chain": zod.string(),
+  "address": zod.string(),
+  "entityName": zod.string().nullish(),
+  "entityType": zod.string(),
+  "confidenceLevel": zod.enum(['UNKNOWN', 'POSSIBLE', 'LIKELY', 'CONFIRMED']),
+  "numericScore": zod.number().min(listInvestigationVaspCandidatesResponseNumericScoreMin).max(listInvestigationVaspCandidatesResponseNumericScoreMax),
+  "status": zod.enum(['PENDING_REVIEW', 'CONFLICTING_EVIDENCE', 'INSUFFICIENT_EVIDENCE', 'CONFIRMED_BY_REVIEW']),
+  "reason": zod.string(),
+  "contradictions": zod.array(zod.record(zod.string(), zod.unknown())),
+  "method": zod.string(),
+  "methodVersion": zod.string(),
+  "evidence": zod.array(zod.object({
+  "category": zod.enum(['DIRECT_BLOCKCHAIN_FACT', 'GRAPH_EVIDENCE', 'ADDRESS_INTELLIGENCE', 'CLUSTER_INFERENCE', 'ABUSE_INTELLIGENCE', 'SOURCE_AGREEMENT', 'SOURCE_QUALITY']),
+  "evidenceType": zod.string(),
+  "subjectType": zod.string(),
+  "subjectId": zod.string(),
+  "polarity": zod.enum(['SUPPORTING', 'NEGATIVE', 'CONTRADICTORY']),
+  "contribution": zod.number(),
+  "source": zod.string().nullish(),
+  "sourceReference": zod.string().nullish(),
+  "sourceUrl": zod.string().nullish(),
+  "retrievedAt": zod.coerce.date().nullish(),
+  "method": zod.string(),
+  "methodVersion": zod.string(),
+  "rawReference": zod.string().nullish(),
+  "details": zod.record(zod.string(), zod.unknown()).optional()
+}))
+})
+export const ListInvestigationVaspCandidatesResponse = zod.array(ListInvestigationVaspCandidatesResponseItem)
+
+
+/**
+ * @summary Record a human review of a VASP candidate
+ */
+export const ReviewInvestigationVaspCandidateParams = zod.object({
+  "id": zod.coerce.string(),
+  "candidateId": zod.coerce.string()
+})
+
+export const reviewInvestigationVaspCandidateBodyRationaleMin = 3;
+export const reviewInvestigationVaspCandidateBodyRationaleMax = 4000;
+
+
+
+export const ReviewInvestigationVaspCandidateBody = zod.object({
+  "decision": zod.enum(['ACCEPTED', 'REJECTED', 'CONFIRMED']),
+  "rationale": zod.string().min(reviewInvestigationVaspCandidateBodyRationaleMin).max(reviewInvestigationVaspCandidateBodyRationaleMax).nullish()
+})
+
+export const ReviewInvestigationVaspCandidateResponse = zod.object({
+  "id": zod.string(),
+  "caseId": zod.string(),
+  "investigationId": zod.string(),
+  "candidateId": zod.string(),
+  "reviewerId": zod.string(),
+  "decision": zod.enum(['ACCEPTED', 'REJECTED', 'CONFIRMED']),
+  "rationale": zod.string().nullish(),
+  "createdAt": zod.coerce.date()
+})
+
+
+/**
+ * @summary Read normalized wallet facts through an authorized provider adapter
+ */
+export const GetLiveWalletProfileParams = zod.object({
+  "chain": zod.enum(['BITCOIN', 'ETHEREUM', 'TRON', 'BNB_CHAIN', 'POLYGON', 'SOLANA', 'OTHER']),
+  "address": zod.coerce.string()
+})
+
+export const GetLiveWalletProfileQueryParams = zod.object({
+  "investigation_id": zod.coerce.string().uuid().describe('Authorized investigation scope; a valid actor alone is insufficient.')
+})
+
+export const GetLiveWalletProfileResponse = zod.object({
+  "provider": zod.string(),
+  "wallet": zod.union([zod.object({
+  "id": zod.string(),
+  "address": zod.string(),
+  "chain": zod.string(),
+  "balance": zod.string().optional(),
+  "balanceUnit": zod.string().optional(),
+  "createdAt": zod.coerce.date(),
+  "provenance": zod.object({
+  "sourceType": zod.string(),
+  "provider": zod.string(),
+  "sourceReference": zod.string().optional(),
+  "rawReference": zod.string().optional(),
+  "retrievedAt": zod.coerce.date(),
+  "method": zod.string()
+})
+}),zod.null()]).optional(),
+  "transactions": zod.array(zod.record(zod.string(), zod.unknown())),
+  "tokenTransfers": zod.array(zod.record(zod.string(), zod.unknown())),
+  "internalTransactions": zod.array(zod.record(zod.string(), zod.unknown())),
+  "capabilities": zod.record(zod.string(), zod.boolean())
+})
+
+
+/**
+ * @summary Read one normalized transaction through an authorized provider adapter
+ */
+export const GetLiveTransactionParams = zod.object({
+  "chain": zod.enum(['BITCOIN', 'ETHEREUM', 'TRON', 'BNB_CHAIN', 'POLYGON', 'SOLANA', 'OTHER']),
+  "txHash": zod.coerce.string()
+})
+
+export const GetLiveTransactionQueryParams = zod.object({
+  "investigation_id": zod.coerce.string().uuid().describe('Authorized investigation scope; a valid actor alone is insufficient.')
+})
+
+export const GetLiveTransactionResponse = zod.object({
+  "provider": zod.string(),
+  "transaction": zod.object({
+  "id": zod.string(),
+  "chain": zod.string(),
+  "transactionHash": zod.string(),
+  "timestamp": zod.coerce.date().optional(),
+  "blockNumber": zod.string().optional(),
+  "blockHash": zod.string().optional(),
+  "confirmations": zod.number().optional(),
+  "from": zod.string().optional(),
+  "to": zod.string().optional(),
+  "value": zod.string().optional(),
+  "fee": zod.string().optional(),
+  "executionStatus": zod.string().optional(),
+  "inputs": zod.array(zod.record(zod.string(), zod.unknown())),
+  "outputs": zod.array(zod.record(zod.string(), zod.unknown())),
+  "provenance": zod.object({
+  "sourceType": zod.string(),
+  "provider": zod.string(),
+  "sourceReference": zod.string().optional(),
+  "rawReference": zod.string().optional(),
+  "retrievedAt": zod.coerce.date(),
+  "method": zod.string()
+})
+}),
+  "tokenTransfers": zod.array(zod.record(zod.string(), zod.unknown())),
+  "contractInteractions": zod.array(zod.record(zod.string(), zod.unknown()))
+})
+
+
+export const createPersistentEvidenceBodyConfidenceMin = 0;
+export const createPersistentEvidenceBodyConfidenceMax = 1;
+
+
+
+export const CreatePersistentEvidenceBody = zod.object({
+  "caseId": zod.string(),
+  "investigationId": zod.string().nullish(),
+  "subjectType": zod.string(),
+  "subjectId": zod.string(),
+  "evidenceType": zod.enum(['BLOCKCHAIN_FACT', 'TRANSACTION', 'ADDRESS_LABEL', 'ENTITY_MATCH', 'VASP_MATCH', 'GRAPH_RELATION', 'RISK_INDICATOR', 'DOCUMENT', 'OSINT', 'OTHER']),
+  "sourceType": zod.enum(['SYNTHETIC', 'API', 'RPC', 'DATASET', 'INFERENCE', 'OTHER', 'USER_PROVIDED']),
+  "provider": zod.string().nullish(),
+  "sourceReference": zod.string().nullish(),
+  "sourceUrl": zod.string().nullish(),
+  "observedAt": zod.coerce.date().nullish(),
+  "collectedAt": zod.coerce.date().nullish(),
+  "method": zod.string().nullish(),
+  "confidence": zod.number().min(createPersistentEvidenceBodyConfidenceMin).max(createPersistentEvidenceBodyConfidenceMax).nullish(),
+  "rawReference": zod.string().nullish(),
+  "contentHash": zod.string().nullish(),
+  "description": zod.string().nullish()
+})
+
+export const createPersistentEvidenceResponseConfidenceMin = 0;
+export const createPersistentEvidenceResponseConfidenceMax = 1;
+
+
+
+export const CreatePersistentEvidenceResponse = zod.object({
+  "id": zod.string(),
+  "caseId": zod.string().nullish(),
+  "investigationId": zod.string().nullish(),
+  "subjectType": zod.string(),
+  "subjectId": zod.string(),
+  "evidenceType": zod.string(),
+  "sourceType": zod.string(),
+  "provider": zod.string().nullish(),
+  "sourceReference": zod.string().nullish(),
+  "sourceUrl": zod.string().nullish(),
+  "observedAt": zod.coerce.date().nullish(),
+  "collectedAt": zod.coerce.date().nullish(),
+  "method": zod.string().nullish(),
+  "confidence": zod.number().min(createPersistentEvidenceResponseConfidenceMin).max(createPersistentEvidenceResponseConfidenceMax).nullish(),
+  "rawReference": zod.string().nullish(),
+  "contentHash": zod.string().nullish(),
+  "description": zod.string().nullish(),
+  "createdBy": zod.string().nullish(),
+  "createdAt": zod.coerce.date()
+})
+
+
+export const GetPersistentEvidenceParams = zod.object({
+  "id": zod.coerce.string()
+})
+
+export const getPersistentEvidenceResponseConfidenceMin = 0;
+export const getPersistentEvidenceResponseConfidenceMax = 1;
+
+
+
+export const GetPersistentEvidenceResponse = zod.object({
+  "id": zod.string(),
+  "caseId": zod.string().nullish(),
+  "investigationId": zod.string().nullish(),
+  "subjectType": zod.string(),
+  "subjectId": zod.string(),
+  "evidenceType": zod.string(),
+  "sourceType": zod.string(),
+  "provider": zod.string().nullish(),
+  "sourceReference": zod.string().nullish(),
+  "sourceUrl": zod.string().nullish(),
+  "observedAt": zod.coerce.date().nullish(),
+  "collectedAt": zod.coerce.date().nullish(),
+  "method": zod.string().nullish(),
+  "confidence": zod.number().min(getPersistentEvidenceResponseConfidenceMin).max(getPersistentEvidenceResponseConfidenceMax).nullish(),
+  "rawReference": zod.string().nullish(),
+  "contentHash": zod.string().nullish(),
+  "description": zod.string().nullish(),
+  "createdBy": zod.string().nullish(),
+  "createdAt": zod.coerce.date()
+})
+
+

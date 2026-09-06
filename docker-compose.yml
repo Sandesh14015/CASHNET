@@ -1,102 +1,66 @@
-# Docker Compose for CashNet development and testing
-# Includes: API server, Model server, Frontend, Database (optional)
-
-version: '3.8'
+# CASHNET — Supabase-backed Docker Compose
+# DATABASE_URL and CASHNET_MIGRATION_DATABASE_URL are injected by the
+# deployment secret manager. This stack intentionally contains no database
+# service, local database volume, or localhost fallback.
 
 services:
-  # API Backend
+  # Use the same ledger-backed migration runner used by local development and
+  # CI. It is a bounded one-shot job; the API never starts against an
+  # uninitialised Supabase schema.
+  migrate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+    command: ["sh", "-c", "pnpm --filter @workspace/db run provision-application-role && pnpm --filter @workspace/db run migrate"]
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?Set DATABASE_URL through the deployment secret manager}
+      CASHNET_MIGRATION_DATABASE_URL: ${CASHNET_MIGRATION_DATABASE_URL:?Set CASHNET_MIGRATION_DATABASE_URL through the deployment secret manager}
+      CASHNET_SUPABASE_CA_CERT_PATH: /run/secrets/cashnet_supabase_ca.pem
+    secrets:
+      - source: cashnet_supabase_ca
+        target: cashnet_supabase_ca.pem
+        mode: 0444
+    restart: "no"
+
   api:
     build:
-      context: ./artifacts/api-server
+      context: .
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    environment:
-      NODE_ENV: development
-      PORT: 3000
-      PYTHON_SERVICE_URL: http://models:5000
-      ENABLE_PII_MASKING: "true"
-      LOG_MASKED_FIELDS: "false"
     depends_on:
-      - models
-    networks:
-      - cashnet
-    restart: unless-stopped
-    volumes:
-      - ./artifacts/api-server/src:/app/src:ro
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 5s
-
-  # ML Model Server
-  models:
-    build:
-      context: .
-      dockerfile: scripts/Dockerfile.model-server
-    ports:
-      - "5000:5000"
+      migrate:
+        condition: service_completed_successfully
     environment:
-      FLASK_ENV: development
-      FLASK_DEBUG: "1"
-      PORT: 5000
-      PYTHONUNBUFFERED: "1"
-    volumes:
-      - ./models:/app/models
-      - ./lib:/app/lib:ro
-      - ./scripts/model_server.py:/app/model_server.py:ro
-    networks:
-      - cashnet
-    restart: unless-stopped
+      DATABASE_URL: ${DATABASE_URL:?Set DATABASE_URL through the deployment secret manager}
+      CASHNET_SUPABASE_CA_CERT_PATH: /run/secrets/cashnet_supabase_ca.pem
+      PORT: "3000"
+      CASHNET_DATA_MODE: authorized
+      # The image runs with NODE_ENV=production. Keep the development actor
+      # header disabled explicitly as a defence-in-depth deployment control.
+      CASHNET_DEV_AUTH_ENABLED: "false"
+      CASHNET_PROVIDER_TIMEOUT_MS: "10000"
+      CASHNET_PROVIDER_MAX_RETRIES: "2"
+      # Provider API keys — set only through the deployment secret manager.
+      ETHERSCAN_API_KEY: ${ETHERSCAN_API_KEY:-}
+      TRONGRID_API_KEY: ${TRONGRID_API_KEY:-}
+      BSCSCAN_API_KEY: ${BSCSCAN_API_KEY:-}
+      POLYGONSCAN_API_KEY: ${POLYGONSCAN_API_KEY:-}
+      SOLANA_RPC_URL: ${SOLANA_RPC_URL:-}
+      SOLANA_API_KEY: ${SOLANA_API_KEY:-}
+    secrets:
+      - source: cashnet_supabase_ca
+        target: cashnet_supabase_ca.pem
+        mode: 0444
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 10s
-
-  # Frontend (React)
-  frontend:
-    build:
-      context: ./artifacts/cashnet
-      dockerfile: Dockerfile
-    ports:
-      - "80:3000"
-    environment:
-      REACT_APP_API_URL: http://localhost:3000/api
-      REACT_APP_MODELS_URL: http://localhost:5000
-    depends_on:
-      - api
-    networks:
-      - cashnet
-    restart: unless-stopped
-
-  # PostgreSQL Database (optional)
-  database:
-    image: postgres:15-alpine
-    ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_DB: cashnet
-      POSTGRES_USER: cashnet_user
-      POSTGRES_PASSWORD: cashnet_password_dev
-    volumes:
-      - cashnet_db:/var/lib/postgresql/data
-    networks:
-      - cashnet
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U cashnet_user"]
-      interval: 10s
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/readyz"]
+      interval: 15s
       timeout: 5s
-      retries: 5
+      start_period: 15s
+      retries: 3
 
-networks:
-  cashnet:
-    driver: bridge
+secrets:
+  cashnet_supabase_ca:
+    file: ${CASHNET_SUPABASE_CA_CERT_PATH:?Set CASHNET_SUPABASE_CA_CERT_PATH to the Supabase CA PEM through the deployment secret manager}
 
-volumes:
-  cashnet_db:
-    driver: local

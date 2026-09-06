@@ -205,6 +205,223 @@ paths:
           content:
             application/json:
               schema: { $ref: "#/components/schemas/Report" }
+  /v1/cases:
+    get:
+      operationId: listPersistentCases
+      tags: [cashnet]
+      summary: List cases accessible to the authenticated development actor
+      responses: { "200": { description: Cases, content: { application/json: { schema: { type: array, items: { $ref: "#/components/schemas/PersistentCase" } } } } } }
+    post:
+      operationId: createPersistentCase
+      tags: [cashnet]
+      summary: Create a persistent case
+      requestBody: { required: true, content: { application/json: { schema: { $ref: "#/components/schemas/PersistentCaseInput" } } } }
+      responses: { "201": { description: Created, content: { application/json: { schema: { $ref: "#/components/schemas/PersistentCase" } } } } }
+  /v1/cases/{id}:
+    get:
+      operationId: getPersistentCase
+      tags: [cashnet]
+      parameters: [{ name: id, in: path, required: true, schema: { type: string } }]
+      responses: { "200": { description: Case, content: { application/json: { schema: { $ref: "#/components/schemas/PersistentCase" } } } } }
+    patch:
+      operationId: updatePersistentCase
+      tags: [cashnet]
+      parameters: [{ name: id, in: path, required: true, schema: { type: string } }]
+      requestBody: { required: true, content: { application/json: { schema: { $ref: "#/components/schemas/PersistentCasePatch" } } } }
+      responses: { "200": { description: Updated, content: { application/json: { schema: { $ref: "#/components/schemas/PersistentCase" } } } } }
+  /v1/cases/{id}/audit:
+    get:
+      operationId: listCaseAuditEvents
+      tags: [cashnet]
+      parameters: [{ name: id, in: path, required: true, schema: { type: string } }]
+      responses: { "200": { description: Audit events, content: { application/json: { schema: { type: array, items: { $ref: "#/components/schemas/AuditEvent" } } } } } }
+  /v1/investigations:
+    post:
+      operationId: createPersistentInvestigation
+      tags: [cashnet]
+      requestBody: { required: true, content: { application/json: { schema: { $ref: "#/components/schemas/InvestigationInput" } } } }
+      responses: { "201": { description: Created; collection requires approval and authorization, content: { application/json: { schema: { $ref: "#/components/schemas/PersistentInvestigation" } } } } }
+  /v1/investigations/wallet:
+    post:
+      operationId: createWalletSubjectInvestigation
+      tags: [cashnet]
+      requestBody: { required: true, content: { application/json: { schema: { $ref: "#/components/schemas/WalletInvestigationInput" } } } }
+      responses: { "201": { description: Created; collection requires approval and authorization, content: { application/json: { schema: { $ref: "#/components/schemas/WalletInvestigationResult" } } } } }
+  /v1/investigations/{id}:
+    get:
+      operationId: getPersistentInvestigation
+      tags: [cashnet]
+      parameters: [{ name: id, in: path, required: true, schema: { type: string } }]
+      responses: { "200": { description: Investigation, content: { application/json: { schema: { $ref: "#/components/schemas/PersistentInvestigation" } } } } }
+    patch:
+      operationId: transitionPersistentInvestigation
+      tags: [cashnet]
+      parameters: [{ name: id, in: path, required: true, schema: { type: string } }]
+      requestBody: { required: true, content: { application/json: { schema: { $ref: "#/components/schemas/InvestigationTransitionInput" } } } }
+      responses: { "200": { description: Updated, content: { application/json: { schema: { $ref: "#/components/schemas/PersistentInvestigation" } } } } }
+  /v1/investigations/{id}/collect:
+    post:
+      operationId: collectInvestigationProviderData
+      tags: [cashnet]
+      summary: Collect authorized live blockchain facts and persist normalized results
+      parameters: [{ name: id, in: path, required: true, schema: { type: string } }]
+      responses: { "200": { description: Collection result, content: { application/json: { schema: { $ref: "#/components/schemas/CollectionResult" } } } } }
+  /v1/investigations/{id}/risk-analysis:
+    post:
+      operationId: executeInvestigationRiskAnalysis
+      tags: [cashnet]
+      summary: Execute bounded AML/risk analysis over stored case-scoped facts
+      parameters: [{ name: id, in: path, required: true, schema: { type: string, format: uuid } }]
+      responses: { "200": { description: Persisted heuristic assessment; not a probability or proof, content: { application/json: { schema: { $ref: "#/components/schemas/RiskAnalysisRun" } } } } }
+  /v1/investigations/{id}/risk-indicators:
+    get:
+      operationId: listInvestigationRiskIndicators
+      tags: [cashnet]
+      summary: List case-scoped persisted risk indicators
+      parameters: [{ name: id, in: path, required: true, schema: { type: string, format: uuid } }, { name: limit, in: query, schema: { type: integer, minimum: 1, maximum: 100, default: 100 } }]
+      responses: { "200": { description: Risk indicators, content: { application/json: { schema: { type: array, items: { $ref: "#/components/schemas/RiskIndicator" } } } } } }
+  /v1/investigations/{id}/risk-indicators/{resourceId}:
+    get:
+      operationId: getInvestigationRiskIndicator
+      tags: [cashnet]
+      summary: Get one case-scoped risk indicator
+      parameters: [{ name: id, in: path, required: true, schema: { type: string, format: uuid } }, { name: resourceId, in: path, required: true, schema: { type: string, format: uuid } }]
+      responses: { "200": { description: Risk indicator, content: { application/json: { schema: { $ref: "#/components/schemas/RiskIndicator" } } } } }
+  /v1/investigations/{id}/graph-features:
+    post:
+      operationId: computeInvestigationGraphFeatures
+      tags: [cashnet]
+      summary: Compute bounded graph features from stored relationships
+      parameters: [{ name: id, in: path, required: true, schema: { type: string, format: uuid } }]
+      requestBody: { required: false, content: { application/json: { schema: { $ref: "#/components/schemas/GraphFeatureRunInput" } } } }
+      responses: { "200": { description: Persisted graph features, content: { application/json: { schema: { $ref: "#/components/schemas/GraphFeatureRun" } } } } }
+  /v1/investigations/{id}/communities:
+    post:
+      operationId: detectInvestigationCommunities
+      tags: [cashnet]
+      summary: Run bounded structural community detection over stored relationships
+      parameters: [{ name: id, in: path, required: true, schema: { type: string, format: uuid } }]
+      requestBody: { required: false, content: { application/json: { schema: { $ref: "#/components/schemas/CommunityRunInput" } } } }
+      responses: { "200": { description: Persisted structural communities; not ownership attribution, content: { application/json: { schema: { $ref: "#/components/schemas/CommunityRun" } } } } }
+  /v1/investigations/{id}/defi-mev-analysis:
+    post:
+      operationId: analyzeInvestigationDefiMev
+      tags: [cashnet]
+      summary: Run historical DeFi and MEV-candidate analysis over stored facts
+      parameters: [{ name: id, in: path, required: true, schema: { type: string, format: uuid } }]
+      responses: { "200": { description: Historical candidates only; not real-time mempool monitoring or proof, content: { application/json: { schema: { $ref: "#/components/schemas/DefiMevAnalysis" } } } } }
+  /v1/investigations/{id}/reports:
+    post:
+      operationId: generateInvestigationForensicReport
+      tags: [cashnet]
+      summary: Generate and persist a case-scoped forensic report
+      parameters: [{ name: id, in: path, required: true, schema: { type: string, format: uuid } }]
+      requestBody: { required: false, content: { application/json: { schema: { $ref: "#/components/schemas/ForensicReportInput" } } } }
+      responses: { "201": { description: Persisted report, content: { application/json: { schema: { $ref: "#/components/schemas/ForensicReport" } } } } }
+  /v1/investigations/{id}/reports/{resourceId}:
+    get:
+      operationId: getInvestigationForensicReport
+      tags: [cashnet]
+      summary: Read one case-scoped persisted forensic report
+      parameters: [{ name: id, in: path, required: true, schema: { type: string, format: uuid } }, { name: resourceId, in: path, required: true, schema: { type: string, format: uuid } }]
+      responses: { "200": { description: Report, content: { application/json: { schema: { $ref: "#/components/schemas/ForensicReport" } } } } }
+  /v1/investigations/{id}/graph:
+    get:
+      operationId: traceInvestigationGraph
+      tags: [cashnet]
+      summary: Trace stored blockchain relationships with bounded BFS
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: string } }
+        - { name: depth, in: query, schema: { type: integer, minimum: 1, maximum: 5, default: 2 } }
+        - { name: direction, in: query, schema: { type: string, enum: [OUTGOING, INCOMING, BOTH], default: OUTGOING } }
+        - { name: max_neighbors, in: query, schema: { type: integer, minimum: 1, maximum: 100, default: 25 } }
+        - { name: max_nodes, in: query, schema: { type: integer, minimum: 1, maximum: 1000, default: 250 } }
+        - { name: max_edges, in: query, schema: { type: integer, minimum: 1, maximum: 2000, default: 500 } }
+        - { name: min_amount, in: query, schema: { type: string, pattern: '^\\d+(\\.\\d+)?$' } }
+        - { name: max_amount, in: query, schema: { type: string, pattern: '^\\d+(\\.\\d+)?$' } }
+        - { name: asset, in: query, schema: { type: string } }
+        - { name: start_time, in: query, schema: { type: string, format: date-time } }
+        - { name: end_time, in: query, schema: { type: string, format: date-time } }
+      responses: { "200": { description: Evidence-backed graph from stored normalized facts, content: { application/json: { schema: { $ref: "#/components/schemas/InvestigationGraph" } } } } }
+  /v1/investigations/{id}/address-intelligence/{chain}/{address}:
+    get:
+      operationId: lookupInvestigationAddressIntelligence
+      tags: [cashnet]
+      summary: Look up approved, case-scoped address intelligence observations
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: string } }
+        - { name: chain, in: path, required: true, schema: { type: string, enum: [BITCOIN, ETHEREUM, TRON] } }
+        - { name: address, in: path, required: true, schema: { type: string } }
+      responses: { "200": { description: Observations and explicit conflicts; never an identity claim, content: { application/json: { schema: { $ref: "#/components/schemas/AddressIntelligenceLookup" } } } } }
+  /v1/investigations/{id}/clusters:
+    post:
+      operationId: analyzeInvestigationBitcoinClusters
+      tags: [cashnet]
+      summary: Run bounded, explainable Bitcoin cluster inference over stored facts
+      parameters: [{ name: id, in: path, required: true, schema: { type: string } }]
+      requestBody: { required: false, content: { application/json: { schema: { $ref: "#/components/schemas/ClusterRunInput" } } } }
+      responses: { "200": { description: Review-required inferences, content: { application/json: { schema: { $ref: "#/components/schemas/ClusterRunResult" } } } } }
+    get:
+      operationId: listInvestigationClusters
+      tags: [cashnet]
+      parameters: [{ name: id, in: path, required: true, schema: { type: string } }, { name: limit, in: query, schema: { type: integer, minimum: 1, maximum: 100, default: 50 } }]
+      responses: { "200": { description: Stored review-required cluster inferences, content: { application/json: { schema: { type: array, items: { $ref: "#/components/schemas/ClusterInference" } } } } } }
+  /v1/investigations/{id}/vasp-analysis:
+    post:
+      operationId: analyzeInvestigationVaspCandidates
+      tags: [cashnet]
+      summary: Run deterministic evidence fusion for service and VASP candidates
+      parameters: [{ name: id, in: path, required: true, schema: { type: string } }]
+      requestBody: { required: false, content: { application/json: { schema: { $ref: "#/components/schemas/VaspAnalysisInput" } } } }
+      responses: { "200": { description: "Investigative candidates, not person attribution", content: { application/json: { schema: { $ref: "#/components/schemas/VaspAnalysisResult" } } } } }
+  /v1/investigations/{id}/vasp-candidates:
+    get:
+      operationId: listInvestigationVaspCandidates
+      tags: [cashnet]
+      parameters: [{ name: id, in: path, required: true, schema: { type: string } }, { name: limit, in: query, schema: { type: integer, minimum: 1, maximum: 100, default: 50 } }]
+      responses: { "200": { description: Persisted candidate records with traceable evidence, content: { application/json: { schema: { type: array, items: { $ref: "#/components/schemas/VaspCandidate" } } } } } }
+  /v1/investigations/{id}/vasp-candidates/{candidateId}/review:
+    post:
+      operationId: reviewInvestigationVaspCandidate
+      tags: [cashnet]
+      summary: Record a human review of a VASP candidate
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: string } }
+        - { name: candidateId, in: path, required: true, schema: { type: string } }
+      requestBody: { required: true, content: { application/json: { schema: { $ref: "#/components/schemas/AttributionReviewInput" } } } }
+      responses: { "201": { description: Append-only review record, content: { application/json: { schema: { $ref: "#/components/schemas/AttributionReview" } } } } }
+  /v1/wallets/{chain}/{address}:
+    get:
+      operationId: getLiveWalletProfile
+      tags: [cashnet]
+      summary: Read normalized wallet facts through an authorized provider adapter
+      parameters:
+        - { name: chain, in: path, required: true, schema: { type: string, enum: [BITCOIN, ETHEREUM, TRON, BNB_CHAIN, POLYGON, SOLANA, OTHER] } }
+        - { name: address, in: path, required: true, schema: { type: string } }
+        - { name: investigation_id, in: query, required: true, schema: { type: string, format: uuid }, description: Authorized investigation scope; a valid actor alone is insufficient. }
+      responses: { "200": { description: Normalized provider result, content: { application/json: { schema: { $ref: "#/components/schemas/LiveWalletResult" } } } } }
+  /v1/transactions/{chain}/{txHash}:
+    get:
+      operationId: getLiveTransaction
+      tags: [cashnet]
+      summary: Read one normalized transaction through an authorized provider adapter
+      parameters:
+        - { name: chain, in: path, required: true, schema: { type: string, enum: [BITCOIN, ETHEREUM, TRON, BNB_CHAIN, POLYGON, SOLANA, OTHER] } }
+        - { name: txHash, in: path, required: true, schema: { type: string } }
+        - { name: investigation_id, in: query, required: true, schema: { type: string, format: uuid }, description: Authorized investigation scope; a valid actor alone is insufficient. }
+      responses: { "200": { description: Normalized transaction, content: { application/json: { schema: { $ref: "#/components/schemas/NormalizedTransactionBundle" } } } } }
+  /v1/evidence:
+    post:
+      operationId: createPersistentEvidence
+      tags: [cashnet]
+      requestBody: { required: true, content: { application/json: { schema: { $ref: "#/components/schemas/EvidenceInput" } } } }
+      responses: { "201": { description: Created, content: { application/json: { schema: { $ref: "#/components/schemas/PersistentEvidence" } } } } }
+  /v1/evidence/{id}:
+    get:
+      operationId: getPersistentEvidence
+      tags: [cashnet]
+      parameters: [{ name: id, in: path, required: true, schema: { type: string } }]
+      responses: { "200": { description: Evidence, content: { application/json: { schema: { $ref: "#/components/schemas/PersistentEvidence" } } } } }
 components:
   schemas:
     HealthStatus:
@@ -471,4 +688,475 @@ components:
         case: { $ref: "#/components/schemas/Case" }
         sections: { type: array, items: { type: object, additionalProperties: true } }
         disclaimer: { type: string }
+    PersistentCase:
+      type: object
+      required: [id, caseNumber, title, description, fraudType, reportedAmount, status, priority, investigationAuthorizationStatus, createdAt, updatedAt]
+      properties:
+        id: { type: string }
+        caseNumber: { type: string }
+        title: { type: string }
+        description: { type: string }
+        fraudType: { type: string }
+        reportedAmount: { type: string }
+        status: { type: string, enum: [OPEN, IN_PROGRESS, ON_HOLD, CLOSED, ARCHIVED] }
+        priority: { type: string }
+        investigationAuthorizationStatus: { type: string, enum: [PENDING, APPROVED, REJECTED] }
+        createdBy: { type: [string, "null"] }
+        assignedTo: { type: [string, "null"] }
+        closedAt: { type: [string, "null"], format: date-time }
+        createdAt: { type: string, format: date-time }
+        updatedAt: { type: string, format: date-time }
+    PersistentCaseInput:
+      type: object
+      required: [caseNumber, title, description, fraudType, reportedAmount]
+      properties:
+        caseNumber: { type: string }
+        title: { type: string }
+        description: { type: string }
+        fraudType: { type: string }
+        reportedAmount: { type: string }
+        priority: { type: string }
+    PersistentCasePatch:
+      type: object
+      properties:
+        title: { type: string }
+        description: { type: string }
+        priority: { type: string }
+        status: { type: string, enum: [OPEN, IN_PROGRESS, ON_HOLD, CLOSED, ARCHIVED] }
+        assignedTo: { type: [string, "null"] }
+        investigationAuthorizationStatus: { type: string, enum: [PENDING, APPROVED, REJECTED] }
+    PersistentInvestigation:
+      type: object
+      required: [id, caseId, status, investigationDepth, createdAt, updatedAt]
+      properties:
+        id: { type: string }
+        caseId: { type: string }
+        status: { type: string, enum: [CREATED, AUTHORIZED, RUNNING, COMPLETED, PARTIAL, FAILED, CANCELLED] }
+        chain: { type: [string, "null"] }
+        walletAddress: { type: [string, "null"] }
+        investigationDepth: { type: number }
+        startTime: { type: [string, "null"], format: date-time }
+        endTime: { type: [string, "null"], format: date-time }
+        createdBy: { type: [string, "null"] }
+        createdAt: { type: string, format: date-time }
+        updatedAt: { type: string, format: date-time }
+    InvestigationInput:
+      type: object
+      required: [caseId]
+      properties:
+        caseId: { type: string }
+        chain: { type: string }
+        walletAddress: { type: string }
+        investigationDepth: { type: number, minimum: 1, maximum: 10 }
+        startTime: { type: string, format: date-time }
+        endTime: { type: string, format: date-time }
+    InvestigationTransitionInput:
+      type: object
+      required: [status]
+      properties:
+        status: { type: string, enum: [AUTHORIZED, RUNNING, COMPLETED, PARTIAL, FAILED, CANCELLED] }
+    WalletInvestigationInput:
+      allOf:
+        - $ref: "#/components/schemas/InvestigationInput"
+        - type: object
+          required: [chain, walletAddress]
+          properties:
+            label: { type: string, enum: [REPORTED, SUSPECT, SUBJECT, OBSERVED, UNKNOWN] }
+    WalletSubject:
+      type: object
+      required: [id, caseId, investigationId, chain, walletAddress, label, createdAt]
+      properties:
+        id: { type: string }
+        caseId: { type: string }
+        investigationId: { type: string }
+        chain: { type: string }
+        walletAddress: { type: string }
+        label: { type: string }
+        createdAt: { type: string, format: date-time }
+    WalletInvestigationResult:
+      type: object
+      required: [investigation, walletSubject]
+      properties:
+        investigation: { $ref: "#/components/schemas/PersistentInvestigation" }
+        walletSubject: { $ref: "#/components/schemas/WalletSubject" }
+    ProviderProvenance:
+      type: object
+      required: [sourceType, provider, retrievedAt, method]
+      properties:
+        sourceType: { type: string }
+        provider: { type: string }
+        sourceReference: { type: string }
+        rawReference: { type: string }
+        retrievedAt: { type: string, format: date-time }
+        method: { type: string }
+    NormalizedWallet:
+      type: object
+      required: [id, address, chain, createdAt, provenance]
+      properties:
+        id: { type: string }
+        address: { type: string }
+        chain: { type: string }
+        balance: { type: string }
+        balanceUnit: { type: string }
+        createdAt: { type: string, format: date-time }
+        provenance: { $ref: "#/components/schemas/ProviderProvenance" }
+    NormalizedTransaction:
+      type: object
+      required: [id, chain, transactionHash, createdAt, inputs, outputs, provenance]
+      properties:
+        id: { type: string }
+        chain: { type: string }
+        transactionHash: { type: string }
+        timestamp: { type: string, format: date-time }
+        blockNumber: { type: string }
+        blockHash: { type: string }
+        confirmations: { type: number }
+        from: { type: string }
+        to: { type: string }
+        value: { type: string }
+        fee: { type: string }
+        executionStatus: { type: string }
+        inputs: { type: array, items: { type: object, additionalProperties: true } }
+        outputs: { type: array, items: { type: object, additionalProperties: true } }
+        provenance: { $ref: "#/components/schemas/ProviderProvenance" }
+    NormalizedTransactionBundle:
+      type: object
+      required: [provider, transaction, tokenTransfers, contractInteractions]
+      properties:
+        provider: { type: string }
+        transaction: { $ref: "#/components/schemas/NormalizedTransaction" }
+        tokenTransfers: { type: array, items: { type: object, additionalProperties: true } }
+        contractInteractions: { type: array, items: { type: object, additionalProperties: true } }
+    LiveWalletResult:
+      type: object
+      required: [provider, transactions, tokenTransfers, internalTransactions, capabilities]
+      properties:
+        provider: { type: string }
+        wallet: { oneOf: [{ $ref: "#/components/schemas/NormalizedWallet" }, { type: "null" }] }
+        transactions: { type: array, items: { type: object, additionalProperties: true } }
+        tokenTransfers: { type: array, items: { type: object, additionalProperties: true } }
+        internalTransactions: { type: array, items: { type: object, additionalProperties: true } }
+        capabilities: { type: object, additionalProperties: { type: boolean } }
+    CollectionResult:
+      type: object
+      required: [investigationId, status, provider, transactionCount, tokenTransferCount]
+      properties:
+        investigationId: { type: string }
+        status: { type: string }
+        provider: { type: string }
+        transactionCount: { type: number }
+        tokenTransferCount: { type: number }
+    PersistentEvidence:
+      type: object
+      required: [id, subjectType, subjectId, evidenceType, sourceType, createdAt]
+      properties:
+        id: { type: string }
+        caseId: { type: [string, "null"] }
+        investigationId: { type: [string, "null"] }
+        subjectType: { type: string }
+        subjectId: { type: string }
+        evidenceType: { type: string }
+        sourceType: { type: string }
+        provider: { type: [string, "null"] }
+        sourceReference: { type: [string, "null"] }
+        sourceUrl: { type: [string, "null"] }
+        observedAt: { type: [string, "null"], format: date-time }
+        collectedAt: { type: [string, "null"], format: date-time }
+        method: { type: [string, "null"] }
+        confidence: { type: [number, "null"], minimum: 0, maximum: 1 }
+        rawReference: { type: [string, "null"] }
+        contentHash: { type: [string, "null"] }
+        description: { type: [string, "null"] }
+        createdBy: { type: [string, "null"] }
+        createdAt: { type: string, format: date-time }
+    EvidenceInput:
+      type: object
+      required: [caseId, subjectType, subjectId, evidenceType, sourceType]
+      properties:
+        caseId: { type: string }
+        investigationId: { type: [string, "null"] }
+        subjectType: { type: string }
+        subjectId: { type: string }
+        evidenceType: { type: string, enum: [BLOCKCHAIN_FACT, TRANSACTION, ADDRESS_LABEL, ENTITY_MATCH, VASP_MATCH, GRAPH_RELATION, RISK_INDICATOR, DOCUMENT, OSINT, OTHER] }
+        sourceType: { type: string, enum: [SYNTHETIC, API, RPC, DATASET, INFERENCE, OTHER, USER_PROVIDED] }
+        provider: { type: [string, "null"] }
+        sourceReference: { type: [string, "null"] }
+        sourceUrl: { type: [string, "null"] }
+        observedAt: { type: [string, "null"], format: date-time }
+        collectedAt: { type: [string, "null"], format: date-time }
+        method: { type: [string, "null"] }
+        confidence: { type: [number, "null"], minimum: 0, maximum: 1 }
+        rawReference: { type: [string, "null"] }
+        contentHash: { type: [string, "null"] }
+        description: { type: [string, "null"] }
+    AuditEvent:
+      type: object
+      required: [id, action, resourceType, result, metadata, createdAt]
+      properties:
+        id: { type: string }
+        caseId: { type: [string, "null"] }
+        actorId: { type: [string, "null"] }
+        action: { type: string }
+        resourceType: { type: string }
+        resourceId: { type: [string, "null"] }
+        requestId: { type: [string, "null"] }
+        result: { type: string, enum: [SUCCESS, DENIED, FAILURE] }
+        metadata: { type: object, additionalProperties: true }
+        createdAt: { type: string, format: date-time }
+    GraphEvidence:
+      type: object
+      required: [transactionHash, method, derivationSourceType]
+      properties:
+        transactionHash: { type: string }
+        provider: { type: [string, "null"] }
+        sourceReference: { type: [string, "null"] }
+        rawReference: { type: [string, "null"] }
+        retrievedAt: { type: [string, "null"], format: date-time }
+        method: { type: string }
+        derivationSourceType: { type: string, enum: [API, INFERENCE] }
+    InvestigationGraphNode:
+      type: object
+      required: [id, chain, address, nodeType]
+      properties:
+        id: { type: string }
+        chain: { type: string }
+        address: { type: string }
+        nodeType: { type: string, enum: [EOA, ADDRESS, CONTRACT, UNKNOWN] }
+        firstSeen: { type: [string, "null"], format: date-time }
+        lastSeen: { type: [string, "null"], format: date-time }
+    InvestigationGraphEdge:
+      type: object
+      required: [id, chain, transactionHash, fromAddress, toAddress, relationshipType, asset, amount, evidence]
+      properties:
+        id: { type: string }
+        chain: { type: string }
+        transactionHash: { type: string }
+        fromAddress: { type: string }
+        toAddress: { type: string }
+        relationshipType: { type: string, enum: [TRANSFER, TOKEN_TRANSFER, INTERNAL_TRANSFER, CONTRACT_INTERACTION, UTXO_SPEND] }
+        asset: { type: string }
+        amount: { type: string }
+        tokenContract: { type: [string, "null"] }
+        timestamp: { type: [string, "null"], format: date-time }
+        blockNumber: { type: [string, "null"] }
+        status: { type: [string, "null"] }
+        evidence: { $ref: "#/components/schemas/GraphEvidence" }
+    InvestigationGraphPath:
+      type: object
+      required: [rank, nodes, edgeIds, hopCount, evidenceComplete]
+      properties:
+        rank: { type: number, minimum: 1 }
+        nodes: { type: array, items: { type: object, required: [chain, address], properties: { chain: { type: string }, address: { type: string } } } }
+        edgeIds: { type: array, items: { type: string } }
+        hopCount: { type: number, minimum: 0 }
+        evidenceComplete: { type: boolean }
+    InvestigationGraph:
+      type: object
+      required: [status, nodes, edges, paths, metadata, limitsApplied, evidenceReferences]
+      properties:
+        status: { type: string, enum: [OK, INSUFFICIENT_DATA] }
+        nodes: { type: array, items: { $ref: "#/components/schemas/InvestigationGraphNode" } }
+        edges: { type: array, items: { $ref: "#/components/schemas/InvestigationGraphEdge" } }
+        paths: { type: array, items: { $ref: "#/components/schemas/InvestigationGraphPath" } }
+        metadata: { type: object, additionalProperties: true }
+        limitsApplied: { type: object, additionalProperties: true }
+        evidenceReferences: { type: array, items: { $ref: "#/components/schemas/GraphEvidence" } }
+    AddressIntelligenceObservation:
+      type: object
+      required: [id, chain, address, entityType, source, retrievedAt, freshnessStatus, confidence, status]
+      properties:
+        id: { type: string }
+        chain: { type: string }
+        address: { type: string }
+        label: { type: [string, "null"] }
+        entityName: { type: [string, "null"] }
+        entityType: { type: string, enum: [EXCHANGE, VASP, CUSTODIAL_SERVICE, DEX, BRIDGE, MIXER, MINING_POOL, DEFI, SCAM, PHISHING, SANCTIONED_ENTITY, OTHER, UNKNOWN] }
+        source: { type: string }
+        sourceReference: { type: [string, "null"] }
+        sourceUrl: { type: [string, "null"] }
+        datasetName: { type: [string, "null"] }
+        datasetVersion: { type: [string, "null"] }
+        license: { type: [string, "null"] }
+        retrievedAt: { type: string, format: date-time }
+        freshnessStatus: { type: string, enum: [FRESH, STALE, EXPIRED, UNKNOWN] }
+        confidence: { type: number, minimum: 0, maximum: 1 }
+        status: { type: string, enum: [UNKNOWN, ACTIVE, STALE, CONFLICTING, REVIEW_REQUIRED] }
+    AddressIntelligenceLookup:
+      type: object
+      required: [status, observations, conflicts]
+      properties:
+        status: { type: string, enum: [SUCCESS, NOT_CONFIGURED, UNAVAILABLE] }
+        observations: { type: array, items: { $ref: "#/components/schemas/AddressIntelligenceObservation" } }
+        conflicts: { type: array, items: { type: object, additionalProperties: true } }
+    ClusterRunInput:
+      type: object
+      properties: { max_transactions: { type: integer, minimum: 1, maximum: 100, default: 50 } }
+    ClusterInference:
+      type: object
+      required: [id, chain, clusterKey, method, methodVersion, confidenceLevel, numericScore, reviewStatus, evidence, members]
+      properties:
+        id: { type: string }
+        clusterKey: { type: string }
+        chain: { type: string, enum: [BITCOIN] }
+        method: { type: string }
+        methodVersion: { type: string }
+        confidenceLevel: { type: string, enum: [UNKNOWN, POSSIBLE, LIKELY] }
+        numericScore: { type: number, minimum: 0, maximum: 100 }
+        reviewStatus: { type: string, enum: [PENDING_REVIEW, ACCEPTED, REJECTED] }
+        ambiguityReason: { type: [string, "null"] }
+        evidence: { type: array, items: { type: object, additionalProperties: true } }
+        members: { type: array, items: { type: object, additionalProperties: true } }
+    ClusterRunResult:
+      type: object
+      required: [status, analyzedTransactions, inferences, truncated]
+      properties:
+        status: { type: string, enum: [OK, INSUFFICIENT_DATA] }
+        analyzedTransactions: { type: integer }
+        inferences: { type: array, items: { $ref: "#/components/schemas/ClusterInference" } }
+        truncated: { type: boolean }
+    VaspAnalysisInput:
+      type: object
+      properties:
+        max_addresses: { type: integer, minimum: 1, maximum: 250, default: 100 }
+        max_candidates: { type: integer, minimum: 1, maximum: 250, default: 50 }
+    AttributionEvidence:
+      type: object
+      required: [category, evidenceType, subjectType, subjectId, polarity, contribution, method, methodVersion]
+      properties:
+        category: { type: string, enum: [DIRECT_BLOCKCHAIN_FACT, GRAPH_EVIDENCE, ADDRESS_INTELLIGENCE, CLUSTER_INFERENCE, ABUSE_INTELLIGENCE, SOURCE_AGREEMENT, SOURCE_QUALITY] }
+        evidenceType: { type: string }
+        subjectType: { type: string }
+        subjectId: { type: string }
+        polarity: { type: string, enum: [SUPPORTING, NEGATIVE, CONTRADICTORY] }
+        contribution: { type: number }
+        source: { type: [string, "null"] }
+        sourceReference: { type: [string, "null"] }
+        sourceUrl: { type: [string, "null"] }
+        retrievedAt: { type: [string, "null"], format: date-time }
+        method: { type: string }
+        methodVersion: { type: string }
+        rawReference: { type: [string, "null"] }
+        details: { type: object, additionalProperties: true }
+    VaspCandidate:
+      type: object
+      required: [id, chain, address, entityType, confidenceLevel, numericScore, status, reason, contradictions, method, methodVersion, evidence]
+      properties:
+        id: { type: string }
+        chain: { type: string }
+        address: { type: string }
+        entityName: { type: [string, "null"] }
+        entityType: { type: string }
+        confidenceLevel: { type: string, enum: [UNKNOWN, POSSIBLE, LIKELY, CONFIRMED] }
+        numericScore: { type: number, minimum: 0, maximum: 100 }
+        status: { type: string, enum: [PENDING_REVIEW, CONFLICTING_EVIDENCE, INSUFFICIENT_EVIDENCE, CONFIRMED_BY_REVIEW] }
+        reason: { type: string }
+        contradictions: { type: array, items: { type: object, additionalProperties: true } }
+        method: { type: string }
+        methodVersion: { type: string }
+        evidence: { type: array, items: { $ref: "#/components/schemas/AttributionEvidence" } }
+    VaspAnalysisResult:
+      type: object
+      required: [status, candidates, truncated]
+      properties:
+        status: { type: string, enum: [OK, INSUFFICIENT_EVIDENCE] }
+        candidates: { type: array, items: { $ref: "#/components/schemas/VaspCandidate" } }
+        truncated: { type: boolean }
+    AttributionReviewInput:
+      type: object
+      required: [decision]
+      properties:
+        decision: { type: string, enum: [ACCEPTED, REJECTED, CONFIRMED] }
+        rationale: { type: [string, "null"], minLength: 3, maxLength: 4000 }
+    AttributionReview:
+      type: object
+      required: [id, caseId, investigationId, candidateId, reviewerId, decision, createdAt]
+      properties:
+        id: { type: string }
+        caseId: { type: string }
+        investigationId: { type: string }
+        candidateId: { type: string }
+        reviewerId: { type: string }
+        decision: { type: string, enum: [ACCEPTED, REJECTED, CONFIRMED] }
+        rationale: { type: [string, "null"] }
+        createdAt: { type: string, format: date-time }
+    RiskIndicator:
+      type: object
+      required: [id, caseId, investigationId, indicatorType, category, severity, scoreContribution, scoreSemantics, method, methodVersion, provenance, createdAt]
+      properties:
+        id: { type: string, format: uuid }
+        caseId: { type: string, format: uuid }
+        investigationId: { type: string, format: uuid }
+        indicatorType: { type: string }
+        category: { type: string }
+        severity: { type: string, enum: [LOW, MEDIUM, HIGH, CRITICAL] }
+        scoreContribution: { type: number }
+        scoreSemantics: { type: string, enum: [HEURISTIC_SCORE_NOT_PROBABILITY] }
+        confidenceLevel: { type: [string, "null"] }
+        evidence: { type: array, items: { type: object, additionalProperties: true } }
+        provenance: { type: object, additionalProperties: true }
+        method: { type: string }
+        methodVersion: { type: string }
+        createdAt: { type: string, format: date-time }
+    RiskAnalysisRun:
+      type: object
+      required: [run, indicators, typologies, scoreSemantics]
+      properties:
+        run: { type: object, additionalProperties: true }
+        indicators: { type: array, items: { $ref: "#/components/schemas/RiskIndicator" } }
+        typologies: { type: array, items: { type: object, additionalProperties: true } }
+        scoreSemantics: { type: string, enum: [HEURISTIC_SCORE_NOT_PROBABILITY] }
+    GraphFeatureRunInput:
+      type: object
+      additionalProperties: false
+      properties: { max_edges: { type: integer, minimum: 1, maximum: 10000, default: 10000 } }
+    GraphFeatureRun:
+      type: object
+      required: [features, edgeCount, method, methodVersion, maxEdges]
+      properties:
+        features: { type: array, items: { type: object, additionalProperties: true } }
+        edgeCount: { type: integer }
+        method: { type: string }
+        methodVersion: { type: string }
+        maxEdges: { type: integer }
+    CommunityRunInput:
+      type: object
+      additionalProperties: false
+      properties:
+        max_nodes: { type: integer, minimum: 1, maximum: 10000, default: 10000 }
+        max_edges: { type: integer, minimum: 1, maximum: 10000, default: 10000 }
+        max_runtime_ms: { type: integer, minimum: 100, maximum: 5000, default: 5000 }
+        max_communities: { type: integer, minimum: 1, maximum: 500, default: 100 }
+    CommunityRun:
+      type: object
+      required: [run, communities, totalNodes, totalEdges, limits]
+      properties:
+        run: { type: object, additionalProperties: true }
+        communities: { type: array, items: { type: object, additionalProperties: true } }
+        totalNodes: { type: integer }
+        totalEdges: { type: integer }
+        limits: { type: object, additionalProperties: true }
+    DefiMevAnalysis:
+      type: object
+      required: [interactions, mev, historicalOnly, disclaimer]
+      properties:
+        interactions: { type: array, items: { type: object, additionalProperties: true } }
+        mev: { type: object, additionalProperties: true }
+        historicalOnly: { type: boolean, const: true }
+        disclaimer: { type: string }
+    ForensicReportInput:
+      type: object
+      additionalProperties: false
+      properties:
+        report_type: { type: string, enum: [INVESTIGATION_SUMMARY, RISK_ASSESSMENT, GRAPH_ANALYSIS, FULL_FORENSIC], default: INVESTIGATION_SUMMARY }
+    ForensicReport:
+      type: object
+      required: [id, caseId, investigationId, reportType, content, methodVersions, createdAt]
+      properties:
+        id: { type: string, format: uuid }
+        caseId: { type: string, format: uuid }
+        investigationId: { type: string, format: uuid }
+        reportType: { type: string }
+        content: { type: object, additionalProperties: true }
+        methodVersions: { type: object, additionalProperties: { type: string } }
+        createdAt: { type: string, format: date-time }
 

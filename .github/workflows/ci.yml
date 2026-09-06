@@ -1,0 +1,133 @@
+name: CASHNET CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: cashnet_test
+          POSTGRES_USER: cashnet
+          POSTGRES_PASSWORD: test_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U cashnet"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.19.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm -r --if-present run lint
+
+      - name: Typecheck
+        run: pnpm run typecheck
+
+      - name: Test
+        run: pnpm -r --if-present run test
+        env:
+          DATABASE_URL: postgres://cashnet:test_password@localhost:5432/cashnet_test
+          # Disposable CI-only PostgreSQL compatibility service; production
+          # deployments use Supabase URLs injected by their secret manager.
+          CASHNET_MIGRATION_DATABASE_URL: postgres://cashnet:test_password@localhost:5432/cashnet_test
+          CASHNET_DATABASE_TEST_MODE: disposable-postgres
+          NODE_ENV: test
+
+      - name: Generate and validate OpenAPI clients
+        run: pnpm --filter @workspace/api-spec run codegen
+
+      - name: Build
+        run: pnpm --filter @workspace/api-server run build
+
+      # This is deliberately the same baseline-plus-ledger runner used by
+      # CASHNET deployments. Do not replace it with a loop over SQL files.
+      - name: Migrate clean PostgreSQL database
+        run: pnpm --filter @workspace/db run migrate
+        env:
+          DATABASE_URL: postgres://cashnet:test_password@localhost:5432/cashnet_test
+          CASHNET_MIGRATION_DATABASE_URL: postgres://cashnet:test_password@localhost:5432/cashnet_test
+          CASHNET_DATABASE_TEST_MODE: disposable-postgres
+          NODE_ENV: test
+
+      - name: Prove migration idempotency
+        run: pnpm --filter @workspace/db run migrate
+        env:
+          DATABASE_URL: postgres://cashnet:test_password@localhost:5432/cashnet_test
+          CASHNET_MIGRATION_DATABASE_URL: postgres://cashnet:test_password@localhost:5432/cashnet_test
+          CASHNET_DATABASE_TEST_MODE: disposable-postgres
+          NODE_ENV: test
+
+      - name: Git check
+        run: git diff --check
+
+  security:
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.19.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # High and critical vulnerabilities are release blockers. Low/moderate
+      # advisory noise is deliberately outside this mandatory gate.
+      - name: Dependency audit (high/critical policy)
+        run: pnpm audit --audit-level=high
+
+      - name: Reject hardcoded secrets
+        run: |
+          # Unit fixtures intentionally use inert strings such as "configured";
+          # scan deployable source, not test data.
+          if git grep -nI -E '(API[_-]?KEY|SECRET|PASSWORD|TOKEN)[[:space:]]*[:=][[:space:]]*"[^"[:space:]]{10,}"' -- Dockerfile docker-compose.yml .github artifacts lib scripts ':(exclude)*.test.ts'; then
+            echo "Potential hardcoded secret detected. Use server environment configuration instead."
+            exit 1
+          fi
+
+  container:
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build container
+        run: docker build -t cashnet:ci .
+
+      - name: Container scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: cashnet:ci
+          format: table
+          severity: CRITICAL,HIGH
+          exit-code: '1'

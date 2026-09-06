@@ -1,0 +1,11 @@
+import { Router, type IRouter } from "express";
+import { z } from "zod";
+
+const evidenceCreation = z.object({ caseId: z.string().uuid(), investigationId: z.string().uuid().nullable().optional(), subjectType: z.string().min(1).max(100), subjectId: z.string().min(1).max(500), evidenceType: z.enum(["BLOCKCHAIN_FACT", "TRANSACTION", "ADDRESS_LABEL", "ENTITY_MATCH", "VASP_MATCH", "GRAPH_RELATION", "RISK_INDICATOR", "DOCUMENT", "OSINT", "OTHER"]), sourceType: z.enum(["SYNTHETIC", "API", "RPC", "DATASET", "INFERENCE", "OTHER", "USER_PROVIDED"]), provider: z.string().min(1).max(200).nullable().optional(), sourceReference: z.string().min(1).max(2000).nullable().optional(), sourceUrl: z.string().url().nullable().optional(), observedAt: z.string().datetime().nullable().optional(), collectedAt: z.string().datetime().nullable().optional(), method: z.string().min(1).max(200).nullable().optional(), confidence: z.number().min(0).max(1).nullable().optional(), rawReference: z.string().min(1).max(2000).nullable().optional(), contentHash: z.string().regex(/^[a-f0-9]{64}$/i).nullable().optional(), description: z.string().min(1).max(10000).nullable().optional() }).strict();
+const router: IRouter = Router();
+const getContext = async () => (await import("../../services/persistent-context")).getPersistentContext();
+
+router.post("/", async (req, res) => { const context = await getContext(); const actor = await context.authenticate.authenticate(req); const input = evidenceCreation.parse(req.body); res.status(201).json(await context.evidence.create(actor, { ...input, investigationId: input.investigationId ?? null, provider: input.provider ?? null, sourceReference: input.sourceReference ?? null, sourceUrl: input.sourceUrl ?? null, observedAt: input.observedAt ?? null, collectedAt: input.collectedAt ?? new Date().toISOString(), method: input.method ?? null, confidence: input.confidence ?? null, rawReference: input.rawReference ?? null, contentHash: input.contentHash ?? null, description: input.description ?? null }, String(req.id))); });
+router.get("/:id", async (req, res) => { const context = await getContext(); const actor = await context.authenticate.authenticate(req); res.json(await context.evidence.get(actor, req.params.id, String(req.id))); });
+
+export default router;

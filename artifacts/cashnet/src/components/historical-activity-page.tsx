@@ -4,7 +4,7 @@ import "leaflet.heat";
 import "leaflet/dist/leaflet.css";
 import { CircleMarker, MapContainer, Popup, TileLayer, useMap } from "react-leaflet";
 import { Download, Search, ShieldAlert } from "lucide-react";
-import { getBackendBase } from "@/lib/api-url";
+// import { getBackendBase } from "@/lib/api-url";
 
 type Txn = { id: string; caseId: string; transactionId: string; amount: number; timestamp: string; latitude: number; longitude: number; state: string; district: string; city: string; pincode: string; locationType: string; riskScore: number; riskCategory: string; fraudType: string; dataSource: "SYNTHETIC" };
 type Poi = { id: string; name: string; bankName: string; latitude: number; longitude: number; city: string; dataSource: "SYNTHETIC" };

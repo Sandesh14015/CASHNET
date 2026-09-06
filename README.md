@@ -1,69 +1,193 @@
 # CASHNET
 
-CASHNET is a synthetic-data cybercrime financial intelligence platform for authorized investigators. It starts with a scam report and connects complaint indicators, account analysis, transactions, multi-hop fund flow, crypto tracing, VASP attribution, risk, geospatial prediction, ATM cash-out hotspots, intervention review, audit, and reporting.
+**Evidence-driven multi-chain blockchain investigation and VASP intelligence platform for SIH PS26182/26183.** CASHNET is an investigator-facing TypeScript workspace that preserves a deterministic synthetic demonstration while adding a protected, server-side foundation for authorized Ethereum, Bitcoin, and TRON collection. It records provenance, isolates case data, and separates observed facts from future analytical inference or attribution.
 
-All seeded intelligence is clearly marked **SYNTHETIC** or **MODEL_INFERENCE**. The application does not access NCRP, SAHYOG, bank systems, UPI, VASP systems, or government systems.
+> Current release: **Phase 6 corrective follow-up, operationally conditional.** CASHNET has protected Phase 3–6 checkpoints and real controlled PostgreSQL-backed API execution, but it is not yet production-ready: direct migration replay, backup/restore, container and CI evidence, authorised live-provider execution, approved label data, and independent accuracy evidence remain required.
 
-## Project structure
+## SIH mapping and current scope
+
+- **PS26182/26183:** case-led financial and blockchain investigation workflows: intake, authorization, evidence, normalized chain facts, audit, and reporting boundaries.
+- **Implemented:** synthetic investigator workflow; PostgreSQL persistence, RBAC, case isolation, investigation/evidence/audit records; authorized provider adapters; bounded graph tracing; conservative clustering; governed address intelligence; AML/risk, historical DeFi/MEV, reporting, and production-auth foundations.
+- **Out of scope / pending external governance:** PS184, real-time mempool monitoring, unapproved label data, automated identity attribution, and independent accuracy calibration.
+
+## Architecture
 
 ```text
-artifacts/cashnet/        React + TypeScript investigator application
-artifacts/api-server/    Express API and synthetic analytical provider
-lib/api-spec/             OpenAPI source contract
-lib/api-client-react/     Generated React Query client
-lib/api-zod/              Generated validation schemas
-lib/db/                   Optional Drizzle/PostgreSQL package
-database/                 Portable schema and seed notes
-docs/                     Architecture and provider replacement notes
+React investigator UI ── generated React Query client ─┐
+                                                        ▼
+Legacy /api/* synthetic routes        /api/v1 Express API
+  (preserved)                                  │
+                                               ▼
+                              development authentication + RBAC
+                                               │
+                                               ▼
+                              case authorization + investigation service
+                                               │
+                                               ▼
+                           BlockchainService → ProviderRouter
+                                  │       ┌──────┼───────────┐
+                                  │       ▼      ▼           ▼
+                                  │ Etherscan  Esplora    TronGrid
+                                  │     V2      Bitcoin      TRON
+                                  ▼
+                raw response → normalization → repositories → PostgreSQL
+                                                   │
+                                                   ▼
+                                        evidence/provenance/audit
 ```
 
-## Setup and run locally
+See [docs/architecture-current.md](docs/architecture-current.md) for the full diagrams and [docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md) for status.
+
+## Supported chains and providers
+
+| Chain | Provider | Status | Current facts |
+| --- | --- | --- | --- |
+| Ethereum | Etherscan V2 | Implemented; live credentials pending | profile, normal/internal transactions, ERC-20 transfers, transaction/block lookup, contract-call metadata where supplied |
+| Bitcoin | Blockstream Esplora-compatible endpoint | Implemented; endpoint pending | profile/history, transaction details, vin/vout, fee, confirmation and UTXO semantics |
+| TRON | TronGrid | Implemented; live credentials pending | account activity, transaction lookup, TRX fields and TRC-20 transfers |
+| BNB Chain | BscScan | Implemented; live credentials pending | profile, normal/internal transactions, BEP-20 transfers and transaction/block lookup |
+| Polygon | PolygonScan | Implemented; live credentials pending | profile, normal/internal transactions, ERC-20 transfers and transaction/block lookup |
+| Solana | Approved JSON-RPC endpoint | Implemented; live endpoint pending | account profile, signatures, transactions, SOL/SPL transfers, slots and instruction provenance |
+
+## Modules and structure
+
+| Path | Responsibility |
+| --- | --- |
+| `artifacts/cashnet` | Existing React/TypeScript investigator UI; currently uses legacy synthetic APIs. |
+| `artifacts/api-server` | Express API, services, RBAC, adapters, repositories, normalized schemas, and tests. |
+| `lib/api-spec` | OpenAPI source and Orval generation configuration. |
+| `lib/api-client-react` / `lib/api-zod` | Generated React Query client and Zod contracts. |
+| `lib/db` / `database` | Drizzle exports, migration runner, baseline schema, and additive migrations. |
+| `docs` | Architecture, decisions, status, provider, and reference-repository records. |
+
+```text
+CASHNET/
+├── artifacts/                 # UI and Express API applications
+├── database/                  # portable baseline + Phase 1–3 migrations
+├── docs/                      # architecture and operational documentation
+├── lib/                       # OpenAPI, generated contracts, Drizzle package
+├── .github/                   # CI and repository templates
+├── CASHNET_COMPLETE_PROJECT_HISTORY.txt
+└── .env.example
+```
+
+The eight reference checkouts are local, ignored `references/` directories. They are not vendored code, packages, or Git submodules.
+
+## Setup
+
+Requirements: Node.js 22, pnpm 11.19.0, and an approved PostgreSQL instance for persistent routes. Docker Compose is provided for development/staging, but its container execution remains a separate validation gate.
 
 ```bash
-pnpm install
-pnpm --filter @workspace/api-server run dev
-# in another terminal
-PORT=4173 BASE_PATH=/ pnpm --filter @workspace/cashnet run dev
+pnpm install --frozen-lockfile
+pnpm run typecheck
+pnpm -r --if-present run test
 ```
 
-The Replit workflows already start both services with the correct ports and routing. The UI calls `/api` through the shared route.
+### Synthetic mode
 
-## Environment variables
+Synthetic mode is the default and needs no database or provider credential.
 
-Copy `.env.example` to `.env` when running outside Replit. Synthetic mode needs no API keys. Set `CASHNET_DATA_MODE=synthetic` to make the default explicit. Supabase and external provider variables are reserved for authorized future adapters; never expose service-role keys to the browser.
+```bash
+cp .env.example .env
+pnpm --filter @workspace/api-server run dev
+# separately:
+pnpm --filter @workspace/cashnet run dev
+```
 
-## Supabase setup
+### Supabase PostgreSQL and migrations
 
-The MVP uses an in-memory synthetic provider so it remains functional without Supabase. For a deployment that needs persistence, create a Supabase project, enable Auth and Storage, apply `database/schema.sql` to its PostgreSQL database, configure `SUPABASE_URL` and `SUPABASE_ANON_KEY` on the server, and keep `SUPABASE_SERVICE_ROLE_KEY` server-only. Add RLS policies before importing any real data. Do not mix user-provided/API records with synthetic records without retaining `source_type`.
+Supabase PostgreSQL is CASHNET's sole authoritative runtime database. A local
+Windows PostgreSQL service, pgAdmin, and a local PostgreSQL Docker container
+are not required for normal development or deployment. Configure both URLs
+only in the deployment secret manager or an ignored local environment file:
 
-## Synthetic demo access
+- `DATABASE_URL`: least-privilege `cashnet` application login. Use Supabase's
+  direct URL for persistent backends when IPv6 (or the IPv4 add-on) is
+  available; otherwise use Supavisor **session** mode.
+- `CASHNET_MIGRATION_DATABASE_URL`: privileged Supabase direct URL for role
+  provisioning, the ledger-backed migration runner, `pg_dump`, and restore.
+  Use Supavisor session mode only when direct IPv6 is unavailable.
 
-The default demo is intentionally open in synthetic mode so reviewers can run the workflow without credentials:
+Both URLs must use `sslmode=verify-full` and the CA PEM referenced by
+`CASHNET_SUPABASE_CA_CERT_PATH`; CASHNET verifies both the certificate chain
+and Supabase hostname. They must never point to
+`localhost`. Provision the initial `cashnet` login once, then apply the
+ledger-backed migrations:
 
-- Investigator: `demo.investigator`
-- Role: `INVESTIGATOR`
-- Case: `CASE-CASHNET-001`
-- Report reference: `NCRP-SYN-260818-001`
+```bash
+pnpm --filter @workspace/db run provision-application-role
+pnpm --filter @workspace/db run migrate
+```
 
-## Main workflow
+The bootstrap command creates `cashnet` only if absent and never changes an
+existing role's password or attributes. The Phase 6 provisioning migration
+grants explicit repository-required access and keeps `audit_events`
+append-only (read/insert only). Never put either URL in the repository or shell
+history. See [Supabase database operations](docs/supabase-database-operations.md).
 
-Open a case from the Cases screen, inspect the complaint, run analysis, open Fund flow, press Play to follow timestamp order, and select the `FIAT → CRYPTO CONVERSION` event. The seeded event is **18 Aug 2026 · 10:11 UTC** at VASP Alpha. Continue to Geo & prediction for ranked predicted ATM locations, then prepare and explicitly approve the intervention. Reports include the same case results and the disclaimer: “Analytical prediction — requires investigator validation.”
+For local v1 testing only, enable `CASHNET_DEV_AUTH_ENABLED=true` outside production and send `X-Cashnet-Dev-Actor` for a seeded development user. This is deliberately disabled in production.
 
-## Major modules
+Production JWT authentication additionally rejects all reserved `demo.*` fixture identities before database role lookup. Provision a distinct managed identity for every production administrator; see [docs/production-identity-operations.md](docs/production-identity-operations.md).
 
-- **Complaint / Cases:** report ingestion with indicators and masked identifiers.
-- **Financial intelligence:** linked account inflow/outflow, velocity, fan-in/fan-out, and explainable risk indicators.
-- **Fund flow:** relationship graph and synchronized timestamp timeline, including fiat-to-crypto and crypto-to-bank conversion edges.
-- **Crypto / VASP:** wallet balances, chains, counterparties, VASP candidates, confidence, classification, and evidence.
-- **Risk:** transparent analytical baseline with score, category, confidence, features, and model version.
-- **Geo & prediction:** synthetic India coordinates, ATM/branch proximity, historical behavior features, ranked hotspots, probability, time window, and contributing factors.
-- **Action / intervention:** latest credited account, synthetic bank/IFSC/branch resolution, draft → review → explicit approval. No automatic freeze, debit, seizure, contact, or submission is performed.
-- **Audit / reports:** user actions and evidence-backed report sections with provenance labels.
+### Docker Compose development/staging
 
-## Known limitations
+Compose contains only the CASHNET migrator and API. It connects to Supabase;
+it does not start, publish, or depend on a local PostgreSQL container or
+volume. The one-shot migrator must complete before the API starts.
 
-The default server store is process-local and resets on restart. The map is rendered as a synthetic analytical surface rather than live map tiles. Kafka, Elasticsearch/Kibana, Supabase, banking APIs, blockchain APIs, and VASP APIs are interfaces/configuration points only. Predictions are a transparent baseline, not a validated operational model. Synthetic identifiers are not real accounts or ownership claims.
+```bash
+# Inject both Supabase URLs through the deployment secret manager or ignored .env.
+docker compose up --build
+```
 
-## Replacing synthetic providers
+Compose runs the ledger-backed `@workspace/db` role bootstrap and migration job.
+The API starts only after that job exits successfully. Database backups and
+restore drills use Supabase connections and PostgreSQL client tools; see
+[docs/backup-restore.md](docs/backup-restore.md).
 
-Implement an adapter behind the existing API boundary for each authorized source: persist raw source reference and `source_type=API`, map provider errors to `DATA SOURCE UNAVAILABLE`, preserve unknown entities instead of guessing, and require credentials only through server environment/secrets. Add contract tests with recorded authorized fixtures, apply RLS and role checks, retain model provenance, and require investigator review before any intervention request is submitted through an institutional channel.# CASHNET
+### Authorized provider mode
+
+Only an approved server environment may use `CASHNET_DATA_MODE=authorized`, `ETHERSCAN_API_KEY`, `ETHERSCAN_CHAIN_ID`, `BITCOIN_ESPLORA_BASE_URL`, `TRONGRID_API_KEY`, `TRONGRID_BASE_URL`, `CASHNET_PROVIDER_TIMEOUT_MS`, and `CASHNET_PROVIDER_MAX_RETRIES`. Values are documented in [.env.example](.env.example); provider keys are server-only secrets.
+
+## API
+
+### Legacy `/api/*`
+
+The unchanged synthetic workflow provides dashboard, cases, complaint intake, synthetic analysis/fund-flow, wallets, predictions, interventions, and reports. It is deterministic demo material, not live intelligence.
+
+### Persistent `/api/v1/*`
+
+- `GET /api/v1/health`, `GET /api/v1/version`
+- case, investigation, evidence, and case-audit routes
+- `POST /api/v1/investigations/:id/collect` for approved, authorized collection
+- `GET /api/v1/wallets/:chain/:address`
+- `GET /api/v1/transactions/:chain/:txHash`
+
+The v1 boundary never trusts client-supplied roles or case ownership. The OpenAPI source is [lib/api-spec/openapi.yaml](lib/api-spec/openapi.yaml).
+
+## Security and provenance
+
+- Central case authorization combines active roles, permissions, and case memberships. Missing/inaccessible cases return the same non-enumerating `NOT_FOUND` outcome and denial attempts are audited.
+- Normalized facts retain source type, provider, source/reference, retrieval time, method, optional confidence, and raw-response reference/data. Facts are not identity, entity, or VASP attribution claims.
+- `synthetic` is the default; `authorized` is explicit. Empty/failing/unsupported provider calls never become synthetic substitutions.
+- CASHNET does not accept private keys, seed phrases, transaction signing material, or browser-side provider credentials.
+
+## Testing and verification
+
+```bash
+pnpm run typecheck
+pnpm -r --if-present run test
+pnpm --filter @workspace/api-spec run codegen
+pnpm --filter @workspace/api-server run build
+git diff --check
+```
+
+Current recorded validation includes typecheck, API/unit tests, OpenAPI generation, API build, and diff checking. The operator-authorised PostgreSQL validator has passed migration execution, idempotency, ledger/catalog checks, and real immutable-audit mutation rejection. Clean-database replay and live Etherscan/Esplora/TronGrid smoke tests remain separate evidence gates; provider results are never fabricated when credentials/endpoints are absent.
+
+## References, licensing, and roadmap
+
+The eight research/reference checkouts are documented in [docs/reference-repository-analysis.md](docs/reference-repository-analysis.md). No code or datasets were copied into CASHNET. In particular, `manic-startup/chainforensics` is AGPL-3.0 and remains reference-only. Third-party data and provider payloads require independent terms, authorization, and provenance review.
+
+`package.json` declares MIT, but no root `LICENSE` text file is currently present; do not infer rights over third-party references or data from that declaration.
+
+Phase 3–6 source capabilities are present, but their operational status is deliberately narrower than their source footprint. Current verified and pending conditions are documented in [docs/phase6-final-production-readiness.md](docs/phase6-final-production-readiness.md) and [docs/current-status-report.md](docs/current-status-report.md). Chainabuse, ML/GNN, PS184, approved third-party label data, independent accuracy calibration, and Phase 7 are not part of the current operational release.

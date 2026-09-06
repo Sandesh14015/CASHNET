@@ -134,7 +134,7 @@ export const ModelAnalysis: React.FC = () => {
             <Select
               fullWidth
               value={selectedModel}
-              onChange={(e) => setSelectedModel(e.target.value as number)}
+              onChange={(e: any) => setSelectedModel(e.target.value as number)}
               sx={{ mb: 2 }}
             >
               <MenuItem value={182}>Model 182 - Crypto/VASP/Cross-Border</MenuItem>
@@ -154,7 +154,7 @@ export const ModelAnalysis: React.FC = () => {
               label="Risk Score (0-1)"
               type="number"
               value={riskScore}
-              onChange={(e) => setRiskScore(e.target.value)}
+              onChange={(e: any) => setRiskScore(e.target.value)}
               inputProps={{ step: '0.1', min: '0', max: '1' }}
               sx={{ mb: 2 }}
             />
@@ -164,7 +164,7 @@ export const ModelAnalysis: React.FC = () => {
               label="Transaction Count"
               type="number"
               value={transactionCount}
-              onChange={(e) => setTransactionCount(e.target.value)}
+              onChange={(e: any) => setTransactionCount(e.target.value)}
               sx={{ mb: 2 }}
             />
 
@@ -173,7 +173,7 @@ export const ModelAnalysis: React.FC = () => {
               label="Amount ($)"
               type="number"
               value={amount}
-              onChange={(e) => setAmount(e.target.value)}
+              onChange={(e: any) => setAmount(e.target.value)}
               sx={{ mb: 2 }}
             />
 
@@ -182,7 +182,7 @@ export const ModelAnalysis: React.FC = () => {
               label="Age (Days)"
               type="number"
               value={ageDays}
-              onChange={(e) => setAgeDays(e.target.value)}
+              onChange={(e: any) => setAgeDays(e.target.value)}
               sx={{ mb: 2 }}
             />
 

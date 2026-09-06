@@ -137,7 +137,7 @@ export const Reports: React.FC = () => {
           </Typography>
           <Select
             value={selectedFormat}
-            onChange={(e) => setSelectedFormat(e.target.value as any)}
+            onChange={(e: any) => setSelectedFormat(e.target.value as any)}
             fullWidth
             sx={{ mb: 2 }}
           >

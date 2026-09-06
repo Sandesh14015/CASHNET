@@ -112,7 +112,7 @@ export const AuditTrail: React.FC = () => {
             <TextField
               label="Action Filter"
               value={filterAction}
-              onChange={(e) => setFilterAction(e.target.value)}
+              onChange={(e: any) => setFilterAction(e.target.value)}
               fullWidth
               placeholder="e.g., CREATE, UPDATE, DELETE"
             />
@@ -121,7 +121,7 @@ export const AuditTrail: React.FC = () => {
             <TextField
               label="Status Filter"
               value={filterStatus}
-              onChange={(e) => setFilterStatus(e.target.value)}
+              onChange={(e: any) => setFilterStatus(e.target.value)}
               fullWidth
               placeholder="success or failure"
             />

@@ -103,7 +103,7 @@ export const CryptoWalletAnalysis: React.FC = () => {
                 fullWidth
                 label="Wallet Address"
                 value={walletAddress}
-                onChange={(e) => setWalletAddress(e.target.value)}
+                onChange={(e: any) => setWalletAddress(e.target.value)}
                 placeholder="Enter Bitcoin or Ethereum address..."
               />
             </Grid>

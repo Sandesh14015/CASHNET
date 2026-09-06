@@ -1,19 +1,18 @@
 {
-    "version": "0.0.0",
-    "license": "MIT",
-    "name": "workspace",
-    "scripts": {
-        "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
-        "build": "pnpm run typecheck && pnpm -r --if-present run build",
-        "typecheck:libs": "tsc --build"
-    },
-    "private": true,
-    "engines": {
-        "node": ">=20",
-        "pnpm": ">=10"
-    },
-    "devDependencies": {
-        "prettier": "^3.9.6",
-        "typescript": "~5.9.3"
-    }
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "node -e \"const fs=require('fs'); for (const file of ['package-lock.json','yarn.lock']) fs.rmSync(file,{force:true}); if (!process.env.npm_config_user_agent?.startsWith('pnpm/')) { console.error('Use pnpm instead'); process.exit(1); }\"",
+    "build": "pnpm run typecheck && pnpm -r --if-present run build",
+    "typecheck:libs": "tsc --build",
+    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
+  },
+  "private": true,
+  "dependencies": {
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6",
+    "typescript": "~5.9.3"
+  }
 }

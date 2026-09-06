@@ -259,3 +259,1040 @@ export interface Report {
   disclaimer: string;
 }
 
+export type PersistentCaseStatus = typeof PersistentCaseStatus[keyof typeof PersistentCaseStatus];
+
+
+export const PersistentCaseStatus = {
+  OPEN: 'OPEN',
+  IN_PROGRESS: 'IN_PROGRESS',
+  ON_HOLD: 'ON_HOLD',
+  CLOSED: 'CLOSED',
+  ARCHIVED: 'ARCHIVED',
+} as const;
+
+export type PersistentCaseInvestigationAuthorizationStatus = typeof PersistentCaseInvestigationAuthorizationStatus[keyof typeof PersistentCaseInvestigationAuthorizationStatus];
+
+
+export const PersistentCaseInvestigationAuthorizationStatus = {
+  PENDING: 'PENDING',
+  APPROVED: 'APPROVED',
+  REJECTED: 'REJECTED',
+} as const;
+
+export interface PersistentCase {
+  id: string;
+  caseNumber: string;
+  title: string;
+  description: string;
+  fraudType: string;
+  reportedAmount: string;
+  status: PersistentCaseStatus;
+  priority: string;
+  investigationAuthorizationStatus: PersistentCaseInvestigationAuthorizationStatus;
+  /** @nullable */
+  createdBy?: string | null;
+  /** @nullable */
+  assignedTo?: string | null;
+  /** @nullable */
+  closedAt?: string | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PersistentCaseInput {
+  caseNumber: string;
+  title: string;
+  description: string;
+  fraudType: string;
+  reportedAmount: string;
+  priority?: string;
+}
+
+export type PersistentCasePatchStatus = typeof PersistentCasePatchStatus[keyof typeof PersistentCasePatchStatus];
+
+
+export const PersistentCasePatchStatus = {
+  OPEN: 'OPEN',
+  IN_PROGRESS: 'IN_PROGRESS',
+  ON_HOLD: 'ON_HOLD',
+  CLOSED: 'CLOSED',
+  ARCHIVED: 'ARCHIVED',
+} as const;
+
+export type PersistentCasePatchInvestigationAuthorizationStatus = typeof PersistentCasePatchInvestigationAuthorizationStatus[keyof typeof PersistentCasePatchInvestigationAuthorizationStatus];
+
+
+export const PersistentCasePatchInvestigationAuthorizationStatus = {
+  PENDING: 'PENDING',
+  APPROVED: 'APPROVED',
+  REJECTED: 'REJECTED',
+} as const;
+
+export interface PersistentCasePatch {
+  title?: string;
+  description?: string;
+  priority?: string;
+  status?: PersistentCasePatchStatus;
+  /** @nullable */
+  assignedTo?: string | null;
+  investigationAuthorizationStatus?: PersistentCasePatchInvestigationAuthorizationStatus;
+}
+
+export type PersistentInvestigationStatus = typeof PersistentInvestigationStatus[keyof typeof PersistentInvestigationStatus];
+
+
+export const PersistentInvestigationStatus = {
+  CREATED: 'CREATED',
+  AUTHORIZED: 'AUTHORIZED',
+  RUNNING: 'RUNNING',
+  COMPLETED: 'COMPLETED',
+  PARTIAL: 'PARTIAL',
+  FAILED: 'FAILED',
+  CANCELLED: 'CANCELLED',
+} as const;
+
+export interface PersistentInvestigation {
+  id: string;
+  caseId: string;
+  status: PersistentInvestigationStatus;
+  /** @nullable */
+  chain?: string | null;
+  /** @nullable */
+  walletAddress?: string | null;
+  investigationDepth: number;
+  /** @nullable */
+  startTime?: string | null;
+  /** @nullable */
+  endTime?: string | null;
+  /** @nullable */
+  createdBy?: string | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface InvestigationInput {
+  caseId: string;
+  chain?: string;
+  walletAddress?: string;
+  /**
+     * @minimum 1
+     * @maximum 10
+     */
+  investigationDepth?: number;
+  startTime?: string;
+  endTime?: string;
+}
+
+export type InvestigationTransitionInputStatus = typeof InvestigationTransitionInputStatus[keyof typeof InvestigationTransitionInputStatus];
+
+
+export const InvestigationTransitionInputStatus = {
+  AUTHORIZED: 'AUTHORIZED',
+  RUNNING: 'RUNNING',
+  COMPLETED: 'COMPLETED',
+  PARTIAL: 'PARTIAL',
+  FAILED: 'FAILED',
+  CANCELLED: 'CANCELLED',
+} as const;
+
+export interface InvestigationTransitionInput {
+  status: InvestigationTransitionInputStatus;
+}
+
+export type WalletInvestigationInputLabel = typeof WalletInvestigationInputLabel[keyof typeof WalletInvestigationInputLabel];
+
+
+export const WalletInvestigationInputLabel = {
+  REPORTED: 'REPORTED',
+  SUSPECT: 'SUSPECT',
+  SUBJECT: 'SUBJECT',
+  OBSERVED: 'OBSERVED',
+  UNKNOWN: 'UNKNOWN',
+} as const;
+
+export type WalletInvestigationInput = InvestigationInput & {
+  label?: WalletInvestigationInputLabel;
+} & Required<Pick<InvestigationInput & {
+  label?: WalletInvestigationInputLabel;
+}, 'chain' | 'walletAddress'>>;
+
+export interface WalletSubject {
+  id: string;
+  caseId: string;
+  investigationId: string;
+  chain: string;
+  walletAddress: string;
+  label: string;
+  createdAt: string;
+}
+
+export interface WalletInvestigationResult {
+  investigation: PersistentInvestigation;
+  walletSubject: WalletSubject;
+}
+
+export interface ProviderProvenance {
+  sourceType: string;
+  provider: string;
+  sourceReference?: string;
+  rawReference?: string;
+  retrievedAt: string;
+  method: string;
+}
+
+export interface NormalizedWallet {
+  id: string;
+  address: string;
+  chain: string;
+  balance?: string;
+  balanceUnit?: string;
+  createdAt: string;
+  provenance: ProviderProvenance;
+}
+
+export type NormalizedTransactionInputsItem = { [key: string]: unknown };
+
+export type NormalizedTransactionOutputsItem = { [key: string]: unknown };
+
+export interface NormalizedTransaction {
+  id: string;
+  chain: string;
+  transactionHash: string;
+  timestamp?: string;
+  blockNumber?: string;
+  blockHash?: string;
+  confirmations?: number;
+  from?: string;
+  to?: string;
+  value?: string;
+  fee?: string;
+  executionStatus?: string;
+  inputs: NormalizedTransactionInputsItem[];
+  outputs: NormalizedTransactionOutputsItem[];
+  provenance: ProviderProvenance;
+}
+
+export type NormalizedTransactionBundleTokenTransfersItem = { [key: string]: unknown };
+
+export type NormalizedTransactionBundleContractInteractionsItem = { [key: string]: unknown };
+
+export interface NormalizedTransactionBundle {
+  provider: string;
+  transaction: NormalizedTransaction;
+  tokenTransfers: NormalizedTransactionBundleTokenTransfersItem[];
+  contractInteractions: NormalizedTransactionBundleContractInteractionsItem[];
+}
+
+export type LiveWalletResultTransactionsItem = { [key: string]: unknown };
+
+export type LiveWalletResultTokenTransfersItem = { [key: string]: unknown };
+
+export type LiveWalletResultInternalTransactionsItem = { [key: string]: unknown };
+
+export type LiveWalletResultCapabilities = {[key: string]: boolean};
+
+export interface LiveWalletResult {
+  provider: string;
+  wallet?: NormalizedWallet | null;
+  transactions: LiveWalletResultTransactionsItem[];
+  tokenTransfers: LiveWalletResultTokenTransfersItem[];
+  internalTransactions: LiveWalletResultInternalTransactionsItem[];
+  capabilities: LiveWalletResultCapabilities;
+}
+
+export interface CollectionResult {
+  investigationId: string;
+  status: string;
+  provider: string;
+  transactionCount: number;
+  tokenTransferCount: number;
+}
+
+export interface PersistentEvidence {
+  id: string;
+  /** @nullable */
+  caseId?: string | null;
+  /** @nullable */
+  investigationId?: string | null;
+  subjectType: string;
+  subjectId: string;
+  evidenceType: string;
+  sourceType: string;
+  /** @nullable */
+  provider?: string | null;
+  /** @nullable */
+  sourceReference?: string | null;
+  /** @nullable */
+  sourceUrl?: string | null;
+  /** @nullable */
+  observedAt?: string | null;
+  /** @nullable */
+  collectedAt?: string | null;
+  /** @nullable */
+  method?: string | null;
+  /**
+     * @minimum 0
+     * @maximum 1
+     * @nullable
+     */
+  confidence?: number | null;
+  /** @nullable */
+  rawReference?: string | null;
+  /** @nullable */
+  contentHash?: string | null;
+  /** @nullable */
+  description?: string | null;
+  /** @nullable */
+  createdBy?: string | null;
+  createdAt: string;
+}
+
+export type EvidenceInputEvidenceType = typeof EvidenceInputEvidenceType[keyof typeof EvidenceInputEvidenceType];
+
+
+export const EvidenceInputEvidenceType = {
+  BLOCKCHAIN_FACT: 'BLOCKCHAIN_FACT',
+  TRANSACTION: 'TRANSACTION',
+  ADDRESS_LABEL: 'ADDRESS_LABEL',
+  ENTITY_MATCH: 'ENTITY_MATCH',
+  VASP_MATCH: 'VASP_MATCH',
+  GRAPH_RELATION: 'GRAPH_RELATION',
+  RISK_INDICATOR: 'RISK_INDICATOR',
+  DOCUMENT: 'DOCUMENT',
+  OSINT: 'OSINT',
+  OTHER: 'OTHER',
+} as const;
+
+export type EvidenceInputSourceType = typeof EvidenceInputSourceType[keyof typeof EvidenceInputSourceType];
+
+
+export const EvidenceInputSourceType = {
+  SYNTHETIC: 'SYNTHETIC',
+  API: 'API',
+  RPC: 'RPC',
+  DATASET: 'DATASET',
+  INFERENCE: 'INFERENCE',
+  OTHER: 'OTHER',
+  USER_PROVIDED: 'USER_PROVIDED',
+} as const;
+
+export interface EvidenceInput {
+  caseId: string;
+  /** @nullable */
+  investigationId?: string | null;
+  subjectType: string;
+  subjectId: string;
+  evidenceType: EvidenceInputEvidenceType;
+  sourceType: EvidenceInputSourceType;
+  /** @nullable */
+  provider?: string | null;
+  /** @nullable */
+  sourceReference?: string | null;
+  /** @nullable */
+  sourceUrl?: string | null;
+  /** @nullable */
+  observedAt?: string | null;
+  /** @nullable */
+  collectedAt?: string | null;
+  /** @nullable */
+  method?: string | null;
+  /**
+     * @minimum 0
+     * @maximum 1
+     * @nullable
+     */
+  confidence?: number | null;
+  /** @nullable */
+  rawReference?: string | null;
+  /** @nullable */
+  contentHash?: string | null;
+  /** @nullable */
+  description?: string | null;
+}
+
+export type AuditEventResult = typeof AuditEventResult[keyof typeof AuditEventResult];
+
+
+export const AuditEventResult = {
+  SUCCESS: 'SUCCESS',
+  DENIED: 'DENIED',
+  FAILURE: 'FAILURE',
+} as const;
+
+export type AuditEventMetadata = { [key: string]: unknown };
+
+export interface AuditEvent {
+  id: string;
+  /** @nullable */
+  caseId?: string | null;
+  /** @nullable */
+  actorId?: string | null;
+  action: string;
+  resourceType: string;
+  /** @nullable */
+  resourceId?: string | null;
+  /** @nullable */
+  requestId?: string | null;
+  result: AuditEventResult;
+  metadata: AuditEventMetadata;
+  createdAt: string;
+}
+
+export type GraphEvidenceDerivationSourceType = typeof GraphEvidenceDerivationSourceType[keyof typeof GraphEvidenceDerivationSourceType];
+
+
+export const GraphEvidenceDerivationSourceType = {
+  API: 'API',
+  INFERENCE: 'INFERENCE',
+} as const;
+
+export interface GraphEvidence {
+  transactionHash: string;
+  /** @nullable */
+  provider?: string | null;
+  /** @nullable */
+  sourceReference?: string | null;
+  /** @nullable */
+  rawReference?: string | null;
+  /** @nullable */
+  retrievedAt?: string | null;
+  method: string;
+  derivationSourceType: GraphEvidenceDerivationSourceType;
+}
+
+export type InvestigationGraphNodeNodeType = typeof InvestigationGraphNodeNodeType[keyof typeof InvestigationGraphNodeNodeType];
+
+
+export const InvestigationGraphNodeNodeType = {
+  EOA: 'EOA',
+  ADDRESS: 'ADDRESS',
+  CONTRACT: 'CONTRACT',
+  UNKNOWN: 'UNKNOWN',
+} as const;
+
+export interface InvestigationGraphNode {
+  id: string;
+  chain: string;
+  address: string;
+  nodeType: InvestigationGraphNodeNodeType;
+  /** @nullable */
+  firstSeen?: string | null;
+  /** @nullable */
+  lastSeen?: string | null;
+}
+
+export type InvestigationGraphEdgeRelationshipType = typeof InvestigationGraphEdgeRelationshipType[keyof typeof InvestigationGraphEdgeRelationshipType];
+
+
+export const InvestigationGraphEdgeRelationshipType = {
+  TRANSFER: 'TRANSFER',
+  TOKEN_TRANSFER: 'TOKEN_TRANSFER',
+  INTERNAL_TRANSFER: 'INTERNAL_TRANSFER',
+  CONTRACT_INTERACTION: 'CONTRACT_INTERACTION',
+  UTXO_SPEND: 'UTXO_SPEND',
+} as const;
+
+export interface InvestigationGraphEdge {
+  id: string;
+  chain: string;
+  transactionHash: string;
+  fromAddress: string;
+  toAddress: string;
+  relationshipType: InvestigationGraphEdgeRelationshipType;
+  asset: string;
+  amount: string;
+  /** @nullable */
+  tokenContract?: string | null;
+  /** @nullable */
+  timestamp?: string | null;
+  /** @nullable */
+  blockNumber?: string | null;
+  /** @nullable */
+  status?: string | null;
+  evidence: GraphEvidence;
+}
+
+export type InvestigationGraphPathNodesItem = {
+  chain: string;
+  address: string;
+};
+
+export interface InvestigationGraphPath {
+  /** @minimum 1 */
+  rank: number;
+  nodes: InvestigationGraphPathNodesItem[];
+  edgeIds: string[];
+  /** @minimum 0 */
+  hopCount: number;
+  evidenceComplete: boolean;
+}
+
+export type InvestigationGraphStatus = typeof InvestigationGraphStatus[keyof typeof InvestigationGraphStatus];
+
+
+export const InvestigationGraphStatus = {
+  OK: 'OK',
+  INSUFFICIENT_DATA: 'INSUFFICIENT_DATA',
+} as const;
+
+export type InvestigationGraphMetadata = { [key: string]: unknown };
+
+export type InvestigationGraphLimitsApplied = { [key: string]: unknown };
+
+export interface InvestigationGraph {
+  status: InvestigationGraphStatus;
+  nodes: InvestigationGraphNode[];
+  edges: InvestigationGraphEdge[];
+  paths: InvestigationGraphPath[];
+  metadata: InvestigationGraphMetadata;
+  limitsApplied: InvestigationGraphLimitsApplied;
+  evidenceReferences: GraphEvidence[];
+}
+
+export type AddressIntelligenceObservationEntityType = typeof AddressIntelligenceObservationEntityType[keyof typeof AddressIntelligenceObservationEntityType];
+
+
+export const AddressIntelligenceObservationEntityType = {
+  EXCHANGE: 'EXCHANGE',
+  VASP: 'VASP',
+  CUSTODIAL_SERVICE: 'CUSTODIAL_SERVICE',
+  DEX: 'DEX',
+  BRIDGE: 'BRIDGE',
+  MIXER: 'MIXER',
+  MINING_POOL: 'MINING_POOL',
+  DEFI: 'DEFI',
+  SCAM: 'SCAM',
+  PHISHING: 'PHISHING',
+  SANCTIONED_ENTITY: 'SANCTIONED_ENTITY',
+  OTHER: 'OTHER',
+  UNKNOWN: 'UNKNOWN',
+} as const;
+
+export type AddressIntelligenceObservationFreshnessStatus = typeof AddressIntelligenceObservationFreshnessStatus[keyof typeof AddressIntelligenceObservationFreshnessStatus];
+
+
+export const AddressIntelligenceObservationFreshnessStatus = {
+  FRESH: 'FRESH',
+  STALE: 'STALE',
+  EXPIRED: 'EXPIRED',
+  UNKNOWN: 'UNKNOWN',
+} as const;
+
+export type AddressIntelligenceObservationStatus = typeof AddressIntelligenceObservationStatus[keyof typeof AddressIntelligenceObservationStatus];
+
+
+export const AddressIntelligenceObservationStatus = {
+  UNKNOWN: 'UNKNOWN',
+  ACTIVE: 'ACTIVE',
+  STALE: 'STALE',
+  CONFLICTING: 'CONFLICTING',
+  REVIEW_REQUIRED: 'REVIEW_REQUIRED',
+} as const;
+
+export interface AddressIntelligenceObservation {
+  id: string;
+  chain: string;
+  address: string;
+  /** @nullable */
+  label?: string | null;
+  /** @nullable */
+  entityName?: string | null;
+  entityType: AddressIntelligenceObservationEntityType;
+  source: string;
+  /** @nullable */
+  sourceReference?: string | null;
+  /** @nullable */
+  sourceUrl?: string | null;
+  /** @nullable */
+  datasetName?: string | null;
+  /** @nullable */
+  datasetVersion?: string | null;
+  /** @nullable */
+  license?: string | null;
+  retrievedAt: string;
+  freshnessStatus: AddressIntelligenceObservationFreshnessStatus;
+  /**
+     * @minimum 0
+     * @maximum 1
+     */
+  confidence: number;
+  status: AddressIntelligenceObservationStatus;
+}
+
+export type AddressIntelligenceLookupStatus = typeof AddressIntelligenceLookupStatus[keyof typeof AddressIntelligenceLookupStatus];
+
+
+export const AddressIntelligenceLookupStatus = {
+  SUCCESS: 'SUCCESS',
+  NOT_CONFIGURED: 'NOT_CONFIGURED',
+  UNAVAILABLE: 'UNAVAILABLE',
+} as const;
+
+export type AddressIntelligenceLookupConflictsItem = { [key: string]: unknown };
+
+export interface AddressIntelligenceLookup {
+  status: AddressIntelligenceLookupStatus;
+  observations: AddressIntelligenceObservation[];
+  conflicts: AddressIntelligenceLookupConflictsItem[];
+}
+
+export interface ClusterRunInput {
+  /**
+     * @minimum 1
+     * @maximum 100
+     */
+  max_transactions?: number;
+}
+
+export type ClusterInferenceChain = typeof ClusterInferenceChain[keyof typeof ClusterInferenceChain];
+
+
+export const ClusterInferenceChain = {
+  BITCOIN: 'BITCOIN',
+} as const;
+
+export type ClusterInferenceConfidenceLevel = typeof ClusterInferenceConfidenceLevel[keyof typeof ClusterInferenceConfidenceLevel];
+
+
+export const ClusterInferenceConfidenceLevel = {
+  UNKNOWN: 'UNKNOWN',
+  POSSIBLE: 'POSSIBLE',
+  LIKELY: 'LIKELY',
+} as const;
+
+export type ClusterInferenceReviewStatus = typeof ClusterInferenceReviewStatus[keyof typeof ClusterInferenceReviewStatus];
+
+
+export const ClusterInferenceReviewStatus = {
+  PENDING_REVIEW: 'PENDING_REVIEW',
+  ACCEPTED: 'ACCEPTED',
+  REJECTED: 'REJECTED',
+} as const;
+
+export type ClusterInferenceEvidenceItem = { [key: string]: unknown };
+
+export type ClusterInferenceMembersItem = { [key: string]: unknown };
+
+export interface ClusterInference {
+  id: string;
+  clusterKey: string;
+  chain: ClusterInferenceChain;
+  method: string;
+  methodVersion: string;
+  confidenceLevel: ClusterInferenceConfidenceLevel;
+  /**
+     * @minimum 0
+     * @maximum 100
+     */
+  numericScore: number;
+  reviewStatus: ClusterInferenceReviewStatus;
+  /** @nullable */
+  ambiguityReason?: string | null;
+  evidence: ClusterInferenceEvidenceItem[];
+  members: ClusterInferenceMembersItem[];
+}
+
+export type ClusterRunResultStatus = typeof ClusterRunResultStatus[keyof typeof ClusterRunResultStatus];
+
+
+export const ClusterRunResultStatus = {
+  OK: 'OK',
+  INSUFFICIENT_DATA: 'INSUFFICIENT_DATA',
+} as const;
+
+export interface ClusterRunResult {
+  status: ClusterRunResultStatus;
+  analyzedTransactions: number;
+  inferences: ClusterInference[];
+  truncated: boolean;
+}
+
+export interface VaspAnalysisInput {
+  /**
+     * @minimum 1
+     * @maximum 250
+     */
+  max_addresses?: number;
+  /**
+     * @minimum 1
+     * @maximum 250
+     */
+  max_candidates?: number;
+}
+
+export type AttributionEvidenceCategory = typeof AttributionEvidenceCategory[keyof typeof AttributionEvidenceCategory];
+
+
+export const AttributionEvidenceCategory = {
+  DIRECT_BLOCKCHAIN_FACT: 'DIRECT_BLOCKCHAIN_FACT',
+  GRAPH_EVIDENCE: 'GRAPH_EVIDENCE',
+  ADDRESS_INTELLIGENCE: 'ADDRESS_INTELLIGENCE',
+  CLUSTER_INFERENCE: 'CLUSTER_INFERENCE',
+  ABUSE_INTELLIGENCE: 'ABUSE_INTELLIGENCE',
+  SOURCE_AGREEMENT: 'SOURCE_AGREEMENT',
+  SOURCE_QUALITY: 'SOURCE_QUALITY',
+} as const;
+
+export type AttributionEvidencePolarity = typeof AttributionEvidencePolarity[keyof typeof AttributionEvidencePolarity];
+
+
+export const AttributionEvidencePolarity = {
+  SUPPORTING: 'SUPPORTING',
+  NEGATIVE: 'NEGATIVE',
+  CONTRADICTORY: 'CONTRADICTORY',
+} as const;
+
+export type AttributionEvidenceDetails = { [key: string]: unknown };
+
+export interface AttributionEvidence {
+  category: AttributionEvidenceCategory;
+  evidenceType: string;
+  subjectType: string;
+  subjectId: string;
+  polarity: AttributionEvidencePolarity;
+  contribution: number;
+  /** @nullable */
+  source?: string | null;
+  /** @nullable */
+  sourceReference?: string | null;
+  /** @nullable */
+  sourceUrl?: string | null;
+  /** @nullable */
+  retrievedAt?: string | null;
+  method: string;
+  methodVersion: string;
+  /** @nullable */
+  rawReference?: string | null;
+  details?: AttributionEvidenceDetails;
+}
+
+export type VaspCandidateConfidenceLevel = typeof VaspCandidateConfidenceLevel[keyof typeof VaspCandidateConfidenceLevel];
+
+
+export const VaspCandidateConfidenceLevel = {
+  UNKNOWN: 'UNKNOWN',
+  POSSIBLE: 'POSSIBLE',
+  LIKELY: 'LIKELY',
+  CONFIRMED: 'CONFIRMED',
+} as const;
+
+export type VaspCandidateStatus = typeof VaspCandidateStatus[keyof typeof VaspCandidateStatus];
+
+
+export const VaspCandidateStatus = {
+  PENDING_REVIEW: 'PENDING_REVIEW',
+  CONFLICTING_EVIDENCE: 'CONFLICTING_EVIDENCE',
+  INSUFFICIENT_EVIDENCE: 'INSUFFICIENT_EVIDENCE',
+  CONFIRMED_BY_REVIEW: 'CONFIRMED_BY_REVIEW',
+} as const;
+
+export type VaspCandidateContradictionsItem = { [key: string]: unknown };
+
+export interface VaspCandidate {
+  id: string;
+  chain: string;
+  address: string;
+  /** @nullable */
+  entityName?: string | null;
+  entityType: string;
+  confidenceLevel: VaspCandidateConfidenceLevel;
+  /**
+     * @minimum 0
+     * @maximum 100
+     */
+  numericScore: number;
+  status: VaspCandidateStatus;
+  reason: string;
+  contradictions: VaspCandidateContradictionsItem[];
+  method: string;
+  methodVersion: string;
+  evidence: AttributionEvidence[];
+}
+
+export type VaspAnalysisResultStatus = typeof VaspAnalysisResultStatus[keyof typeof VaspAnalysisResultStatus];
+
+
+export const VaspAnalysisResultStatus = {
+  OK: 'OK',
+  INSUFFICIENT_EVIDENCE: 'INSUFFICIENT_EVIDENCE',
+} as const;
+
+export interface VaspAnalysisResult {
+  status: VaspAnalysisResultStatus;
+  candidates: VaspCandidate[];
+  truncated: boolean;
+}
+
+export type AttributionReviewInputDecision = typeof AttributionReviewInputDecision[keyof typeof AttributionReviewInputDecision];
+
+
+export const AttributionReviewInputDecision = {
+  ACCEPTED: 'ACCEPTED',
+  REJECTED: 'REJECTED',
+  CONFIRMED: 'CONFIRMED',
+} as const;
+
+export interface AttributionReviewInput {
+  decision: AttributionReviewInputDecision;
+  /**
+     * @minLength 3
+     * @maxLength 4000
+     * @nullable
+     */
+  rationale?: string | null;
+}
+
+export type AttributionReviewDecision = typeof AttributionReviewDecision[keyof typeof AttributionReviewDecision];
+
+
+export const AttributionReviewDecision = {
+  ACCEPTED: 'ACCEPTED',
+  REJECTED: 'REJECTED',
+  CONFIRMED: 'CONFIRMED',
+} as const;
+
+export interface AttributionReview {
+  id: string;
+  caseId: string;
+  investigationId: string;
+  candidateId: string;
+  reviewerId: string;
+  decision: AttributionReviewDecision;
+  /** @nullable */
+  rationale?: string | null;
+  createdAt: string;
+}
+
+export type RiskIndicatorSeverity = typeof RiskIndicatorSeverity[keyof typeof RiskIndicatorSeverity];
+
+
+export const RiskIndicatorSeverity = {
+  LOW: 'LOW',
+  MEDIUM: 'MEDIUM',
+  HIGH: 'HIGH',
+  CRITICAL: 'CRITICAL',
+} as const;
+
+export type RiskIndicatorScoreSemantics = typeof RiskIndicatorScoreSemantics[keyof typeof RiskIndicatorScoreSemantics];
+
+
+export const RiskIndicatorScoreSemantics = {
+  HEURISTIC_SCORE_NOT_PROBABILITY: 'HEURISTIC_SCORE_NOT_PROBABILITY',
+} as const;
+
+export type RiskIndicatorEvidenceItem = { [key: string]: unknown };
+
+export type RiskIndicatorProvenance = { [key: string]: unknown };
+
+export interface RiskIndicator {
+  id: string;
+  caseId: string;
+  investigationId: string;
+  indicatorType: string;
+  category: string;
+  severity: RiskIndicatorSeverity;
+  scoreContribution: number;
+  scoreSemantics: RiskIndicatorScoreSemantics;
+  /** @nullable */
+  confidenceLevel?: string | null;
+  evidence?: RiskIndicatorEvidenceItem[];
+  provenance: RiskIndicatorProvenance;
+  method: string;
+  methodVersion: string;
+  createdAt: string;
+}
+
+export type RiskAnalysisRunRun = { [key: string]: unknown };
+
+export type RiskAnalysisRunTypologiesItem = { [key: string]: unknown };
+
+export type RiskAnalysisRunScoreSemantics = typeof RiskAnalysisRunScoreSemantics[keyof typeof RiskAnalysisRunScoreSemantics];
+
+
+export const RiskAnalysisRunScoreSemantics = {
+  HEURISTIC_SCORE_NOT_PROBABILITY: 'HEURISTIC_SCORE_NOT_PROBABILITY',
+} as const;
+
+export interface RiskAnalysisRun {
+  run: RiskAnalysisRunRun;
+  indicators: RiskIndicator[];
+  typologies: RiskAnalysisRunTypologiesItem[];
+  scoreSemantics: RiskAnalysisRunScoreSemantics;
+}
+
+export interface GraphFeatureRunInput {
+  /**
+     * @minimum 1
+     * @maximum 10000
+     */
+  max_edges?: number;
+}
+
+export type GraphFeatureRunFeaturesItem = { [key: string]: unknown };
+
+export interface GraphFeatureRun {
+  features: GraphFeatureRunFeaturesItem[];
+  edgeCount: number;
+  method: string;
+  methodVersion: string;
+  maxEdges: number;
+}
+
+export interface CommunityRunInput {
+  /**
+     * @minimum 1
+     * @maximum 10000
+     */
+  max_nodes?: number;
+  /**
+     * @minimum 1
+     * @maximum 10000
+     */
+  max_edges?: number;
+  /**
+     * @minimum 100
+     * @maximum 5000
+     */
+  max_runtime_ms?: number;
+  /**
+     * @minimum 1
+     * @maximum 500
+     */
+  max_communities?: number;
+}
+
+export type CommunityRunRun = { [key: string]: unknown };
+
+export type CommunityRunCommunitiesItem = { [key: string]: unknown };
+
+export type CommunityRunLimits = { [key: string]: unknown };
+
+export interface CommunityRun {
+  run: CommunityRunRun;
+  communities: CommunityRunCommunitiesItem[];
+  totalNodes: number;
+  totalEdges: number;
+  limits: CommunityRunLimits;
+}
+
+export type DefiMevAnalysisInteractionsItem = { [key: string]: unknown };
+
+export type DefiMevAnalysisMev = { [key: string]: unknown };
+
+export interface DefiMevAnalysis {
+  interactions: DefiMevAnalysisInteractionsItem[];
+  mev: DefiMevAnalysisMev;
+  historicalOnly: true;
+  disclaimer: string;
+}
+
+export type ForensicReportInputReportType = typeof ForensicReportInputReportType[keyof typeof ForensicReportInputReportType];
+
+
+export const ForensicReportInputReportType = {
+  INVESTIGATION_SUMMARY: 'INVESTIGATION_SUMMARY',
+  RISK_ASSESSMENT: 'RISK_ASSESSMENT',
+  GRAPH_ANALYSIS: 'GRAPH_ANALYSIS',
+  FULL_FORENSIC: 'FULL_FORENSIC',
+} as const;
+
+export interface ForensicReportInput {
+  report_type?: ForensicReportInputReportType;
+}
+
+export type ForensicReportContent = { [key: string]: unknown };
+
+export type ForensicReportMethodVersions = {[key: string]: string};
+
+export interface ForensicReport {
+  id: string;
+  caseId: string;
+  investigationId: string;
+  reportType: string;
+  content: ForensicReportContent;
+  methodVersions: ForensicReportMethodVersions;
+  createdAt: string;
+}
+
+export type ListInvestigationRiskIndicatorsParams = {
+/**
+ * @minimum 1
+ * @maximum 100
+ */
+limit?: number;
+};
+
+export type TraceInvestigationGraphParams = {
+/**
+ * @minimum 1
+ * @maximum 5
+ */
+depth?: number;
+direction?: TraceInvestigationGraphDirection;
+/**
+ * @minimum 1
+ * @maximum 100
+ */
+max_neighbors?: number;
+/**
+ * @minimum 1
+ * @maximum 1000
+ */
+max_nodes?: number;
+/**
+ * @minimum 1
+ * @maximum 2000
+ */
+max_edges?: number;
+/**
+ * @pattern ^\\d+(\\.\\d+)?$
+ */
+min_amount?: string;
+/**
+ * @pattern ^\\d+(\\.\\d+)?$
+ */
+max_amount?: string;
+asset?: string;
+start_time?: string;
+end_time?: string;
+};
+
+export type TraceInvestigationGraphDirection = typeof TraceInvestigationGraphDirection[keyof typeof TraceInvestigationGraphDirection];
+
+
+export const TraceInvestigationGraphDirection = {
+  OUTGOING: 'OUTGOING',
+  INCOMING: 'INCOMING',
+  BOTH: 'BOTH',
+} as const;
+
+export type ListInvestigationClustersParams = {
+/**
+ * @minimum 1
+ * @maximum 100
+ */
+limit?: number;
+};
+
+export type ListInvestigationVaspCandidatesParams = {
+/**
+ * @minimum 1
+ * @maximum 100
+ */
+limit?: number;
+};
+
+export type GetLiveWalletProfileParams = {
+/**
+ * Authorized investigation scope; a valid actor alone is insufficient.
+ */
+investigation_id: string;
+};
+
+export type GetLiveTransactionParams = {
+/**
+ * Authorized investigation scope; a valid actor alone is insufficient.
+ */
+investigation_id: string;
+};
+
