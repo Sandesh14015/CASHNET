@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004221",
+  "complaint_date": "2026-07-12T19:03:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 23,
+    "gender": "Female",
+    "phone": "+91 00000 04221",
+    "email": "victim-4221@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4221",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1114",
+      "ifsc_code": "SYNTHETIC-IB-115",
+      "upi_id": "account-account-000115@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "bank_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (bank impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04221",
+      "email": "synthetic-fraud-4221@example.invalid",
+      "whatsapp_number": "+91 00000 04221"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004221-01",
+        "date": "2026-07-12T16:53:00Z",
+        "amount": 6100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1114",
+        "to_account": "XXXXXXXXX2267",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 6100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-12T16:43:00Z",
+    "fraud_end_time": "2026-07-12T17:03:00Z",
+    "reporting_delay_hours": 2
+  }
+}

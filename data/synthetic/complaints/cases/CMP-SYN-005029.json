@@ -1,0 +1,80 @@
+{
+  "complaint_id": "CMP-SYN-005029",
+  "complaint_date": "2026-08-10T23:48:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 59,
+    "gender": "Female",
+    "phone": "+91 00000 05029",
+    "email": "victim-5029@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5029",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1191",
+      "ifsc_code": "SYNTHETIC-IB-192",
+      "upi_id": "account-account-000192@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05029",
+      "email": "synthetic-fraud-5029@example.invalid",
+      "whatsapp_number": "+91 00000 05029"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005029-01",
+        "date": "2026-08-09T23:18:00Z",
+        "amount": 55100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1191",
+        "to_account": "XXXXXXXXX2074",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-005029-02",
+        "date": "2026-08-09T23:28:00Z",
+        "amount": 17300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000192@cashnet.invalid",
+        "to_account": "mule-account-001075@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-005029-03",
+        "date": "2026-08-09T23:38:00Z",
+        "amount": 77400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000192@cashnet.invalid",
+        "to_account": "mule-account-001075@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 149800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-09T23:08:00Z",
+    "fraud_end_time": "2026-08-09T23:48:00Z",
+    "reporting_delay_hours": 24
+  }
+}

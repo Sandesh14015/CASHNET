@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007709",
+  "complaint_date": "2026-06-06T20:33:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 24,
+    "gender": "Other",
+    "phone": "+91 00000 07709",
+    "email": "victim-7709@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7709",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1415",
+      "ifsc_code": "SYNTHETIC-IB-416",
+      "upi_id": "account-account-000416@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "KYC_update",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (KYC update). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07709",
+      "email": "synthetic-fraud-7709@example.invalid",
+      "whatsapp_number": "+91 00000 07709"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007709-01",
+        "date": "2026-06-06T19:23:00Z",
+        "amount": 83400,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1415",
+        "to_account": "XXXXXXXXX2799",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 83400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-06T19:13:00Z",
+    "fraud_end_time": "2026-06-06T19:33:00Z",
+    "reporting_delay_hours": 1
+  }
+}

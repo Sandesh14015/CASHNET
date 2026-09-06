@@ -1,0 +1,215 @@
+# ============================================================================
+# CashNet Kubernetes Deployment
+# ============================================================================
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cashnet-api
+  namespace: cashnet
+  labels:
+    app: cashnet-api
+    tier: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cashnet-api
+  template:
+    metadata:
+      labels:
+        app: cashnet-api
+        tier: backend
+    spec:
+      containers:
+        - name: cashnet-api
+          image: cashnet-api:latest
+          ports:
+            - containerPort: 8000
+              name: http
+          env:
+            - name: ENVIRONMENT
+              value: "production"
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: cashnet-secrets
+                  key: database-url
+            - name: REDIS_URL
+              valueFrom:
+                secretKeyRef:
+                  name: cashnet-secrets
+                  key: redis-url
+            - name: AUTH_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: cashnet-secrets
+                  key: auth-secret-key
+            - name: ENCRYPTION_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: cashnet-secrets
+                  key: encryption-key
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          volumeMounts:
+            - name: models
+              mountPath: /app/models
+            - name: logs
+              mountPath: /app/logs
+      volumes:
+        - name: models
+          persistentVolumeClaim:
+            claimName: cashnet-models-pvc
+        - name: logs
+          emptyDir: {}
+      imagePullSecrets:
+        - name: cashnet-registry-secret
+
+---
+# ============================================================================
+# Service
+# ============================================================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: cashnet-api-service
+  namespace: cashnet
+spec:
+  selector:
+    app: cashnet-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+      name: http
+  type: ClusterIP
+
+---
+# ============================================================================
+# Ingress
+# ============================================================================
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cashnet-api-ingress
+  namespace: cashnet
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - cashnet.gov.in
+      secretName: cashnet-tls
+  rules:
+    - host: cashnet.gov.in
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: cashnet-api-service
+                port:
+                  number: 80
+
+---
+# ============================================================================
+# Horizontal Pod Autoscaler
+# ============================================================================
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: cashnet-api-hpa
+  namespace: cashnet
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cashnet-api
+  minReplicas: 3
+  maxReplicas: 10
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 70
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          type: Utilization
+          averageUtilization: 80
+
+---
+# ============================================================================
+# Persistent Volume Claim for Models
+# ============================================================================
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: cashnet-models-pvc
+  namespace: cashnet
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: gp3
+
+---
+# ============================================================================
+# ConfigMap for Non-Sensitive Configuration
+# ============================================================================
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cashnet-config
+  namespace: cashnet
+data:
+  ENVIRONMENT: "production"
+  LOG_LEVEL: "info"
+  API_WORKERS: "4"
+  RATE_LIMIT_ENABLED: "true"
+  RATE_LIMIT_REQUESTS: "200"
+  RATE_LIMIT_WINDOW: "60"
+
+---
+# ============================================================================
+# Secret for Sensitive Configuration
+# ============================================================================
+apiVersion: v1
+kind: Secret
+metadata:
+  name: cashnet-secrets
+  namespace: cashnet
+type: Opaque
+stringData:
+  database-url: "postgresql://cashnet:${DB_PASSWORD}@postgres:5432/cashnet"
+  redis-url: "redis://redis:6379/0"
+  auth-secret-key: "${AUTH_SECRET_KEY}"
+  encryption-key: "${ENCRYPTION_KEY}"
+  vault-token: "${VAULT_TOKEN}"

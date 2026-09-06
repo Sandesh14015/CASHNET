@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-006788",
+  "complaint_date": "2026-07-12T04:13:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 29,
+    "gender": "Female",
+    "phone": "+91 00000 06788",
+    "email": "victim-6788@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6788",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1011",
+      "ifsc_code": "SYNTHETIC-BO-012",
+      "upi_id": "account-account-000012@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "fake_website",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (fake website). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06788",
+      "email": "synthetic-fraud-6788@example.invalid",
+      "whatsapp_number": "+91 00000 06788"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006788-01",
+        "date": "2026-07-11T21:53:00Z",
+        "amount": 85100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1011",
+        "to_account": "XXXXXXXXX2882",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-006788-02",
+        "date": "2026-07-11T22:03:00Z",
+        "amount": 49200,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1011",
+        "to_account": "XXXXXXXXX2882",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 134300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-11T21:43:00Z",
+    "fraud_end_time": "2026-07-11T22:13:00Z",
+    "reporting_delay_hours": 6
+  }
+}

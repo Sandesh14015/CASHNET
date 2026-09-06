@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004340",
+  "complaint_date": "2026-08-14T19:11:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 21,
+    "gender": "Male",
+    "phone": "+91 00000 04340",
+    "email": "victim-4340@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4340",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1579",
+      "ifsc_code": "SYNTHETIC-BO-580",
+      "upi_id": "account-account-000580@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04340",
+      "email": "synthetic-fraud-4340@example.invalid",
+      "whatsapp_number": "+91 00000 04340"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004340-01",
+        "date": "2026-08-14T13:01:00Z",
+        "amount": 47100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1579",
+        "to_account": "XXXXXXXXX1782",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 47100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-14T12:51:00Z",
+    "fraud_end_time": "2026-08-14T13:11:00Z",
+    "reporting_delay_hours": 6
+  }
+}

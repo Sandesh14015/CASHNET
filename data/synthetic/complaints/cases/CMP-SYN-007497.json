@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007497",
+  "complaint_date": "2026-08-20T20:19:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 31,
+    "gender": "Female",
+    "phone": "+91 00000 07497",
+    "email": "victim-7497@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7497",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX2436",
+      "ifsc_code": "SYNTHETIC-UB-1437",
+      "upi_id": "account-account-001437@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "fake_website",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (fake website). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07497",
+      "email": "synthetic-fraud-7497@example.invalid",
+      "whatsapp_number": "+91 00000 07497"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007497-01",
+        "date": "2026-08-20T18:09:00Z",
+        "amount": 83200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2436",
+        "to_account": "XXXXXXXXX2904",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 83200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-20T17:59:00Z",
+    "fraud_end_time": "2026-08-20T18:19:00Z",
+    "reporting_delay_hours": 2
+  }
+}

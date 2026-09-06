@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-004785",
+  "complaint_date": "2026-06-10T10:36:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 57,
+    "gender": "Female",
+    "phone": "+91 00000 04785",
+    "email": "victim-4785@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4785",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1185",
+      "ifsc_code": "SYNTHETIC-PN-186",
+      "upi_id": "account-account-000186@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "sextortion",
+    "sub_type": "video_call_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a sextortion (video call scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04785",
+      "email": "synthetic-fraud-4785@example.invalid",
+      "video_call_platform": "Synthetic Video Platform",
+      "whatsapp_number": "+91 00000 04785"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004785-01",
+        "date": "2026-06-09T10:26:00Z",
+        "amount": 24400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000186@cashnet.invalid",
+        "to_account": "mule-account-001507@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 24400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-09T10:16:00Z",
+    "fraud_end_time": "2026-06-09T10:36:00Z",
+    "reporting_delay_hours": 24
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001239",
+  "complaint_date": "2026-06-13T12:26:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 43,
+    "gender": "Female",
+    "phone": "+91 00000 01239",
+    "email": "victim-1239@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1239",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1458",
+      "ifsc_code": "SYNTHETIC-IB-459",
+      "upi_id": "account-account-000459@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "remote_access",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (remote access). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01239",
+      "email": "synthetic-fraud-1239@example.invalid",
+      "whatsapp_number": "+91 00000 01239"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001239-01",
+        "date": "2026-06-13T00:16:00Z",
+        "amount": 55100,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000459@cashnet.invalid",
+        "to_account": "mule-account-001415@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 55100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-13T00:06:00Z",
+    "fraud_end_time": "2026-06-13T00:26:00Z",
+    "reporting_delay_hours": 12
+  }
+}

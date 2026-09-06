@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004056",
+  "complaint_date": "2026-06-27T09:54:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 31,
+    "gender": "Male",
+    "phone": "+91 00000 04056",
+    "email": "victim-4056@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4056",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1462",
+      "ifsc_code": "SYNTHETIC-PN-463",
+      "upi_id": "account-account-000463@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "fake_seller",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (fake seller). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04056",
+      "email": "synthetic-fraud-4056@example.invalid",
+      "whatsapp_number": "+91 00000 04056"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004056-01",
+        "date": "2026-06-26T21:44:00Z",
+        "amount": 97200,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1462",
+        "to_account": "XXXXXXXXX2687",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 97200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-26T21:34:00Z",
+    "fraud_end_time": "2026-06-26T21:54:00Z",
+    "reporting_delay_hours": 12
+  }
+}

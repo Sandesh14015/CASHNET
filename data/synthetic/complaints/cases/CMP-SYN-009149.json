@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009149",
+  "complaint_date": "2026-08-25T15:13:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 47,
+    "gender": "Female",
+    "phone": "+91 00000 09149",
+    "email": "victim-9149@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9149",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1677",
+      "ifsc_code": "SYNTHETIC-KM-678",
+      "upi_id": "account-account-000678@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "fake_exchange",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (fake exchange). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 09149",
+      "email": "synthetic-fraud-9149@example.invalid",
+      "whatsapp_number": "+91 00000 09149"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009149-01",
+        "date": "2026-08-25T14:03:00Z",
+        "amount": 85300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000678@cashnet.invalid",
+        "to_account": "mule-account-001333@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 85300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-25T13:53:00Z",
+    "fraud_end_time": "2026-08-25T14:13:00Z",
+    "reporting_delay_hours": 1
+  }
+}

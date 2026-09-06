@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-001617",
+  "complaint_date": "2026-08-16T11:01:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 72,
+    "gender": "Male",
+    "phone": "+91 00000 01617",
+    "email": "victim-1617@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1617",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1277",
+      "ifsc_code": "SYNTHETIC-IB-278",
+      "upi_id": "account-account-000278@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01617",
+      "email": "synthetic-fraud-1617@example.invalid",
+      "whatsapp_number": "+91 00000 01617"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001617-01",
+        "date": "2026-08-15T10:41:00Z",
+        "amount": 26300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000278@cashnet.invalid",
+        "to_account": "mule-account-001534@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-001617-02",
+        "date": "2026-08-15T10:51:00Z",
+        "amount": 40400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000278@cashnet.invalid",
+        "to_account": "mule-account-001534@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 66700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-15T10:31:00Z",
+    "fraud_end_time": "2026-08-15T11:01:00Z",
+    "reporting_delay_hours": 24
+  }
+}

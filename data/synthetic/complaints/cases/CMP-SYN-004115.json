@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004115",
+  "complaint_date": "2026-07-17T04:27:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 67,
+    "gender": "Female",
+    "phone": "+91 00000 04115",
+    "email": "victim-4115@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4115",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1219",
+      "ifsc_code": "SYNTHETIC-KM-220",
+      "upi_id": "account-account-000220@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "collect_request",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (collect request). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04115",
+      "email": "synthetic-fraud-4115@example.invalid",
+      "whatsapp_number": "+91 00000 04115"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004115-01",
+        "date": "2026-07-16T22:17:00Z",
+        "amount": 12600,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1219",
+        "to_account": "XXXXXXXXX2792",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 12600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-16T22:07:00Z",
+    "fraud_end_time": "2026-07-16T22:27:00Z",
+    "reporting_delay_hours": 6
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "complaint_id": "CMP-SYN-002523",
+  "complaint_date": "2026-08-26T17:47:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 20,
+    "gender": "Other",
+    "phone": "+91 00000 02523",
+    "email": "victim-2523@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2523",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1717",
+      "ifsc_code": "SYNTHETIC-KM-718",
+      "upi_id": "account-account-000718@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "fake_support",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (fake support). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02523",
+      "email": "synthetic-fraud-2523@example.invalid",
+      "whatsapp_number": "+91 00000 02523"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002523-01",
+        "date": "2026-08-26T15:17:00Z",
+        "amount": 56700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000718@cashnet.invalid",
+        "to_account": "mule-account-001680@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002523-02",
+        "date": "2026-08-26T15:27:00Z",
+        "amount": 51400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000718@cashnet.invalid",
+        "to_account": "mule-account-001680@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002523-03",
+        "date": "2026-08-26T15:37:00Z",
+        "amount": 2300,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1717",
+        "to_account": "XXXXXXXXX2679",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 110400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-26T15:07:00Z",
+    "fraud_end_time": "2026-08-26T15:47:00Z",
+    "reporting_delay_hours": 2
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "complaint_id": "CMP-SYN-000078",
+  "complaint_date": "2026-06-12T22:14:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 51,
+    "gender": "Other",
+    "phone": "+91 00000 00078",
+    "email": "victim-78@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 78",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1557",
+      "ifsc_code": "SYNTHETIC-UB-558",
+      "upi_id": "account-account-000558@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "fake_summons",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (fake summons). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00078",
+      "email": "synthetic-fraud-78@example.invalid",
+      "whatsapp_number": "+91 00000 00078"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000078-01",
+        "date": "2026-06-12T09:44:00Z",
+        "amount": 23000,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1557",
+        "to_account": "XXXXXXXXX2450",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-000078-02",
+        "date": "2026-06-12T09:54:00Z",
+        "amount": 12600,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000558@cashnet.invalid",
+        "to_account": "mule-account-001451@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-000078-03",
+        "date": "2026-06-12T10:04:00Z",
+        "amount": 12300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000558@cashnet.invalid",
+        "to_account": "mule-account-001451@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 47900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-12T09:34:00Z",
+    "fraud_end_time": "2026-06-12T10:14:00Z",
+    "reporting_delay_hours": 12
+  }
+}

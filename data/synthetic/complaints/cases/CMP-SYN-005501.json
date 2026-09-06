@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005501",
+  "complaint_date": "2026-06-30T18:56:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 57,
+    "gender": "Male",
+    "phone": "+91 00000 05501",
+    "email": "victim-5501@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5501",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1491",
+      "ifsc_code": "SYNTHETIC-HB-492",
+      "upi_id": "account-account-000492@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05501",
+      "email": "synthetic-fraud-5501@example.invalid",
+      "whatsapp_number": "+91 00000 05501"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005501-01",
+        "date": "2026-06-29T18:46:00Z",
+        "amount": 29900,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1491",
+        "to_account": "XXXXXXXXX2809",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 29900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-29T18:36:00Z",
+    "fraud_end_time": "2026-06-29T18:56:00Z",
+    "reporting_delay_hours": 24
+  }
+}

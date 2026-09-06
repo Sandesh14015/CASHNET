@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003798",
+  "complaint_date": "2026-07-03T21:22:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 29,
+    "gender": "Other",
+    "phone": "+91 00000 03798",
+    "email": "victim-3798@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3798",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX2297",
+      "ifsc_code": "SYNTHETIC-PN-1298",
+      "upi_id": "account-account-001298@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "KYC_update",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (KYC update). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03798",
+      "email": "synthetic-fraud-3798@example.invalid",
+      "whatsapp_number": "+91 00000 03798"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003798-01",
+        "date": "2026-07-03T19:12:00Z",
+        "amount": 67500,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX2297",
+        "to_account": "XXXXXXXXX2796",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 67500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-03T19:02:00Z",
+    "fraud_end_time": "2026-07-03T19:22:00Z",
+    "reporting_delay_hours": 2
+  }
+}

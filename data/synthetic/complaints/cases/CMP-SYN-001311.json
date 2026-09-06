@@ -1,0 +1,80 @@
+{
+  "complaint_id": "CMP-SYN-001311",
+  "complaint_date": "2026-07-12T01:38:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 42,
+    "gender": "Male",
+    "phone": "+91 00000 01311",
+    "email": "victim-1311@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1311",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1665",
+      "ifsc_code": "SYNTHETIC-CB-666",
+      "upi_id": "account-account-000666@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "ransomware",
+    "sub_type": "company_data_ransom",
+    "description": "Synthetic CASHNET training complaint: victim reported a ransomware (company data ransom). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01311",
+      "email": "synthetic-fraud-1311@example.invalid",
+      "whatsapp_number": "+91 00000 01311"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001311-01",
+        "date": "2026-07-11T01:08:00Z",
+        "amount": 68000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000666@cashnet.invalid",
+        "to_account": "mule-account-001201@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-001311-02",
+        "date": "2026-07-11T01:18:00Z",
+        "amount": 15700,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1665",
+        "to_account": "XXXXXXXXX2200",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-001311-03",
+        "date": "2026-07-11T01:28:00Z",
+        "amount": 43900,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1665",
+        "to_account": "XXXXXXXXX2200",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 127600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-11T00:58:00Z",
+    "fraud_end_time": "2026-07-11T01:38:00Z",
+    "reporting_delay_hours": 24
+  }
+}

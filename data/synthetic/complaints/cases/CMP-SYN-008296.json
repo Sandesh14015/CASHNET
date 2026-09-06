@@ -1,0 +1,80 @@
+{
+  "complaint_id": "CMP-SYN-008296",
+  "complaint_date": "2026-06-19T23:13:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 54,
+    "gender": "Female",
+    "phone": "+91 00000 08296",
+    "email": "victim-8296@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8296",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1206",
+      "ifsc_code": "SYNTHETIC-IB-207",
+      "upi_id": "account-account-000207@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "ransomware",
+    "sub_type": "personal_data_ransom",
+    "description": "Synthetic CASHNET training complaint: victim reported a ransomware (personal data ransom). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08296",
+      "email": "synthetic-fraud-8296@example.invalid",
+      "whatsapp_number": "+91 00000 08296"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008296-01",
+        "date": "2026-06-19T16:43:00Z",
+        "amount": 64800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000207@cashnet.invalid",
+        "to_account": "mule-account-001403@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-008296-02",
+        "date": "2026-06-19T16:53:00Z",
+        "amount": 11000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000207@cashnet.invalid",
+        "to_account": "mule-account-001403@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-008296-03",
+        "date": "2026-06-19T17:03:00Z",
+        "amount": 7800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000207@cashnet.invalid",
+        "to_account": "mule-account-001403@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 83600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-19T16:33:00Z",
+    "fraud_end_time": "2026-06-19T17:13:00Z",
+    "reporting_delay_hours": 6
+  }
+}

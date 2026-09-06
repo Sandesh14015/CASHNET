@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000769",
+  "complaint_date": "2026-08-22T15:30:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 48,
+    "gender": "Male",
+    "phone": "+91 00000 00769",
+    "email": "victim-769@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 769",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX2692",
+      "ifsc_code": "SYNTHETIC-IB-1693",
+      "upi_id": "account-account-001693@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "video_call_threat",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (video call threat). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00769",
+      "email": "synthetic-fraud-769@example.invalid",
+      "whatsapp_number": "+91 00000 00769"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000769-01",
+        "date": "2026-08-22T13:20:00Z",
+        "amount": 21100,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001693@cashnet.invalid",
+        "to_account": "mule-account-001519@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 21100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-22T13:10:00Z",
+    "fraud_end_time": "2026-08-22T13:30:00Z",
+    "reporting_delay_hours": 2
+  }
+}

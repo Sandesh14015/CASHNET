@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009267",
+  "complaint_date": "2026-07-14T08:11:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 51,
+    "gender": "Female",
+    "phone": "+91 00000 09267",
+    "email": "victim-9267@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9267",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1726",
+      "ifsc_code": "SYNTHETIC-BO-727",
+      "upi_id": "account-account-000727@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09267",
+      "email": "synthetic-fraud-9267@example.invalid",
+      "whatsapp_number": "+91 00000 09267"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009267-01",
+        "date": "2026-07-14T07:01:00Z",
+        "amount": 62800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1726",
+        "to_account": "XXXXXXXXX2056",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 62800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-14T06:51:00Z",
+    "fraud_end_time": "2026-07-14T07:11:00Z",
+    "reporting_delay_hours": 1
+  }
+}

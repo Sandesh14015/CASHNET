@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006918",
+  "complaint_date": "2026-07-01T06:54:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 22,
+    "gender": "Male",
+    "phone": "+91 00000 06918",
+    "email": "victim-6918@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6918",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1481",
+      "ifsc_code": "SYNTHETIC-KM-482",
+      "upi_id": "account-account-000482@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 06918",
+      "email": "synthetic-fraud-6918@example.invalid",
+      "whatsapp_number": "+91 00000 06918"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006918-01",
+        "date": "2026-07-01T06:38:00Z",
+        "amount": 5900,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1481",
+        "to_account": "XXXXXXXXX1879",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 5900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-01T06:28:00Z",
+    "fraud_end_time": "2026-07-01T06:48:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

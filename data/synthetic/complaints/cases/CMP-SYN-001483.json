@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001483",
+  "complaint_date": "2026-07-27T18:09:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 52,
+    "gender": "Female",
+    "phone": "+91 00000 01483",
+    "email": "victim-1483@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1483",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1614",
+      "ifsc_code": "SYNTHETIC-SB-615",
+      "upi_id": "account-account-000615@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01483",
+      "email": "synthetic-fraud-1483@example.invalid",
+      "whatsapp_number": "+91 00000 01483"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001483-01",
+        "date": "2026-07-27T11:59:00Z",
+        "amount": 36300,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1614",
+        "to_account": "XXXXXXXXX2426",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 36300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-27T11:49:00Z",
+    "fraud_end_time": "2026-07-27T12:09:00Z",
+    "reporting_delay_hours": 6
+  }
+}

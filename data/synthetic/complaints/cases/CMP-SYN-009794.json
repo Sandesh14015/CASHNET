@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009794",
+  "complaint_date": "2026-08-17T00:17:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 67,
+    "gender": "Male",
+    "phone": "+91 00000 09794",
+    "email": "victim-9794@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9794",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX2747",
+      "ifsc_code": "SYNTHETIC-IB-1748",
+      "upi_id": "account-account-001748@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "fake_exchange",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (fake exchange). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 09794",
+      "email": "synthetic-fraud-9794@example.invalid",
+      "whatsapp_number": "+91 00000 09794"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009794-01",
+        "date": "2026-08-16T00:07:00Z",
+        "amount": 71600,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001748@cashnet.invalid",
+        "to_account": "mule-account-001571@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 71600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-15T23:57:00Z",
+    "fraud_end_time": "2026-08-16T00:17:00Z",
+    "reporting_delay_hours": 24
+  }
+}

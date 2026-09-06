@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-008967",
+  "complaint_date": "2026-07-03T11:08:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 43,
+    "gender": "Other",
+    "phone": "+91 00000 08967",
+    "email": "victim-8967@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8967",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX2565",
+      "ifsc_code": "SYNTHETIC-IB-1566",
+      "upi_id": "account-account-001566@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "collect_request",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (collect request). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08967",
+      "email": "synthetic-fraud-8967@example.invalid",
+      "whatsapp_number": "+91 00000 08967"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008967-01",
+        "date": "2026-07-03T09:58:00Z",
+        "amount": 82100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2565",
+        "to_account": "XXXXXXXXX1830",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 82100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-03T09:48:00Z",
+    "fraud_end_time": "2026-07-03T10:08:00Z",
+    "reporting_delay_hours": 1
+  }
+}

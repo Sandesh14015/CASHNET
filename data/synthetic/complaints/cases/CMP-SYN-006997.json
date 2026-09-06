@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006997",
+  "complaint_date": "2026-08-03T02:24:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 58,
+    "gender": "Other",
+    "phone": "+91 00000 06997",
+    "email": "victim-6997@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6997",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1393",
+      "ifsc_code": "SYNTHETIC-IB-394",
+      "upi_id": "account-account-000394@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "bank_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (bank impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 06997",
+      "email": "synthetic-fraud-6997@example.invalid",
+      "whatsapp_number": "+91 00000 06997"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006997-01",
+        "date": "2026-08-03T01:44:00Z",
+        "amount": 67700,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1393",
+        "to_account": "XXXXXXXXX2042",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 67700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-03T01:34:00Z",
+    "fraud_end_time": "2026-08-03T01:54:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

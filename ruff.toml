@@ -1,0 +1,14 @@
+[lint]
+select = ["E", "F", "W", "C", "B", "A", "DTZ", "RUF", "UP", "SIM", "TRY"]
+ignore = ["E501", "BLE001", "SIM102", "TRY300", "C901", "TRY003"]  # Ignore line length, blind exceptions, nested if simplification, try/else style, function complexity, and long exception messages
+
+[lint.per-file-ignores]
+# Disable BLE001 for blockchain adapters (external API integrations)
+# Also disable TRY301/TRY002 as these adapters use simple exception patterns
+"services/blockchain/*.py" = ["BLE001", "TRY301", "TRY002"]
+# Allow in scripts for error resilience; E402 is necessary because scripts mutate
+# sys.path before importing local packages — that ordering is intentional.
+"scripts/*.py" = ["BLE001", "E402"]
+
+[format]
+quote-style = "double"

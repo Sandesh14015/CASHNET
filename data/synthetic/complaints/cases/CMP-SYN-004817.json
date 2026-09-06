@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004817",
+  "complaint_date": "2026-06-16T21:39:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 35,
+    "gender": "Male",
+    "phone": "+91 00000 04817",
+    "email": "victim-4817@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4817",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1233",
+      "ifsc_code": "SYNTHETIC-AB-234",
+      "upi_id": "account-account-000234@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04817",
+      "email": "synthetic-fraud-4817@example.invalid",
+      "whatsapp_number": "+91 00000 04817"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004817-01",
+        "date": "2026-06-16T09:29:00Z",
+        "amount": 47600,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1233",
+        "to_account": "XXXXXXXXX1994",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 47600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-16T09:19:00Z",
+    "fraud_end_time": "2026-06-16T09:39:00Z",
+    "reporting_delay_hours": 12
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-004799",
+  "complaint_date": "2026-08-05T05:31:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 47,
+    "gender": "Male",
+    "phone": "+91 00000 04799",
+    "email": "victim-4799@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4799",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1589",
+      "ifsc_code": "SYNTHETIC-IB-590",
+      "upi_id": "account-account-000590@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "ransomware",
+    "sub_type": "personal_data_ransom",
+    "description": "Synthetic CASHNET training complaint: victim reported a ransomware (personal data ransom). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 04799",
+      "email": "synthetic-fraud-4799@example.invalid",
+      "whatsapp_number": "+91 00000 04799"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004799-01",
+        "date": "2026-08-04T17:11:00Z",
+        "amount": 14300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000590@cashnet.invalid",
+        "to_account": "mule-account-001401@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-004799-02",
+        "date": "2026-08-04T17:21:00Z",
+        "amount": 88000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000590@cashnet.invalid",
+        "to_account": "mule-account-001401@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 102300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-04T17:01:00Z",
+    "fraud_end_time": "2026-08-04T17:31:00Z",
+    "reporting_delay_hours": 12
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007719",
+  "complaint_date": "2026-06-01T13:34:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 38,
+    "gender": "Male",
+    "phone": "+91 00000 07719",
+    "email": "victim-7719@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7719",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1134",
+      "ifsc_code": "SYNTHETIC-CB-135",
+      "upi_id": "account-account-000135@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07719",
+      "email": "synthetic-fraud-7719@example.invalid",
+      "whatsapp_number": "+91 00000 07719"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007719-01",
+        "date": "2026-06-01T11:24:00Z",
+        "amount": 2400,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1134",
+        "to_account": "XXXXXXXXX2132",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 2400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-01T11:14:00Z",
+    "fraud_end_time": "2026-06-01T11:34:00Z",
+    "reporting_delay_hours": 2
+  }
+}

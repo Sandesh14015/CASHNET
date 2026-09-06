@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007796",
+  "complaint_date": "2026-07-15T07:28:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 46,
+    "gender": "Female",
+    "phone": "+91 00000 07796",
+    "email": "victim-7796@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7796",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1600",
+      "ifsc_code": "SYNTHETIC-SB-601",
+      "upi_id": "account-account-000601@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07796",
+      "email": "synthetic-fraud-7796@example.invalid",
+      "whatsapp_number": "+91 00000 07796"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007796-01",
+        "date": "2026-07-15T01:18:00Z",
+        "amount": 80400,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1600",
+        "to_account": "XXXXXXXXX2450",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 80400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-15T01:08:00Z",
+    "fraud_end_time": "2026-07-15T01:28:00Z",
+    "reporting_delay_hours": 6
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-002992",
+  "complaint_date": "2026-07-10T22:49:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 37,
+    "gender": "Other",
+    "phone": "+91 00000 02992",
+    "email": "victim-2992@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2992",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1147",
+      "ifsc_code": "SYNTHETIC-AB-148",
+      "upi_id": "account-account-000148@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "sextortion",
+    "sub_type": "video_call_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a sextortion (video call scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02992",
+      "email": "synthetic-fraud-2992@example.invalid",
+      "video_call_platform": "Synthetic Video Platform",
+      "whatsapp_number": "+91 00000 02992"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002992-01",
+        "date": "2026-07-10T21:39:00Z",
+        "amount": 1200,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000148@cashnet.invalid",
+        "to_account": "mule-account-001769@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 1200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-10T21:29:00Z",
+    "fraud_end_time": "2026-07-10T21:49:00Z",
+    "reporting_delay_hours": 1
+  }
+}

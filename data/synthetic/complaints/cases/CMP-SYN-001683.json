@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001683",
+  "complaint_date": "2026-08-24T04:37:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 19,
+    "gender": "Other",
+    "phone": "+91 00000 01683",
+    "email": "victim-1683@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1683",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1410",
+      "ifsc_code": "SYNTHETIC-UB-411",
+      "upi_id": "account-account-000411@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 01683",
+      "email": "synthetic-fraud-1683@example.invalid",
+      "whatsapp_number": "+91 00000 01683"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001683-01",
+        "date": "2026-08-24T03:27:00Z",
+        "amount": 89200,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1410",
+        "to_account": "XXXXXXXXX2370",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 89200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-24T03:17:00Z",
+    "fraud_end_time": "2026-08-24T03:37:00Z",
+    "reporting_delay_hours": 1
+  }
+}

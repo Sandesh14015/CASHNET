@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009406",
+  "complaint_date": "2026-06-21T05:16:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 49,
+    "gender": "Other",
+    "phone": "+91 00000 09406",
+    "email": "victim-9406@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9406",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1222",
+      "ifsc_code": "SYNTHETIC-AB-223",
+      "upi_id": "account-account-000223@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "romance_scam",
+    "sub_type": "emergency_payment",
+    "description": "Synthetic CASHNET training complaint: victim reported a romance scam (emergency payment). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09406",
+      "email": "synthetic-fraud-9406@example.invalid",
+      "whatsapp_number": "+91 00000 09406"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009406-01",
+        "date": "2026-06-20T17:06:00Z",
+        "amount": 73200,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000223@cashnet.invalid",
+        "to_account": "mule-account-001253@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 73200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-20T16:56:00Z",
+    "fraud_end_time": "2026-06-20T17:16:00Z",
+    "reporting_delay_hours": 12
+  }
+}

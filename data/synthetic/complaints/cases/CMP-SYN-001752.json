@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001752",
+  "complaint_date": "2026-08-29T20:09:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 53,
+    "gender": "Other",
+    "phone": "+91 00000 01752",
+    "email": "victim-1752@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1752",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1698",
+      "ifsc_code": "SYNTHETIC-CB-699",
+      "upi_id": "account-account-000699@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01752",
+      "email": "synthetic-fraud-1752@example.invalid",
+      "whatsapp_number": "+91 00000 01752"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001752-01",
+        "date": "2026-08-28T19:59:00Z",
+        "amount": 44300,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1698",
+        "to_account": "XXXXXXXXX2890",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 44300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-28T19:49:00Z",
+    "fraud_end_time": "2026-08-28T20:09:00Z",
+    "reporting_delay_hours": 24
+  }
+}

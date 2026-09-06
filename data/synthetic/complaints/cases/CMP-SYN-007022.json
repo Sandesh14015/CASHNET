@@ -1,0 +1,90 @@
+{
+  "complaint_id": "CMP-SYN-007022",
+  "complaint_date": "2026-06-19T19:14:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 51,
+    "gender": "Female",
+    "phone": "+91 00000 07022",
+    "email": "victim-7022@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7022",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1273",
+      "ifsc_code": "SYNTHETIC-IB-274",
+      "upi_id": "account-account-000274@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "bank_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (bank impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07022",
+      "email": "synthetic-fraud-7022@example.invalid",
+      "whatsapp_number": "+91 00000 07022"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007022-01",
+        "date": "2026-06-19T18:28:00Z",
+        "amount": 19900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000274@cashnet.invalid",
+        "to_account": "mule-account-001275@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-007022-02",
+        "date": "2026-06-19T18:38:00Z",
+        "amount": 35400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000274@cashnet.invalid",
+        "to_account": "mule-account-001275@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-007022-03",
+        "date": "2026-06-19T18:48:00Z",
+        "amount": 16800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1273",
+        "to_account": "XXXXXXXXX2274",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-007022-04",
+        "date": "2026-06-19T18:58:00Z",
+        "amount": 62900,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1273",
+        "to_account": "XXXXXXXXX2274",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 135000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-19T18:18:00Z",
+    "fraud_end_time": "2026-06-19T19:08:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003597",
+  "complaint_date": "2026-07-13T04:18:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 37,
+    "gender": "Other",
+    "phone": "+91 00000 03597",
+    "email": "victim-3597@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3597",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1384",
+      "ifsc_code": "SYNTHETIC-HB-385",
+      "upi_id": "account-account-000385@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "police_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (police impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03597",
+      "email": "synthetic-fraud-3597@example.invalid",
+      "whatsapp_number": "+91 00000 03597"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003597-01",
+        "date": "2026-07-13T04:02:00Z",
+        "amount": 32100,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000385@cashnet.invalid",
+        "to_account": "mule-account-001416@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 32100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-13T03:52:00Z",
+    "fraud_end_time": "2026-07-13T04:12:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

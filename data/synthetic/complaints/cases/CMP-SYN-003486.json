@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-003486",
+  "complaint_date": "2026-07-26T03:31:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 74,
+    "gender": "Other",
+    "phone": "+91 00000 03486",
+    "email": "victim-3486@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3486",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1171",
+      "ifsc_code": "SYNTHETIC-UB-172",
+      "upi_id": "account-account-000172@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "bank_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (bank impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03486",
+      "email": "synthetic-fraud-3486@example.invalid",
+      "whatsapp_number": "+91 00000 03486"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003486-01",
+        "date": "2026-07-26T03:05:00Z",
+        "amount": 98000,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1171",
+        "to_account": "XXXXXXXXX2455",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-003486-02",
+        "date": "2026-07-26T03:15:00Z",
+        "amount": 38600,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000172@cashnet.invalid",
+        "to_account": "mule-account-001456@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 136600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-26T02:55:00Z",
+    "fraud_end_time": "2026-07-26T03:25:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006461",
+  "complaint_date": "2026-06-06T15:55:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 53,
+    "gender": "Male",
+    "phone": "+91 00000 06461",
+    "email": "victim-6461@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6461",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1234",
+      "ifsc_code": "SYNTHETIC-IB-235",
+      "upi_id": "account-account-000235@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06461",
+      "email": "synthetic-fraud-6461@example.invalid",
+      "whatsapp_number": "+91 00000 06461"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006461-01",
+        "date": "2026-06-06T09:45:00Z",
+        "amount": 91500,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1234",
+        "to_account": "XXXXXXXXX2799",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 91500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-06T09:35:00Z",
+    "fraud_end_time": "2026-06-06T09:55:00Z",
+    "reporting_delay_hours": 6
+  }
+}

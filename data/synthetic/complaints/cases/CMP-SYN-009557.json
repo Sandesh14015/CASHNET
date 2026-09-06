@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009557",
+  "complaint_date": "2026-08-16T11:44:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 73,
+    "gender": "Female",
+    "phone": "+91 00000 09557",
+    "email": "victim-9557@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9557",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1925",
+      "ifsc_code": "SYNTHETIC-AB-926",
+      "upi_id": "account-account-000926@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "fake_exchange",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (fake exchange). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09557",
+      "email": "synthetic-fraud-9557@example.invalid",
+      "whatsapp_number": "+91 00000 09557"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009557-01",
+        "date": "2026-08-16T11:04:00Z",
+        "amount": 59700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000926@cashnet.invalid",
+        "to_account": "mule-account-001377@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 59700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-16T10:54:00Z",
+    "fraud_end_time": "2026-08-16T11:14:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

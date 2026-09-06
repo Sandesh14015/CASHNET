@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-000636",
+  "complaint_date": "2026-08-24T13:39:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 64,
+    "gender": "Female",
+    "phone": "+91 00000 00636",
+    "email": "victim-636@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 636",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX2059",
+      "ifsc_code": "SYNTHETIC-IB-1060",
+      "upi_id": "account-account-001060@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "training_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (training fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00636",
+      "email": "synthetic-fraud-636@example.invalid",
+      "telegram_id": "@synthetic_offer_636",
+      "whatsapp_number": "+91 00000 00636"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000636-01",
+        "date": "2026-08-23T13:29:00Z",
+        "amount": 8100,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001060@cashnet.invalid",
+        "to_account": "mule-account-001509@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 8100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-23T13:19:00Z",
+    "fraud_end_time": "2026-08-23T13:39:00Z",
+    "reporting_delay_hours": 24
+  }
+}

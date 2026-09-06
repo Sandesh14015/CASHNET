@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004574",
+  "complaint_date": "2026-06-30T05:36:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 26,
+    "gender": "Female",
+    "phone": "+91 00000 04574",
+    "email": "victim-4574@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4574",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX2396",
+      "ifsc_code": "SYNTHETIC-SB-1397",
+      "upi_id": "account-account-001397@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "police_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (police impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 04574",
+      "email": "synthetic-fraud-4574@example.invalid",
+      "whatsapp_number": "+91 00000 04574"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004574-01",
+        "date": "2026-06-30T03:26:00Z",
+        "amount": 2100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2396",
+        "to_account": "XXXXXXXXX2179",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 2100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-30T03:16:00Z",
+    "fraud_end_time": "2026-06-30T03:36:00Z",
+    "reporting_delay_hours": 2
+  }
+}

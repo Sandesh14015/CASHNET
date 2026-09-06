@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007700",
+  "complaint_date": "2026-07-27T02:49:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 27,
+    "gender": "Female",
+    "phone": "+91 00000 07700",
+    "email": "victim-7700@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7700",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1055",
+      "ifsc_code": "SYNTHETIC-IB-056",
+      "upi_id": "account-account-000056@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07700",
+      "email": "synthetic-fraud-7700@example.invalid",
+      "whatsapp_number": "+91 00000 07700"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007700-01",
+        "date": "2026-07-27T01:39:00Z",
+        "amount": 92500,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1055",
+        "to_account": "XXXXXXXXX1922",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 92500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-27T01:29:00Z",
+    "fraud_end_time": "2026-07-27T01:49:00Z",
+    "reporting_delay_hours": 1
+  }
+}

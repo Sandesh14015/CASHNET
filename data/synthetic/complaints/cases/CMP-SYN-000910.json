@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000910",
+  "complaint_date": "2026-06-02T11:13:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 25,
+    "gender": "Female",
+    "phone": "+91 00000 00910",
+    "email": "victim-910@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 910",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1549",
+      "ifsc_code": "SYNTHETIC-HB-550",
+      "upi_id": "account-account-000550@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "fake_website",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (fake website). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 00910",
+      "email": "synthetic-fraud-910@example.invalid",
+      "whatsapp_number": "+91 00000 00910"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000910-01",
+        "date": "2026-06-02T10:57:00Z",
+        "amount": 92200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1549",
+        "to_account": "XXXXXXXXX2813",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 92200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-02T10:47:00Z",
+    "fraud_end_time": "2026-06-02T11:07:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

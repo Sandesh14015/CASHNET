@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-006935",
+  "complaint_date": "2026-07-09T16:40:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 29,
+    "gender": "Female",
+    "phone": "+91 00000 06935",
+    "email": "victim-6935@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6935",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1733",
+      "ifsc_code": "SYNTHETIC-BO-734",
+      "upi_id": "account-account-000734@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "ransomware",
+    "sub_type": "company_data_ransom",
+    "description": "Synthetic CASHNET training complaint: victim reported a ransomware (company data ransom). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 06935",
+      "email": "synthetic-fraud-6935@example.invalid",
+      "whatsapp_number": "+91 00000 06935"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006935-01",
+        "date": "2026-07-09T16:14:00Z",
+        "amount": 2100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1733",
+        "to_account": "XXXXXXXXX2664",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-006935-02",
+        "date": "2026-07-09T16:24:00Z",
+        "amount": 73300,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1733",
+        "to_account": "XXXXXXXXX2664",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 75400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-09T16:04:00Z",
+    "fraud_end_time": "2026-07-09T16:34:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

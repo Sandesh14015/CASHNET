@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009547",
+  "complaint_date": "2026-08-15T21:07:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 62,
+    "gender": "Female",
+    "phone": "+91 00000 09547",
+    "email": "victim-9547@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9547",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1581",
+      "ifsc_code": "SYNTHETIC-UB-582",
+      "upi_id": "account-account-000582@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "account_takeover",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (account takeover). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 09547",
+      "email": "synthetic-fraud-9547@example.invalid",
+      "whatsapp_number": "+91 00000 09547"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009547-01",
+        "date": "2026-08-15T19:57:00Z",
+        "amount": 40600,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1581",
+        "to_account": "XXXXXXXXX2426",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 40600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-15T19:47:00Z",
+    "fraud_end_time": "2026-08-15T20:07:00Z",
+    "reporting_delay_hours": 1
+  }
+}

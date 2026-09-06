@@ -1,0 +1,71 @@
+{
+  "complaint_id": "CMP-SYN-006726",
+  "complaint_date": "2026-06-10T01:18:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 21,
+    "gender": "Male",
+    "phone": "+91 00000 06726",
+    "email": "victim-6726@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6726",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1207",
+      "ifsc_code": "SYNTHETIC-SB-208",
+      "upi_id": "account-account-000208@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "investment_scam",
+    "sub_type": "guaranteed_returns",
+    "description": "Synthetic CASHNET training complaint: victim reported a investment scam (guaranteed returns). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06726",
+      "email": "synthetic-fraud-6726@example.invalid",
+      "telegram_id": "@synthetic_offer_6726",
+      "whatsapp_number": "+91 00000 06726"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006726-01",
+        "date": "2026-06-09T00:58:00Z",
+        "amount": 26000,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1207",
+        "to_account": "XXXXXXXXX2134",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-006726-02",
+        "date": "2026-06-09T01:08:00Z",
+        "amount": 68600,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000208@cashnet.invalid",
+        "to_account": "mule-account-001135@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 94600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-09T00:48:00Z",
+    "fraud_end_time": "2026-06-09T01:18:00Z",
+    "reporting_delay_hours": 24
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006401",
+  "complaint_date": "2026-07-22T11:58:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 49,
+    "gender": "Female",
+    "phone": "+91 00000 06401",
+    "email": "victim-6401@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6401",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1156",
+      "ifsc_code": "SYNTHETIC-BO-157",
+      "upi_id": "account-account-000157@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "wallet_transfer",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (wallet transfer). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06401",
+      "email": "synthetic-fraud-6401@example.invalid",
+      "whatsapp_number": "+91 00000 06401"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006401-01",
+        "date": "2026-07-21T23:48:00Z",
+        "amount": 73100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1156",
+        "to_account": "XXXXXXXXX2923",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 73100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-21T23:38:00Z",
+    "fraud_end_time": "2026-07-21T23:58:00Z",
+    "reporting_delay_hours": 12
+  }
+}

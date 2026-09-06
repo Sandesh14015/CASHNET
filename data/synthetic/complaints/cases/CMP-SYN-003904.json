@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003904",
+  "complaint_date": "2026-07-21T07:13:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 75,
+    "gender": "Female",
+    "phone": "+91 00000 03904",
+    "email": "victim-3904@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3904",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1144",
+      "ifsc_code": "SYNTHETIC-BO-145",
+      "upi_id": "account-account-000145@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "fake_exchange",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (fake exchange). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03904",
+      "email": "synthetic-fraud-3904@example.invalid",
+      "whatsapp_number": "+91 00000 03904"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003904-01",
+        "date": "2026-07-20T07:03:00Z",
+        "amount": 11100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1144",
+        "to_account": "XXXXXXXXX1860",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 11100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-20T06:53:00Z",
+    "fraud_end_time": "2026-07-20T07:13:00Z",
+    "reporting_delay_hours": 24
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006135",
+  "complaint_date": "2026-08-18T06:36:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 67,
+    "gender": "Female",
+    "phone": "+91 00000 06135",
+    "email": "victim-6135@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6135",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1379",
+      "ifsc_code": "SYNTHETIC-KM-380",
+      "upi_id": "account-account-000380@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "ransomware",
+    "sub_type": "company_data_ransom",
+    "description": "Synthetic CASHNET training complaint: victim reported a ransomware (company data ransom). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06135",
+      "email": "synthetic-fraud-6135@example.invalid",
+      "whatsapp_number": "+91 00000 06135"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006135-01",
+        "date": "2026-08-18T05:26:00Z",
+        "amount": 35900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000380@cashnet.invalid",
+        "to_account": "mule-account-001415@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 35900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-18T05:16:00Z",
+    "fraud_end_time": "2026-08-18T05:36:00Z",
+    "reporting_delay_hours": 1
+  }
+}

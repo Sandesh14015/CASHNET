@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004358",
+  "complaint_date": "2026-08-11T13:22:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 56,
+    "gender": "Male",
+    "phone": "+91 00000 04358",
+    "email": "victim-4358@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4358",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1569",
+      "ifsc_code": "SYNTHETIC-BO-570",
+      "upi_id": "account-account-000570@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04358",
+      "email": "synthetic-fraud-4358@example.invalid",
+      "whatsapp_number": "+91 00000 04358"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004358-01",
+        "date": "2026-08-11T07:12:00Z",
+        "amount": 28700,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1569",
+        "to_account": "XXXXXXXXX2172",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 28700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-11T07:02:00Z",
+    "fraud_end_time": "2026-08-11T07:22:00Z",
+    "reporting_delay_hours": 6
+  }
+}

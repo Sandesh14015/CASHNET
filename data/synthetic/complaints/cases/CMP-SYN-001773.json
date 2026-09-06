@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001773",
+  "complaint_date": "2026-06-03T10:11:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 23,
+    "gender": "Other",
+    "phone": "+91 00000 01773",
+    "email": "victim-1773@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1773",
+      "city": "New Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1366",
+      "ifsc_code": "SYNTHETIC-SB-367",
+      "upi_id": "account-account-000367@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 01773",
+      "email": "synthetic-fraud-1773@example.invalid",
+      "whatsapp_number": "+91 00000 01773"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001773-01",
+        "date": "2026-06-02T22:01:00Z",
+        "amount": 16000,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1366",
+        "to_account": "XXXXXXXXX2239",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 16000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-02T21:51:00Z",
+    "fraud_end_time": "2026-06-02T22:11:00Z",
+    "reporting_delay_hours": 12
+  }
+}

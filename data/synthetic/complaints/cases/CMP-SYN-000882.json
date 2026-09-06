@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000882",
+  "complaint_date": "2026-07-10T02:56:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 44,
+    "gender": "Male",
+    "phone": "+91 00000 00882",
+    "email": "victim-882@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 882",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1129",
+      "ifsc_code": "SYNTHETIC-CB-130",
+      "upi_id": "account-account-000130@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "fake_website",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (fake website). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 00882",
+      "email": "synthetic-fraud-882@example.invalid",
+      "whatsapp_number": "+91 00000 00882"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000882-01",
+        "date": "2026-07-09T02:46:00Z",
+        "amount": 4800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000130@cashnet.invalid",
+        "to_account": "mule-account-000844@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 4800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-09T02:36:00Z",
+    "fraud_end_time": "2026-07-09T02:56:00Z",
+    "reporting_delay_hours": 24
+  }
+}

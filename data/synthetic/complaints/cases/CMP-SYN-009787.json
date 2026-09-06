@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-009787",
+  "complaint_date": "2026-07-17T08:48:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 26,
+    "gender": "Male",
+    "phone": "+91 00000 09787",
+    "email": "victim-9787@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9787",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1100",
+      "ifsc_code": "SYNTHETIC-IB-101",
+      "upi_id": "account-account-000101@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "sextortion",
+    "sub_type": "image_blackmail",
+    "description": "Synthetic CASHNET training complaint: victim reported a sextortion (image blackmail). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09787",
+      "email": "synthetic-fraud-9787@example.invalid",
+      "video_call_platform": "Synthetic Video Platform",
+      "whatsapp_number": "+91 00000 09787"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009787-01",
+        "date": "2026-07-16T08:38:00Z",
+        "amount": 9500,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000101@cashnet.invalid",
+        "to_account": "mule-account-001495@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 9500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-16T08:28:00Z",
+    "fraud_end_time": "2026-07-16T08:48:00Z",
+    "reporting_delay_hours": 24
+  }
+}

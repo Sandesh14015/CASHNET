@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004043",
+  "complaint_date": "2026-07-28T18:17:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 65,
+    "gender": "Male",
+    "phone": "+91 00000 04043",
+    "email": "victim-4043@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4043",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1696",
+      "ifsc_code": "SYNTHETIC-HB-697",
+      "upi_id": "account-account-000697@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04043",
+      "email": "synthetic-fraud-4043@example.invalid",
+      "whatsapp_number": "+91 00000 04043"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004043-01",
+        "date": "2026-07-28T17:37:00Z",
+        "amount": 51200,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1696",
+        "to_account": "XXXXXXXXX2556",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 51200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-28T17:27:00Z",
+    "fraud_end_time": "2026-07-28T17:47:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

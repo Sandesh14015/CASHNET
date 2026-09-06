@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006364",
+  "complaint_date": "2026-07-03T10:06:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 69,
+    "gender": "Male",
+    "phone": "+91 00000 06364",
+    "email": "victim-6364@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6364",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1042",
+      "ifsc_code": "SYNTHETIC-PN-043",
+      "upi_id": "account-account-000043@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "fake_website",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (fake website). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06364",
+      "email": "synthetic-fraud-6364@example.invalid",
+      "whatsapp_number": "+91 00000 06364"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006364-01",
+        "date": "2026-07-03T09:26:00Z",
+        "amount": 29700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000043@cashnet.invalid",
+        "to_account": "mule-account-001201@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 29700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-03T09:16:00Z",
+    "fraud_end_time": "2026-07-03T09:36:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

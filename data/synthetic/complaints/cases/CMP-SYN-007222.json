@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007222",
+  "complaint_date": "2026-07-01T20:31:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 60,
+    "gender": "Female",
+    "phone": "+91 00000 07222",
+    "email": "victim-7222@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7222",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1408",
+      "ifsc_code": "SYNTHETIC-SB-409",
+      "upi_id": "account-account-000409@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "romance_scam",
+    "sub_type": "gift_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a romance scam (gift scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07222",
+      "email": "synthetic-fraud-7222@example.invalid",
+      "whatsapp_number": "+91 00000 07222"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007222-01",
+        "date": "2026-07-01T19:51:00Z",
+        "amount": 20400,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1408",
+        "to_account": "XXXXXXXXX1814",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 20400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-01T19:41:00Z",
+    "fraud_end_time": "2026-07-01T20:01:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

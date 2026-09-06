@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005476",
+  "complaint_date": "2026-06-21T19:24:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 50,
+    "gender": "Other",
+    "phone": "+91 00000 05476",
+    "email": "victim-5476@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5476",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1219",
+      "ifsc_code": "SYNTHETIC-KM-220",
+      "upi_id": "account-account-000220@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05476",
+      "email": "synthetic-fraud-5476@example.invalid",
+      "whatsapp_number": "+91 00000 05476"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005476-01",
+        "date": "2026-06-20T19:14:00Z",
+        "amount": 99500,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000220@cashnet.invalid",
+        "to_account": "mule-account-001696@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 99500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-20T19:04:00Z",
+    "fraud_end_time": "2026-06-20T19:24:00Z",
+    "reporting_delay_hours": 24
+  }
+}

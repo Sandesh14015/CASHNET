@@ -1,0 +1,90 @@
+{
+  "complaint_id": "CMP-SYN-005212",
+  "complaint_date": "2026-06-23T17:42:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 52,
+    "gender": "Other",
+    "phone": "+91 00000 05212",
+    "email": "victim-5212@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5212",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1432",
+      "ifsc_code": "SYNTHETIC-BO-433",
+      "upi_id": "account-account-000433@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "account_takeover",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (account takeover). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05212",
+      "email": "synthetic-fraud-5212@example.invalid",
+      "whatsapp_number": "+91 00000 05212"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005212-01",
+        "date": "2026-06-23T11:02:00Z",
+        "amount": 73400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000433@cashnet.invalid",
+        "to_account": "mule-account-001620@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-005212-02",
+        "date": "2026-06-23T11:12:00Z",
+        "amount": 74000,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1432",
+        "to_account": "XXXXXXXXX2619",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-005212-03",
+        "date": "2026-06-23T11:22:00Z",
+        "amount": 15100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1432",
+        "to_account": "XXXXXXXXX2619",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-005212-04",
+        "date": "2026-06-23T11:32:00Z",
+        "amount": 27000,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1432",
+        "to_account": "XXXXXXXXX2619",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 189500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-23T10:52:00Z",
+    "fraud_end_time": "2026-06-23T11:42:00Z",
+    "reporting_delay_hours": 6
+  }
+}

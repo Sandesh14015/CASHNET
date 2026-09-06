@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003684",
+  "complaint_date": "2026-06-20T20:36:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 59,
+    "gender": "Female",
+    "phone": "+91 00000 03684",
+    "email": "victim-3684@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3684",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1043",
+      "ifsc_code": "SYNTHETIC-PN-044",
+      "upi_id": "account-account-000044@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "ransomware",
+    "sub_type": "personal_data_ransom",
+    "description": "Synthetic CASHNET training complaint: victim reported a ransomware (personal data ransom). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03684",
+      "email": "synthetic-fraud-3684@example.invalid",
+      "whatsapp_number": "+91 00000 03684"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003684-01",
+        "date": "2026-06-20T20:20:00Z",
+        "amount": 23700,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1043",
+        "to_account": "XXXXXXXXX1825",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 23700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-20T20:10:00Z",
+    "fraud_end_time": "2026-06-20T20:30:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

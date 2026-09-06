@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005677",
+  "complaint_date": "2026-07-04T16:12:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 62,
+    "gender": "Other",
+    "phone": "+91 00000 05677",
+    "email": "victim-5677@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5677",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1306",
+      "ifsc_code": "SYNTHETIC-SB-307",
+      "upi_id": "account-account-000307@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 05677",
+      "email": "synthetic-fraud-5677@example.invalid",
+      "whatsapp_number": "+91 00000 05677"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005677-01",
+        "date": "2026-07-04T10:02:00Z",
+        "amount": 57200,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000307@cashnet.invalid",
+        "to_account": "mule-account-000869@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 57200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-04T09:52:00Z",
+    "fraud_end_time": "2026-07-04T10:12:00Z",
+    "reporting_delay_hours": 6
+  }
+}

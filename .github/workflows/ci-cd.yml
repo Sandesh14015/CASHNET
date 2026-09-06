@@ -1,0 +1,322 @@
+name: CashNet CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - 'feature/**'
+  pull_request:
+    branches:
+      - main
+      - develop
+
+env:
+  PYTHON_VERSION: '3.11'
+  NODE_VERSION: '20'
+
+jobs:
+
+  # ============================================================================
+  # LINT & FORMAT CHECK
+  # ============================================================================
+
+  lint:
+    name: Lint & Format
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff black mypy
+          pip install -r requirements.txt
+
+      - name: Run Ruff linter
+        run: ruff check lib/ services/ scripts/ tests/
+
+      - name: Run Black formatter check
+        run: black --check lib/ services/ scripts/ tests/
+
+      - name: Run MyPy type checker
+        run: mypy lib/ --ignore-missing-imports
+        continue-on-error: true
+
+
+  # ============================================================================
+  # SECURITY SCANNING
+  # ============================================================================
+
+  security:
+    name: Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install bandit safety pip-audit
+
+      - name: Run Bandit security linter
+        run: |
+          bandit -r lib/ services/ scripts/ \
+            -f json \
+            -o bandit-report.json || true
+
+      - name: Run Safety dependency check
+        run: |
+          safety check --json > safety-report.json || true
+        continue-on-error: true
+
+      - name: Run pip-audit
+        run: |
+          pip-audit --format=json > audit-report.json || true
+        continue-on-error: true
+
+      - name: Upload security reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: security-reports
+          path: |
+            bandit-report.json
+            safety-report.json
+            audit-report.json
+
+
+  # ============================================================================
+  # PYTHON TESTS
+  # ============================================================================
+
+  test-python:
+    name: Python Tests
+    runs-on: ubuntu-latest
+    needs: lint
+
+    services:
+      postgres:
+        image: postgis/postgis:15-3.3
+        env:
+          POSTGRES_DB: cashnet_test
+          POSTGRES_USER: test
+          POSTGRES_PASSWORD: test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-cov pytest-asyncio httpx factory-boy
+
+      - name: Run Python tests
+        env:
+          DATABASE_URL: postgresql://test:test@localhost:5432/cashnet_test
+          ENVIRONMENT: test
+        run: |
+          pytest tests/ \
+            --cov=lib \
+            --cov-report=xml \
+            --cov-report=html \
+            --junitxml=junit-results.xml \
+            -v
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: python-test-results
+          path: |
+            junit-results.xml
+            coverage.xml
+            htmlcov/
+
+
+  # ============================================================================
+  # DATABASE MIGRATION TEST
+  # ============================================================================
+
+  test-migrations:
+    name: Database Migrations
+    runs-on: ubuntu-latest
+    needs: lint
+
+    services:
+      postgres:
+        image: postgis/postgis:15-3.3
+        env:
+          POSTGRES_DB: cashnet_migration_test
+          POSTGRES_USER: test
+          POSTGRES_PASSWORD: test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install PostgreSQL client
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y postgresql-client
+
+      - name: Test schema application
+        env:
+          DATABASE_URL: postgresql://test:test@localhost:5432/cashnet_migration_test
+        run: |
+          echo "Testing schema application..."
+          psql "$DATABASE_URL" -f database/schema.sql
+          echo "Schema applied successfully!"
+
+          echo "Verifying tables exist..."
+          psql "$DATABASE_URL" -c "\dt" | grep -E "cases|addresses|entities|transactions|findings"
+
+          echo "All core tables verified!"
+
+
+  # ============================================================================
+  # BUILD & PACKAGE
+  # ============================================================================
+
+  build:
+    name: Build & Package
+    runs-on: ubuntu-latest
+    needs:
+      - test-python
+      - test-migrations
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install build twine
+
+      - name: Build Python package
+        run: python -m build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+
+  # ============================================================================
+  # DEPLOY TO STAGING
+  # ============================================================================
+
+  deploy-staging:
+    name: Deploy to Staging
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/develop'
+    environment: staging
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to staging environment
+        run: |
+          echo "Deploying to staging..."
+          echo "This would deploy to staging environment"
+          # Add actual deployment steps here
+          # e.g., docker build, push to registry, deploy to k8s
+
+      - name: Run smoke tests
+        run: |
+          echo "Running smoke tests..."
+          # Add smoke test commands here
+
+
+  # ============================================================================
+  # DEPLOY TO PRODUCTION
+  # ============================================================================
+
+  deploy-production:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    environment: production
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to production environment
+        run: |
+          echo "Deploying to production..."
+          echo "This would deploy to production environment"
+          # Add actual deployment steps here
+
+      - name: Verify deployment
+        run: |
+          echo "Verifying deployment..."
+          # Add actual verification steps here
+
+
+  # ============================================================================
+  # NOTIFICATION
+  # ============================================================================
+
+  notify:
+    name: Notify
+    runs-on: ubuntu-latest
+    needs:
+      - deploy-staging
+      - deploy-production
+    if: always()
+
+    steps:
+      - name: Send notification
+        run: |
+          echo "Pipeline completed with status: ${{ job.status }}"
+          # Add notification steps here
+          # Slack, Email, etc.

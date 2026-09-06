@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000523",
+  "complaint_date": "2026-07-16T17:43:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 64,
+    "gender": "Male",
+    "phone": "+91 00000 00523",
+    "email": "victim-523@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 523",
+      "city": "New Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1032",
+      "ifsc_code": "SYNTHETIC-IB-033",
+      "upi_id": "account-account-000033@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "wallet_transfer",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (wallet transfer). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00523",
+      "email": "synthetic-fraud-523@example.invalid",
+      "whatsapp_number": "+91 00000 00523"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000523-01",
+        "date": "2026-07-16T17:27:00Z",
+        "amount": 23500,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1032",
+        "to_account": "XXXXXXXXX1772",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 23500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-16T17:17:00Z",
+    "fraud_end_time": "2026-07-16T17:37:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

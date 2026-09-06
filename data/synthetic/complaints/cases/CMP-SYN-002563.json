@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002563",
+  "complaint_date": "2026-08-24T21:31:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 21,
+    "gender": "Other",
+    "phone": "+91 00000 02563",
+    "email": "victim-2563@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2563",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1657",
+      "ifsc_code": "SYNTHETIC-KM-658",
+      "upi_id": "account-account-000658@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "ransomware",
+    "sub_type": "personal_data_ransom",
+    "description": "Synthetic CASHNET training complaint: victim reported a ransomware (personal data ransom). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 02563",
+      "email": "synthetic-fraud-2563@example.invalid",
+      "whatsapp_number": "+91 00000 02563"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002563-01",
+        "date": "2026-08-24T09:21:00Z",
+        "amount": 40000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000658@cashnet.invalid",
+        "to_account": "mule-account-001820@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 40000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-24T09:11:00Z",
+    "fraud_end_time": "2026-08-24T09:31:00Z",
+    "reporting_delay_hours": 12
+  }
+}

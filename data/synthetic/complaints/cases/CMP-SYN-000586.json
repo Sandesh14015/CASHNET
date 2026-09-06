@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000586",
+  "complaint_date": "2026-07-23T02:17:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 29,
+    "gender": "Female",
+    "phone": "+91 00000 00586",
+    "email": "victim-586@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 586",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1540",
+      "ifsc_code": "SYNTHETIC-IB-541",
+      "upi_id": "account-account-000541@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 00586",
+      "email": "synthetic-fraud-586@example.invalid",
+      "whatsapp_number": "+91 00000 00586"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000586-01",
+        "date": "2026-07-22T14:07:00Z",
+        "amount": 85300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000541@cashnet.invalid",
+        "to_account": "mule-account-001630@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 85300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-22T13:57:00Z",
+    "fraud_end_time": "2026-07-22T14:17:00Z",
+    "reporting_delay_hours": 12
+  }
+}

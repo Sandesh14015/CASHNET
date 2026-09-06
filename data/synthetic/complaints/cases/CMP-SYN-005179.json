@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005179",
+  "complaint_date": "2026-08-22T03:40:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 57,
+    "gender": "Male",
+    "phone": "+91 00000 05179",
+    "email": "victim-5179@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5179",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1213",
+      "ifsc_code": "SYNTHETIC-IB-214",
+      "upi_id": "account-account-000214@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "fake_summons",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (fake summons). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05179",
+      "email": "synthetic-fraud-5179@example.invalid",
+      "whatsapp_number": "+91 00000 05179"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005179-01",
+        "date": "2026-08-21T03:30:00Z",
+        "amount": 18000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000214@cashnet.invalid",
+        "to_account": "mule-account-001002@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 18000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-21T03:20:00Z",
+    "fraud_end_time": "2026-08-21T03:40:00Z",
+    "reporting_delay_hours": 24
+  }
+}

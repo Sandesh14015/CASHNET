@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-004440",
+  "complaint_date": "2026-07-16T02:18:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 36,
+    "gender": "Male",
+    "phone": "+91 00000 04440",
+    "email": "victim-4440@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4440",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1394",
+      "ifsc_code": "SYNTHETIC-IB-395",
+      "upi_id": "account-account-000395@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "training_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (training fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04440",
+      "email": "synthetic-fraud-4440@example.invalid",
+      "telegram_id": "@synthetic_offer_4440",
+      "whatsapp_number": "+91 00000 04440"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004440-01",
+        "date": "2026-07-15T20:08:00Z",
+        "amount": 67800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000395@cashnet.invalid",
+        "to_account": "mule-account-000969@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 67800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-15T19:58:00Z",
+    "fraud_end_time": "2026-07-15T20:18:00Z",
+    "reporting_delay_hours": 6
+  }
+}

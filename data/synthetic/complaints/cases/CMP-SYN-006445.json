@@ -1,0 +1,71 @@
+{
+  "complaint_id": "CMP-SYN-006445",
+  "complaint_date": "2026-07-10T04:30:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 26,
+    "gender": "Female",
+    "phone": "+91 00000 06445",
+    "email": "victim-6445@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6445",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1574",
+      "ifsc_code": "SYNTHETIC-IB-575",
+      "upi_id": "account-account-000575@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "training_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (training fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 06445",
+      "email": "synthetic-fraud-6445@example.invalid",
+      "telegram_id": "@synthetic_offer_6445",
+      "whatsapp_number": "+91 00000 06445"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006445-01",
+        "date": "2026-07-10T02:10:00Z",
+        "amount": 32100,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000575@cashnet.invalid",
+        "to_account": "mule-account-001067@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-006445-02",
+        "date": "2026-07-10T02:20:00Z",
+        "amount": 8600,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000575@cashnet.invalid",
+        "to_account": "mule-account-001067@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 40700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-10T02:00:00Z",
+    "fraud_end_time": "2026-07-10T02:30:00Z",
+    "reporting_delay_hours": 2
+  }
+}

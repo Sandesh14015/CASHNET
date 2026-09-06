@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009863",
+  "complaint_date": "2026-08-21T02:38:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 21,
+    "gender": "Male",
+    "phone": "+91 00000 09863",
+    "email": "victim-9863@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9863",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1033",
+      "ifsc_code": "SYNTHETIC-HB-034",
+      "upi_id": "account-account-000034@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "collect_request",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (collect request). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09863",
+      "email": "synthetic-fraud-9863@example.invalid",
+      "whatsapp_number": "+91 00000 09863"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009863-01",
+        "date": "2026-08-20T02:28:00Z",
+        "amount": 17500,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000034@cashnet.invalid",
+        "to_account": "mule-account-001896@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 17500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-20T02:18:00Z",
+    "fraud_end_time": "2026-08-20T02:38:00Z",
+    "reporting_delay_hours": 24
+  }
+}

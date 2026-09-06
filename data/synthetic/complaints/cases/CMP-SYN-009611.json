@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009611",
+  "complaint_date": "2026-08-28T07:53:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 34,
+    "gender": "Other",
+    "phone": "+91 00000 09611",
+    "email": "victim-9611@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9611",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX1238",
+      "ifsc_code": "SYNTHETIC-IB-239",
+      "upi_id": "account-account-000239@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "OTP_fraud",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (OTP fraud). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09611",
+      "email": "synthetic-fraud-9611@example.invalid",
+      "whatsapp_number": "+91 00000 09611"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009611-01",
+        "date": "2026-08-28T01:43:00Z",
+        "amount": 88300,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1238",
+        "to_account": "XXXXXXXXX2484",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 88300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-28T01:33:00Z",
+    "fraud_end_time": "2026-08-28T01:53:00Z",
+    "reporting_delay_hours": 6
+  }
+}

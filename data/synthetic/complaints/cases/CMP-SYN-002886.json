@@ -1,0 +1,100 @@
+{
+  "complaint_id": "CMP-SYN-002886",
+  "complaint_date": "2026-07-08T04:55:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 61,
+    "gender": "Other",
+    "phone": "+91 00000 02886",
+    "email": "victim-2886@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2886",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX2018",
+      "ifsc_code": "SYNTHETIC-HB-1019",
+      "upi_id": "account-account-001019@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "non_delivery",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (non delivery). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 02886",
+      "email": "synthetic-fraud-2886@example.invalid",
+      "whatsapp_number": "+91 00000 02886"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002886-01",
+        "date": "2026-07-08T03:59:00Z",
+        "amount": 83400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001019@cashnet.invalid",
+        "to_account": "mule-account-001769@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002886-02",
+        "date": "2026-07-08T04:09:00Z",
+        "amount": 97500,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001019@cashnet.invalid",
+        "to_account": "mule-account-001769@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002886-03",
+        "date": "2026-07-08T04:19:00Z",
+        "amount": 84100,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001019@cashnet.invalid",
+        "to_account": "mule-account-001769@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002886-04",
+        "date": "2026-07-08T04:29:00Z",
+        "amount": 16400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001019@cashnet.invalid",
+        "to_account": "mule-account-001769@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002886-05",
+        "date": "2026-07-08T04:39:00Z",
+        "amount": 74800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2018",
+        "to_account": "XXXXXXXXX2768",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 356200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-08T03:49:00Z",
+    "fraud_end_time": "2026-07-08T04:49:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

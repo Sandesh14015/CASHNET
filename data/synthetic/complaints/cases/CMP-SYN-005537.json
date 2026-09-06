@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005537",
+  "complaint_date": "2026-07-17T06:09:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 33,
+    "gender": "Female",
+    "phone": "+91 00000 05537",
+    "email": "victim-5537@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5537",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1711",
+      "ifsc_code": "SYNTHETIC-IB-712",
+      "upi_id": "account-account-000712@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 05537",
+      "email": "synthetic-fraud-5537@example.invalid",
+      "whatsapp_number": "+91 00000 05537"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005537-01",
+        "date": "2026-07-16T05:59:00Z",
+        "amount": 16700,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1711",
+        "to_account": "XXXXXXXXX2169",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 16700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-16T05:49:00Z",
+    "fraud_end_time": "2026-07-16T06:09:00Z",
+    "reporting_delay_hours": 24
+  }
+}

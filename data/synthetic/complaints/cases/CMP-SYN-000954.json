@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000954",
+  "complaint_date": "2026-06-07T13:14:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 19,
+    "gender": "Other",
+    "phone": "+91 00000 00954",
+    "email": "victim-954@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 954",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX2849",
+      "ifsc_code": "SYNTHETIC-KM-1850",
+      "upi_id": "account-account-001850@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "fake_summons",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (fake summons). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 00954",
+      "email": "synthetic-fraud-954@example.invalid",
+      "whatsapp_number": "+91 00000 00954"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000954-01",
+        "date": "2026-06-07T12:58:00Z",
+        "amount": 4700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001850@cashnet.invalid",
+        "to_account": "mule-account-001213@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 4700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-07T12:48:00Z",
+    "fraud_end_time": "2026-06-07T13:08:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009435",
+  "complaint_date": "2026-07-31T23:54:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 28,
+    "gender": "Male",
+    "phone": "+91 00000 09435",
+    "email": "victim-9435@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9435",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1365",
+      "ifsc_code": "SYNTHETIC-IB-366",
+      "upi_id": "account-account-000366@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "fake_website",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (fake website). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09435",
+      "email": "synthetic-fraud-9435@example.invalid",
+      "whatsapp_number": "+91 00000 09435"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009435-01",
+        "date": "2026-07-30T23:44:00Z",
+        "amount": 25900,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1365",
+        "to_account": "XXXXXXXXX1886",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 25900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-30T23:34:00Z",
+    "fraud_end_time": "2026-07-30T23:54:00Z",
+    "reporting_delay_hours": 24
+  }
+}

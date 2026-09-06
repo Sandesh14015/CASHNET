@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003377",
+  "complaint_date": "2026-07-24T10:47:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 46,
+    "gender": "Other",
+    "phone": "+91 00000 03377",
+    "email": "victim-3377@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3377",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1122",
+      "ifsc_code": "SYNTHETIC-BO-123",
+      "upi_id": "account-account-000123@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "fake_website",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (fake website). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03377",
+      "email": "synthetic-fraud-3377@example.invalid",
+      "whatsapp_number": "+91 00000 03377"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003377-01",
+        "date": "2026-07-24T04:37:00Z",
+        "amount": 4200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1122",
+        "to_account": "XXXXXXXXX2822",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 4200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-24T04:27:00Z",
+    "fraud_end_time": "2026-07-24T04:47:00Z",
+    "reporting_delay_hours": 6
+  }
+}

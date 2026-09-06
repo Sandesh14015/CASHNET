@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007271",
+  "complaint_date": "2026-06-12T16:47:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 42,
+    "gender": "Other",
+    "phone": "+91 00000 07271",
+    "email": "victim-7271@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7271",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1639",
+      "ifsc_code": "SYNTHETIC-UB-640",
+      "upi_id": "account-account-000640@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "romance_scam",
+    "sub_type": "gift_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a romance scam (gift scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07271",
+      "email": "synthetic-fraud-7271@example.invalid",
+      "whatsapp_number": "+91 00000 07271"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007271-01",
+        "date": "2026-06-12T04:37:00Z",
+        "amount": 53700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000640@cashnet.invalid",
+        "to_account": "mule-account-000964@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 53700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-12T04:27:00Z",
+    "fraud_end_time": "2026-06-12T04:47:00Z",
+    "reporting_delay_hours": 12
+  }
+}

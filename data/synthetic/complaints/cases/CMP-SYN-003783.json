@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003783",
+  "complaint_date": "2026-08-15T21:05:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 74,
+    "gender": "Female",
+    "phone": "+91 00000 03783",
+    "email": "victim-3783@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3783",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1254",
+      "ifsc_code": "SYNTHETIC-BO-255",
+      "upi_id": "account-account-000255@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "OTP_fraud",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (OTP fraud). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 03783",
+      "email": "synthetic-fraud-3783@example.invalid",
+      "whatsapp_number": "+91 00000 03783"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003783-01",
+        "date": "2026-08-15T19:55:00Z",
+        "amount": 28100,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000255@cashnet.invalid",
+        "to_account": "mule-account-001449@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 28100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-15T19:45:00Z",
+    "fraud_end_time": "2026-08-15T20:05:00Z",
+    "reporting_delay_hours": 1
+  }
+}

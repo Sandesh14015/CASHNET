@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-009534",
+  "complaint_date": "2026-06-16T17:58:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 45,
+    "gender": "Other",
+    "phone": "+91 00000 09534",
+    "email": "victim-9534@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9534",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1976",
+      "ifsc_code": "SYNTHETIC-UB-977",
+      "upi_id": "account-account-000977@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "fake_seller",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (fake seller). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09534",
+      "email": "synthetic-fraud-9534@example.invalid",
+      "whatsapp_number": "+91 00000 09534"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009534-01",
+        "date": "2026-06-16T16:38:00Z",
+        "amount": 5300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000977@cashnet.invalid",
+        "to_account": "mule-account-000828@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-009534-02",
+        "date": "2026-06-16T16:48:00Z",
+        "amount": 30000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000977@cashnet.invalid",
+        "to_account": "mule-account-000828@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 35300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-16T16:28:00Z",
+    "fraud_end_time": "2026-06-16T16:58:00Z",
+    "reporting_delay_hours": 1
+  }
+}

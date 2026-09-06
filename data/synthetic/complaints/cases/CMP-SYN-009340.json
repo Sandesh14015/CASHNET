@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009340",
+  "complaint_date": "2026-07-24T11:24:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 60,
+    "gender": "Other",
+    "phone": "+91 00000 09340",
+    "email": "victim-9340@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9340",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1541",
+      "ifsc_code": "SYNTHETIC-UB-542",
+      "upi_id": "account-account-000542@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "fake_website",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (fake website). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 09340",
+      "email": "synthetic-fraud-9340@example.invalid",
+      "whatsapp_number": "+91 00000 09340"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009340-01",
+        "date": "2026-07-24T05:14:00Z",
+        "amount": 33700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000542@cashnet.invalid",
+        "to_account": "mule-account-001793@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 33700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-24T05:04:00Z",
+    "fraud_end_time": "2026-07-24T05:24:00Z",
+    "reporting_delay_hours": 6
+  }
+}

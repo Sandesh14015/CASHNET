@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004395",
+  "complaint_date": "2026-06-22T16:56:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 49,
+    "gender": "Male",
+    "phone": "+91 00000 04395",
+    "email": "victim-4395@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4395",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1775",
+      "ifsc_code": "SYNTHETIC-BO-776",
+      "upi_id": "account-account-000776@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04395",
+      "email": "synthetic-fraud-4395@example.invalid",
+      "whatsapp_number": "+91 00000 04395"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004395-01",
+        "date": "2026-06-22T04:46:00Z",
+        "amount": 8100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1775",
+        "to_account": "XXXXXXXXX2693",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 8100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-22T04:36:00Z",
+    "fraud_end_time": "2026-06-22T04:56:00Z",
+    "reporting_delay_hours": 12
+  }
+}

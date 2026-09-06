@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001394",
+  "complaint_date": "2026-08-03T15:31:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 44,
+    "gender": "Other",
+    "phone": "+91 00000 01394",
+    "email": "victim-1394@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1394",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1290",
+      "ifsc_code": "SYNTHETIC-PN-291",
+      "upi_id": "account-account-000291@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "OTP_fraud",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (OTP fraud). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01394",
+      "email": "synthetic-fraud-1394@example.invalid",
+      "whatsapp_number": "+91 00000 01394"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001394-01",
+        "date": "2026-08-03T09:21:00Z",
+        "amount": 12700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000291@cashnet.invalid",
+        "to_account": "mule-account-000754@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 12700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-03T09:11:00Z",
+    "fraud_end_time": "2026-08-03T09:31:00Z",
+    "reporting_delay_hours": 6
+  }
+}

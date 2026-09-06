@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004336",
+  "complaint_date": "2026-08-22T05:44:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 64,
+    "gender": "Other",
+    "phone": "+91 00000 04336",
+    "email": "victim-4336@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4336",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1134",
+      "ifsc_code": "SYNTHETIC-CB-135",
+      "upi_id": "account-account-000135@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 04336",
+      "email": "synthetic-fraud-4336@example.invalid",
+      "whatsapp_number": "+91 00000 04336"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004336-01",
+        "date": "2026-08-22T05:28:00Z",
+        "amount": 44500,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1134",
+        "to_account": "XXXXXXXXX1926",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 44500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-22T05:18:00Z",
+    "fraud_end_time": "2026-08-22T05:38:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

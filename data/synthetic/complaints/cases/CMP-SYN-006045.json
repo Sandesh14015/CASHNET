@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006045",
+  "complaint_date": "2026-07-13T14:34:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 65,
+    "gender": "Female",
+    "phone": "+91 00000 06045",
+    "email": "victim-6045@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6045",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX2927",
+      "ifsc_code": "SYNTHETIC-IB-1928",
+      "upi_id": "account-account-001928@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 06045",
+      "email": "synthetic-fraud-6045@example.invalid",
+      "whatsapp_number": "+91 00000 06045"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006045-01",
+        "date": "2026-07-13T02:24:00Z",
+        "amount": 76900,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2927",
+        "to_account": "XXXXXXXXX2813",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 76900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-13T02:14:00Z",
+    "fraud_end_time": "2026-07-13T02:34:00Z",
+    "reporting_delay_hours": 12
+  }
+}

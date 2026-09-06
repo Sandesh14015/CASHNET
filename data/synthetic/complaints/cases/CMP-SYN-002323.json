@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-002323",
+  "complaint_date": "2026-06-25T14:19:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 47,
+    "gender": "Female",
+    "phone": "+91 00000 02323",
+    "email": "victim-2323@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2323",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX1703",
+      "ifsc_code": "SYNTHETIC-IB-704",
+      "upi_id": "account-account-000704@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "training_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (training fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 02323",
+      "email": "synthetic-fraud-2323@example.invalid",
+      "telegram_id": "@synthetic_offer_2323",
+      "whatsapp_number": "+91 00000 02323"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002323-01",
+        "date": "2026-06-25T02:09:00Z",
+        "amount": 82600,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1703",
+        "to_account": "XXXXXXXXX1937",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 82600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-25T01:59:00Z",
+    "fraud_end_time": "2026-06-25T02:19:00Z",
+    "reporting_delay_hours": 12
+  }
+}

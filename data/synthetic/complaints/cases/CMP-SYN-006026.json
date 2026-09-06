@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-006026",
+  "complaint_date": "2026-07-25T10:06:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 68,
+    "gender": "Male",
+    "phone": "+91 00000 06026",
+    "email": "victim-6026@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6026",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1709",
+      "ifsc_code": "SYNTHETIC-BO-710",
+      "upi_id": "account-account-000710@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "part_time_job",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (part time job). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06026",
+      "email": "synthetic-fraud-6026@example.invalid",
+      "telegram_id": "@synthetic_offer_6026",
+      "whatsapp_number": "+91 00000 06026"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006026-01",
+        "date": "2026-07-24T21:56:00Z",
+        "amount": 40800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000710@cashnet.invalid",
+        "to_account": "mule-account-001233@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 40800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-24T21:46:00Z",
+    "fraud_end_time": "2026-07-24T22:06:00Z",
+    "reporting_delay_hours": 12
+  }
+}

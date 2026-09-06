@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004201",
+  "complaint_date": "2026-06-11T01:48:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 57,
+    "gender": "Male",
+    "phone": "+91 00000 04201",
+    "email": "victim-4201@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4201",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1570",
+      "ifsc_code": "SYNTHETIC-IB-571",
+      "upi_id": "account-account-000571@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "SIM_swap",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (SIM swap). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04201",
+      "email": "synthetic-fraud-4201@example.invalid",
+      "whatsapp_number": "+91 00000 04201"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004201-01",
+        "date": "2026-06-11T01:32:00Z",
+        "amount": 67800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1570",
+        "to_account": "XXXXXXXXX2134",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 67800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-11T01:22:00Z",
+    "fraud_end_time": "2026-06-11T01:42:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

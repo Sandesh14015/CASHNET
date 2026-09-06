@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-008489",
+  "complaint_date": "2026-06-27T20:32:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 56,
+    "gender": "Male",
+    "phone": "+91 00000 08489",
+    "email": "victim-8489@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8489",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1491",
+      "ifsc_code": "SYNTHETIC-HB-492",
+      "upi_id": "account-account-000492@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "police_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (police impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08489",
+      "email": "synthetic-fraud-8489@example.invalid",
+      "whatsapp_number": "+91 00000 08489"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008489-01",
+        "date": "2026-06-27T20:06:00Z",
+        "amount": 8400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000492@cashnet.invalid",
+        "to_account": "mule-account-000886@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-008489-02",
+        "date": "2026-06-27T20:16:00Z",
+        "amount": 47000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000492@cashnet.invalid",
+        "to_account": "mule-account-000886@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 55400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-27T19:56:00Z",
+    "fraud_end_time": "2026-06-27T20:26:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

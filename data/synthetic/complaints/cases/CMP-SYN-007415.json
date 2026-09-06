@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007415",
+  "complaint_date": "2026-06-12T14:38:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 63,
+    "gender": "Male",
+    "phone": "+91 00000 07415",
+    "email": "victim-7415@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7415",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1648",
+      "ifsc_code": "SYNTHETIC-IB-649",
+      "upi_id": "account-account-000649@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "collect_request",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (collect request). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07415",
+      "email": "synthetic-fraud-7415@example.invalid",
+      "whatsapp_number": "+91 00000 07415"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007415-01",
+        "date": "2026-06-12T13:58:00Z",
+        "amount": 64500,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1648",
+        "to_account": "XXXXXXXXX1855",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 64500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-12T13:48:00Z",
+    "fraud_end_time": "2026-06-12T14:08:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

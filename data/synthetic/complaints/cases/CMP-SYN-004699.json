@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004699",
+  "complaint_date": "2026-08-26T11:01:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 27,
+    "gender": "Female",
+    "phone": "+91 00000 04699",
+    "email": "victim-4699@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4699",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX2187",
+      "ifsc_code": "SYNTHETIC-BO-1188",
+      "upi_id": "account-account-001188@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "OTP_fraud",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (OTP fraud). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 04699",
+      "email": "synthetic-fraud-4699@example.invalid",
+      "whatsapp_number": "+91 00000 04699"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004699-01",
+        "date": "2026-08-26T04:51:00Z",
+        "amount": 24000,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2187",
+        "to_account": "XXXXXXXXX2204",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 24000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-26T04:41:00Z",
+    "fraud_end_time": "2026-08-26T05:01:00Z",
+    "reporting_delay_hours": 6
+  }
+}

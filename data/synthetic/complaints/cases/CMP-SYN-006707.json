@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006707",
+  "complaint_date": "2026-07-22T12:07:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 47,
+    "gender": "Other",
+    "phone": "+91 00000 06707",
+    "email": "victim-6707@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6707",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX2312",
+      "ifsc_code": "SYNTHETIC-BO-1313",
+      "upi_id": "account-account-001313@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06707",
+      "email": "synthetic-fraud-6707@example.invalid",
+      "whatsapp_number": "+91 00000 06707"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006707-01",
+        "date": "2026-07-22T11:51:00Z",
+        "amount": 23100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2312",
+        "to_account": "XXXXXXXXX2257",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 23100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-22T11:41:00Z",
+    "fraud_end_time": "2026-07-22T12:01:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

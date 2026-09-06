@@ -1,0 +1,71 @@
+{
+  "complaint_id": "CMP-SYN-000707",
+  "complaint_date": "2026-07-07T22:54:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 26,
+    "gender": "Other",
+    "phone": "+91 00000 00707",
+    "email": "victim-707@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 707",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1695",
+      "ifsc_code": "SYNTHETIC-CB-696",
+      "upi_id": "account-account-000696@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "security_deposit",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (security deposit). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00707",
+      "email": "synthetic-fraud-707@example.invalid",
+      "telegram_id": "@synthetic_offer_707",
+      "whatsapp_number": "+91 00000 00707"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000707-01",
+        "date": "2026-07-07T16:34:00Z",
+        "amount": 55800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000696@cashnet.invalid",
+        "to_account": "mule-account-001392@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-000707-02",
+        "date": "2026-07-07T16:44:00Z",
+        "amount": 65000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000696@cashnet.invalid",
+        "to_account": "mule-account-001392@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 120800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-07T16:24:00Z",
+    "fraud_end_time": "2026-07-07T16:54:00Z",
+    "reporting_delay_hours": 6
+  }
+}

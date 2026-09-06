@@ -1,0 +1,80 @@
+{
+  "complaint_id": "CMP-SYN-002665",
+  "complaint_date": "2026-07-24T15:59:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 51,
+    "gender": "Female",
+    "phone": "+91 00000 02665",
+    "email": "victim-2665@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2665",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1504",
+      "ifsc_code": "SYNTHETIC-IB-505",
+      "upi_id": "account-account-000505@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 02665",
+      "email": "synthetic-fraud-2665@example.invalid",
+      "whatsapp_number": "+91 00000 02665"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002665-01",
+        "date": "2026-07-24T14:29:00Z",
+        "amount": 24200,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000505@cashnet.invalid",
+        "to_account": "mule-account-001410@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002665-02",
+        "date": "2026-07-24T14:39:00Z",
+        "amount": 74400,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1504",
+        "to_account": "XXXXXXXXX2409",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002665-03",
+        "date": "2026-07-24T14:49:00Z",
+        "amount": 61700,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1504",
+        "to_account": "XXXXXXXXX2409",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 160300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-24T14:19:00Z",
+    "fraud_end_time": "2026-07-24T14:59:00Z",
+    "reporting_delay_hours": 1
+  }
+}

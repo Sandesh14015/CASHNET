@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005876",
+  "complaint_date": "2026-07-12T19:05:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 49,
+    "gender": "Male",
+    "phone": "+91 00000 05876",
+    "email": "victim-5876@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5876",
+      "city": "New Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1675",
+      "ifsc_code": "SYNTHETIC-UB-676",
+      "upi_id": "account-account-000676@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "police_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (police impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 05876",
+      "email": "synthetic-fraud-5876@example.invalid",
+      "whatsapp_number": "+91 00000 05876"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005876-01",
+        "date": "2026-07-11T18:55:00Z",
+        "amount": 75900,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1675",
+        "to_account": "XXXXXXXXX2130",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 75900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-11T18:45:00Z",
+    "fraud_end_time": "2026-07-11T19:05:00Z",
+    "reporting_delay_hours": 24
+  }
+}

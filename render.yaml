@@ -1,0 +1,52 @@
+# Render.com Deployment Configuration
+# Deploy CashNet on Render with separate services for API, Models, and Frontend
+
+services:
+  # Backend API Server (Node.js)
+  - type: web
+    name: cashnet-api
+    runtime: node
+    buildCommand: cd artifacts/api-server && npm install && npm run build
+    startCommand: cd artifacts/api-server && node dist/index.js
+    autoDeployTrigger: commit
+    # PORT is set by Render automatically; do not hardcode it here. The Node
+    # server reads process.env.PORT (see artifacts/api-server/src/index.ts).
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PYTHON_SERVICE_URL
+        sync: false
+      - key: ENABLE_PII_MASKING
+        value: "true"
+      - key: LOG_LEVEL
+        value: info
+
+  # Model Server (Python / Flask)
+  - type: web
+    name: cashnet-models
+    runtime: python
+    pythonVersion: 3.11.9
+    buildCommand: pip install -r requirements.txt && pip install flask flask-cors
+    # model_server.py reads PORT from the environment (Render sets it).
+    startCommand: python scripts/model_server.py
+    autoDeployTrigger: commit
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: PYTHONUNBUFFERED
+        value: "1"
+
+  # Frontend (React static site)
+  - type: web
+    name: cashnet-frontend
+    runtime: static
+    buildCommand: pnpm install && pnpm --filter @workspace/cashnet run build
+    staticPublishPath: artifacts/cashnet/dist/public
+    autoDeployTrigger: commit
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+# Set these in the Render dashboard after first deploy:
+#   PYTHON_SERVICE_URL  ->  URL of the cashnet-models service

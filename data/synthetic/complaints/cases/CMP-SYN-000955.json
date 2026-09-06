@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000955",
+  "complaint_date": "2026-07-01T22:12:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 55,
+    "gender": "Male",
+    "phone": "+91 00000 00955",
+    "email": "victim-955@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 955",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1693",
+      "ifsc_code": "SYNTHETIC-CB-694",
+      "upi_id": "account-account-000694@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "wallet_transfer",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (wallet transfer). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00955",
+      "email": "synthetic-fraud-955@example.invalid",
+      "whatsapp_number": "+91 00000 00955"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000955-01",
+        "date": "2026-06-30T22:02:00Z",
+        "amount": 61800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000694@cashnet.invalid",
+        "to_account": "mule-account-001205@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 61800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-30T21:52:00Z",
+    "fraud_end_time": "2026-06-30T22:12:00Z",
+    "reporting_delay_hours": 24
+  }
+}

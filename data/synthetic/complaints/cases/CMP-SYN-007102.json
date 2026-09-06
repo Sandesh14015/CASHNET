@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007102",
+  "complaint_date": "2026-07-10T23:11:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 22,
+    "gender": "Other",
+    "phone": "+91 00000 07102",
+    "email": "victim-7102@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7102",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1343",
+      "ifsc_code": "SYNTHETIC-IB-344",
+      "upi_id": "account-account-000344@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07102",
+      "email": "synthetic-fraud-7102@example.invalid",
+      "whatsapp_number": "+91 00000 07102"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007102-01",
+        "date": "2026-07-10T17:01:00Z",
+        "amount": 7600,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1343",
+        "to_account": "XXXXXXXXX2554",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 7600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-10T16:51:00Z",
+    "fraud_end_time": "2026-07-10T17:11:00Z",
+    "reporting_delay_hours": 6
+  }
+}

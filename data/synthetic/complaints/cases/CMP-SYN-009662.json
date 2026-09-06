@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009662",
+  "complaint_date": "2026-08-26T16:41:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 44,
+    "gender": "Female",
+    "phone": "+91 00000 09662",
+    "email": "victim-9662@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9662",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1396",
+      "ifsc_code": "SYNTHETIC-HB-397",
+      "upi_id": "account-account-000397@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "fake_support",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (fake support). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09662",
+      "email": "synthetic-fraud-9662@example.invalid",
+      "whatsapp_number": "+91 00000 09662"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009662-01",
+        "date": "2026-08-26T16:01:00Z",
+        "amount": 90100,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000397@cashnet.invalid",
+        "to_account": "mule-account-000931@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 90100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-26T15:51:00Z",
+    "fraud_end_time": "2026-08-26T16:11:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

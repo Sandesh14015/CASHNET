@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-005349",
+  "complaint_date": "2026-07-04T03:10:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 40,
+    "gender": "Female",
+    "phone": "+91 00000 05349",
+    "email": "victim-5349@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5349",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1810",
+      "ifsc_code": "SYNTHETIC-PN-811",
+      "upi_id": "account-account-000811@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "collect_request",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (collect request). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05349",
+      "email": "synthetic-fraud-5349@example.invalid",
+      "whatsapp_number": "+91 00000 05349"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005349-01",
+        "date": "2026-07-03T02:50:00Z",
+        "amount": 29200,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1810",
+        "to_account": "XXXXXXXXX2021",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-005349-02",
+        "date": "2026-07-03T03:00:00Z",
+        "amount": 71700,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1810",
+        "to_account": "XXXXXXXXX2021",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 100900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-03T02:40:00Z",
+    "fraud_end_time": "2026-07-03T03:10:00Z",
+    "reporting_delay_hours": 24
+  }
+}

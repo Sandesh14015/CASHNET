@@ -1,0 +1,71 @@
+{
+  "complaint_id": "CMP-SYN-009051",
+  "complaint_date": "2026-07-05T23:21:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 31,
+    "gender": "Other",
+    "phone": "+91 00000 09051",
+    "email": "victim-9051@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9051",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1712",
+      "ifsc_code": "SYNTHETIC-BO-713",
+      "upi_id": "account-account-000713@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "investment_scam",
+    "sub_type": "fake_trading_platform",
+    "description": "Synthetic CASHNET training complaint: victim reported a investment scam (fake trading platform). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09051",
+      "email": "synthetic-fraud-9051@example.invalid",
+      "telegram_id": "@synthetic_offer_9051",
+      "whatsapp_number": "+91 00000 09051"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009051-01",
+        "date": "2026-07-05T22:31:00Z",
+        "amount": 39600,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1712",
+        "to_account": "XXXXXXXXX2628",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-009051-02",
+        "date": "2026-07-05T22:41:00Z",
+        "amount": 24800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000713@cashnet.invalid",
+        "to_account": "mule-account-001629@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 64400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-05T22:21:00Z",
+    "fraud_end_time": "2026-07-05T22:51:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

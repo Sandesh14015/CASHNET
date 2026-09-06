@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004153",
+  "complaint_date": "2026-07-06T20:37:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 71,
+    "gender": "Male",
+    "phone": "+91 00000 04153",
+    "email": "victim-4153@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4153",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1239",
+      "ifsc_code": "SYNTHETIC-AB-240",
+      "upi_id": "account-account-000240@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 04153",
+      "email": "synthetic-fraud-4153@example.invalid",
+      "whatsapp_number": "+91 00000 04153"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004153-01",
+        "date": "2026-07-06T14:27:00Z",
+        "amount": 7800,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1239",
+        "to_account": "XXXXXXXXX2148",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 7800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-06T14:17:00Z",
+    "fraud_end_time": "2026-07-06T14:37:00Z",
+    "reporting_delay_hours": 6
+  }
+}

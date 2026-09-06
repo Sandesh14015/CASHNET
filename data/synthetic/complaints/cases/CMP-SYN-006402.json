@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-006402",
+  "complaint_date": "2026-07-23T12:39:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 68,
+    "gender": "Male",
+    "phone": "+91 00000 06402",
+    "email": "victim-6402@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6402",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1967",
+      "ifsc_code": "SYNTHETIC-IB-968",
+      "upi_id": "account-account-000968@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "wallet_transfer",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (wallet transfer). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 06402",
+      "email": "synthetic-fraud-6402@example.invalid",
+      "whatsapp_number": "+91 00000 06402"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006402-01",
+        "date": "2026-07-23T12:13:00Z",
+        "amount": 97000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000968@cashnet.invalid",
+        "to_account": "mule-account-001869@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-006402-02",
+        "date": "2026-07-23T12:23:00Z",
+        "amount": 85000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000968@cashnet.invalid",
+        "to_account": "mule-account-001869@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 182000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-23T12:03:00Z",
+    "fraud_end_time": "2026-07-23T12:33:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

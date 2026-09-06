@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-008133",
+  "complaint_date": "2026-06-11T10:59:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 40,
+    "gender": "Other",
+    "phone": "+91 00000 08133",
+    "email": "victim-8133@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8133",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1219",
+      "ifsc_code": "SYNTHETIC-KM-220",
+      "upi_id": "account-account-000220@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "fake_exchange",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (fake exchange). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 08133",
+      "email": "synthetic-fraud-8133@example.invalid",
+      "whatsapp_number": "+91 00000 08133"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008133-01",
+        "date": "2026-06-11T09:49:00Z",
+        "amount": 4300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000220@cashnet.invalid",
+        "to_account": "mule-account-001767@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 4300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-11T09:39:00Z",
+    "fraud_end_time": "2026-06-11T09:59:00Z",
+    "reporting_delay_hours": 1
+  }
+}

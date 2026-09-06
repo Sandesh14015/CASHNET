@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004474",
+  "complaint_date": "2026-08-17T14:04:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 61,
+    "gender": "Male",
+    "phone": "+91 00000 04474",
+    "email": "victim-4474@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4474",
+      "city": "New Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX2027",
+      "ifsc_code": "SYNTHETIC-AB-1028",
+      "upi_id": "account-account-001028@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "bank_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (bank impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04474",
+      "email": "synthetic-fraud-4474@example.invalid",
+      "whatsapp_number": "+91 00000 04474"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004474-01",
+        "date": "2026-08-16T13:54:00Z",
+        "amount": 86000,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2027",
+        "to_account": "XXXXXXXXX2475",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 86000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-16T13:44:00Z",
+    "fraud_end_time": "2026-08-16T14:04:00Z",
+    "reporting_delay_hours": 24
+  }
+}

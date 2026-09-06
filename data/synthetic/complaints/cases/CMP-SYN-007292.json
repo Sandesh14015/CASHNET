@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-007292",
+  "complaint_date": "2026-07-05T07:38:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 35,
+    "gender": "Female",
+    "phone": "+91 00000 07292",
+    "email": "victim-7292@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7292",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1067",
+      "ifsc_code": "SYNTHETIC-HB-068",
+      "upi_id": "account-account-000068@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "part_time_job",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (part time job). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07292",
+      "email": "synthetic-fraud-7292@example.invalid",
+      "telegram_id": "@synthetic_offer_7292",
+      "whatsapp_number": "+91 00000 07292"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007292-01",
+        "date": "2026-07-05T06:28:00Z",
+        "amount": 19900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000068@cashnet.invalid",
+        "to_account": "mule-account-001301@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 19900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-05T06:18:00Z",
+    "fraud_end_time": "2026-07-05T06:38:00Z",
+    "reporting_delay_hours": 1
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009711",
+  "complaint_date": "2026-08-26T21:26:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 24,
+    "gender": "Male",
+    "phone": "+91 00000 09711",
+    "email": "victim-9711@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9711",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1400",
+      "ifsc_code": "SYNTHETIC-IB-401",
+      "upi_id": "account-account-000401@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "fake_summons",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (fake summons). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09711",
+      "email": "synthetic-fraud-9711@example.invalid",
+      "whatsapp_number": "+91 00000 09711"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009711-01",
+        "date": "2026-08-25T21:16:00Z",
+        "amount": 31100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1400",
+        "to_account": "XXXXXXXXX2769",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 31100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-25T21:06:00Z",
+    "fraud_end_time": "2026-08-25T21:26:00Z",
+    "reporting_delay_hours": 24
+  }
+}

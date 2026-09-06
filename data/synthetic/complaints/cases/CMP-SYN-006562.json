@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006562",
+  "complaint_date": "2026-08-08T10:01:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 49,
+    "gender": "Female",
+    "phone": "+91 00000 06562",
+    "email": "victim-6562@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6562",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1935",
+      "ifsc_code": "SYNTHETIC-IB-936",
+      "upi_id": "account-account-000936@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "bank_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (bank impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06562",
+      "email": "synthetic-fraud-6562@example.invalid",
+      "whatsapp_number": "+91 00000 06562"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006562-01",
+        "date": "2026-08-08T07:51:00Z",
+        "amount": 55200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1935",
+        "to_account": "XXXXXXXXX2911",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 55200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-08T07:41:00Z",
+    "fraud_end_time": "2026-08-08T08:01:00Z",
+    "reporting_delay_hours": 2
+  }
+}

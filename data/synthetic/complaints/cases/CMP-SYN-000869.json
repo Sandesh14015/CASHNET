@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000869",
+  "complaint_date": "2026-08-12T20:19:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 41,
+    "gender": "Male",
+    "phone": "+91 00000 00869",
+    "email": "victim-869@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 869",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX2489",
+      "ifsc_code": "SYNTHETIC-BO-1490",
+      "upi_id": "account-account-001490@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00869",
+      "email": "synthetic-fraud-869@example.invalid",
+      "whatsapp_number": "+91 00000 00869"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000869-01",
+        "date": "2026-08-12T14:09:00Z",
+        "amount": 6300,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2489",
+        "to_account": "XXXXXXXXX2592",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 6300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-12T13:59:00Z",
+    "fraud_end_time": "2026-08-12T14:19:00Z",
+    "reporting_delay_hours": 6
+  }
+}

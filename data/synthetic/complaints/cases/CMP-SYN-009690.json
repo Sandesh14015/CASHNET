@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009690",
+  "complaint_date": "2026-07-25T17:22:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 41,
+    "gender": "Female",
+    "phone": "+91 00000 09690",
+    "email": "victim-9690@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9690",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1536",
+      "ifsc_code": "SYNTHETIC-KM-537",
+      "upi_id": "account-account-000537@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "SIM_swap",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (SIM swap). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 09690",
+      "email": "synthetic-fraud-9690@example.invalid",
+      "whatsapp_number": "+91 00000 09690"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009690-01",
+        "date": "2026-07-25T11:12:00Z",
+        "amount": 48400,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1536",
+        "to_account": "XXXXXXXXX2685",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 48400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-25T11:02:00Z",
+    "fraud_end_time": "2026-07-25T11:22:00Z",
+    "reporting_delay_hours": 6
+  }
+}

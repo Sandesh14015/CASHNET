@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003613",
+  "complaint_date": "2026-06-26T04:14:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 26,
+    "gender": "Female",
+    "phone": "+91 00000 03613",
+    "email": "victim-3613@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3613",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX1002",
+      "ifsc_code": "SYNTHETIC-IB-003",
+      "upi_id": "account-account-000003@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "fake_website",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (fake website). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 03613",
+      "email": "synthetic-fraud-3613@example.invalid",
+      "whatsapp_number": "+91 00000 03613"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003613-01",
+        "date": "2026-06-26T02:04:00Z",
+        "amount": 97300,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1002",
+        "to_account": "XXXXXXXXX2000",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 97300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-26T01:54:00Z",
+    "fraud_end_time": "2026-06-26T02:14:00Z",
+    "reporting_delay_hours": 2
+  }
+}

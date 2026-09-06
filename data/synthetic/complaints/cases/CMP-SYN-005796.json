@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005796",
+  "complaint_date": "2026-08-08T20:38:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 71,
+    "gender": "Other",
+    "phone": "+91 00000 05796",
+    "email": "victim-5796@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5796",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1079",
+      "ifsc_code": "SYNTHETIC-KM-080",
+      "upi_id": "account-account-000080@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "account_takeover",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (account takeover). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 05796",
+      "email": "synthetic-fraud-5796@example.invalid",
+      "whatsapp_number": "+91 00000 05796"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005796-01",
+        "date": "2026-08-08T08:28:00Z",
+        "amount": 95600,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1079",
+        "to_account": "XXXXXXXXX2000",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 95600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-08T08:18:00Z",
+    "fraud_end_time": "2026-08-08T08:38:00Z",
+    "reporting_delay_hours": 12
+  }
+}

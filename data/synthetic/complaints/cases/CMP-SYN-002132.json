@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-002132",
+  "complaint_date": "2026-07-02T12:55:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 36,
+    "gender": "Other",
+    "phone": "+91 00000 02132",
+    "email": "victim-2132@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2132",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX2891",
+      "ifsc_code": "SYNTHETIC-BO-1892",
+      "upi_id": "account-account-001892@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "part_time_job",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (part time job). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02132",
+      "email": "synthetic-fraud-2132@example.invalid",
+      "telegram_id": "@synthetic_offer_2132",
+      "whatsapp_number": "+91 00000 02132"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002132-01",
+        "date": "2026-07-01T12:45:00Z",
+        "amount": 66800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001892@cashnet.invalid",
+        "to_account": "mule-account-001180@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 66800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-01T12:35:00Z",
+    "fraud_end_time": "2026-07-01T12:55:00Z",
+    "reporting_delay_hours": 24
+  }
+}

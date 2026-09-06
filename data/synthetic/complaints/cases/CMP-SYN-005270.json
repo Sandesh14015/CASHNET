@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005270",
+  "complaint_date": "2026-08-28T21:15:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 74,
+    "gender": "Male",
+    "phone": "+91 00000 05270",
+    "email": "victim-5270@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5270",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1284",
+      "ifsc_code": "SYNTHETIC-SB-285",
+      "upi_id": "account-account-000285@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "romance_scam",
+    "sub_type": "gift_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a romance scam (gift scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05270",
+      "email": "synthetic-fraud-5270@example.invalid",
+      "whatsapp_number": "+91 00000 05270"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005270-01",
+        "date": "2026-08-28T20:35:00Z",
+        "amount": 2700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000285@cashnet.invalid",
+        "to_account": "mule-account-001702@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 2700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-28T20:25:00Z",
+    "fraud_end_time": "2026-08-28T20:45:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

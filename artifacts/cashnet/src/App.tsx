@@ -5,7 +5,7 @@ import {
   ChevronRight, CircleDot, Clock3, Crosshair, Database, FileCheck2, FileText,
   Fingerprint, Globe2, LayoutDashboard, LockKeyhole, Menu, Network, PanelLeftClose,
   PanelLeftOpen, Pause, Plus, Radar, RefreshCw, Search, Send, Settings2, Shield,
-  Sparkles, Target, Upload, WalletCards, X, Zap
+  Sparkles, Target, Upload, WalletCards, X, Zap, MapPinned, Cpu
 } from 'lucide-react';
 import {
   useAddComplaint, useAnalyzeCase, useApproveIntervention, useCreateCase,
@@ -20,6 +20,19 @@ import type {
 import { Link, Route, Router as WouterRouter, Switch, useLocation, useParams } from 'wouter';
 import { ErrorBoundary } from '@/components/error-boundary';
 import NotFound from '@/pages/not-found';
+import HistoricalActivityPage from '@/components/historical-activity-page';
+import PredictiveEnginePage from '@/components/predictive-engine-page';
+import AlertsPage from '@/components/alerts-page';
+import LandingPage from '@/pages/landing/LandingPage';
+
+import { setBaseUrl } from '@workspace/api-client-react';
+
+// Wire the API client to the backend URL at startup.
+// VITE_API_BASE_URL is set in Vercel environment variables.
+// Falls back to relative paths (same-origin) for local dev.
+if (import.meta.env.VITE_API_BASE_URL) {
+  setBaseUrl(import.meta.env.VITE_API_BASE_URL);
+}
 
 const queryClient = new QueryClient();
 
@@ -32,6 +45,15 @@ const compactMoney = (value?: number) => typeof value === 'number'
 const dateTime = (value?: string) => value ? new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(value)) : '—';
 const dateOnly = (value?: string) => value ? new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).format(new Date(value)) : '—';
 const titleCase = (value?: string) => (value || 'unknown').replace(/[-_]/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase());
+
+const getCasesArray = (data: any): Case[] => {
+  if (Array.isArray(data)) return data;
+  if (data && typeof data === 'object') {
+    if (Array.isArray(data.cases)) return data.cases;
+    if (Array.isArray(data.data)) return data.data;
+  }
+  return [];
+};
 
 function Skeleton({ className = '' }: { className?: string }) {
   return <div className={`animate-pulse rounded bg-slate-200/70 ${className}`} />;
@@ -71,17 +93,20 @@ function Panel({ title, eyebrow, action, children, className = '' }: { title: st
 }
 
 const navGroups = [
-  { label: 'Workspace', items: [
-    { href: '/', label: 'Overview', icon: LayoutDashboard },
-    { href: '/cases', label: 'Cases', icon: Fingerprint },
-    { href: '/fund-flow', label: 'Fund flow', icon: Network },
+  { label: 'I4C Problem Deliverables', items: [
+    { href: '/predictive-engine', label: 'a. Predictive Engine (Model 184)', icon: Cpu },
+    { href: '/historical-activity', label: 'b. Risk Heatmap Dashboard (GIS)', icon: MapPinned },
+    { href: '/cases', label: 'c. Law Enforcement Interface', icon: Fingerprint },
+    { href: '/alerts', label: 'd. Alert & Notification System', icon: Bell },
   ] },
-  { label: 'Intelligence', items: [
+  { label: 'Investigator Workbench', items: [
+    { href: '/', label: 'Overview', icon: LayoutDashboard },
+    { href: '/fund-flow', label: 'Fund flow graph', icon: Network },
     { href: '/crypto', label: 'Crypto wallets', icon: WalletCards },
     { href: '/vasp', label: 'VASP attribution', icon: Building2 },
     { href: '/geo', label: 'Geo & prediction', icon: Globe2 },
   ] },
-  { label: 'Action', items: [
+  { label: 'Actions & Audit', items: [
     { href: '/interventions', label: 'Interventions', icon: Shield },
     { href: '/reports', label: 'Reports', icon: FileText },
     { href: '/audit', label: 'Audit trail', icon: FileCheck2 },
@@ -166,7 +191,7 @@ function DashboardPage() {
   const dashboard = useGetDashboard(); const cases = useListCases();
   if (dashboard.isLoading || cases.isLoading) return <LoadingState />;
   if (dashboard.isError) return <ErrorState />;
-  const data = dashboard.data as Dashboard | undefined; const caseList = cases.data || [];
+  const data = dashboard.data as Dashboard | undefined; const caseList = getCasesArray(cases.data);
   const metric = (key: string) => String(data?.metrics?.[key] ?? '—');
   return <div className="enter"><PageHead kicker="Signal desk / live" title="Overview" description="A compact operating picture of active fraud, conversion windows and intervention-ready intelligence." action={<Link href="/cases" className="flex items-center justify-center gap-2 bg-slate-800 px-4 py-2.5 text-xs font-bold text-amber-300 hover:bg-slate-700" data-testid="link-open-cases"><Fingerprint size={15} /> Open case desk</Link>} />
     <div className="mb-5 grid grid-cols-2 gap-3 lg:grid-cols-4"><Metric label="Active cases" value={metric('activeCases')} detail="Across current queue" tone="slate" icon={Fingerprint} /><Metric label="Exposure tracked" value={metric('totalExposure') === '—' ? compactMoney(caseList.reduce((a, c) => a + c.amount, 0)) : metric('totalExposure')} detail="Fiat equivalent" tone="amber" icon={BarChart3} /><Metric label="High risk" value={metric('highRiskCases')} detail="Requires triage" tone="red" icon={AlertTriangle} /><Metric label="Conversion window" value={data?.conversionWindow || '—'} detail="Observed model window" tone="cyan" icon={Clock3} /></div>
@@ -179,7 +204,7 @@ function DashboardPage() {
 function CasesPage() {
   const cases = useListCases(); const createCase = useCreateCase(); const addComplaint = useAddComplaint();
   const [showForm, setShowForm] = useState(false); const [query, setQuery] = useState(''); const [form, setForm] = useState({ title: '', fraudType: 'UPI scam', amount: '', description: '', victimCity: '', victimState: '', account: '', wallet: '' });
-  const list = (cases.data || []).filter((item) => `${item.reference} ${item.title} ${item.city}`.toLowerCase().includes(query.toLowerCase()));
+  const list = getCasesArray(cases.data).filter((item) => `${item.reference} ${item.title} ${item.city}`.toLowerCase().includes(query.toLowerCase()));
   const submit = (event: React.FormEvent) => { event.preventDefault(); createCase.mutate({ data: { ...form, amount: Number(form.amount) } }, { onSuccess: () => { setShowForm(false); setForm({ title: '', fraudType: 'UPI scam', amount: '', description: '', victimCity: '', victimState: '', account: '', wallet: '' }); queryClient.invalidateQueries({ queryKey: cases.queryKey }); } }); };
   if (cases.isLoading) return <LoadingState />;
   if (cases.isError) return <ErrorState />;
@@ -229,7 +254,7 @@ function WalletsPage() {
 }
 
 function CaseScopedPage({ kind }: { kind: 'vasp' | 'geo' }) {
-  const cases = useListCases(); const selected = cases.data?.[0]?.id || ''; const detail = useGetCase(selected);
+  const cases = useListCases(); const selected = getCasesArray(cases.data)[0]?.id || ''; const detail = useGetCase(selected);
   if (cases.isLoading || detail.isLoading) return <LoadingState />; if (detail.isError || !detail.data) return <EmptyState title="Select a case for attribution" description="This view is case-scoped. Open a case from the desk to load linked intelligence." action={<Link href="/cases" className="mt-4 bg-slate-800 px-3 py-2 text-xs font-bold text-amber-300" data-testid="link-select-case">Open case desk</Link>} />;
   const item = detail.data as CaseDetail;
   if (kind === 'vasp') return <div className="enter"><PageHead kicker={`Attribution / ${item.reference}`} title="VASP attribution" description="Service-provider classifications and evidence supporting the wallet attribution." action={<Pill tone="amber"><Sparkles size={12} /> Model-assisted</Pill>} /><div className="grid gap-5 md:grid-cols-2">{(item.vasp || []).map((vasp, index) => <Panel key={index} title={vasp.name} eyebrow="Attribution candidate" action={<Pill tone={vasp.confidence >= .7 ? 'green' : 'amber'}>{vasp.classification}</Pill>}><div className="p-5"><div className="mb-4 flex items-center justify-between"><span className="text-[10px] uppercase tracking-widest text-slate-400">Confidence</span><span className="font-mono-data text-2xl text-cyan-700">{vasp.confidence}</span></div><div className="mb-5 h-1.5 bg-slate-100"><div className="h-1.5 bg-cyan-500" style={{ width: `${Math.min(100, vasp.confidence * 100)}%` }} /></div><div className="space-y-2">{vasp.evidence.map((evidence) => <div className="flex gap-2 text-xs text-slate-600" key={evidence}><Check size={14} className="mt-0.5 shrink-0 text-cyan-600" />{evidence}</div>)}</div><div className="mt-5 border-t border-slate-100 pt-3 font-mono-data text-[9px] text-slate-400">CASE {item.reference} · INFERENCE LABEL REQUIRED</div></div></Panel>)}{!item.vasp?.length && <div className="md:col-span-2"><EmptyState title="No VASP candidates" description="Run analysis to populate attribution candidates." /></div>}</div></div>;
@@ -243,21 +268,21 @@ function GeoPage({ item }: { item: CaseDetail }) {
 }
 
 function InterventionsPage() {
-  const cases = useListCases(); const selected = cases.data?.[0]?.id || ''; const intervention = useGetIntervention(selected); const approve = useApproveIntervention(); const create = useCreateIntervention();
+  const cases = useListCases(); const selected = getCasesArray(cases.data)[0]?.id || ''; const intervention = useGetIntervention(selected); const approve = useApproveIntervention(); const create = useCreateIntervention();
   if (cases.isLoading || intervention.isLoading) return <LoadingState />; if (intervention.isError || !intervention.data) return <EmptyState title="No intervention request" description="Select an analyzed case to prepare an evidence-backed request." action={<Link href="/cases" className="mt-4 bg-slate-800 px-3 py-2 text-xs font-bold text-amber-300" data-testid="link-intervention-case">Open case desk</Link>} />;
   const item = intervention.data as Intervention;
   return <div className="enter"><PageHead kicker={`Action review / ${item.caseId}`} title="Interventions" description="Review the authorized request, then explicitly approve. Approval is recorded against the case audit trail." action={<Pill tone={item.status?.toLowerCase().includes('approved') ? 'green' : 'amber'}>{item.status}</Pill>} /><div className="grid gap-5 xl:grid-cols-[1fr_.7fr]"><Panel title="Intervention request" eyebrow="Evidence-backed / human approval required"><div className="p-5"><div className="grid gap-4 sm:grid-cols-2"><div><div className="label">Request type</div><div className="value">{titleCase(item.requestType)}</div></div><div><div className="label">Approval gate</div><div className="value">{item.approvalRequired ? 'Required' : 'Not required'}</div></div><div><div className="label">Account</div><div className="value font-mono-data">{item.account}</div></div><div><div className="label">Institution</div><div className="value">{item.bank} · {item.branch}</div><div className="text-[10px] text-slate-400">{item.ifsc}</div></div></div><div className="mt-5 border-l-2 border-amber-400 bg-amber-50 p-4 text-xs leading-5 text-amber-900"><div className="mb-1 font-bold uppercase tracking-widest text-[10px]">Analyst rationale</div>{item.reason}</div><div className="mt-5 flex flex-wrap items-center gap-3"><button disabled={approve.isPending || item.status?.toLowerCase().includes('approved')} onClick={() => approve.mutate({ caseId: selected }, { onSuccess: () => queryClient.invalidateQueries({ queryKey: intervention.queryKey }) })} className="flex items-center gap-2 bg-slate-800 px-4 py-2.5 text-xs font-bold text-amber-300 disabled:opacity-50" data-testid="button-approve-intervention"><Check size={15} />{item.status?.toLowerCase().includes('approved') ? 'Approved' : approve.isPending ? 'Approving...' : 'Approve intervention'}</button><button onClick={() => create.mutate({ caseId: selected, data: { requestType: item.requestType } }, { onSuccess: () => queryClient.invalidateQueries({ queryKey: intervention.queryKey }) })} className="flex items-center gap-2 border border-slate-300 px-4 py-2.5 text-xs font-bold text-slate-700" data-testid="button-refresh-intervention"><RefreshCw size={14} /> Prepare latest request</button></div></div></Panel><Panel title="Control notes" eyebrow="Governance / audit"><div className="space-y-4 p-5 text-xs text-slate-600"><div className="flex gap-3"><LockKeyhole size={16} className="shrink-0 text-cyan-600" /><span>Only authorized investigators may approve an intervention.</span></div><div className="flex gap-3"><FileCheck2 size={16} className="shrink-0 text-cyan-600" /><span>Approval status and actor are retained in the audit feed.</span></div><div className="flex gap-3"><Pause size={16} className="shrink-0 text-amber-600" /><span>Provider state: {item.submittedAt ? `submitted ${dateTime(item.submittedAt)}` : 'not submitted'}.</span></div></div></Panel></div></div>;
 }
 
 function ReportsPage() {
-  const cases = useListCases(); const selected = cases.data?.[0]?.id || ''; const report = useGetReport(selected);
+  const cases = useListCases(); const selected = getCasesArray(cases.data)[0]?.id || ''; const report = useGetReport(selected);
   if (cases.isLoading || report.isLoading) return <LoadingState rows={7} />; if (report.isError || !report.data) return <EmptyState title="Report not available" description="Select a case with report data to generate a reviewable investigation brief." action={<Link href="/cases" className="mt-4 bg-slate-800 px-3 py-2 text-xs font-bold text-amber-300" data-testid="link-report-case">Open case desk</Link>} />;
   const data = report.data as Report;
   return <div className="enter"><PageHead kicker={`Report / ${data.case.reference}`} title="Reports" description="Generated investigation brief assembled from the case intelligence graph." action={<button onClick={() => window.print()} className="flex items-center gap-2 border border-slate-300 bg-white px-4 py-2.5 text-xs font-bold text-slate-700" data-testid="button-print-report"><FileText size={15} /> Print / export</button>} /><div className="mx-auto max-w-5xl border border-slate-200 bg-white shadow-sm"><div className="border-b-4 border-amber-400 bg-slate-800 p-7 text-slate-100"><div className="flex items-start justify-between"><div><div className="font-mono-data text-[10px] uppercase tracking-[.2em] text-cyan-300">CASHNET / intelligence brief</div><h2 className="mt-4 text-2xl font-extrabold">{data.case.title}</h2><div className="mt-2 font-mono-data text-xs text-slate-400">{data.case.reference} · generated {dateTime(new Date().toISOString())}</div></div><Fingerprint size={34} className="text-amber-300" /></div></div><div className="p-7"><div className="mb-7 grid grid-cols-2 gap-4 border-b border-slate-200 pb-6 sm:grid-cols-4"><div><div className="label">Classification</div><div className="value">{data.case.fraudType}</div></div><div><div className="label">Exposure</div><div className="value font-mono-data">{money(data.case.amount)}</div></div><div><div className="label">Priority</div><div className="value">{data.case.priority}</div></div><div><div className="label">Conversion</div><div className="value font-mono-data text-[11px]">{dateTime(data.case.conversionAt)}</div></div></div><div className="space-y-6">{(data.sections || []).map((section, index) => <div key={index} className="border-l-2 border-cyan-400 pl-4"><h3 className="text-sm font-extrabold text-slate-800">{String(section.title ?? section.heading ?? `Section ${index + 1}`)}</h3><p className="mt-2 text-xs leading-6 text-slate-600">{String(section.content ?? section.summary ?? Object.values(section).join(' · '))}</p></div>)}</div><div className="mt-8 border-t border-slate-200 pt-4 text-[10px] leading-5 text-slate-400"><span className="font-bold uppercase tracking-widest text-slate-500">Handling note · </span>{data.disclaimer}</div></div></div></div>;
 }
 
 function AuditPage() {
-  const cases = useListCases(); const selected = cases.data?.[0]?.id || ''; const detail = useGetCase(selected);
+  const cases = useListCases(); const selected = getCasesArray(cases.data)[0]?.id || ''; const detail = useGetCase(selected);
   if (cases.isLoading || detail.isLoading) return <LoadingState />;
   const audit = detail.data?.audit || [];
   return <div className="enter"><PageHead kicker={`Chain of custody / ${detail.data?.reference || 'case selection'}`} title="Audit trail" description="Immutable-looking activity view sourced from the selected case record. Use it to validate analyst actions and provider events." action={<Pill tone="cyan"><FileCheck2 size={12} /> Evidence log</Pill>} /><Panel title="Recorded actions" eyebrow={`${audit.length} events / chronological`}><div className="divide-y divide-slate-100">{audit.map((event, index) => <div className="grid gap-3 p-4 sm:grid-cols-[150px_1fr_150px_110px] sm:items-center" key={index} data-testid={`row-audit-${index}`}><div className="font-mono-data text-[10px] text-slate-500">{dateTime(event.timestamp)}</div><div className="flex items-center gap-2 text-xs font-bold text-slate-800"><span className="flex size-6 items-center justify-center rounded-full bg-cyan-100 text-cyan-700"><Activity size={12} /></span>{event.action}</div><div className="text-xs text-slate-500">{event.actor}</div><Pill>{event.source}</Pill></div>)}{!audit.length && <EmptyState title="Audit trail is empty" description="Actions will appear once an authorized workflow has been initiated." />}</div></Panel></div>;
@@ -269,28 +294,38 @@ function SettingsPage() {
 }
 
 function FundFlowRoute() {
-  const cases = useListCases(); const selected = cases.data?.[0]?.id || '';
+  const cases = useListCases(); const selected = getCasesArray(cases.data)[0]?.id || '';
+  const [, navigate] = useLocation();
   if (cases.isLoading) return <LoadingState />;
-  return selected ? <FundFlowPage /> : <EmptyState title="Select a case to open fund flow" description="Fund flow is synchronized to a case. Ingest or select a case from the desk first." action={<Link href="/cases" className="mt-4 bg-slate-800 px-3 py-2 text-xs font-bold text-amber-300" data-testid="link-fund-flow-cases">Open case desk</Link>} />;
+  if (selected) { navigate(`/fund-flow/${selected}`); return null; }
+  return <EmptyState title="Select a case to open fund flow" description="Fund flow is synchronized to a case. Ingest or select a case from the desk first." action={<Link href="/cases" className="mt-4 bg-slate-800 px-3 py-2 text-xs font-bold text-amber-300" data-testid="link-fund-flow-cases">Open case desk</Link>} />;
 }
 
 function Router() {
   const [location] = useLocation();
-  return <ErrorBoundary resetKey={location}><Shell><Switch>
-    <Route path="/" component={DashboardPage} />
-    <Route path="/cases" component={CasesPage} />
-    <Route path="/cases/:id" component={CaseWorkspacePage} />
-    <Route path="/fund-flow" component={FundFlowRoute} />
-    <Route path="/fund-flow/:caseId" component={FundFlowPage} />
-    <Route path="/crypto" component={WalletsPage} />
-    <Route path="/vasp" component={() => <CaseScopedPage kind="vasp" />} />
-    <Route path="/geo" component={() => <CaseScopedPage kind="geo" />} />
-    <Route path="/interventions" component={InterventionsPage} />
-    <Route path="/reports" component={ReportsPage} />
-    <Route path="/audit" component={AuditPage} />
-    <Route path="/settings" component={SettingsPage} />
-    <Route component={NotFound} />
-  </Switch></Shell></ErrorBoundary>;
+  return <ErrorBoundary resetKey={location}><Switch>
+    <Route path="/" component={LandingPage} />
+    <Route>
+      <Shell><Switch>
+        <Route path="/dashboard" component={DashboardPage} />
+        <Route path="/predictive-engine" component={PredictiveEnginePage} />
+        <Route path="/alerts" component={AlertsPage} />
+        <Route path="/cases" component={CasesPage} />
+        <Route path="/cases/:id" component={CaseWorkspacePage} />
+        <Route path="/fund-flow" component={FundFlowRoute} />
+        <Route path="/fund-flow/:caseId" component={FundFlowPage} />
+        <Route path="/crypto" component={WalletsPage} />
+        <Route path="/vasp" component={() => <CaseScopedPage kind="vasp" />} />
+        <Route path="/geo" component={() => <CaseScopedPage kind="geo" />} />
+        <Route path="/historical-activity" component={HistoricalActivityPage} />
+        <Route path="/interventions" component={InterventionsPage} />
+        <Route path="/reports" component={ReportsPage} />
+        <Route path="/audit" component={AuditPage} />
+        <Route path="/settings" component={SettingsPage} />
+        <Route component={NotFound} />
+      </Switch></Shell>
+    </Route>
+  </Switch></ErrorBoundary>;
 }
 
 function App() {

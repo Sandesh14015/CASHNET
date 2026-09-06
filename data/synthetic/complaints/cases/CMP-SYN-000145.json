@@ -1,0 +1,80 @@
+{
+  "complaint_id": "CMP-SYN-000145",
+  "complaint_date": "2026-08-23T22:03:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 55,
+    "gender": "Male",
+    "phone": "+91 00000 00145",
+    "email": "victim-145@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 145",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1470",
+      "ifsc_code": "SYNTHETIC-BO-471",
+      "upi_id": "account-account-000471@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "SIM_swap",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (SIM swap). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 00145",
+      "email": "synthetic-fraud-145@example.invalid",
+      "whatsapp_number": "+91 00000 00145"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000145-01",
+        "date": "2026-08-23T21:27:00Z",
+        "amount": 93000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000471@cashnet.invalid",
+        "to_account": "mule-account-001139@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-000145-02",
+        "date": "2026-08-23T21:37:00Z",
+        "amount": 68300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000471@cashnet.invalid",
+        "to_account": "mule-account-001139@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-000145-03",
+        "date": "2026-08-23T21:47:00Z",
+        "amount": 96100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1470",
+        "to_account": "XXXXXXXXX2138",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 257400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-23T21:17:00Z",
+    "fraud_end_time": "2026-08-23T21:57:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

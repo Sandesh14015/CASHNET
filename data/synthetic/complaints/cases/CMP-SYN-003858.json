@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003858",
+  "complaint_date": "2026-08-16T22:50:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 64,
+    "gender": "Male",
+    "phone": "+91 00000 03858",
+    "email": "victim-3858@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3858",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX2314",
+      "ifsc_code": "SYNTHETIC-CB-1315",
+      "upi_id": "account-account-001315@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "police_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (police impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 03858",
+      "email": "synthetic-fraud-3858@example.invalid",
+      "whatsapp_number": "+91 00000 03858"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003858-01",
+        "date": "2026-08-16T22:10:00Z",
+        "amount": 98100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2314",
+        "to_account": "XXXXXXXXX2112",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 98100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-16T22:00:00Z",
+    "fraud_end_time": "2026-08-16T22:20:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

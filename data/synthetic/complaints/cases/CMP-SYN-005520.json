@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005520",
+  "complaint_date": "2026-08-25T17:11:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 44,
+    "gender": "Other",
+    "phone": "+91 00000 05520",
+    "email": "victim-5520@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5520",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1730",
+      "ifsc_code": "SYNTHETIC-HB-731",
+      "upi_id": "account-account-000731@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "urgent_verification",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (urgent verification). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05520",
+      "email": "synthetic-fraud-5520@example.invalid",
+      "whatsapp_number": "+91 00000 05520"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005520-01",
+        "date": "2026-08-25T11:01:00Z",
+        "amount": 17400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000731@cashnet.invalid",
+        "to_account": "mule-account-001919@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 17400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-25T10:51:00Z",
+    "fraud_end_time": "2026-08-25T11:11:00Z",
+    "reporting_delay_hours": 6
+  }
+}

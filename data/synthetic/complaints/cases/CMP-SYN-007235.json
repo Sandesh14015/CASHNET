@@ -1,0 +1,71 @@
+{
+  "complaint_id": "CMP-SYN-007235",
+  "complaint_date": "2026-06-05T21:01:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 21,
+    "gender": "Female",
+    "phone": "+91 00000 07235",
+    "email": "victim-7235@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7235",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1461",
+      "ifsc_code": "SYNTHETIC-HB-462",
+      "upi_id": "account-account-000462@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "training_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (training fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07235",
+      "email": "synthetic-fraud-7235@example.invalid",
+      "telegram_id": "@synthetic_offer_7235",
+      "whatsapp_number": "+91 00000 07235"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007235-01",
+        "date": "2026-06-05T18:41:00Z",
+        "amount": 57400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000462@cashnet.invalid",
+        "to_account": "mule-account-001661@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-007235-02",
+        "date": "2026-06-05T18:51:00Z",
+        "amount": 14900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000462@cashnet.invalid",
+        "to_account": "mule-account-001661@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 72300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-05T18:31:00Z",
+    "fraud_end_time": "2026-06-05T19:01:00Z",
+    "reporting_delay_hours": 2
+  }
+}

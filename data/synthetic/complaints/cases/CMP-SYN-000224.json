@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-000224",
+  "complaint_date": "2026-06-05T22:39:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 42,
+    "gender": "Male",
+    "phone": "+91 00000 00224",
+    "email": "victim-224@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 224",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1523",
+      "ifsc_code": "SYNTHETIC-CB-524",
+      "upi_id": "account-account-000524@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "training_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (training fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00224",
+      "email": "synthetic-fraud-224@example.invalid",
+      "telegram_id": "@synthetic_offer_224",
+      "whatsapp_number": "+91 00000 00224"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000224-01",
+        "date": "2026-06-05T20:29:00Z",
+        "amount": 5900,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1523",
+        "to_account": "XXXXXXXXX1822",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 5900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-05T20:19:00Z",
+    "fraud_end_time": "2026-06-05T20:39:00Z",
+    "reporting_delay_hours": 2
+  }
+}

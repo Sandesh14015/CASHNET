@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009548",
+  "complaint_date": "2026-08-10T00:56:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 59,
+    "gender": "Male",
+    "phone": "+91 00000 09548",
+    "email": "victim-9548@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9548",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX2129",
+      "ifsc_code": "SYNTHETIC-HB-1130",
+      "upi_id": "account-account-001130@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "remote_access",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (remote access). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09548",
+      "email": "synthetic-fraud-9548@example.invalid",
+      "whatsapp_number": "+91 00000 09548"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009548-01",
+        "date": "2026-08-09T00:46:00Z",
+        "amount": 41700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001130@cashnet.invalid",
+        "to_account": "mule-account-000815@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 41700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-09T00:36:00Z",
+    "fraud_end_time": "2026-08-09T00:56:00Z",
+    "reporting_delay_hours": 24
+  }
+}

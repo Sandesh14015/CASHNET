@@ -1,0 +1,52 @@
+.cashnet-landing {
+  /* Scope all custom landing page styles here to avoid leaking to the main app */
+  min-height: 100vh;
+  font-family: var(--app-font-sans, "Manrope", sans-serif);
+}
+
+.cashnet-landing .hero-pattern {
+  background-image: linear-gradient(hsl(214 26% 87% / 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(214 26% 87% / 0.1) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.cashnet-landing .dark-pattern {
+  background-image: linear-gradient(hsl(214 28% 25% / 0.45) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(214 28% 25% / 0.45) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.cashnet-landing .glow-orb-cyan {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(6,182,212,0.15) 0%, rgba(6,182,212,0) 70%);
+  pointer-events: none;
+}
+
+.cashnet-landing .glow-orb-amber {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245,158,11,0.15) 0%, rgba(245,158,11,0) 70%);
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes landingFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cashnet-landing .animate-fade-in-up {
+  animation: landingFadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.cashnet-landing .delay-100 { animation-delay: 100ms; }
+.cashnet-landing .delay-200 { animation-delay: 200ms; }
+.cashnet-landing .delay-300 { animation-delay: 300ms; }

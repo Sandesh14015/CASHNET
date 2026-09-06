@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001485",
+  "complaint_date": "2026-06-29T11:36:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 62,
+    "gender": "Female",
+    "phone": "+91 00000 01485",
+    "email": "victim-1485@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1485",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1466",
+      "ifsc_code": "SYNTHETIC-IB-467",
+      "upi_id": "account-account-000467@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 01485",
+      "email": "synthetic-fraud-1485@example.invalid",
+      "whatsapp_number": "+91 00000 01485"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001485-01",
+        "date": "2026-06-28T11:26:00Z",
+        "amount": 73200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1466",
+        "to_account": "XXXXXXXXX2709",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 73200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-28T11:16:00Z",
+    "fraud_end_time": "2026-06-28T11:36:00Z",
+    "reporting_delay_hours": 24
+  }
+}

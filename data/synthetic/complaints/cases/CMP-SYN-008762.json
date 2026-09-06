@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-008762",
+  "complaint_date": "2026-08-29T06:29:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 42,
+    "gender": "Male",
+    "phone": "+91 00000 08762",
+    "email": "victim-8762@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8762",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1561",
+      "ifsc_code": "SYNTHETIC-CB-562",
+      "upi_id": "account-account-000562@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "bank_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (bank impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 08762",
+      "email": "synthetic-fraud-8762@example.invalid",
+      "whatsapp_number": "+91 00000 08762"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008762-01",
+        "date": "2026-08-28T06:19:00Z",
+        "amount": 44800,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1561",
+        "to_account": "XXXXXXXXX2409",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 44800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-28T06:09:00Z",
+    "fraud_end_time": "2026-08-28T06:29:00Z",
+    "reporting_delay_hours": 24
+  }
+}

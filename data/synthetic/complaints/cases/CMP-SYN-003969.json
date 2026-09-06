@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003969",
+  "complaint_date": "2026-06-18T14:25:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 66,
+    "gender": "Other",
+    "phone": "+91 00000 03969",
+    "email": "victim-3969@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3969",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1157",
+      "ifsc_code": "SYNTHETIC-AB-158",
+      "upi_id": "account-account-000158@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "account_takeover",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (account takeover). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03969",
+      "email": "synthetic-fraud-3969@example.invalid",
+      "whatsapp_number": "+91 00000 03969"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003969-01",
+        "date": "2026-06-18T12:15:00Z",
+        "amount": 99300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000158@cashnet.invalid",
+        "to_account": "mule-account-001442@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 99300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-18T12:05:00Z",
+    "fraud_end_time": "2026-06-18T12:25:00Z",
+    "reporting_delay_hours": 2
+  }
+}

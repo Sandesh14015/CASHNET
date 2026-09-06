@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001076",
+  "complaint_date": "2026-07-28T02:41:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 57,
+    "gender": "Other",
+    "phone": "+91 00000 01076",
+    "email": "victim-1076@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1076",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1139",
+      "ifsc_code": "SYNTHETIC-UB-140",
+      "upi_id": "account-account-000140@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "non_delivery",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (non delivery). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01076",
+      "email": "synthetic-fraud-1076@example.invalid",
+      "whatsapp_number": "+91 00000 01076"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001076-01",
+        "date": "2026-07-28T02:25:00Z",
+        "amount": 33400,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1139",
+        "to_account": "XXXXXXXXX2204",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 33400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-28T02:15:00Z",
+    "fraud_end_time": "2026-07-28T02:35:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

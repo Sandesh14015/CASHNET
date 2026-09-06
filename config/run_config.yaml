@@ -1,0 +1,16 @@
+# CASHNET pipeline run configuration (plan.md §4 config contract)
+active_models:
+  182: true     # crypto / VASP attribution + cross-border routing
+  183: true     # complaint classification + risk/alert
+  184: false    # banking / ATM predictive intelligence
+input_source: auto   # auto | 182 | 183 | 184
+write_outputs: true
+eval_mode: false
+# confidence cut-offs below which a prediction is flagged needs_review
+thresholds:
+  freeze: 0.90
+  alert: 0.70
+  log: 0.50
+# model artifact store (per user instruction, artifacts live under /models)
+models_dir: models
+final_model: models/final_model.pkl

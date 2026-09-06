@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-002737",
+  "complaint_date": "2026-07-09T05:20:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 64,
+    "gender": "Other",
+    "phone": "+91 00000 02737",
+    "email": "victim-2737@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2737",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1042",
+      "ifsc_code": "SYNTHETIC-PN-043",
+      "upi_id": "account-account-000043@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "fake_seller",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (fake seller). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02737",
+      "email": "synthetic-fraud-2737@example.invalid",
+      "whatsapp_number": "+91 00000 02737"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002737-01",
+        "date": "2026-07-09T04:00:00Z",
+        "amount": 69900,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1042",
+        "to_account": "XXXXXXXXX1885",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002737-02",
+        "date": "2026-07-09T04:10:00Z",
+        "amount": 53700,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1042",
+        "to_account": "XXXXXXXXX1885",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 123600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-09T03:50:00Z",
+    "fraud_end_time": "2026-07-09T04:20:00Z",
+    "reporting_delay_hours": 1
+  }
+}

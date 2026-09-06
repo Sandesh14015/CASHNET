@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-009942",
+  "complaint_date": "2026-07-07T21:31:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 53,
+    "gender": "Female",
+    "phone": "+91 00000 09942",
+    "email": "victim-9942@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9942",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1561",
+      "ifsc_code": "SYNTHETIC-CB-562",
+      "upi_id": "account-account-000562@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "account_takeover",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (account takeover). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09942",
+      "email": "synthetic-fraud-9942@example.invalid",
+      "whatsapp_number": "+91 00000 09942"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009942-01",
+        "date": "2026-07-07T09:11:00Z",
+        "amount": 82000,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1561",
+        "to_account": "XXXXXXXXX2413",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-009942-02",
+        "date": "2026-07-07T09:21:00Z",
+        "amount": 48700,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1561",
+        "to_account": "XXXXXXXXX2413",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 130700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-07T09:01:00Z",
+    "fraud_end_time": "2026-07-07T09:31:00Z",
+    "reporting_delay_hours": 12
+  }
+}

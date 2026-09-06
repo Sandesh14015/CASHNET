@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009688",
+  "complaint_date": "2026-06-07T08:39:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 58,
+    "gender": "Male",
+    "phone": "+91 00000 09688",
+    "email": "victim-9688@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9688",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1307",
+      "ifsc_code": "SYNTHETIC-SB-308",
+      "upi_id": "account-account-000308@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "remote_access",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (remote access). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09688",
+      "email": "synthetic-fraud-9688@example.invalid",
+      "whatsapp_number": "+91 00000 09688"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009688-01",
+        "date": "2026-06-06T08:29:00Z",
+        "amount": 41400,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1307",
+        "to_account": "XXXXXXXXX2470",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 41400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-06T08:19:00Z",
+    "fraud_end_time": "2026-06-06T08:39:00Z",
+    "reporting_delay_hours": 24
+  }
+}

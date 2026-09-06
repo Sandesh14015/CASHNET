@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002561",
+  "complaint_date": "2026-06-19T13:14:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 54,
+    "gender": "Other",
+    "phone": "+91 00000 02561",
+    "email": "victim-2561@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2561",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1659",
+      "ifsc_code": "SYNTHETIC-AB-660",
+      "upi_id": "account-account-000660@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "fake_website",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (fake website). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 02561",
+      "email": "synthetic-fraud-2561@example.invalid",
+      "whatsapp_number": "+91 00000 02561"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002561-01",
+        "date": "2026-06-19T01:04:00Z",
+        "amount": 80700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000660@cashnet.invalid",
+        "to_account": "mule-account-001131@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 80700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-19T00:54:00Z",
+    "fraud_end_time": "2026-06-19T01:14:00Z",
+    "reporting_delay_hours": 12
+  }
+}

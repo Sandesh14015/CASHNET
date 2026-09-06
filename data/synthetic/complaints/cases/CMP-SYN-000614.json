@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-000614",
+  "complaint_date": "2026-06-21T07:40:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 70,
+    "gender": "Male",
+    "phone": "+91 00000 00614",
+    "email": "victim-614@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 614",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1715",
+      "ifsc_code": "SYNTHETIC-IB-716",
+      "upi_id": "account-account-000716@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "fake_exchange",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (fake exchange). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00614",
+      "email": "synthetic-fraud-614@example.invalid",
+      "whatsapp_number": "+91 00000 00614"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000614-01",
+        "date": "2026-06-21T01:20:00Z",
+        "amount": 99800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1715",
+        "to_account": "XXXXXXXXX2431",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-000614-02",
+        "date": "2026-06-21T01:30:00Z",
+        "amount": 37300,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1715",
+        "to_account": "XXXXXXXXX2431",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 137100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-21T01:10:00Z",
+    "fraud_end_time": "2026-06-21T01:40:00Z",
+    "reporting_delay_hours": 6
+  }
+}

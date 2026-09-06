@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007751",
+  "complaint_date": "2026-07-21T18:34:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 41,
+    "gender": "Other",
+    "phone": "+91 00000 07751",
+    "email": "victim-7751@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7751",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1890",
+      "ifsc_code": "SYNTHETIC-KM-891",
+      "upi_id": "account-account-000891@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "urgent_verification",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (urgent verification). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07751",
+      "email": "synthetic-fraud-7751@example.invalid",
+      "whatsapp_number": "+91 00000 07751"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007751-01",
+        "date": "2026-07-21T18:18:00Z",
+        "amount": 38200,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1890",
+        "to_account": "XXXXXXXXX2932",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 38200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-21T18:08:00Z",
+    "fraud_end_time": "2026-07-21T18:28:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

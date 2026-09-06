@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-001061",
+  "complaint_date": "2026-06-03T22:43:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 20,
+    "gender": "Male",
+    "phone": "+91 00000 01061",
+    "email": "victim-1061@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1061",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1285",
+      "ifsc_code": "SYNTHETIC-IB-286",
+      "upi_id": "account-account-000286@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "part_time_job",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (part time job). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01061",
+      "email": "synthetic-fraud-1061@example.invalid",
+      "telegram_id": "@synthetic_offer_1061",
+      "whatsapp_number": "+91 00000 01061"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001061-01",
+        "date": "2026-06-03T22:03:00Z",
+        "amount": 40100,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000286@cashnet.invalid",
+        "to_account": "mule-account-001623@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 40100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-03T21:53:00Z",
+    "fraud_end_time": "2026-06-03T22:13:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

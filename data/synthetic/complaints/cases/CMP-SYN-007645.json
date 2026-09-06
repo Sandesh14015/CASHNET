@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007645",
+  "complaint_date": "2026-07-11T14:49:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 42,
+    "gender": "Female",
+    "phone": "+91 00000 07645",
+    "email": "victim-7645@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7645",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1166",
+      "ifsc_code": "SYNTHETIC-SB-167",
+      "upi_id": "account-account-000167@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "remote_access",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (remote access). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 07645",
+      "email": "synthetic-fraud-7645@example.invalid",
+      "whatsapp_number": "+91 00000 07645"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007645-01",
+        "date": "2026-07-11T12:39:00Z",
+        "amount": 23200,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000167@cashnet.invalid",
+        "to_account": "mule-account-001476@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 23200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-11T12:29:00Z",
+    "fraud_end_time": "2026-07-11T12:49:00Z",
+    "reporting_delay_hours": 2
+  }
+}

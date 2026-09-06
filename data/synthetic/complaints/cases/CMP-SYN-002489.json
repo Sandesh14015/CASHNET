@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-002489",
+  "complaint_date": "2026-08-28T03:28:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 19,
+    "gender": "Other",
+    "phone": "+91 00000 02489",
+    "email": "victim-2489@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2489",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX2396",
+      "ifsc_code": "SYNTHETIC-SB-1397",
+      "upi_id": "account-account-001397@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02489",
+      "email": "synthetic-fraud-2489@example.invalid",
+      "whatsapp_number": "+91 00000 02489"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002489-01",
+        "date": "2026-08-27T15:08:00Z",
+        "amount": 34600,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2396",
+        "to_account": "XXXXXXXXX2258",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002489-02",
+        "date": "2026-08-27T15:18:00Z",
+        "amount": 83200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2396",
+        "to_account": "XXXXXXXXX2258",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 117800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-27T14:58:00Z",
+    "fraud_end_time": "2026-08-27T15:28:00Z",
+    "reporting_delay_hours": 12
+  }
+}

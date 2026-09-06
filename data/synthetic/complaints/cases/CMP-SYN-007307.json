@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007307",
+  "complaint_date": "2026-08-15T08:18:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 34,
+    "gender": "Male",
+    "phone": "+91 00000 07307",
+    "email": "victim-7307@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7307",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1140",
+      "ifsc_code": "SYNTHETIC-HB-141",
+      "upi_id": "account-account-000141@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "remote_access",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (remote access). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07307",
+      "email": "synthetic-fraud-7307@example.invalid",
+      "whatsapp_number": "+91 00000 07307"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007307-01",
+        "date": "2026-08-15T08:02:00Z",
+        "amount": 85600,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1140",
+        "to_account": "XXXXXXXXX2334",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 85600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-15T07:52:00Z",
+    "fraud_end_time": "2026-08-15T08:12:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

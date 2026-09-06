@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009729",
+  "complaint_date": "2026-07-01T02:28:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 49,
+    "gender": "Other",
+    "phone": "+91 00000 09729",
+    "email": "victim-9729@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9729",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1387",
+      "ifsc_code": "SYNTHETIC-HB-388",
+      "upi_id": "account-account-000388@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "police_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (police impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09729",
+      "email": "synthetic-fraud-9729@example.invalid",
+      "whatsapp_number": "+91 00000 09729"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009729-01",
+        "date": "2026-06-30T20:18:00Z",
+        "amount": 1700,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1387",
+        "to_account": "XXXXXXXXX2743",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 1700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-30T20:08:00Z",
+    "fraud_end_time": "2026-06-30T20:28:00Z",
+    "reporting_delay_hours": 6
+  }
+}

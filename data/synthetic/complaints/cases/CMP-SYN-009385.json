@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-009385",
+  "complaint_date": "2026-06-05T16:11:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 65,
+    "gender": "Other",
+    "phone": "+91 00000 09385",
+    "email": "victim-9385@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9385",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1684",
+      "ifsc_code": "SYNTHETIC-AB-685",
+      "upi_id": "account-account-000685@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "urgent_verification",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (urgent verification). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 09385",
+      "email": "synthetic-fraud-9385@example.invalid",
+      "whatsapp_number": "+91 00000 09385"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009385-01",
+        "date": "2026-06-05T14:51:00Z",
+        "amount": 87900,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1684",
+        "to_account": "XXXXXXXXX2724",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-009385-02",
+        "date": "2026-06-05T15:01:00Z",
+        "amount": 57300,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1684",
+        "to_account": "XXXXXXXXX2724",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 145200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-05T14:41:00Z",
+    "fraud_end_time": "2026-06-05T15:11:00Z",
+    "reporting_delay_hours": 1
+  }
+}

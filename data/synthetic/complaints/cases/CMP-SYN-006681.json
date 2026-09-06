@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006681",
+  "complaint_date": "2026-07-12T17:19:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 54,
+    "gender": "Female",
+    "phone": "+91 00000 06681",
+    "email": "victim-6681@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6681",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1632",
+      "ifsc_code": "SYNTHETIC-KM-633",
+      "upi_id": "account-account-000633@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "fake_seller",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (fake seller). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 06681",
+      "email": "synthetic-fraud-6681@example.invalid",
+      "whatsapp_number": "+91 00000 06681"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006681-01",
+        "date": "2026-07-12T05:09:00Z",
+        "amount": 48500,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000633@cashnet.invalid",
+        "to_account": "mule-account-001557@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 48500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-12T04:59:00Z",
+    "fraud_end_time": "2026-07-12T05:19:00Z",
+    "reporting_delay_hours": 12
+  }
+}

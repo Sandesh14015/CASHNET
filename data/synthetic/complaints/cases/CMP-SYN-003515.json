@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-003515",
+  "complaint_date": "2026-06-10T20:29:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 56,
+    "gender": "Female",
+    "phone": "+91 00000 03515",
+    "email": "victim-3515@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3515",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1715",
+      "ifsc_code": "SYNTHETIC-IB-716",
+      "upi_id": "account-account-000716@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "part_time_job",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (part time job). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03515",
+      "email": "synthetic-fraud-3515@example.invalid",
+      "telegram_id": "@synthetic_offer_3515",
+      "whatsapp_number": "+91 00000 03515"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003515-01",
+        "date": "2026-06-10T14:19:00Z",
+        "amount": 91700,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1715",
+        "to_account": "XXXXXXXXX2682",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 91700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-10T14:09:00Z",
+    "fraud_end_time": "2026-06-10T14:29:00Z",
+    "reporting_delay_hours": 6
+  }
+}

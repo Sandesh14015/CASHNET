@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-001534",
+  "complaint_date": "2026-06-12T01:35:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 36,
+    "gender": "Female",
+    "phone": "+91 00000 01534",
+    "email": "victim-1534@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1534",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1674",
+      "ifsc_code": "SYNTHETIC-IB-675",
+      "upi_id": "account-account-000675@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "ransomware",
+    "sub_type": "company_data_ransom",
+    "description": "Synthetic CASHNET training complaint: victim reported a ransomware (company data ransom). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01534",
+      "email": "synthetic-fraud-1534@example.invalid",
+      "whatsapp_number": "+91 00000 01534"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001534-01",
+        "date": "2026-06-11T13:15:00Z",
+        "amount": 81500,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1674",
+        "to_account": "XXXXXXXXX1864",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-001534-02",
+        "date": "2026-06-11T13:25:00Z",
+        "amount": 78900,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1674",
+        "to_account": "XXXXXXXXX1864",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 160400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-11T13:05:00Z",
+    "fraud_end_time": "2026-06-11T13:35:00Z",
+    "reporting_delay_hours": 12
+  }
+}

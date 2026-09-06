@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001462",
+  "complaint_date": "2026-08-10T03:31:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 51,
+    "gender": "Other",
+    "phone": "+91 00000 01462",
+    "email": "victim-1462@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1462",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX1002",
+      "ifsc_code": "SYNTHETIC-IB-003",
+      "upi_id": "account-account-000003@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 01462",
+      "email": "synthetic-fraud-1462@example.invalid",
+      "whatsapp_number": "+91 00000 01462"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001462-01",
+        "date": "2026-08-10T03:15:00Z",
+        "amount": 83000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000003@cashnet.invalid",
+        "to_account": "mule-account-001138@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 83000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-10T03:05:00Z",
+    "fraud_end_time": "2026-08-10T03:25:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

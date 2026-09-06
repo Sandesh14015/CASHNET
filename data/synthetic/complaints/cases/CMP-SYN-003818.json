@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003818",
+  "complaint_date": "2026-08-13T12:34:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 55,
+    "gender": "Male",
+    "phone": "+91 00000 03818",
+    "email": "victim-3818@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3818",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1336",
+      "ifsc_code": "SYNTHETIC-BO-337",
+      "upi_id": "account-account-000337@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "SIM_swap",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (SIM swap). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 03818",
+      "email": "synthetic-fraud-3818@example.invalid",
+      "whatsapp_number": "+91 00000 03818"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003818-01",
+        "date": "2026-08-13T10:24:00Z",
+        "amount": 8800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000337@cashnet.invalid",
+        "to_account": "mule-account-001710@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 8800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-13T10:14:00Z",
+    "fraud_end_time": "2026-08-13T10:34:00Z",
+    "reporting_delay_hours": 2
+  }
+}

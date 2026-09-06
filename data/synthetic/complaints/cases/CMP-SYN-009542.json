@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-009542",
+  "complaint_date": "2026-07-13T22:11:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 68,
+    "gender": "Other",
+    "phone": "+91 00000 09542",
+    "email": "victim-9542@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9542",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1530",
+      "ifsc_code": "SYNTHETIC-PN-531",
+      "upi_id": "account-account-000531@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "ransomware",
+    "sub_type": "company_data_ransom",
+    "description": "Synthetic CASHNET training complaint: victim reported a ransomware (company data ransom). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09542",
+      "email": "synthetic-fraud-9542@example.invalid",
+      "whatsapp_number": "+91 00000 09542"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009542-01",
+        "date": "2026-07-13T19:51:00Z",
+        "amount": 81100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1530",
+        "to_account": "XXXXXXXXX1971",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-009542-02",
+        "date": "2026-07-13T20:01:00Z",
+        "amount": 75800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1530",
+        "to_account": "XXXXXXXXX1971",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 156900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-13T19:41:00Z",
+    "fraud_end_time": "2026-07-13T20:11:00Z",
+    "reporting_delay_hours": 2
+  }
+}

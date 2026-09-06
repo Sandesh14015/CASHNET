@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-002486",
+  "complaint_date": "2026-06-16T21:01:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 18,
+    "gender": "Female",
+    "phone": "+91 00000 02486",
+    "email": "victim-2486@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2486",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1318",
+      "ifsc_code": "SYNTHETIC-BO-319",
+      "upi_id": "account-account-000319@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "sextortion",
+    "sub_type": "image_blackmail",
+    "description": "Synthetic CASHNET training complaint: victim reported a sextortion (image blackmail). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02486",
+      "email": "synthetic-fraud-2486@example.invalid",
+      "video_call_platform": "Synthetic Video Platform",
+      "whatsapp_number": "+91 00000 02486"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002486-01",
+        "date": "2026-06-16T18:51:00Z",
+        "amount": 23800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000319@cashnet.invalid",
+        "to_account": "mule-account-001793@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 23800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-16T18:41:00Z",
+    "fraud_end_time": "2026-06-16T19:01:00Z",
+    "reporting_delay_hours": 2
+  }
+}

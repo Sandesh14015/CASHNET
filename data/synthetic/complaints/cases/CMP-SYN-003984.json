@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003984",
+  "complaint_date": "2026-07-03T23:48:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 44,
+    "gender": "Male",
+    "phone": "+91 00000 03984",
+    "email": "victim-3984@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3984",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1446",
+      "ifsc_code": "SYNTHETIC-UB-447",
+      "upi_id": "account-account-000447@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "fake_seller",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (fake seller). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 03984",
+      "email": "synthetic-fraud-3984@example.invalid",
+      "whatsapp_number": "+91 00000 03984"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003984-01",
+        "date": "2026-07-03T22:38:00Z",
+        "amount": 8300,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1446",
+        "to_account": "XXXXXXXXX2727",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 8300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-03T22:28:00Z",
+    "fraud_end_time": "2026-07-03T22:48:00Z",
+    "reporting_delay_hours": 1
+  }
+}

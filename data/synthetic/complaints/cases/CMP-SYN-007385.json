@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007385",
+  "complaint_date": "2026-07-28T00:17:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 72,
+    "gender": "Female",
+    "phone": "+91 00000 07385",
+    "email": "victim-7385@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7385",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1348",
+      "ifsc_code": "SYNTHETIC-UB-349",
+      "upi_id": "account-account-000349@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "non_delivery",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (non delivery). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07385",
+      "email": "synthetic-fraud-7385@example.invalid",
+      "whatsapp_number": "+91 00000 07385"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007385-01",
+        "date": "2026-07-27T18:07:00Z",
+        "amount": 32400,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1348",
+        "to_account": "XXXXXXXXX2190",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 32400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-27T17:57:00Z",
+    "fraud_end_time": "2026-07-27T18:17:00Z",
+    "reporting_delay_hours": 6
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005568",
+  "complaint_date": "2026-06-11T15:09:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 20,
+    "gender": "Male",
+    "phone": "+91 00000 05568",
+    "email": "victim-5568@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5568",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1715",
+      "ifsc_code": "SYNTHETIC-IB-716",
+      "upi_id": "account-account-000716@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "fake_support",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (fake support). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05568",
+      "email": "synthetic-fraud-5568@example.invalid",
+      "whatsapp_number": "+91 00000 05568"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005568-01",
+        "date": "2026-06-11T02:59:00Z",
+        "amount": 53500,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000716@cashnet.invalid",
+        "to_account": "mule-account-001645@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 53500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-11T02:49:00Z",
+    "fraud_end_time": "2026-06-11T03:09:00Z",
+    "reporting_delay_hours": 12
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002809",
+  "complaint_date": "2026-07-16T10:12:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 24,
+    "gender": "Male",
+    "phone": "+91 00000 02809",
+    "email": "victim-2809@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2809",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1708",
+      "ifsc_code": "SYNTHETIC-AB-709",
+      "upi_id": "account-account-000709@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "bank_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (bank impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02809",
+      "email": "synthetic-fraud-2809@example.invalid",
+      "whatsapp_number": "+91 00000 02809"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002809-01",
+        "date": "2026-07-15T22:02:00Z",
+        "amount": 42100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1708",
+        "to_account": "XXXXXXXXX2348",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 42100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-15T21:52:00Z",
+    "fraud_end_time": "2026-07-15T22:12:00Z",
+    "reporting_delay_hours": 12
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003640",
+  "complaint_date": "2026-07-02T00:45:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 61,
+    "gender": "Female",
+    "phone": "+91 00000 03640",
+    "email": "victim-3640@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3640",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1340",
+      "ifsc_code": "SYNTHETIC-CB-341",
+      "upi_id": "account-account-000341@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "police_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (police impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03640",
+      "email": "synthetic-fraud-3640@example.invalid",
+      "whatsapp_number": "+91 00000 03640"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003640-01",
+        "date": "2026-07-01T23:35:00Z",
+        "amount": 6000,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1340",
+        "to_account": "XXXXXXXXX2682",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 6000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-01T23:25:00Z",
+    "fraud_end_time": "2026-07-01T23:45:00Z",
+    "reporting_delay_hours": 1
+  }
+}

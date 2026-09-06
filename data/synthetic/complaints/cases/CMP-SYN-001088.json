@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001088",
+  "complaint_date": "2026-08-09T07:59:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 70,
+    "gender": "Other",
+    "phone": "+91 00000 01088",
+    "email": "victim-1088@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1088",
+      "city": "New Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1310",
+      "ifsc_code": "SYNTHETIC-IB-311",
+      "upi_id": "account-account-000311@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "OTP_fraud",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (OTP fraud). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01088",
+      "email": "synthetic-fraud-1088@example.invalid",
+      "whatsapp_number": "+91 00000 01088"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001088-01",
+        "date": "2026-08-09T06:49:00Z",
+        "amount": 40500,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000311@cashnet.invalid",
+        "to_account": "mule-account-000770@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 40500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-09T06:39:00Z",
+    "fraud_end_time": "2026-08-09T06:59:00Z",
+    "reporting_delay_hours": 1
+  }
+}

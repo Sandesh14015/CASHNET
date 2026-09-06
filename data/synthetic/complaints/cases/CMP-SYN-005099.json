@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005099",
+  "complaint_date": "2026-06-30T09:35:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 29,
+    "gender": "Male",
+    "phone": "+91 00000 05099",
+    "email": "victim-5099@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5099",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1102",
+      "ifsc_code": "SYNTHETIC-BO-103",
+      "upi_id": "account-account-000103@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05099",
+      "email": "synthetic-fraud-5099@example.invalid",
+      "whatsapp_number": "+91 00000 05099"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005099-01",
+        "date": "2026-06-30T08:55:00Z",
+        "amount": 60100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1102",
+        "to_account": "XXXXXXXXX2889",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 60100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-30T08:45:00Z",
+    "fraud_end_time": "2026-06-30T09:05:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

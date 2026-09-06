@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005563",
+  "complaint_date": "2026-06-27T10:10:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 41,
+    "gender": "Female",
+    "phone": "+91 00000 05563",
+    "email": "victim-5563@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5563",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX2639",
+      "ifsc_code": "SYNTHETIC-IB-1640",
+      "upi_id": "account-account-001640@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05563",
+      "email": "synthetic-fraud-5563@example.invalid",
+      "whatsapp_number": "+91 00000 05563"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005563-01",
+        "date": "2026-06-26T22:00:00Z",
+        "amount": 1700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001640@cashnet.invalid",
+        "to_account": "mule-account-001644@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 1700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-26T21:50:00Z",
+    "fraud_end_time": "2026-06-26T22:10:00Z",
+    "reporting_delay_hours": 12
+  }
+}

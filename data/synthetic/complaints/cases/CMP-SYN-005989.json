@@ -1,0 +1,80 @@
+{
+  "complaint_id": "CMP-SYN-005989",
+  "complaint_date": "2026-08-09T14:54:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 27,
+    "gender": "Female",
+    "phone": "+91 00000 05989",
+    "email": "victim-5989@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5989",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1515",
+      "ifsc_code": "SYNTHETIC-IB-516",
+      "upi_id": "account-account-000516@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "collect_request",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (collect request). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05989",
+      "email": "synthetic-fraud-5989@example.invalid",
+      "whatsapp_number": "+91 00000 05989"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005989-01",
+        "date": "2026-08-09T12:24:00Z",
+        "amount": 76400,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1515",
+        "to_account": "XXXXXXXXX2443",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-005989-02",
+        "date": "2026-08-09T12:34:00Z",
+        "amount": 10600,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000516@cashnet.invalid",
+        "to_account": "mule-account-001444@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-005989-03",
+        "date": "2026-08-09T12:44:00Z",
+        "amount": 58200,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1515",
+        "to_account": "XXXXXXXXX2443",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 145200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-09T12:14:00Z",
+    "fraud_end_time": "2026-08-09T12:54:00Z",
+    "reporting_delay_hours": 2
+  }
+}

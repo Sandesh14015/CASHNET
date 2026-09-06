@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-004535",
+  "complaint_date": "2026-07-23T21:57:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 44,
+    "gender": "Male",
+    "phone": "+91 00000 04535",
+    "email": "victim-4535@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4535",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1280",
+      "ifsc_code": "SYNTHETIC-KM-281",
+      "upi_id": "account-account-000281@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "SIM_swap",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (SIM swap). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04535",
+      "email": "synthetic-fraud-4535@example.invalid",
+      "whatsapp_number": "+91 00000 04535"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004535-01",
+        "date": "2026-07-23T19:37:00Z",
+        "amount": 37100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1280",
+        "to_account": "XXXXXXXXX2583",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-004535-02",
+        "date": "2026-07-23T19:47:00Z",
+        "amount": 91500,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1280",
+        "to_account": "XXXXXXXXX2583",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 128600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-23T19:27:00Z",
+    "fraud_end_time": "2026-07-23T19:57:00Z",
+    "reporting_delay_hours": 2
+  }
+}

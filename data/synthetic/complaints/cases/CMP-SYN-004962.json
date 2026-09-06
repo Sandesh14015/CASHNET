@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004962",
+  "complaint_date": "2026-08-04T05:39:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 63,
+    "gender": "Female",
+    "phone": "+91 00000 04962",
+    "email": "victim-4962@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4962",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX2145",
+      "ifsc_code": "SYNTHETIC-PN-1146",
+      "upi_id": "account-account-001146@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "collect_request",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (collect request). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 04962",
+      "email": "synthetic-fraud-4962@example.invalid",
+      "whatsapp_number": "+91 00000 04962"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004962-01",
+        "date": "2026-08-04T04:29:00Z",
+        "amount": 70800,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2145",
+        "to_account": "XXXXXXXXX2232",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 70800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-04T04:19:00Z",
+    "fraud_end_time": "2026-08-04T04:39:00Z",
+    "reporting_delay_hours": 1
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-004503",
+  "complaint_date": "2026-06-26T03:41:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 71,
+    "gender": "Other",
+    "phone": "+91 00000 04503",
+    "email": "victim-4503@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4503",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1522",
+      "ifsc_code": "SYNTHETIC-HB-523",
+      "upi_id": "account-account-000523@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04503",
+      "email": "synthetic-fraud-4503@example.invalid",
+      "whatsapp_number": "+91 00000 04503"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004503-01",
+        "date": "2026-06-26T03:15:00Z",
+        "amount": 2200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1522",
+        "to_account": "XXXXXXXXX2178",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-004503-02",
+        "date": "2026-06-26T03:25:00Z",
+        "amount": 74800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000523@cashnet.invalid",
+        "to_account": "mule-account-001179@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 77000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-26T03:05:00Z",
+    "fraud_end_time": "2026-06-26T03:35:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

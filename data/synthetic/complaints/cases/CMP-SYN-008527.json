@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-008527",
+  "complaint_date": "2026-07-23T22:10:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 52,
+    "gender": "Other",
+    "phone": "+91 00000 08527",
+    "email": "victim-8527@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8527",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1668",
+      "ifsc_code": "SYNTHETIC-AB-669",
+      "upi_id": "account-account-000669@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08527",
+      "email": "synthetic-fraud-8527@example.invalid",
+      "whatsapp_number": "+91 00000 08527"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008527-01",
+        "date": "2026-07-23T21:54:00Z",
+        "amount": 55200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1668",
+        "to_account": "XXXXXXXXX2426",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 55200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-23T21:44:00Z",
+    "fraud_end_time": "2026-07-23T22:04:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

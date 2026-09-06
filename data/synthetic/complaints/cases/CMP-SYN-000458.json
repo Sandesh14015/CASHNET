@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000458",
+  "complaint_date": "2026-08-02T08:17:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 29,
+    "gender": "Other",
+    "phone": "+91 00000 00458",
+    "email": "victim-458@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 458",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX2171",
+      "ifsc_code": "SYNTHETIC-BO-1172",
+      "upi_id": "account-account-001172@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00458",
+      "email": "synthetic-fraud-458@example.invalid",
+      "whatsapp_number": "+91 00000 00458"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000458-01",
+        "date": "2026-08-02T07:07:00Z",
+        "amount": 37700,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2171",
+        "to_account": "XXXXXXXXX2088",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 37700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-02T06:57:00Z",
+    "fraud_end_time": "2026-08-02T07:17:00Z",
+    "reporting_delay_hours": 1
+  }
+}

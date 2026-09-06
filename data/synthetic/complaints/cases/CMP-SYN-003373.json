@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-003373",
+  "complaint_date": "2026-07-30T07:57:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 52,
+    "gender": "Other",
+    "phone": "+91 00000 03373",
+    "email": "victim-3373@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3373",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1130",
+      "ifsc_code": "SYNTHETIC-PN-131",
+      "upi_id": "account-account-000131@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 03373",
+      "email": "synthetic-fraud-3373@example.invalid",
+      "whatsapp_number": "+91 00000 03373"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003373-01",
+        "date": "2026-07-30T01:37:00Z",
+        "amount": 65300,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1130",
+        "to_account": "XXXXXXXXX2720",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-003373-02",
+        "date": "2026-07-30T01:47:00Z",
+        "amount": 66700,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1130",
+        "to_account": "XXXXXXXXX2720",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 132000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-30T01:27:00Z",
+    "fraud_end_time": "2026-07-30T01:57:00Z",
+    "reporting_delay_hours": 6
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-007522",
+  "complaint_date": "2026-07-31T06:33:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 60,
+    "gender": "Female",
+    "phone": "+91 00000 07522",
+    "email": "victim-7522@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7522",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1168",
+      "ifsc_code": "SYNTHETIC-AB-169",
+      "upi_id": "account-account-000169@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "security_deposit",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (security deposit). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07522",
+      "email": "synthetic-fraud-7522@example.invalid",
+      "telegram_id": "@synthetic_offer_7522",
+      "whatsapp_number": "+91 00000 07522"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007522-01",
+        "date": "2026-07-31T00:23:00Z",
+        "amount": 63100,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000169@cashnet.invalid",
+        "to_account": "mule-account-001174@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 63100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-31T00:13:00Z",
+    "fraud_end_time": "2026-07-31T00:33:00Z",
+    "reporting_delay_hours": 6
+  }
+}

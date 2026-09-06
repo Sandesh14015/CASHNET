@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002705",
+  "complaint_date": "2026-08-20T04:44:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 32,
+    "gender": "Male",
+    "phone": "+91 00000 02705",
+    "email": "victim-2705@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2705",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1709",
+      "ifsc_code": "SYNTHETIC-BO-710",
+      "upi_id": "account-account-000710@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "urgent_verification",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (urgent verification). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02705",
+      "email": "synthetic-fraud-2705@example.invalid",
+      "whatsapp_number": "+91 00000 02705"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002705-01",
+        "date": "2026-08-19T04:34:00Z",
+        "amount": 9400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000710@cashnet.invalid",
+        "to_account": "mule-account-001274@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 9400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-19T04:24:00Z",
+    "fraud_end_time": "2026-08-19T04:44:00Z",
+    "reporting_delay_hours": 24
+  }
+}

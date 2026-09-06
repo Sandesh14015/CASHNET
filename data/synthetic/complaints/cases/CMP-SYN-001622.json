@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-001622",
+  "complaint_date": "2026-08-10T13:22:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 68,
+    "gender": "Other",
+    "phone": "+91 00000 01622",
+    "email": "victim-1622@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1622",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1185",
+      "ifsc_code": "SYNTHETIC-PN-186",
+      "upi_id": "account-account-000186@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01622",
+      "email": "synthetic-fraud-1622@example.invalid",
+      "whatsapp_number": "+91 00000 01622"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001622-01",
+        "date": "2026-08-10T12:32:00Z",
+        "amount": 42000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000186@cashnet.invalid",
+        "to_account": "mule-account-000834@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-001622-02",
+        "date": "2026-08-10T12:42:00Z",
+        "amount": 5700,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1185",
+        "to_account": "XXXXXXXXX1833",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 47700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-10T12:22:00Z",
+    "fraud_end_time": "2026-08-10T12:52:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

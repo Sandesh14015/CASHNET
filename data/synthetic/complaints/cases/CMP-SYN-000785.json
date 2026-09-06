@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-000785",
+  "complaint_date": "2026-08-02T18:41:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 19,
+    "gender": "Male",
+    "phone": "+91 00000 00785",
+    "email": "victim-785@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 785",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1670",
+      "ifsc_code": "SYNTHETIC-IB-671",
+      "upi_id": "account-account-000671@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "police_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (police impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 00785",
+      "email": "synthetic-fraud-785@example.invalid",
+      "whatsapp_number": "+91 00000 00785"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000785-01",
+        "date": "2026-08-02T17:51:00Z",
+        "amount": 44400,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1670",
+        "to_account": "XXXXXXXXX2695",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-000785-02",
+        "date": "2026-08-02T18:01:00Z",
+        "amount": 24800,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1670",
+        "to_account": "XXXXXXXXX2695",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 69200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-02T17:41:00Z",
+    "fraud_end_time": "2026-08-02T18:11:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

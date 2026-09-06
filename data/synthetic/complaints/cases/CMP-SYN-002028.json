@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002028",
+  "complaint_date": "2026-06-11T09:44:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 70,
+    "gender": "Male",
+    "phone": "+91 00000 02028",
+    "email": "victim-2028@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2028",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1419",
+      "ifsc_code": "SYNTHETIC-HB-420",
+      "upi_id": "account-account-000420@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "urgent_verification",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (urgent verification). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 02028",
+      "email": "synthetic-fraud-2028@example.invalid",
+      "whatsapp_number": "+91 00000 02028"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002028-01",
+        "date": "2026-06-11T09:04:00Z",
+        "amount": 70900,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1419",
+        "to_account": "XXXXXXXXX2602",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 70900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-11T08:54:00Z",
+    "fraud_end_time": "2026-06-11T09:14:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

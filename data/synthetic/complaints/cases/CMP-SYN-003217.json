@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-003217",
+  "complaint_date": "2026-06-04T10:28:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 64,
+    "gender": "Male",
+    "phone": "+91 00000 03217",
+    "email": "victim-3217@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3217",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1060",
+      "ifsc_code": "SYNTHETIC-HB-061",
+      "upi_id": "account-account-000061@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03217",
+      "email": "synthetic-fraud-3217@example.invalid",
+      "whatsapp_number": "+91 00000 03217"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003217-01",
+        "date": "2026-06-03T10:08:00Z",
+        "amount": 42400,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1060",
+        "to_account": "XXXXXXXXX1903",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-003217-02",
+        "date": "2026-06-03T10:18:00Z",
+        "amount": 19700,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1060",
+        "to_account": "XXXXXXXXX1903",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 62100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-03T09:58:00Z",
+    "fraud_end_time": "2026-06-03T10:28:00Z",
+    "reporting_delay_hours": 24
+  }
+}

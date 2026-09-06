@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000605",
+  "complaint_date": "2026-06-02T10:45:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 67,
+    "gender": "Other",
+    "phone": "+91 00000 00605",
+    "email": "victim-605@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 605",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1076",
+      "ifsc_code": "SYNTHETIC-IB-077",
+      "upi_id": "account-account-000077@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00605",
+      "email": "synthetic-fraud-605@example.invalid",
+      "whatsapp_number": "+91 00000 00605"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000605-01",
+        "date": "2026-06-02T10:05:00Z",
+        "amount": 98500,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1076",
+        "to_account": "XXXXXXXXX1968",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 98500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-02T09:55:00Z",
+    "fraud_end_time": "2026-06-02T10:15:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

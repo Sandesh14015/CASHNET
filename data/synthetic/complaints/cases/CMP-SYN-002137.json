@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002137",
+  "complaint_date": "2026-08-20T13:48:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 60,
+    "gender": "Male",
+    "phone": "+91 00000 02137",
+    "email": "victim-2137@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2137",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1218",
+      "ifsc_code": "SYNTHETIC-AB-219",
+      "upi_id": "account-account-000219@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02137",
+      "email": "synthetic-fraud-2137@example.invalid",
+      "whatsapp_number": "+91 00000 02137"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002137-01",
+        "date": "2026-08-20T11:38:00Z",
+        "amount": 93700,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1218",
+        "to_account": "XXXXXXXXX2325",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 93700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-20T11:28:00Z",
+    "fraud_end_time": "2026-08-20T11:48:00Z",
+    "reporting_delay_hours": 2
+  }
+}

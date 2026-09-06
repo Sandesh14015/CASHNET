@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004777",
+  "complaint_date": "2026-07-15T22:45:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 22,
+    "gender": "Other",
+    "phone": "+91 00000 04777",
+    "email": "victim-4777@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4777",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX2867",
+      "ifsc_code": "SYNTHETIC-IB-1868",
+      "upi_id": "account-account-001868@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04777",
+      "email": "synthetic-fraud-4777@example.invalid",
+      "whatsapp_number": "+91 00000 04777"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004777-01",
+        "date": "2026-07-15T22:29:00Z",
+        "amount": 55500,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001868@cashnet.invalid",
+        "to_account": "mule-account-000753@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 55500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-15T22:19:00Z",
+    "fraud_end_time": "2026-07-15T22:39:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

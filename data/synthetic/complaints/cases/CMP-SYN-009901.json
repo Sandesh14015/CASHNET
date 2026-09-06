@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009901",
+  "complaint_date": "2026-07-26T11:57:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 31,
+    "gender": "Female",
+    "phone": "+91 00000 09901",
+    "email": "victim-9901@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9901",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1052",
+      "ifsc_code": "SYNTHETIC-AB-053",
+      "upi_id": "account-account-000053@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "OTP_fraud",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (OTP fraud). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09901",
+      "email": "synthetic-fraud-9901@example.invalid",
+      "whatsapp_number": "+91 00000 09901"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009901-01",
+        "date": "2026-07-26T11:41:00Z",
+        "amount": 25600,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000053@cashnet.invalid",
+        "to_account": "mule-account-001787@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 25600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-26T11:31:00Z",
+    "fraud_end_time": "2026-07-26T11:51:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

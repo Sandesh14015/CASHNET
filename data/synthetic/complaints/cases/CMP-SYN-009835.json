@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009835",
+  "complaint_date": "2026-08-16T06:21:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 41,
+    "gender": "Other",
+    "phone": "+91 00000 09835",
+    "email": "victim-9835@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9835",
+      "city": "New Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1204",
+      "ifsc_code": "SYNTHETIC-UB-205",
+      "upi_id": "account-account-000205@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "romance_scam",
+    "sub_type": "emergency_payment",
+    "description": "Synthetic CASHNET training complaint: victim reported a romance scam (emergency payment). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09835",
+      "email": "synthetic-fraud-9835@example.invalid",
+      "whatsapp_number": "+91 00000 09835"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009835-01",
+        "date": "2026-08-16T05:41:00Z",
+        "amount": 1300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000205@cashnet.invalid",
+        "to_account": "mule-account-000764@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 1300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-16T05:31:00Z",
+    "fraud_end_time": "2026-08-16T05:51:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

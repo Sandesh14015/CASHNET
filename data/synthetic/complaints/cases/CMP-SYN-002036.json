@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002036",
+  "complaint_date": "2026-07-08T03:55:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 24,
+    "gender": "Male",
+    "phone": "+91 00000 02036",
+    "email": "victim-2036@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2036",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX2303",
+      "ifsc_code": "SYNTHETIC-KM-1304",
+      "upi_id": "account-account-001304@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "collect_request",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (collect request). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02036",
+      "email": "synthetic-fraud-2036@example.invalid",
+      "whatsapp_number": "+91 00000 02036"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002036-01",
+        "date": "2026-07-08T02:45:00Z",
+        "amount": 91800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001304@cashnet.invalid",
+        "to_account": "mule-account-001330@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 91800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-08T02:35:00Z",
+    "fraud_end_time": "2026-07-08T02:55:00Z",
+    "reporting_delay_hours": 1
+  }
+}

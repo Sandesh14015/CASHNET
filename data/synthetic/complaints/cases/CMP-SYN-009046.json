@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-009046",
+  "complaint_date": "2026-07-25T00:22:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 44,
+    "gender": "Female",
+    "phone": "+91 00000 09046",
+    "email": "victim-9046@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9046",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1037",
+      "ifsc_code": "SYNTHETIC-BO-038",
+      "upi_id": "account-account-000038@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "sextortion",
+    "sub_type": "video_call_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a sextortion (video call scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09046",
+      "email": "synthetic-fraud-9046@example.invalid",
+      "video_call_platform": "Synthetic Video Platform",
+      "whatsapp_number": "+91 00000 09046"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009046-01",
+        "date": "2026-07-25T00:06:00Z",
+        "amount": 38700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000038@cashnet.invalid",
+        "to_account": "mule-account-001841@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 38700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-24T23:56:00Z",
+    "fraud_end_time": "2026-07-25T00:16:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

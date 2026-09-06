@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007225",
+  "complaint_date": "2026-07-02T00:20:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 57,
+    "gender": "Other",
+    "phone": "+91 00000 07225",
+    "email": "victim-7225@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7225",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1657",
+      "ifsc_code": "SYNTHETIC-KM-658",
+      "upi_id": "account-account-000658@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "fake_support",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (fake support). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07225",
+      "email": "synthetic-fraud-7225@example.invalid",
+      "whatsapp_number": "+91 00000 07225"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007225-01",
+        "date": "2026-07-01T12:10:00Z",
+        "amount": 46700,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1657",
+        "to_account": "XXXXXXXXX2315",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 46700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-01T12:00:00Z",
+    "fraud_end_time": "2026-07-01T12:20:00Z",
+    "reporting_delay_hours": 12
+  }
+}

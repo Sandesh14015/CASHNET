@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009471",
+  "complaint_date": "2026-08-13T22:01:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 26,
+    "gender": "Female",
+    "phone": "+91 00000 09471",
+    "email": "victim-9471@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9471",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX2394",
+      "ifsc_code": "SYNTHETIC-SB-1395",
+      "upi_id": "account-account-001395@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09471",
+      "email": "synthetic-fraud-9471@example.invalid",
+      "whatsapp_number": "+91 00000 09471"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009471-01",
+        "date": "2026-08-13T20:51:00Z",
+        "amount": 13200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2394",
+        "to_account": "XXXXXXXXX2923",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 13200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-13T20:41:00Z",
+    "fraud_end_time": "2026-08-13T21:01:00Z",
+    "reporting_delay_hours": 1
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-000873",
+  "complaint_date": "2026-07-31T09:48:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 50,
+    "gender": "Female",
+    "phone": "+91 00000 00873",
+    "email": "victim-873@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 873",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1049",
+      "ifsc_code": "SYNTHETIC-KM-050",
+      "upi_id": "account-account-000050@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "training_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (training fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00873",
+      "email": "synthetic-fraud-873@example.invalid",
+      "telegram_id": "@synthetic_offer_873",
+      "whatsapp_number": "+91 00000 00873"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000873-01",
+        "date": "2026-07-31T09:08:00Z",
+        "amount": 23400,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1049",
+        "to_account": "XXXXXXXXX2752",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 23400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-31T08:58:00Z",
+    "fraud_end_time": "2026-07-31T09:18:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

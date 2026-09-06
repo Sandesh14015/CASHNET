@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007813",
+  "complaint_date": "2026-08-18T12:48:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 63,
+    "gender": "Other",
+    "phone": "+91 00000 07813",
+    "email": "victim-7813@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7813",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1457",
+      "ifsc_code": "SYNTHETIC-BO-458",
+      "upi_id": "account-account-000458@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "ransomware",
+    "sub_type": "personal_data_ransom",
+    "description": "Synthetic CASHNET training complaint: victim reported a ransomware (personal data ransom). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07813",
+      "email": "synthetic-fraud-7813@example.invalid",
+      "whatsapp_number": "+91 00000 07813"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007813-01",
+        "date": "2026-08-18T11:38:00Z",
+        "amount": 55100,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1457",
+        "to_account": "XXXXXXXXX2548",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 55100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-18T11:28:00Z",
+    "fraud_end_time": "2026-08-18T11:48:00Z",
+    "reporting_delay_hours": 1
+  }
+}

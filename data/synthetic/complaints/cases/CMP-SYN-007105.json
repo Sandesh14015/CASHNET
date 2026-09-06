@@ -1,0 +1,80 @@
+{
+  "complaint_id": "CMP-SYN-007105",
+  "complaint_date": "2026-06-29T13:14:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 36,
+    "gender": "Male",
+    "phone": "+91 00000 07105",
+    "email": "victim-7105@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7105",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1514",
+      "ifsc_code": "SYNTHETIC-UB-515",
+      "upi_id": "account-account-000515@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "remote_access",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (remote access). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 07105",
+      "email": "synthetic-fraud-7105@example.invalid",
+      "whatsapp_number": "+91 00000 07105"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007105-01",
+        "date": "2026-06-29T12:14:00Z",
+        "amount": 72800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000515@cashnet.invalid",
+        "to_account": "mule-account-001299@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-007105-02",
+        "date": "2026-06-29T12:24:00Z",
+        "amount": 93000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000515@cashnet.invalid",
+        "to_account": "mule-account-001299@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-007105-03",
+        "date": "2026-06-29T12:34:00Z",
+        "amount": 56300,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1514",
+        "to_account": "XXXXXXXXX2298",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 222100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-29T12:04:00Z",
+    "fraud_end_time": "2026-06-29T12:44:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

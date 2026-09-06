@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-002075",
+  "complaint_date": "2026-07-25T13:24:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 27,
+    "gender": "Female",
+    "phone": "+91 00000 02075",
+    "email": "victim-2075@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2075",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX2438",
+      "ifsc_code": "SYNTHETIC-SB-1439",
+      "upi_id": "account-account-001439@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "fake_summons",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (fake summons). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 02075",
+      "email": "synthetic-fraud-2075@example.invalid",
+      "whatsapp_number": "+91 00000 02075"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002075-01",
+        "date": "2026-07-25T12:34:00Z",
+        "amount": 38800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001439@cashnet.invalid",
+        "to_account": "mule-account-001459@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002075-02",
+        "date": "2026-07-25T12:44:00Z",
+        "amount": 73500,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001439@cashnet.invalid",
+        "to_account": "mule-account-001459@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 112300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-25T12:24:00Z",
+    "fraud_end_time": "2026-07-25T12:54:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000505",
+  "complaint_date": "2026-07-14T17:43:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 46,
+    "gender": "Female",
+    "phone": "+91 00000 00505",
+    "email": "victim-505@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 505",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1172",
+      "ifsc_code": "SYNTHETIC-CB-173",
+      "upi_id": "account-account-000173@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00505",
+      "email": "synthetic-fraud-505@example.invalid",
+      "whatsapp_number": "+91 00000 00505"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000505-01",
+        "date": "2026-07-14T16:33:00Z",
+        "amount": 48600,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000173@cashnet.invalid",
+        "to_account": "mule-account-001498@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 48600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-14T16:23:00Z",
+    "fraud_end_time": "2026-07-14T16:43:00Z",
+    "reporting_delay_hours": 1
+  }
+}

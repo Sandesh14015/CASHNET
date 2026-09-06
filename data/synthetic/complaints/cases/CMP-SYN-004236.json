@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004236",
+  "complaint_date": "2026-07-20T11:14:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 54,
+    "gender": "Female",
+    "phone": "+91 00000 04236",
+    "email": "victim-4236@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4236",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1577",
+      "ifsc_code": "SYNTHETIC-IB-578",
+      "upi_id": "account-account-000578@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "SIM_swap",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (SIM swap). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04236",
+      "email": "synthetic-fraud-4236@example.invalid",
+      "whatsapp_number": "+91 00000 04236"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004236-01",
+        "date": "2026-07-19T23:04:00Z",
+        "amount": 16200,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1577",
+        "to_account": "XXXXXXXXX1904",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 16200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-19T22:54:00Z",
+    "fraud_end_time": "2026-07-19T23:14:00Z",
+    "reporting_delay_hours": 12
+  }
+}

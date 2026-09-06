@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002726",
+  "complaint_date": "2026-06-22T07:45:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 19,
+    "gender": "Female",
+    "phone": "+91 00000 02726",
+    "email": "victim-2726@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2726",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1500",
+      "ifsc_code": "SYNTHETIC-IB-501",
+      "upi_id": "account-account-000501@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02726",
+      "email": "synthetic-fraud-2726@example.invalid",
+      "whatsapp_number": "+91 00000 02726"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002726-01",
+        "date": "2026-06-22T06:35:00Z",
+        "amount": 90300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000501@cashnet.invalid",
+        "to_account": "mule-account-001205@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 90300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-22T06:25:00Z",
+    "fraud_end_time": "2026-06-22T06:45:00Z",
+    "reporting_delay_hours": 1
+  }
+}

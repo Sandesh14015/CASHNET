@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007638",
+  "complaint_date": "2026-08-22T20:55:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 27,
+    "gender": "Female",
+    "phone": "+91 00000 07638",
+    "email": "victim-7638@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7638",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1219",
+      "ifsc_code": "SYNTHETIC-KM-220",
+      "upi_id": "account-account-000220@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "bank_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (bank impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07638",
+      "email": "synthetic-fraud-7638@example.invalid",
+      "whatsapp_number": "+91 00000 07638"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007638-01",
+        "date": "2026-08-22T08:45:00Z",
+        "amount": 11500,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1219",
+        "to_account": "XXXXXXXXX1812",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 11500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-22T08:35:00Z",
+    "fraud_end_time": "2026-08-22T08:55:00Z",
+    "reporting_delay_hours": 12
+  }
+}

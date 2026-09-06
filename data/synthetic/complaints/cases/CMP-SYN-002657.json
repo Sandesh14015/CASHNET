@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002657",
+  "complaint_date": "2026-06-12T22:50:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 43,
+    "gender": "Female",
+    "phone": "+91 00000 02657",
+    "email": "victim-2657@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2657",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX1074",
+      "ifsc_code": "SYNTHETIC-IB-075",
+      "upi_id": "account-account-000075@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "wallet_transfer",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (wallet transfer). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 02657",
+      "email": "synthetic-fraud-2657@example.invalid",
+      "whatsapp_number": "+91 00000 02657"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002657-01",
+        "date": "2026-06-12T22:34:00Z",
+        "amount": 1600,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000075@cashnet.invalid",
+        "to_account": "mule-account-001162@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 1600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-12T22:24:00Z",
+    "fraud_end_time": "2026-06-12T22:44:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000635",
+  "complaint_date": "2026-06-17T06:02:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 47,
+    "gender": "Female",
+    "phone": "+91 00000 00635",
+    "email": "victim-635@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 635",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1350",
+      "ifsc_code": "SYNTHETIC-CB-351",
+      "upi_id": "account-account-000351@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "bank_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (bank impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00635",
+      "email": "synthetic-fraud-635@example.invalid",
+      "whatsapp_number": "+91 00000 00635"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000635-01",
+        "date": "2026-06-16T23:52:00Z",
+        "amount": 66900,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1350",
+        "to_account": "XXXXXXXXX2090",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 66900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-16T23:42:00Z",
+    "fraud_end_time": "2026-06-17T00:02:00Z",
+    "reporting_delay_hours": 6
+  }
+}

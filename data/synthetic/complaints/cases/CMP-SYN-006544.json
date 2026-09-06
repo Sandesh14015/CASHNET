@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-006544",
+  "complaint_date": "2026-06-27T20:32:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 62,
+    "gender": "Male",
+    "phone": "+91 00000 06544",
+    "email": "victim-6544@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6544",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1724",
+      "ifsc_code": "SYNTHETIC-IB-725",
+      "upi_id": "account-account-000725@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "non_delivery",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (non delivery). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06544",
+      "email": "synthetic-fraud-6544@example.invalid",
+      "whatsapp_number": "+91 00000 06544"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006544-01",
+        "date": "2026-06-27T08:12:00Z",
+        "amount": 24200,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1724",
+        "to_account": "XXXXXXXXX1938",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-006544-02",
+        "date": "2026-06-27T08:22:00Z",
+        "amount": 53100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1724",
+        "to_account": "XXXXXXXXX1938",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 77300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-27T08:02:00Z",
+    "fraud_end_time": "2026-06-27T08:32:00Z",
+    "reporting_delay_hours": 12
+  }
+}

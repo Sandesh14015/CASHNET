@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-005852",
+  "complaint_date": "2026-07-17T10:35:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 27,
+    "gender": "Other",
+    "phone": "+91 00000 05852",
+    "email": "victim-5852@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5852",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1177",
+      "ifsc_code": "SYNTHETIC-BO-178",
+      "upi_id": "account-account-000178@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "security_deposit",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (security deposit). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05852",
+      "email": "synthetic-fraud-5852@example.invalid",
+      "telegram_id": "@synthetic_offer_5852",
+      "whatsapp_number": "+91 00000 05852"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005852-01",
+        "date": "2026-07-17T09:25:00Z",
+        "amount": 5000,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1177",
+        "to_account": "XXXXXXXXX2155",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 5000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-17T09:15:00Z",
+    "fraud_end_time": "2026-07-17T09:35:00Z",
+    "reporting_delay_hours": 1
+  }
+}

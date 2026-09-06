@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-003567",
+  "complaint_date": "2026-07-17T05:05:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 48,
+    "gender": "Male",
+    "phone": "+91 00000 03567",
+    "email": "victim-3567@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3567",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1657",
+      "ifsc_code": "SYNTHETIC-KM-658",
+      "upi_id": "account-account-000658@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "part_time_job",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (part time job). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03567",
+      "email": "synthetic-fraud-3567@example.invalid",
+      "telegram_id": "@synthetic_offer_3567",
+      "whatsapp_number": "+91 00000 03567"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003567-01",
+        "date": "2026-07-16T04:55:00Z",
+        "amount": 68700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000658@cashnet.invalid",
+        "to_account": "mule-account-001002@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 68700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-16T04:45:00Z",
+    "fraud_end_time": "2026-07-16T05:05:00Z",
+    "reporting_delay_hours": 24
+  }
+}

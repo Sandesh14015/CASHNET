@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000797",
+  "complaint_date": "2026-07-16T20:04:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 52,
+    "gender": "Male",
+    "phone": "+91 00000 00797",
+    "email": "victim-797@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 797",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX2783",
+      "ifsc_code": "SYNTHETIC-CB-1784",
+      "upi_id": "account-account-001784@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "video_call_threat",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (video call threat). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00797",
+      "email": "synthetic-fraud-797@example.invalid",
+      "whatsapp_number": "+91 00000 00797"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000797-01",
+        "date": "2026-07-16T07:54:00Z",
+        "amount": 81000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001784@cashnet.invalid",
+        "to_account": "mule-account-001711@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 81000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-16T07:44:00Z",
+    "fraud_end_time": "2026-07-16T08:04:00Z",
+    "reporting_delay_hours": 12
+  }
+}

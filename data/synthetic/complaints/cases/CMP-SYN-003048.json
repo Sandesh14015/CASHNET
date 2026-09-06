@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003048",
+  "complaint_date": "2026-06-02T22:18:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 47,
+    "gender": "Male",
+    "phone": "+91 00000 03048",
+    "email": "victim-3048@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3048",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1991",
+      "ifsc_code": "SYNTHETIC-CB-992",
+      "upi_id": "account-account-000992@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03048",
+      "email": "synthetic-fraud-3048@example.invalid",
+      "whatsapp_number": "+91 00000 03048"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003048-01",
+        "date": "2026-06-02T21:38:00Z",
+        "amount": 22700,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1991",
+        "to_account": "XXXXXXXXX1844",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 22700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-02T21:28:00Z",
+    "fraud_end_time": "2026-06-02T21:48:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

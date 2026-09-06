@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-009921",
+  "complaint_date": "2026-06-16T11:55:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 63,
+    "gender": "Female",
+    "phone": "+91 00000 09921",
+    "email": "victim-9921@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9921",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1581",
+      "ifsc_code": "SYNTHETIC-UB-582",
+      "upi_id": "account-account-000582@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "romance_scam",
+    "sub_type": "emergency_payment",
+    "description": "Synthetic CASHNET training complaint: victim reported a romance scam (emergency payment). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09921",
+      "email": "synthetic-fraud-9921@example.invalid",
+      "whatsapp_number": "+91 00000 09921"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009921-01",
+        "date": "2026-06-15T23:35:00Z",
+        "amount": 74600,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1581",
+        "to_account": "XXXXXXXXX2574",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-009921-02",
+        "date": "2026-06-15T23:45:00Z",
+        "amount": 75100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1581",
+        "to_account": "XXXXXXXXX2574",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 149700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-15T23:25:00Z",
+    "fraud_end_time": "2026-06-15T23:55:00Z",
+    "reporting_delay_hours": 12
+  }
+}

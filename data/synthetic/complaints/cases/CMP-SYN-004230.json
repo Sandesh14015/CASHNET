@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004230",
+  "complaint_date": "2026-08-04T02:37:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 43,
+    "gender": "Male",
+    "phone": "+91 00000 04230",
+    "email": "victim-4230@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4230",
+      "city": "New Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1232",
+      "ifsc_code": "SYNTHETIC-IB-233",
+      "upi_id": "account-account-000233@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "fake_exchange",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (fake exchange). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04230",
+      "email": "synthetic-fraud-4230@example.invalid",
+      "whatsapp_number": "+91 00000 04230"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004230-01",
+        "date": "2026-08-04T00:27:00Z",
+        "amount": 1900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000233@cashnet.invalid",
+        "to_account": "mule-account-001001@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 1900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-04T00:17:00Z",
+    "fraud_end_time": "2026-08-04T00:37:00Z",
+    "reporting_delay_hours": 2
+  }
+}

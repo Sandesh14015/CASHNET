@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-008242",
+  "complaint_date": "2026-08-08T06:18:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 62,
+    "gender": "Other",
+    "phone": "+91 00000 08242",
+    "email": "victim-8242@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8242",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX2117",
+      "ifsc_code": "SYNTHETIC-HB-1118",
+      "upi_id": "account-account-001118@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "fake_support",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (fake support). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08242",
+      "email": "synthetic-fraud-8242@example.invalid",
+      "whatsapp_number": "+91 00000 08242"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008242-01",
+        "date": "2026-08-07T18:08:00Z",
+        "amount": 59800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2117",
+        "to_account": "XXXXXXXXX2451",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 59800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-07T17:58:00Z",
+    "fraud_end_time": "2026-08-07T18:18:00Z",
+    "reporting_delay_hours": 12
+  }
+}

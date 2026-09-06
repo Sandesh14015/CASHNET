@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004216",
+  "complaint_date": "2026-08-07T05:56:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 73,
+    "gender": "Female",
+    "phone": "+91 00000 04216",
+    "email": "victim-4216@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4216",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1017",
+      "ifsc_code": "SYNTHETIC-UB-018",
+      "upi_id": "account-account-000018@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "non_delivery",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (non delivery). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04216",
+      "email": "synthetic-fraud-4216@example.invalid",
+      "whatsapp_number": "+91 00000 04216"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004216-01",
+        "date": "2026-08-06T23:46:00Z",
+        "amount": 33100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1017",
+        "to_account": "XXXXXXXXX1866",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 33100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-06T23:36:00Z",
+    "fraud_end_time": "2026-08-06T23:56:00Z",
+    "reporting_delay_hours": 6
+  }
+}

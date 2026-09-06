@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004924",
+  "complaint_date": "2026-08-13T05:48:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 37,
+    "gender": "Male",
+    "phone": "+91 00000 04924",
+    "email": "victim-4924@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4924",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1446",
+      "ifsc_code": "SYNTHETIC-UB-447",
+      "upi_id": "account-account-000447@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 04924",
+      "email": "synthetic-fraud-4924@example.invalid",
+      "whatsapp_number": "+91 00000 04924"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004924-01",
+        "date": "2026-08-13T05:08:00Z",
+        "amount": 19100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1446",
+        "to_account": "XXXXXXXXX2784",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 19100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-13T04:58:00Z",
+    "fraud_end_time": "2026-08-13T05:18:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

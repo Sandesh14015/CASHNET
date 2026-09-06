@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000125",
+  "complaint_date": "2026-07-05T08:30:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 48,
+    "gender": "Female",
+    "phone": "+91 00000 00125",
+    "email": "victim-125@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 125",
+      "city": "New Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1395",
+      "ifsc_code": "SYNTHETIC-IB-396",
+      "upi_id": "account-account-000396@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 00125",
+      "email": "synthetic-fraud-125@example.invalid",
+      "whatsapp_number": "+91 00000 00125"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000125-01",
+        "date": "2026-07-05T07:50:00Z",
+        "amount": 42000,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1395",
+        "to_account": "XXXXXXXXX2935",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 42000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-05T07:40:00Z",
+    "fraud_end_time": "2026-07-05T08:00:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

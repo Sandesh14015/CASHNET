@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004672",
+  "complaint_date": "2026-06-09T17:24:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 41,
+    "gender": "Female",
+    "phone": "+91 00000 04672",
+    "email": "victim-4672@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4672",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1055",
+      "ifsc_code": "SYNTHETIC-IB-056",
+      "upi_id": "account-account-000056@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "fake_support",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (fake support). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04672",
+      "email": "synthetic-fraud-4672@example.invalid",
+      "whatsapp_number": "+91 00000 04672"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004672-01",
+        "date": "2026-06-09T16:14:00Z",
+        "amount": 20900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000056@cashnet.invalid",
+        "to_account": "mule-account-000762@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 20900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-09T16:04:00Z",
+    "fraud_end_time": "2026-06-09T16:24:00Z",
+    "reporting_delay_hours": 1
+  }
+}

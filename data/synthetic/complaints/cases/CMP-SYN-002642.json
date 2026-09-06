@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002642",
+  "complaint_date": "2026-06-17T16:19:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 36,
+    "gender": "Female",
+    "phone": "+91 00000 02642",
+    "email": "victim-2642@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2642",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1301",
+      "ifsc_code": "SYNTHETIC-KM-302",
+      "upi_id": "account-account-000302@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "urgent_verification",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (urgent verification). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02642",
+      "email": "synthetic-fraud-2642@example.invalid",
+      "whatsapp_number": "+91 00000 02642"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002642-01",
+        "date": "2026-06-17T10:09:00Z",
+        "amount": 63300,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1301",
+        "to_account": "XXXXXXXXX1814",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 63300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-17T09:59:00Z",
+    "fraud_end_time": "2026-06-17T10:19:00Z",
+    "reporting_delay_hours": 6
+  }
+}

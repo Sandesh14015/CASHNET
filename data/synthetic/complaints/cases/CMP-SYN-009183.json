@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009183",
+  "complaint_date": "2026-08-23T07:51:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 53,
+    "gender": "Male",
+    "phone": "+91 00000 09183",
+    "email": "victim-9183@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9183",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1555",
+      "ifsc_code": "SYNTHETIC-PN-556",
+      "upi_id": "account-account-000556@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09183",
+      "email": "synthetic-fraud-9183@example.invalid",
+      "whatsapp_number": "+91 00000 09183"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009183-01",
+        "date": "2026-08-22T19:41:00Z",
+        "amount": 37100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1555",
+        "to_account": "XXXXXXXXX2659",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 37100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-22T19:31:00Z",
+    "fraud_end_time": "2026-08-22T19:51:00Z",
+    "reporting_delay_hours": 12
+  }
+}

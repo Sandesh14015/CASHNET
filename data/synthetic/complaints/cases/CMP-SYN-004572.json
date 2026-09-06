@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004572",
+  "complaint_date": "2026-07-26T18:23:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 29,
+    "gender": "Male",
+    "phone": "+91 00000 04572",
+    "email": "victim-4572@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4572",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1142",
+      "ifsc_code": "SYNTHETIC-BO-143",
+      "upi_id": "account-account-000143@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 04572",
+      "email": "synthetic-fraud-4572@example.invalid",
+      "whatsapp_number": "+91 00000 04572"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004572-01",
+        "date": "2026-07-26T06:13:00Z",
+        "amount": 58700,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1142",
+        "to_account": "XXXXXXXXX2214",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 58700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-26T06:03:00Z",
+    "fraud_end_time": "2026-07-26T06:23:00Z",
+    "reporting_delay_hours": 12
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000709",
+  "complaint_date": "2026-07-29T00:24:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 68,
+    "gender": "Female",
+    "phone": "+91 00000 00709",
+    "email": "victim-709@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 709",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1678",
+      "ifsc_code": "SYNTHETIC-AB-679",
+      "upi_id": "account-account-000679@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "wallet_transfer",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (wallet transfer). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00709",
+      "email": "synthetic-fraud-709@example.invalid",
+      "whatsapp_number": "+91 00000 00709"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000709-01",
+        "date": "2026-07-29T00:08:00Z",
+        "amount": 78300,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1678",
+        "to_account": "XXXXXXXXX2545",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 78300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-28T23:58:00Z",
+    "fraud_end_time": "2026-07-29T00:18:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

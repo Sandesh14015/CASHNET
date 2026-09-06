@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007449",
+  "complaint_date": "2026-06-21T09:51:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 53,
+    "gender": "Other",
+    "phone": "+91 00000 07449",
+    "email": "victim-7449@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7449",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1636",
+      "ifsc_code": "SYNTHETIC-HB-637",
+      "upi_id": "account-account-000637@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07449",
+      "email": "synthetic-fraud-7449@example.invalid",
+      "whatsapp_number": "+91 00000 07449"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007449-01",
+        "date": "2026-06-21T07:41:00Z",
+        "amount": 13000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000637@cashnet.invalid",
+        "to_account": "mule-account-001906@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 13000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-21T07:31:00Z",
+    "fraud_end_time": "2026-06-21T07:51:00Z",
+    "reporting_delay_hours": 2
+  }
+}

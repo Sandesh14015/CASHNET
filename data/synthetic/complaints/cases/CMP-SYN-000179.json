@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000179",
+  "complaint_date": "2026-07-25T01:24:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 35,
+    "gender": "Other",
+    "phone": "+91 00000 00179",
+    "email": "victim-179@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 179",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1530",
+      "ifsc_code": "SYNTHETIC-PN-531",
+      "upi_id": "account-account-000531@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00179",
+      "email": "synthetic-fraud-179@example.invalid",
+      "whatsapp_number": "+91 00000 00179"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000179-01",
+        "date": "2026-07-25T00:14:00Z",
+        "amount": 79900,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1530",
+        "to_account": "XXXXXXXXX1930",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 79900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-25T00:04:00Z",
+    "fraud_end_time": "2026-07-25T00:24:00Z",
+    "reporting_delay_hours": 1
+  }
+}

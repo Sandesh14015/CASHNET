@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005742",
+  "complaint_date": "2026-06-14T14:37:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 19,
+    "gender": "Female",
+    "phone": "+91 00000 05742",
+    "email": "victim-5742@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5742",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX2522",
+      "ifsc_code": "SYNTHETIC-AB-1523",
+      "upi_id": "account-account-001523@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "remote_access",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (remote access). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 05742",
+      "email": "synthetic-fraud-5742@example.invalid",
+      "whatsapp_number": "+91 00000 05742"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005742-01",
+        "date": "2026-06-14T13:27:00Z",
+        "amount": 37500,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2522",
+        "to_account": "XXXXXXXXX2072",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 37500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-14T13:17:00Z",
+    "fraud_end_time": "2026-06-14T13:37:00Z",
+    "reporting_delay_hours": 1
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-003686",
+  "complaint_date": "2026-08-26T08:27:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 23,
+    "gender": "Male",
+    "phone": "+91 00000 03686",
+    "email": "victim-3686@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3686",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1534",
+      "ifsc_code": "SYNTHETIC-CB-535",
+      "upi_id": "account-account-000535@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 03686",
+      "email": "synthetic-fraud-3686@example.invalid",
+      "whatsapp_number": "+91 00000 03686"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003686-01",
+        "date": "2026-08-26T08:01:00Z",
+        "amount": 57700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000535@cashnet.invalid",
+        "to_account": "mule-account-001260@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-003686-02",
+        "date": "2026-08-26T08:11:00Z",
+        "amount": 66000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000535@cashnet.invalid",
+        "to_account": "mule-account-001260@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 123700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-26T07:51:00Z",
+    "fraud_end_time": "2026-08-26T08:21:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-001203",
+  "complaint_date": "2026-06-28T06:31:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 24,
+    "gender": "Male",
+    "phone": "+91 00000 01203",
+    "email": "victim-1203@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1203",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1672",
+      "ifsc_code": "SYNTHETIC-IB-673",
+      "upi_id": "account-account-000673@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "wallet_transfer",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (wallet transfer). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01203",
+      "email": "synthetic-fraud-1203@example.invalid",
+      "whatsapp_number": "+91 00000 01203"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001203-01",
+        "date": "2026-06-28T00:11:00Z",
+        "amount": 59900,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1672",
+        "to_account": "XXXXXXXXX2620",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-001203-02",
+        "date": "2026-06-28T00:21:00Z",
+        "amount": 55500,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1672",
+        "to_account": "XXXXXXXXX2620",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 115400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-28T00:01:00Z",
+    "fraud_end_time": "2026-06-28T00:31:00Z",
+    "reporting_delay_hours": 6
+  }
+}

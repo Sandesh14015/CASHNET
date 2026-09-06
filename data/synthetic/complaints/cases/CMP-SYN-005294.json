@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005294",
+  "complaint_date": "2026-07-27T08:08:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 71,
+    "gender": "Male",
+    "phone": "+91 00000 05294",
+    "email": "victim-5294@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5294",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1732",
+      "ifsc_code": "SYNTHETIC-AB-733",
+      "upi_id": "account-account-000733@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "ransomware",
+    "sub_type": "company_data_ransom",
+    "description": "Synthetic CASHNET training complaint: victim reported a ransomware (company data ransom). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05294",
+      "email": "synthetic-fraud-5294@example.invalid",
+      "whatsapp_number": "+91 00000 05294"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005294-01",
+        "date": "2026-07-26T07:58:00Z",
+        "amount": 53500,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000733@cashnet.invalid",
+        "to_account": "mule-account-000815@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 53500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-26T07:48:00Z",
+    "fraud_end_time": "2026-07-26T08:08:00Z",
+    "reporting_delay_hours": 24
+  }
+}

@@ -1,0 +1,194 @@
+version: '3.8'
+
+# ============================================================================
+# CashNet Docker Compose Configuration
+# ============================================================================
+
+services:
+  # ============================================================================
+  # PostgreSQL Database
+  # ============================================================================
+  postgres:
+    image: postgis/postgis:15-3.3
+    container_name: cashnet-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: cashnet
+      POSTGRES_USER: cashnet
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-cashnet_dev}
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cashnet"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - cashnet-network
+
+  # ============================================================================
+  # Redis Cache
+  # ============================================================================
+  redis:
+    image: redis:7-alpine
+    container_name: cashnet-redis
+    restart: unless-stopped
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - cashnet-network
+
+  # ============================================================================
+  # CashNet API Server
+  # ============================================================================
+  api:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile
+    container_name: cashnet-api
+    restart: unless-stopped
+    environment:
+      - ENVIRONMENT=${ENVIRONMENT:-development}
+      - DATABASE_URL=postgresql://cashnet:${DATABASE_PASSWORD:-cashnet_dev}@postgres:5432/cashnet
+      - REDIS_URL=redis://redis:6379/0
+      - AUTH_SECRET_KEY=${AUTH_SECRET_KEY:-dev-secret-key}
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY:-dev-encryption-key}
+    ports:
+      - "${API_PORT:-8000}:8000"
+    volumes:
+      - ./models:/app/models
+      - ./logs:/app/logs
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - cashnet-network
+
+  # ============================================================================
+  # Geospatial Service
+  # ============================================================================
+  geospatial:
+    build:
+      context: ./services/geospatial
+      dockerfile: Dockerfile
+    container_name: cashnet-geospatial
+    restart: unless-stopped
+    environment:
+      - ENVIRONMENT=${ENVIRONMENT:-development}
+    ports:
+      - "${GEOSPATIAL_PORT:-8001}:8000"
+    volumes:
+      - ./services/geospatial/data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - cashnet-network
+
+  # ============================================================================
+  # Nginx Reverse Proxy
+  # ============================================================================
+  nginx:
+    image: nginx:alpine
+    container_name: cashnet-nginx
+    restart: unless-stopped
+    ports:
+      - "${NGINX_PORT:-80}:80"
+      - "${NGINX_SSL_PORT:-443}:443"
+    volumes:
+      - ./infrastructure/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./infrastructure/nginx/ssl:/etc/nginx/ssl
+    depends_on:
+      - api
+      - geospatial
+    networks:
+      - cashnet-network
+
+  # ============================================================================
+  # Prometheus Monitoring
+  # ============================================================================
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: cashnet-prometheus
+    restart: unless-stopped
+    ports:
+      - "${PROMETHEUS_PORT:-9090}:9090"
+    volumes:
+      - ./infrastructure/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    networks:
+      - cashnet-network
+
+  # ============================================================================
+  # Grafana Dashboards
+  # ============================================================================
+  grafana:
+    image: grafana/grafana:latest
+    container_name: cashnet-grafana
+    restart: unless-stopped
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
+    ports:
+      - "${GRAFANA_PORT:-3000}:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./infrastructure/monitoring/grafana/dashboards:/var/lib/grafana/dashboards
+    depends_on:
+      - prometheus
+    networks:
+      - cashnet-network
+
+  # ============================================================================
+  # Vault (Secrets Management)
+  # ============================================================================
+  vault:
+    image: hashicorp/vault:latest
+    container_name: cashnet-vault
+    restart: unless-stopped
+    environment:
+      - VAULT_DEV_ROOT_TOKEN_ID=${VAULT_DEV_TOKEN:-dev-token}
+      - VAULT_DEV_LISTEN_ADDRESS=0.0.0.0:8200
+    ports:
+      - "${VAULT_PORT:-8200}:8200"
+    volumes:
+      - vault_data:/vault/data
+    cap_add:
+      - IPC_LOCK
+    networks:
+      - cashnet-network
+
+# ============================================================================
+# Volumes
+# ============================================================================
+volumes:
+  postgres_data:
+  redis_data:
+  prometheus_data:
+  grafana_data:
+  vault_data:
+
+# ============================================================================
+# Networks
+# ============================================================================
+networks:
+  cashnet-network:
+    driver: bridge

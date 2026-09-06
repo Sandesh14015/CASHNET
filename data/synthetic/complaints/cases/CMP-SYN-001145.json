@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001145",
+  "complaint_date": "2026-06-17T23:39:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 22,
+    "gender": "Other",
+    "phone": "+91 00000 01145",
+    "email": "victim-1145@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1145",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1121",
+      "ifsc_code": "SYNTHETIC-KM-122",
+      "upi_id": "account-account-000122@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "fake_exchange",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (fake exchange). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01145",
+      "email": "synthetic-fraud-1145@example.invalid",
+      "whatsapp_number": "+91 00000 01145"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001145-01",
+        "date": "2026-06-16T23:29:00Z",
+        "amount": 41700,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1121",
+        "to_account": "XXXXXXXXX2569",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 41700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-16T23:19:00Z",
+    "fraud_end_time": "2026-06-16T23:39:00Z",
+    "reporting_delay_hours": 24
+  }
+}

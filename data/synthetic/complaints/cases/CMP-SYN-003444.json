@@ -1,0 +1,71 @@
+{
+  "complaint_id": "CMP-SYN-003444",
+  "complaint_date": "2026-08-18T21:30:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 54,
+    "gender": "Male",
+    "phone": "+91 00000 03444",
+    "email": "victim-3444@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3444",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX2353",
+      "ifsc_code": "SYNTHETIC-IB-1354",
+      "upi_id": "account-account-001354@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "investment_scam",
+    "sub_type": "fake_trading_platform",
+    "description": "Synthetic CASHNET training complaint: victim reported a investment scam (fake trading platform). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03444",
+      "email": "synthetic-fraud-3444@example.invalid",
+      "telegram_id": "@synthetic_offer_3444",
+      "whatsapp_number": "+91 00000 03444"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003444-01",
+        "date": "2026-08-18T20:40:00Z",
+        "amount": 63700,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2353",
+        "to_account": "XXXXXXXXX2640",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-003444-02",
+        "date": "2026-08-18T20:50:00Z",
+        "amount": 89700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001354@cashnet.invalid",
+        "to_account": "mule-account-001641@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 153400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-18T20:30:00Z",
+    "fraud_end_time": "2026-08-18T21:00:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

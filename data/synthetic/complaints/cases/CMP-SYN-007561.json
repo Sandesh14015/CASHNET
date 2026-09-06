@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007561",
+  "complaint_date": "2026-06-12T06:18:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 24,
+    "gender": "Other",
+    "phone": "+91 00000 07561",
+    "email": "victim-7561@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7561",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1211",
+      "ifsc_code": "SYNTHETIC-SB-212",
+      "upi_id": "account-account-000212@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "remote_access",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (remote access). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07561",
+      "email": "synthetic-fraud-7561@example.invalid",
+      "whatsapp_number": "+91 00000 07561"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007561-01",
+        "date": "2026-06-12T00:08:00Z",
+        "amount": 87000,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1211",
+        "to_account": "XXXXXXXXX2602",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 87000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-11T23:58:00Z",
+    "fraud_end_time": "2026-06-12T00:18:00Z",
+    "reporting_delay_hours": 6
+  }
+}

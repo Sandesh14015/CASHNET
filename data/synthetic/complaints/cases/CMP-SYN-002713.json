@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002713",
+  "complaint_date": "2026-08-03T02:38:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 22,
+    "gender": "Male",
+    "phone": "+91 00000 02713",
+    "email": "victim-2713@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2713",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX1278",
+      "ifsc_code": "SYNTHETIC-IB-279",
+      "upi_id": "account-account-000279@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "wallet_transfer",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (wallet transfer). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02713",
+      "email": "synthetic-fraud-2713@example.invalid",
+      "whatsapp_number": "+91 00000 02713"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002713-01",
+        "date": "2026-08-03T01:28:00Z",
+        "amount": 42800,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1278",
+        "to_account": "XXXXXXXXX2835",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 42800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-03T01:18:00Z",
+    "fraud_end_time": "2026-08-03T01:38:00Z",
+    "reporting_delay_hours": 1
+  }
+}

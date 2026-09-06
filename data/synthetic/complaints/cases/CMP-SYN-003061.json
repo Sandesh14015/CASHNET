@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003061",
+  "complaint_date": "2026-07-05T12:11:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 57,
+    "gender": "Male",
+    "phone": "+91 00000 03061",
+    "email": "victim-3061@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3061",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1933",
+      "ifsc_code": "SYNTHETIC-PN-934",
+      "upi_id": "account-account-000934@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "video_call_threat",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (video call threat). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03061",
+      "email": "synthetic-fraud-3061@example.invalid",
+      "whatsapp_number": "+91 00000 03061"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003061-01",
+        "date": "2026-07-05T10:01:00Z",
+        "amount": 28900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000934@cashnet.invalid",
+        "to_account": "mule-account-001602@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 28900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-05T09:51:00Z",
+    "fraud_end_time": "2026-07-05T10:11:00Z",
+    "reporting_delay_hours": 2
+  }
+}

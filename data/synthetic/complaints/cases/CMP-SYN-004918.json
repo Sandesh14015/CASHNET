@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004918",
+  "complaint_date": "2026-08-10T03:55:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 26,
+    "gender": "Female",
+    "phone": "+91 00000 04918",
+    "email": "victim-4918@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4918",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1056",
+      "ifsc_code": "SYNTHETIC-SB-057",
+      "upi_id": "account-account-000057@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "account_takeover",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (account takeover). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04918",
+      "email": "synthetic-fraud-4918@example.invalid",
+      "whatsapp_number": "+91 00000 04918"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004918-01",
+        "date": "2026-08-10T01:45:00Z",
+        "amount": 97000,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1056",
+        "to_account": "XXXXXXXXX2415",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 97000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-10T01:35:00Z",
+    "fraud_end_time": "2026-08-10T01:55:00Z",
+    "reporting_delay_hours": 2
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007077",
+  "complaint_date": "2026-06-01T13:31:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 32,
+    "gender": "Other",
+    "phone": "+91 00000 07077",
+    "email": "victim-7077@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7077",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1048",
+      "ifsc_code": "SYNTHETIC-KM-049",
+      "upi_id": "account-account-000049@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07077",
+      "email": "synthetic-fraud-7077@example.invalid",
+      "whatsapp_number": "+91 00000 07077"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007077-01",
+        "date": "2026-06-01T13:15:00Z",
+        "amount": 60200,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1048",
+        "to_account": "XXXXXXXXX2861",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 60200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-01T13:05:00Z",
+    "fraud_end_time": "2026-06-01T13:25:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

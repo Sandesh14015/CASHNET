@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-009884",
+  "complaint_date": "2026-08-08T23:47:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 66,
+    "gender": "Male",
+    "phone": "+91 00000 09884",
+    "email": "victim-9884@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9884",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1613",
+      "ifsc_code": "SYNTHETIC-IB-614",
+      "upi_id": "account-account-000614@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "security_deposit",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (security deposit). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09884",
+      "email": "synthetic-fraud-9884@example.invalid",
+      "telegram_id": "@synthetic_offer_9884",
+      "whatsapp_number": "+91 00000 09884"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009884-01",
+        "date": "2026-08-08T23:31:00Z",
+        "amount": 99800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1613",
+        "to_account": "XXXXXXXXX2119",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 99800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-08T23:21:00Z",
+    "fraud_end_time": "2026-08-08T23:41:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

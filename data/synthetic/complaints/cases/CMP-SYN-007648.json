@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007648",
+  "complaint_date": "2026-06-06T02:25:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 21,
+    "gender": "Female",
+    "phone": "+91 00000 07648",
+    "email": "victim-7648@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7648",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX2436",
+      "ifsc_code": "SYNTHETIC-UB-1437",
+      "upi_id": "account-account-001437@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "OTP_fraud",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (OTP fraud). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07648",
+      "email": "synthetic-fraud-7648@example.invalid",
+      "whatsapp_number": "+91 00000 07648"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007648-01",
+        "date": "2026-06-05T20:15:00Z",
+        "amount": 97200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2436",
+        "to_account": "XXXXXXXXX2830",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 97200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-05T20:05:00Z",
+    "fraud_end_time": "2026-06-05T20:25:00Z",
+    "reporting_delay_hours": 6
+  }
+}

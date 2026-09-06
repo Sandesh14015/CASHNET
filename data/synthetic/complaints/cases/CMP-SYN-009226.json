@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009226",
+  "complaint_date": "2026-07-22T07:31:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 27,
+    "gender": "Female",
+    "phone": "+91 00000 09226",
+    "email": "victim-9226@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9226",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1302",
+      "ifsc_code": "SYNTHETIC-IB-303",
+      "upi_id": "account-account-000303@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09226",
+      "email": "synthetic-fraud-9226@example.invalid",
+      "whatsapp_number": "+91 00000 09226"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009226-01",
+        "date": "2026-07-21T07:21:00Z",
+        "amount": 10400,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1302",
+        "to_account": "XXXXXXXXX2685",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 10400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-21T07:11:00Z",
+    "fraud_end_time": "2026-07-21T07:31:00Z",
+    "reporting_delay_hours": 24
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009299",
+  "complaint_date": "2026-06-22T05:44:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 58,
+    "gender": "Male",
+    "phone": "+91 00000 09299",
+    "email": "victim-9299@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9299",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1143",
+      "ifsc_code": "SYNTHETIC-SB-144",
+      "upi_id": "account-account-000144@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "police_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (police impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09299",
+      "email": "synthetic-fraud-9299@example.invalid",
+      "whatsapp_number": "+91 00000 09299"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009299-01",
+        "date": "2026-06-21T05:34:00Z",
+        "amount": 58300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000144@cashnet.invalid",
+        "to_account": "mule-account-001717@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 58300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-21T05:24:00Z",
+    "fraud_end_time": "2026-06-21T05:44:00Z",
+    "reporting_delay_hours": 24
+  }
+}

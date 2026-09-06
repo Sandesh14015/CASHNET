@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-005667",
+  "complaint_date": "2026-07-06T02:29:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 46,
+    "gender": "Other",
+    "phone": "+91 00000 05667",
+    "email": "victim-5667@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5667",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1312",
+      "ifsc_code": "SYNTHETIC-IB-313",
+      "upi_id": "account-account-000313@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "training_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (training fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05667",
+      "email": "synthetic-fraud-5667@example.invalid",
+      "telegram_id": "@synthetic_offer_5667",
+      "whatsapp_number": "+91 00000 05667"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005667-01",
+        "date": "2026-07-05T02:19:00Z",
+        "amount": 50500,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000313@cashnet.invalid",
+        "to_account": "mule-account-000946@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 50500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-05T02:09:00Z",
+    "fraud_end_time": "2026-07-05T02:29:00Z",
+    "reporting_delay_hours": 24
+  }
+}

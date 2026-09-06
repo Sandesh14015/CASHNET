@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-009121",
+  "complaint_date": "2026-07-25T00:48:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 20,
+    "gender": "Other",
+    "phone": "+91 00000 09121",
+    "email": "victim-9121@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9121",
+      "city": "New Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1335",
+      "ifsc_code": "SYNTHETIC-BO-336",
+      "upi_id": "account-account-000336@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "KYC_update",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (KYC update). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09121",
+      "email": "synthetic-fraud-9121@example.invalid",
+      "whatsapp_number": "+91 00000 09121"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009121-01",
+        "date": "2026-07-25T00:22:00Z",
+        "amount": 2600,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1335",
+        "to_account": "XXXXXXXXX2183",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-009121-02",
+        "date": "2026-07-25T00:32:00Z",
+        "amount": 94400,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1335",
+        "to_account": "XXXXXXXXX2183",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 97000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-25T00:12:00Z",
+    "fraud_end_time": "2026-07-25T00:42:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

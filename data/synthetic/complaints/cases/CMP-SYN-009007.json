@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009007",
+  "complaint_date": "2026-07-24T15:12:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 54,
+    "gender": "Male",
+    "phone": "+91 00000 09007",
+    "email": "victim-9007@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9007",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX2261",
+      "ifsc_code": "SYNTHETIC-BO-1262",
+      "upi_id": "account-account-001262@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "collect_request",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (collect request). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 09007",
+      "email": "synthetic-fraud-9007@example.invalid",
+      "whatsapp_number": "+91 00000 09007"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009007-01",
+        "date": "2026-07-24T09:02:00Z",
+        "amount": 20700,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2261",
+        "to_account": "XXXXXXXXX1833",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 20700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-24T08:52:00Z",
+    "fraud_end_time": "2026-07-24T09:12:00Z",
+    "reporting_delay_hours": 6
+  }
+}

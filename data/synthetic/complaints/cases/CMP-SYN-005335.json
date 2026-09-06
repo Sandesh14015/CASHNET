@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005335",
+  "complaint_date": "2026-08-17T09:15:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 59,
+    "gender": "Male",
+    "phone": "+91 00000 05335",
+    "email": "victim-5335@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5335",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1000",
+      "ifsc_code": "SYNTHETIC-HB-001",
+      "upi_id": "account-account-000001@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 05335",
+      "email": "synthetic-fraud-5335@example.invalid",
+      "whatsapp_number": "+91 00000 05335"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005335-01",
+        "date": "2026-08-17T03:05:00Z",
+        "amount": 42200,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000001@cashnet.invalid",
+        "to_account": "mule-account-001835@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 42200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-17T02:55:00Z",
+    "fraud_end_time": "2026-08-17T03:15:00Z",
+    "reporting_delay_hours": 6
+  }
+}

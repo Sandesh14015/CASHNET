@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-003674",
+  "complaint_date": "2026-08-27T15:46:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 66,
+    "gender": "Female",
+    "phone": "+91 00000 03674",
+    "email": "victim-3674@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3674",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1698",
+      "ifsc_code": "SYNTHETIC-CB-699",
+      "upi_id": "account-account-000699@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "part_time_job",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (part time job). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 03674",
+      "email": "synthetic-fraud-3674@example.invalid",
+      "telegram_id": "@synthetic_offer_3674",
+      "whatsapp_number": "+91 00000 03674"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003674-01",
+        "date": "2026-08-27T03:36:00Z",
+        "amount": 39300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000699@cashnet.invalid",
+        "to_account": "mule-account-000951@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 39300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-27T03:26:00Z",
+    "fraud_end_time": "2026-08-27T03:46:00Z",
+    "reporting_delay_hours": 12
+  }
+}

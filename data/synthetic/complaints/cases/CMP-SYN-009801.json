@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009801",
+  "complaint_date": "2026-06-22T19:23:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 22,
+    "gender": "Other",
+    "phone": "+91 00000 09801",
+    "email": "victim-9801@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9801",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1709",
+      "ifsc_code": "SYNTHETIC-BO-710",
+      "upi_id": "account-account-000710@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "wallet_transfer",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (wallet transfer). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09801",
+      "email": "synthetic-fraud-9801@example.invalid",
+      "whatsapp_number": "+91 00000 09801"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009801-01",
+        "date": "2026-06-22T07:13:00Z",
+        "amount": 94400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000710@cashnet.invalid",
+        "to_account": "mule-account-000771@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 94400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-22T07:03:00Z",
+    "fraud_end_time": "2026-06-22T07:23:00Z",
+    "reporting_delay_hours": 12
+  }
+}

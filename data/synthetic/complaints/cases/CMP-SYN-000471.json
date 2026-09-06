@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000471",
+  "complaint_date": "2026-06-12T11:19:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 25,
+    "gender": "Female",
+    "phone": "+91 00000 00471",
+    "email": "victim-471@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 471",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1066",
+      "ifsc_code": "SYNTHETIC-IB-067",
+      "upi_id": "account-account-000067@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00471",
+      "email": "synthetic-fraud-471@example.invalid",
+      "whatsapp_number": "+91 00000 00471"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000471-01",
+        "date": "2026-06-12T11:03:00Z",
+        "amount": 38800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1066",
+        "to_account": "XXXXXXXXX1921",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 38800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-12T10:53:00Z",
+    "fraud_end_time": "2026-06-12T11:13:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

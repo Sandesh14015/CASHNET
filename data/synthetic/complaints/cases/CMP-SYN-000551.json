@@ -1,0 +1,90 @@
+{
+  "complaint_id": "CMP-SYN-000551",
+  "complaint_date": "2026-06-20T00:29:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 62,
+    "gender": "Other",
+    "phone": "+91 00000 00551",
+    "email": "victim-551@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 551",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1967",
+      "ifsc_code": "SYNTHETIC-IB-968",
+      "upi_id": "account-account-000968@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00551",
+      "email": "synthetic-fraud-551@example.invalid",
+      "whatsapp_number": "+91 00000 00551"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000551-01",
+        "date": "2026-06-19T11:49:00Z",
+        "amount": 70400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000968@cashnet.invalid",
+        "to_account": "mule-account-000785@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-000551-02",
+        "date": "2026-06-19T11:59:00Z",
+        "amount": 36600,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1967",
+        "to_account": "XXXXXXXXX1784",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-000551-03",
+        "date": "2026-06-19T12:09:00Z",
+        "amount": 41000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000968@cashnet.invalid",
+        "to_account": "mule-account-000785@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-000551-04",
+        "date": "2026-06-19T12:19:00Z",
+        "amount": 75400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000968@cashnet.invalid",
+        "to_account": "mule-account-000785@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 223400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-19T11:39:00Z",
+    "fraud_end_time": "2026-06-19T12:29:00Z",
+    "reporting_delay_hours": 12
+  }
+}

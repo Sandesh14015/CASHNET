@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-002070",
+  "complaint_date": "2026-08-08T10:21:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 55,
+    "gender": "Female",
+    "phone": "+91 00000 02070",
+    "email": "victim-2070@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2070",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1214",
+      "ifsc_code": "SYNTHETIC-KM-215",
+      "upi_id": "account-account-000215@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "remote_access",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (remote access). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 02070",
+      "email": "synthetic-fraud-2070@example.invalid",
+      "whatsapp_number": "+91 00000 02070"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002070-01",
+        "date": "2026-08-08T09:01:00Z",
+        "amount": 79300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000215@cashnet.invalid",
+        "to_account": "mule-account-001518@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002070-02",
+        "date": "2026-08-08T09:11:00Z",
+        "amount": 15100,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000215@cashnet.invalid",
+        "to_account": "mule-account-001518@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 94400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-08T08:51:00Z",
+    "fraud_end_time": "2026-08-08T09:21:00Z",
+    "reporting_delay_hours": 1
+  }
+}

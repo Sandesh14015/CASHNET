@@ -1,0 +1,71 @@
+{
+  "complaint_id": "CMP-SYN-002432",
+  "complaint_date": "2026-06-25T18:54:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 58,
+    "gender": "Female",
+    "phone": "+91 00000 02432",
+    "email": "victim-2432@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2432",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1242",
+      "ifsc_code": "SYNTHETIC-IB-243",
+      "upi_id": "account-account-000243@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "investment_scam",
+    "sub_type": "guaranteed_returns",
+    "description": "Synthetic CASHNET training complaint: victim reported a investment scam (guaranteed returns). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 02432",
+      "email": "synthetic-fraud-2432@example.invalid",
+      "telegram_id": "@synthetic_offer_2432",
+      "whatsapp_number": "+91 00000 02432"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002432-01",
+        "date": "2026-06-25T17:34:00Z",
+        "amount": 32900,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1242",
+        "to_account": "XXXXXXXXX2214",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002432-02",
+        "date": "2026-06-25T17:44:00Z",
+        "amount": 4700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000243@cashnet.invalid",
+        "to_account": "mule-account-001215@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 37600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-25T17:24:00Z",
+    "fraud_end_time": "2026-06-25T17:54:00Z",
+    "reporting_delay_hours": 1
+  }
+}

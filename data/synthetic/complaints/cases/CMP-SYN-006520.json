@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006520",
+  "complaint_date": "2026-06-04T11:27:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 52,
+    "gender": "Female",
+    "phone": "+91 00000 06520",
+    "email": "victim-6520@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6520",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1470",
+      "ifsc_code": "SYNTHETIC-BO-471",
+      "upi_id": "account-account-000471@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "bank_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (bank impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 06520",
+      "email": "synthetic-fraud-6520@example.invalid",
+      "whatsapp_number": "+91 00000 06520"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006520-01",
+        "date": "2026-06-03T11:17:00Z",
+        "amount": 5800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000471@cashnet.invalid",
+        "to_account": "mule-account-001053@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 5800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-03T11:07:00Z",
+    "fraud_end_time": "2026-06-03T11:27:00Z",
+    "reporting_delay_hours": 24
+  }
+}

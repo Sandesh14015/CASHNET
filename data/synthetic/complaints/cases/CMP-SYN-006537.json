@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006537",
+  "complaint_date": "2026-07-29T21:38:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 47,
+    "gender": "Female",
+    "phone": "+91 00000 06537",
+    "email": "victim-6537@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6537",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1177",
+      "ifsc_code": "SYNTHETIC-BO-178",
+      "upi_id": "account-account-000178@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "account_takeover",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (account takeover). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06537",
+      "email": "synthetic-fraud-6537@example.invalid",
+      "whatsapp_number": "+91 00000 06537"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006537-01",
+        "date": "2026-07-28T21:28:00Z",
+        "amount": 28900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000178@cashnet.invalid",
+        "to_account": "mule-account-001098@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 28900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-28T21:18:00Z",
+    "fraud_end_time": "2026-07-28T21:38:00Z",
+    "reporting_delay_hours": 24
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "complaint_id": "CMP-SYN-006696",
+  "complaint_date": "2026-06-30T19:34:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 42,
+    "gender": "Female",
+    "phone": "+91 00000 06696",
+    "email": "victim-6696@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6696",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1682",
+      "ifsc_code": "SYNTHETIC-KM-683",
+      "upi_id": "account-account-000683@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "sextortion",
+    "sub_type": "video_call_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a sextortion (video call scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06696",
+      "email": "synthetic-fraud-6696@example.invalid",
+      "video_call_platform": "Synthetic Video Platform",
+      "whatsapp_number": "+91 00000 06696"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006696-01",
+        "date": "2026-06-30T18:44:00Z",
+        "amount": 11100,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000683@cashnet.invalid",
+        "to_account": "mule-account-001578@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-006696-02",
+        "date": "2026-06-30T18:54:00Z",
+        "amount": 18600,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1682",
+        "to_account": "XXXXXXXXX2577",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 29700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-30T18:34:00Z",
+    "fraud_end_time": "2026-06-30T19:04:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

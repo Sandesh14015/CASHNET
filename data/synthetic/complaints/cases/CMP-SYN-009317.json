@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009317",
+  "complaint_date": "2026-06-01T11:16:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 44,
+    "gender": "Other",
+    "phone": "+91 00000 09317",
+    "email": "victim-9317@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9317",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1401",
+      "ifsc_code": "SYNTHETIC-PN-402",
+      "upi_id": "account-account-000402@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "fake_seller",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (fake seller). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09317",
+      "email": "synthetic-fraud-9317@example.invalid",
+      "whatsapp_number": "+91 00000 09317"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009317-01",
+        "date": "2026-06-01T10:06:00Z",
+        "amount": 52800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000402@cashnet.invalid",
+        "to_account": "mule-account-000869@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 52800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-01T09:56:00Z",
+    "fraud_end_time": "2026-06-01T10:16:00Z",
+    "reporting_delay_hours": 1
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003801",
+  "complaint_date": "2026-07-17T23:15:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 32,
+    "gender": "Male",
+    "phone": "+91 00000 03801",
+    "email": "victim-3801@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3801",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1486",
+      "ifsc_code": "SYNTHETIC-BO-487",
+      "upi_id": "account-account-000487@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "non_delivery",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (non delivery). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03801",
+      "email": "synthetic-fraud-3801@example.invalid",
+      "whatsapp_number": "+91 00000 03801"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003801-01",
+        "date": "2026-07-17T17:05:00Z",
+        "amount": 73300,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1486",
+        "to_account": "XXXXXXXXX2874",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 73300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-17T16:55:00Z",
+    "fraud_end_time": "2026-07-17T17:15:00Z",
+    "reporting_delay_hours": 6
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003659",
+  "complaint_date": "2026-07-04T08:05:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 35,
+    "gender": "Male",
+    "phone": "+91 00000 03659",
+    "email": "victim-3659@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3659",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1302",
+      "ifsc_code": "SYNTHETIC-IB-303",
+      "upi_id": "account-account-000303@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03659",
+      "email": "synthetic-fraud-3659@example.invalid",
+      "whatsapp_number": "+91 00000 03659"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003659-01",
+        "date": "2026-07-03T07:55:00Z",
+        "amount": 10200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1302",
+        "to_account": "XXXXXXXXX2180",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 10200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-03T07:45:00Z",
+    "fraud_end_time": "2026-07-03T08:05:00Z",
+    "reporting_delay_hours": 24
+  }
+}

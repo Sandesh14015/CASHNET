@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004911",
+  "complaint_date": "2026-05-31T18:17:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 53,
+    "gender": "Other",
+    "phone": "+91 00000 04911",
+    "email": "victim-4911@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4911",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1054",
+      "ifsc_code": "SYNTHETIC-AB-055",
+      "upi_id": "account-account-000055@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04911",
+      "email": "synthetic-fraud-4911@example.invalid",
+      "whatsapp_number": "+91 00000 04911"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004911-01",
+        "date": "2026-05-31T06:07:00Z",
+        "amount": 9800,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1054",
+        "to_account": "XXXXXXXXX2463",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 9800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-05-31T05:57:00Z",
+    "fraud_end_time": "2026-05-31T06:17:00Z",
+    "reporting_delay_hours": 12
+  }
+}

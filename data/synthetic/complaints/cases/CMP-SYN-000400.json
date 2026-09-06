@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000400",
+  "complaint_date": "2026-08-12T01:10:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 21,
+    "gender": "Female",
+    "phone": "+91 00000 00400",
+    "email": "victim-400@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 400",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1299",
+      "ifsc_code": "SYNTHETIC-PN-300",
+      "upi_id": "account-account-000300@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "bank_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (bank impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00400",
+      "email": "synthetic-fraud-400@example.invalid",
+      "whatsapp_number": "+91 00000 00400"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000400-01",
+        "date": "2026-08-11T13:00:00Z",
+        "amount": 28900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000300@cashnet.invalid",
+        "to_account": "mule-account-001747@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 28900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-11T12:50:00Z",
+    "fraud_end_time": "2026-08-11T13:10:00Z",
+    "reporting_delay_hours": 12
+  }
+}

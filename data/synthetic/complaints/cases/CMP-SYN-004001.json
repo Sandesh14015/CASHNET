@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-004001",
+  "complaint_date": "2026-06-15T09:42:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 70,
+    "gender": "Male",
+    "phone": "+91 00000 04001",
+    "email": "victim-4001@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4001",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1934",
+      "ifsc_code": "SYNTHETIC-IB-935",
+      "upi_id": "account-account-000935@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "training_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (training fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04001",
+      "email": "synthetic-fraud-4001@example.invalid",
+      "telegram_id": "@synthetic_offer_4001",
+      "whatsapp_number": "+91 00000 04001"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004001-01",
+        "date": "2026-06-15T07:32:00Z",
+        "amount": 74100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1934",
+        "to_account": "XXXXXXXXX2460",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 74100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-15T07:22:00Z",
+    "fraud_end_time": "2026-06-15T07:42:00Z",
+    "reporting_delay_hours": 2
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002874",
+  "complaint_date": "2026-06-14T13:39:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 59,
+    "gender": "Other",
+    "phone": "+91 00000 02874",
+    "email": "victim-2874@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2874",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX1216",
+      "ifsc_code": "SYNTHETIC-IB-217",
+      "upi_id": "account-account-000217@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "account_takeover",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (account takeover). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02874",
+      "email": "synthetic-fraud-2874@example.invalid",
+      "whatsapp_number": "+91 00000 02874"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002874-01",
+        "date": "2026-06-14T11:29:00Z",
+        "amount": 21200,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000217@cashnet.invalid",
+        "to_account": "mule-account-000904@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 21200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-14T11:19:00Z",
+    "fraud_end_time": "2026-06-14T11:39:00Z",
+    "reporting_delay_hours": 2
+  }
+}

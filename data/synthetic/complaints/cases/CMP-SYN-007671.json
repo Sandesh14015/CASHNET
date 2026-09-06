@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007671",
+  "complaint_date": "2026-08-27T00:14:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 31,
+    "gender": "Female",
+    "phone": "+91 00000 07671",
+    "email": "victim-7671@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7671",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1891",
+      "ifsc_code": "SYNTHETIC-BO-892",
+      "upi_id": "account-account-000892@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "remote_access",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (remote access). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07671",
+      "email": "synthetic-fraud-7671@example.invalid",
+      "whatsapp_number": "+91 00000 07671"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007671-01",
+        "date": "2026-08-26T23:34:00Z",
+        "amount": 96300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000892@cashnet.invalid",
+        "to_account": "mule-account-001582@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 96300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-26T23:24:00Z",
+    "fraud_end_time": "2026-08-26T23:44:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

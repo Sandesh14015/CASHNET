@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002833",
+  "complaint_date": "2026-07-08T08:20:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 44,
+    "gender": "Female",
+    "phone": "+91 00000 02833",
+    "email": "victim-2833@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2833",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1273",
+      "ifsc_code": "SYNTHETIC-IB-274",
+      "upi_id": "account-account-000274@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "video_call_threat",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (video call threat). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 02833",
+      "email": "synthetic-fraud-2833@example.invalid",
+      "whatsapp_number": "+91 00000 02833"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002833-01",
+        "date": "2026-07-08T08:04:00Z",
+        "amount": 58800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000274@cashnet.invalid",
+        "to_account": "mule-account-001759@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 58800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-08T07:54:00Z",
+    "fraud_end_time": "2026-07-08T08:14:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "complaint_id": "CMP-SYN-008276",
+  "complaint_date": "2026-08-10T08:33:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 64,
+    "gender": "Other",
+    "phone": "+91 00000 08276",
+    "email": "victim-8276@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8276",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1252",
+      "ifsc_code": "SYNTHETIC-HB-253",
+      "upi_id": "account-account-000253@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "investment_scam",
+    "sub_type": "fake_trading_platform",
+    "description": "Synthetic CASHNET training complaint: victim reported a investment scam (fake trading platform). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08276",
+      "email": "synthetic-fraud-8276@example.invalid",
+      "telegram_id": "@synthetic_offer_8276",
+      "whatsapp_number": "+91 00000 08276"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008276-01",
+        "date": "2026-08-10T06:13:00Z",
+        "amount": 48600,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000253@cashnet.invalid",
+        "to_account": "mule-account-001912@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-008276-02",
+        "date": "2026-08-10T06:23:00Z",
+        "amount": 39200,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000253@cashnet.invalid",
+        "to_account": "mule-account-001912@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 87800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-10T06:03:00Z",
+    "fraud_end_time": "2026-08-10T06:33:00Z",
+    "reporting_delay_hours": 2
+  }
+}

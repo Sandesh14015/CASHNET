@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001876",
+  "complaint_date": "2026-07-15T01:58:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 44,
+    "gender": "Male",
+    "phone": "+91 00000 01876",
+    "email": "victim-1876@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1876",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1497",
+      "ifsc_code": "SYNTHETIC-AB-498",
+      "upi_id": "account-account-000498@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "fake_support",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (fake support). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01876",
+      "email": "synthetic-fraud-1876@example.invalid",
+      "whatsapp_number": "+91 00000 01876"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001876-01",
+        "date": "2026-07-15T01:42:00Z",
+        "amount": 94500,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1497",
+        "to_account": "XXXXXXXXX2281",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 94500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-15T01:32:00Z",
+    "fraud_end_time": "2026-07-15T01:52:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002341",
+  "complaint_date": "2026-07-07T15:50:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 72,
+    "gender": "Female",
+    "phone": "+91 00000 02341",
+    "email": "victim-2341@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2341",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1566",
+      "ifsc_code": "SYNTHETIC-HB-567",
+      "upi_id": "account-account-000567@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "fake_summons",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (fake summons). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02341",
+      "email": "synthetic-fraud-2341@example.invalid",
+      "whatsapp_number": "+91 00000 02341"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002341-01",
+        "date": "2026-07-07T15:34:00Z",
+        "amount": 26100,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000567@cashnet.invalid",
+        "to_account": "mule-account-001464@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 26100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-07T15:24:00Z",
+    "fraud_end_time": "2026-07-07T15:44:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

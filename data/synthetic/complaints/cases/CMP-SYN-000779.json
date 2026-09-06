@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000779",
+  "complaint_date": "2026-08-27T07:31:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 72,
+    "gender": "Female",
+    "phone": "+91 00000 00779",
+    "email": "victim-779@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 779",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1671",
+      "ifsc_code": "SYNTHETIC-IB-672",
+      "upi_id": "account-account-000672@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "fake_seller",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (fake seller). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 00779",
+      "email": "synthetic-fraud-779@example.invalid",
+      "whatsapp_number": "+91 00000 00779"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000779-01",
+        "date": "2026-08-26T19:21:00Z",
+        "amount": 90100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1671",
+        "to_account": "XXXXXXXXX2743",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 90100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-26T19:11:00Z",
+    "fraud_end_time": "2026-08-26T19:31:00Z",
+    "reporting_delay_hours": 12
+  }
+}

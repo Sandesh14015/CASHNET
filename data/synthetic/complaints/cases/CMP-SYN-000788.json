@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000788",
+  "complaint_date": "2026-07-14T02:27:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 32,
+    "gender": "Other",
+    "phone": "+91 00000 00788",
+    "email": "victim-788@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 788",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX2207",
+      "ifsc_code": "SYNTHETIC-IB-1208",
+      "upi_id": "account-account-001208@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "romance_scam",
+    "sub_type": "emergency_payment",
+    "description": "Synthetic CASHNET training complaint: victim reported a romance scam (emergency payment). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00788",
+      "email": "synthetic-fraud-788@example.invalid",
+      "whatsapp_number": "+91 00000 00788"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000788-01",
+        "date": "2026-07-13T14:17:00Z",
+        "amount": 45400,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2207",
+        "to_account": "XXXXXXXXX2259",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 45400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-13T14:07:00Z",
+    "fraud_end_time": "2026-07-13T14:27:00Z",
+    "reporting_delay_hours": 12
+  }
+}

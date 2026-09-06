@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007904",
+  "complaint_date": "2026-08-04T06:32:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 23,
+    "gender": "Female",
+    "phone": "+91 00000 07904",
+    "email": "victim-7904@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7904",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX2227",
+      "ifsc_code": "SYNTHETIC-IB-1228",
+      "upi_id": "account-account-001228@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 07904",
+      "email": "synthetic-fraud-7904@example.invalid",
+      "whatsapp_number": "+91 00000 07904"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007904-01",
+        "date": "2026-08-03T06:22:00Z",
+        "amount": 85500,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2227",
+        "to_account": "XXXXXXXXX2829",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 85500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-03T06:12:00Z",
+    "fraud_end_time": "2026-08-03T06:32:00Z",
+    "reporting_delay_hours": 24
+  }
+}

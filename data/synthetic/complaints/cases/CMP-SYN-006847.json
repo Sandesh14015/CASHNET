@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006847",
+  "complaint_date": "2026-08-04T20:32:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 45,
+    "gender": "Female",
+    "phone": "+91 00000 06847",
+    "email": "victim-6847@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6847",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1175",
+      "ifsc_code": "SYNTHETIC-CB-176",
+      "upi_id": "account-account-000176@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "account_takeover",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (account takeover). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06847",
+      "email": "synthetic-fraud-6847@example.invalid",
+      "whatsapp_number": "+91 00000 06847"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006847-01",
+        "date": "2026-08-04T19:52:00Z",
+        "amount": 3000,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1175",
+        "to_account": "XXXXXXXXX2862",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 3000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-04T19:42:00Z",
+    "fraud_end_time": "2026-08-04T20:02:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

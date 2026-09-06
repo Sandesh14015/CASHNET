@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006848",
+  "complaint_date": "2026-07-27T21:48:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 54,
+    "gender": "Male",
+    "phone": "+91 00000 06848",
+    "email": "victim-6848@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6848",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1459",
+      "ifsc_code": "SYNTHETIC-PN-460",
+      "upi_id": "account-account-000460@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06848",
+      "email": "synthetic-fraud-6848@example.invalid",
+      "whatsapp_number": "+91 00000 06848"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006848-01",
+        "date": "2026-07-27T21:32:00Z",
+        "amount": 74800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000460@cashnet.invalid",
+        "to_account": "mule-account-001681@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 74800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-27T21:22:00Z",
+    "fraud_end_time": "2026-07-27T21:42:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

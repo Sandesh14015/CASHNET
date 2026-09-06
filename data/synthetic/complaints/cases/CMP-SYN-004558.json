@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004558",
+  "complaint_date": "2026-06-03T11:48:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 62,
+    "gender": "Other",
+    "phone": "+91 00000 04558",
+    "email": "victim-4558@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4558",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1405",
+      "ifsc_code": "SYNTHETIC-CB-406",
+      "upi_id": "account-account-000406@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 04558",
+      "email": "synthetic-fraud-4558@example.invalid",
+      "whatsapp_number": "+91 00000 04558"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004558-01",
+        "date": "2026-06-03T05:38:00Z",
+        "amount": 99800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1405",
+        "to_account": "XXXXXXXXX2434",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 99800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-03T05:28:00Z",
+    "fraud_end_time": "2026-06-03T05:48:00Z",
+    "reporting_delay_hours": 6
+  }
+}

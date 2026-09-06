@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-007823",
+  "complaint_date": "2026-06-18T22:33:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 40,
+    "gender": "Male",
+    "phone": "+91 00000 07823",
+    "email": "victim-7823@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7823",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX2731",
+      "ifsc_code": "SYNTHETIC-SB-1732",
+      "upi_id": "account-account-001732@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "part_time_job",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (part time job). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07823",
+      "email": "synthetic-fraud-7823@example.invalid",
+      "telegram_id": "@synthetic_offer_7823",
+      "whatsapp_number": "+91 00000 07823"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007823-01",
+        "date": "2026-06-17T22:23:00Z",
+        "amount": 39500,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2731",
+        "to_account": "XXXXXXXXX1758",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 39500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-17T22:13:00Z",
+    "fraud_end_time": "2026-06-17T22:33:00Z",
+    "reporting_delay_hours": 24
+  }
+}

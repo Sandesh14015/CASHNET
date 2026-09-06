@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009706",
+  "complaint_date": "2026-06-08T19:47:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 20,
+    "gender": "Female",
+    "phone": "+91 00000 09706",
+    "email": "victim-9706@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9706",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1109",
+      "ifsc_code": "SYNTHETIC-BO-110",
+      "upi_id": "account-account-000110@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09706",
+      "email": "synthetic-fraud-9706@example.invalid",
+      "whatsapp_number": "+91 00000 09706"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009706-01",
+        "date": "2026-06-08T19:31:00Z",
+        "amount": 59200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1109",
+        "to_account": "XXXXXXXXX2528",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 59200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-08T19:21:00Z",
+    "fraud_end_time": "2026-06-08T19:41:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

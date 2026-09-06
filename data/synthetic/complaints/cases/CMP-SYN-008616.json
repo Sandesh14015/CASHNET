@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-008616",
+  "complaint_date": "2026-07-16T22:26:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 43,
+    "gender": "Male",
+    "phone": "+91 00000 08616",
+    "email": "victim-8616@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8616",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX1651",
+      "ifsc_code": "SYNTHETIC-IB-652",
+      "upi_id": "account-account-000652@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "fake_support",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (fake support). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08616",
+      "email": "synthetic-fraud-8616@example.invalid",
+      "whatsapp_number": "+91 00000 08616"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008616-01",
+        "date": "2026-07-16T21:46:00Z",
+        "amount": 51400,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1651",
+        "to_account": "XXXXXXXXX2803",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 51400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-16T21:36:00Z",
+    "fraud_end_time": "2026-07-16T21:56:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

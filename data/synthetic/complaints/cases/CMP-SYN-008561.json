@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-008561",
+  "complaint_date": "2026-06-20T20:15:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 32,
+    "gender": "Female",
+    "phone": "+91 00000 08561",
+    "email": "victim-8561@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8561",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX1852",
+      "ifsc_code": "SYNTHETIC-IB-853",
+      "upi_id": "account-account-000853@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "urgent_verification",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (urgent verification). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 08561",
+      "email": "synthetic-fraud-8561@example.invalid",
+      "whatsapp_number": "+91 00000 08561"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008561-01",
+        "date": "2026-06-20T17:55:00Z",
+        "amount": 35000,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1852",
+        "to_account": "XXXXXXXXX2596",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-008561-02",
+        "date": "2026-06-20T18:05:00Z",
+        "amount": 60000,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1852",
+        "to_account": "XXXXXXXXX2596",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 95000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-20T17:45:00Z",
+    "fraud_end_time": "2026-06-20T18:15:00Z",
+    "reporting_delay_hours": 2
+  }
+}

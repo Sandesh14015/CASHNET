@@ -1,0 +1,71 @@
+{
+  "complaint_id": "CMP-SYN-009764",
+  "complaint_date": "2026-08-13T06:07:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 44,
+    "gender": "Female",
+    "phone": "+91 00000 09764",
+    "email": "victim-9764@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9764",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1357",
+      "ifsc_code": "SYNTHETIC-UB-358",
+      "upi_id": "account-account-000358@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "sextortion",
+    "sub_type": "video_call_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a sextortion (video call scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09764",
+      "email": "synthetic-fraud-9764@example.invalid",
+      "video_call_platform": "Synthetic Video Platform",
+      "whatsapp_number": "+91 00000 09764"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009764-01",
+        "date": "2026-08-12T05:47:00Z",
+        "amount": 59900,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1357",
+        "to_account": "XXXXXXXXX1756",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-009764-02",
+        "date": "2026-08-12T05:57:00Z",
+        "amount": 19500,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1357",
+        "to_account": "XXXXXXXXX1756",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 79400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-12T05:37:00Z",
+    "fraud_end_time": "2026-08-12T06:07:00Z",
+    "reporting_delay_hours": 24
+  }
+}

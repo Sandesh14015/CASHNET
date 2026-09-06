@@ -1,0 +1,81 @@
+{
+  "complaint_id": "CMP-SYN-008768",
+  "complaint_date": "2026-06-12T14:46:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 67,
+    "gender": "Male",
+    "phone": "+91 00000 08768",
+    "email": "victim-8768@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8768",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX2129",
+      "ifsc_code": "SYNTHETIC-HB-1130",
+      "upi_id": "account-account-001130@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "sextortion",
+    "sub_type": "image_blackmail",
+    "description": "Synthetic CASHNET training complaint: victim reported a sextortion (image blackmail). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08768",
+      "email": "synthetic-fraud-8768@example.invalid",
+      "video_call_platform": "Synthetic Video Platform",
+      "whatsapp_number": "+91 00000 08768"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008768-01",
+        "date": "2026-06-12T02:16:00Z",
+        "amount": 60800,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2129",
+        "to_account": "XXXXXXXXX2256",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-008768-02",
+        "date": "2026-06-12T02:26:00Z",
+        "amount": 22200,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001130@cashnet.invalid",
+        "to_account": "mule-account-001257@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-008768-03",
+        "date": "2026-06-12T02:36:00Z",
+        "amount": 88800,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX2129",
+        "to_account": "XXXXXXXXX2256",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 171800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-12T02:06:00Z",
+    "fraud_end_time": "2026-06-12T02:46:00Z",
+    "reporting_delay_hours": 12
+  }
+}

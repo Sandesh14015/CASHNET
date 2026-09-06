@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000425",
+  "complaint_date": "2026-06-04T14:24:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 33,
+    "gender": "Male",
+    "phone": "+91 00000 00425",
+    "email": "victim-425@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 425",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1610",
+      "ifsc_code": "SYNTHETIC-IB-611",
+      "upi_id": "account-account-000611@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "OTP_fraud",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (OTP fraud). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00425",
+      "email": "synthetic-fraud-425@example.invalid",
+      "whatsapp_number": "+91 00000 00425"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000425-01",
+        "date": "2026-06-04T02:14:00Z",
+        "amount": 41600,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1610",
+        "to_account": "XXXXXXXXX2274",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 41600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-04T02:04:00Z",
+    "fraud_end_time": "2026-06-04T02:24:00Z",
+    "reporting_delay_hours": 12
+  }
+}

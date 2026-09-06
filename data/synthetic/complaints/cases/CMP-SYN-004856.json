@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004856",
+  "complaint_date": "2026-06-01T11:12:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 73,
+    "gender": "Other",
+    "phone": "+91 00000 04856",
+    "email": "victim-4856@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4856",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX2927",
+      "ifsc_code": "SYNTHETIC-IB-1928",
+      "upi_id": "account-account-001928@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04856",
+      "email": "synthetic-fraud-4856@example.invalid",
+      "whatsapp_number": "+91 00000 04856"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004856-01",
+        "date": "2026-06-01T10:32:00Z",
+        "amount": 66100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2927",
+        "to_account": "XXXXXXXXX2402",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 66100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-01T10:22:00Z",
+    "fraud_end_time": "2026-06-01T10:42:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

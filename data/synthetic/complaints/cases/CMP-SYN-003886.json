@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-003886",
+  "complaint_date": "2026-08-06T03:14:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 44,
+    "gender": "Other",
+    "phone": "+91 00000 03886",
+    "email": "victim-3886@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3886",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX2111",
+      "ifsc_code": "SYNTHETIC-IB-1112",
+      "upi_id": "account-account-001112@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "security_deposit",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (security deposit). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03886",
+      "email": "synthetic-fraud-3886@example.invalid",
+      "telegram_id": "@synthetic_offer_3886",
+      "whatsapp_number": "+91 00000 03886"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003886-01",
+        "date": "2026-08-06T01:04:00Z",
+        "amount": 60800,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2111",
+        "to_account": "XXXXXXXXX2323",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 60800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-06T00:54:00Z",
+    "fraud_end_time": "2026-08-06T01:14:00Z",
+    "reporting_delay_hours": 2
+  }
+}

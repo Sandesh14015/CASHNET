@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004876",
+  "complaint_date": "2026-07-07T20:27:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 37,
+    "gender": "Female",
+    "phone": "+91 00000 04876",
+    "email": "victim-4876@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4876",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1955",
+      "ifsc_code": "SYNTHETIC-BO-956",
+      "upi_id": "account-account-000956@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04876",
+      "email": "synthetic-fraud-4876@example.invalid",
+      "whatsapp_number": "+91 00000 04876"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004876-01",
+        "date": "2026-07-06T20:17:00Z",
+        "amount": 58100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1955",
+        "to_account": "XXXXXXXXX2545",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 58100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-06T20:07:00Z",
+    "fraud_end_time": "2026-07-06T20:27:00Z",
+    "reporting_delay_hours": 24
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003715",
+  "complaint_date": "2026-08-23T09:12:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 46,
+    "gender": "Other",
+    "phone": "+91 00000 03715",
+    "email": "victim-3715@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3715",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1159",
+      "ifsc_code": "SYNTHETIC-PN-160",
+      "upi_id": "account-account-000160@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "fake_exchange",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (fake exchange). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03715",
+      "email": "synthetic-fraud-3715@example.invalid",
+      "whatsapp_number": "+91 00000 03715"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003715-01",
+        "date": "2026-08-23T08:56:00Z",
+        "amount": 75300,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1159",
+        "to_account": "XXXXXXXXX2527",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 75300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-23T08:46:00Z",
+    "fraud_end_time": "2026-08-23T09:06:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

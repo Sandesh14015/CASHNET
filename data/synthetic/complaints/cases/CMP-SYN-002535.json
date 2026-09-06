@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002535",
+  "complaint_date": "2026-07-27T23:29:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 43,
+    "gender": "Male",
+    "phone": "+91 00000 02535",
+    "email": "victim-2535@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2535",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1720",
+      "ifsc_code": "SYNTHETIC-AB-721",
+      "upi_id": "account-account-000721@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02535",
+      "email": "synthetic-fraud-2535@example.invalid",
+      "whatsapp_number": "+91 00000 02535"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002535-01",
+        "date": "2026-07-27T23:13:00Z",
+        "amount": 67500,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1720",
+        "to_account": "XXXXXXXXX2029",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 67500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-27T23:03:00Z",
+    "fraud_end_time": "2026-07-27T23:23:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-008798",
+  "complaint_date": "2026-07-26T03:04:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 22,
+    "gender": "Other",
+    "phone": "+91 00000 08798",
+    "email": "victim-8798@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8798",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX2860",
+      "ifsc_code": "SYNTHETIC-AB-1861",
+      "upi_id": "account-account-001861@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "fake_summons",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (fake summons). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 08798",
+      "email": "synthetic-fraud-8798@example.invalid",
+      "whatsapp_number": "+91 00000 08798"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008798-01",
+        "date": "2026-07-26T02:48:00Z",
+        "amount": 42000,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2860",
+        "to_account": "XXXXXXXXX2000",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 42000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-26T02:38:00Z",
+    "fraud_end_time": "2026-07-26T02:58:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

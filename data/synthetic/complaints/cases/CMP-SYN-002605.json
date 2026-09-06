@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002605",
+  "complaint_date": "2026-08-23T01:36:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 23,
+    "gender": "Female",
+    "phone": "+91 00000 02605",
+    "email": "victim-2605@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2605",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1448",
+      "ifsc_code": "SYNTHETIC-IB-449",
+      "upi_id": "account-account-000449@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02605",
+      "email": "synthetic-fraud-2605@example.invalid",
+      "whatsapp_number": "+91 00000 02605"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002605-01",
+        "date": "2026-08-23T00:26:00Z",
+        "amount": 69000,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1448",
+        "to_account": "XXXXXXXXX2749",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 69000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-23T00:16:00Z",
+    "fraud_end_time": "2026-08-23T00:36:00Z",
+    "reporting_delay_hours": 1
+  }
+}

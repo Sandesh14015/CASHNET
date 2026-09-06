@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009696",
+  "complaint_date": "2026-06-25T22:46:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 47,
+    "gender": "Female",
+    "phone": "+91 00000 09696",
+    "email": "victim-9696@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9696",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1171",
+      "ifsc_code": "SYNTHETIC-UB-172",
+      "upi_id": "account-account-000172@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 09696",
+      "email": "synthetic-fraud-9696@example.invalid",
+      "whatsapp_number": "+91 00000 09696"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009696-01",
+        "date": "2026-06-25T20:36:00Z",
+        "amount": 86700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000172@cashnet.invalid",
+        "to_account": "mule-account-001517@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 86700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-25T20:26:00Z",
+    "fraud_end_time": "2026-06-25T20:46:00Z",
+    "reporting_delay_hours": 2
+  }
+}

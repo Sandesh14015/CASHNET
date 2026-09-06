@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005368",
+  "complaint_date": "2026-06-24T22:20:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 32,
+    "gender": "Other",
+    "phone": "+91 00000 05368",
+    "email": "victim-5368@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5368",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1195",
+      "ifsc_code": "SYNTHETIC-PN-196",
+      "upi_id": "account-account-000196@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "KYC_update",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (KYC update). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05368",
+      "email": "synthetic-fraud-5368@example.invalid",
+      "whatsapp_number": "+91 00000 05368"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005368-01",
+        "date": "2026-06-24T22:04:00Z",
+        "amount": 12200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1195",
+        "to_account": "XXXXXXXXX2906",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 12200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-24T21:54:00Z",
+    "fraud_end_time": "2026-06-24T22:14:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006425",
+  "complaint_date": "2026-08-04T08:30:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 68,
+    "gender": "Female",
+    "phone": "+91 00000 06425",
+    "email": "victim-6425@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6425",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1309",
+      "ifsc_code": "SYNTHETIC-CB-310",
+      "upi_id": "account-account-000310@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "police_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (police impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 06425",
+      "email": "synthetic-fraud-6425@example.invalid",
+      "whatsapp_number": "+91 00000 06425"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006425-01",
+        "date": "2026-08-04T06:20:00Z",
+        "amount": 77600,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1309",
+        "to_account": "XXXXXXXXX1980",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 77600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-04T06:10:00Z",
+    "fraud_end_time": "2026-08-04T06:30:00Z",
+    "reporting_delay_hours": 2
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-002957",
+  "complaint_date": "2026-07-27T12:19:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 56,
+    "gender": "Female",
+    "phone": "+91 00000 02957",
+    "email": "victim-2957@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2957",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1415",
+      "ifsc_code": "SYNTHETIC-IB-416",
+      "upi_id": "account-account-000416@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "security_deposit",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (security deposit). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02957",
+      "email": "synthetic-fraud-2957@example.invalid",
+      "telegram_id": "@synthetic_offer_2957",
+      "whatsapp_number": "+91 00000 02957"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002957-01",
+        "date": "2026-07-26T12:09:00Z",
+        "amount": 51400,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1415",
+        "to_account": "XXXXXXXXX1846",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 51400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-26T11:59:00Z",
+    "fraud_end_time": "2026-07-26T12:19:00Z",
+    "reporting_delay_hours": 24
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001188",
+  "complaint_date": "2026-06-18T15:01:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 74,
+    "gender": "Other",
+    "phone": "+91 00000 01188",
+    "email": "victim-1188@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1188",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1012",
+      "ifsc_code": "SYNTHETIC-HB-013",
+      "upi_id": "account-account-000013@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01188",
+      "email": "synthetic-fraud-1188@example.invalid",
+      "whatsapp_number": "+91 00000 01188"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001188-01",
+        "date": "2026-06-18T14:21:00Z",
+        "amount": 67800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1012",
+        "to_account": "XXXXXXXXX2080",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 67800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-18T14:11:00Z",
+    "fraud_end_time": "2026-06-18T14:31:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

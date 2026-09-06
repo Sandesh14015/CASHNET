@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005360",
+  "complaint_date": "2026-05-31T14:54:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 29,
+    "gender": "Female",
+    "phone": "+91 00000 05360",
+    "email": "victim-5360@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5360",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX2901",
+      "ifsc_code": "SYNTHETIC-SB-1902",
+      "upi_id": "account-account-001902@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 05360",
+      "email": "synthetic-fraud-5360@example.invalid",
+      "whatsapp_number": "+91 00000 05360"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005360-01",
+        "date": "2026-05-31T08:44:00Z",
+        "amount": 62800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2901",
+        "to_account": "XXXXXXXXX2004",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 62800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-05-31T08:34:00Z",
+    "fraud_end_time": "2026-05-31T08:54:00Z",
+    "reporting_delay_hours": 6
+  }
+}

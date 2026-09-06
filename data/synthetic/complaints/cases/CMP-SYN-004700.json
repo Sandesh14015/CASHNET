@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-004700",
+  "complaint_date": "2026-08-27T20:44:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 64,
+    "gender": "Female",
+    "phone": "+91 00000 04700",
+    "email": "victim-4700@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4700",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1547",
+      "ifsc_code": "SYNTHETIC-BO-548",
+      "upi_id": "account-account-000548@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "part_time_job",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (part time job). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 04700",
+      "email": "synthetic-fraud-4700@example.invalid",
+      "telegram_id": "@synthetic_offer_4700",
+      "whatsapp_number": "+91 00000 04700"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004700-01",
+        "date": "2026-08-27T20:28:00Z",
+        "amount": 60000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000548@cashnet.invalid",
+        "to_account": "mule-account-001666@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 60000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-27T20:18:00Z",
+    "fraud_end_time": "2026-08-27T20:38:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

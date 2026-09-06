@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-006813",
+  "complaint_date": "2026-06-16T00:50:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 46,
+    "gender": "Male",
+    "phone": "+91 00000 06813",
+    "email": "victim-6813@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6813",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1337",
+      "ifsc_code": "SYNTHETIC-BO-338",
+      "upi_id": "account-account-000338@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06813",
+      "email": "synthetic-fraud-6813@example.invalid",
+      "whatsapp_number": "+91 00000 06813"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006813-01",
+        "date": "2026-06-15T00:30:00Z",
+        "amount": 4700,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1337",
+        "to_account": "XXXXXXXXX2469",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-006813-02",
+        "date": "2026-06-15T00:40:00Z",
+        "amount": 98200,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1337",
+        "to_account": "XXXXXXXXX2469",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 102900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-15T00:20:00Z",
+    "fraud_end_time": "2026-06-15T00:50:00Z",
+    "reporting_delay_hours": 24
+  }
+}

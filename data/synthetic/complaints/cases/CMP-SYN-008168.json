@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-008168",
+  "complaint_date": "2026-06-14T16:22:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 26,
+    "gender": "Other",
+    "phone": "+91 00000 08168",
+    "email": "victim-8168@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8168",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1281",
+      "ifsc_code": "SYNTHETIC-IB-282",
+      "upi_id": "account-account-000282@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08168",
+      "email": "synthetic-fraud-8168@example.invalid",
+      "whatsapp_number": "+91 00000 08168"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008168-01",
+        "date": "2026-06-14T15:42:00Z",
+        "amount": 87400,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1281",
+        "to_account": "XXXXXXXXX2096",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 87400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-14T15:32:00Z",
+    "fraud_end_time": "2026-06-14T15:52:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005072",
+  "complaint_date": "2026-07-02T00:54:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 36,
+    "gender": "Other",
+    "phone": "+91 00000 05072",
+    "email": "victim-5072@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5072",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1130",
+      "ifsc_code": "SYNTHETIC-PN-131",
+      "upi_id": "account-account-000131@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "account_takeover",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (account takeover). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05072",
+      "email": "synthetic-fraud-5072@example.invalid",
+      "whatsapp_number": "+91 00000 05072"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005072-01",
+        "date": "2026-07-02T00:14:00Z",
+        "amount": 41700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000131@cashnet.invalid",
+        "to_account": "mule-account-001843@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 41700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-02T00:04:00Z",
+    "fraud_end_time": "2026-07-02T00:24:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

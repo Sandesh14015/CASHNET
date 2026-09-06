@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-008234",
+  "complaint_date": "2026-08-25T13:18:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 59,
+    "gender": "Male",
+    "phone": "+91 00000 08234",
+    "email": "victim-8234@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8234",
+      "city": "New Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1512",
+      "ifsc_code": "SYNTHETIC-SB-513",
+      "upi_id": "account-account-000513@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "security_deposit",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (security deposit). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08234",
+      "email": "synthetic-fraud-8234@example.invalid",
+      "telegram_id": "@synthetic_offer_8234",
+      "whatsapp_number": "+91 00000 08234"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008234-01",
+        "date": "2026-08-25T12:08:00Z",
+        "amount": 66800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1512",
+        "to_account": "XXXXXXXXX2252",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 66800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-25T11:58:00Z",
+    "fraud_end_time": "2026-08-25T12:18:00Z",
+    "reporting_delay_hours": 1
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000822",
+  "complaint_date": "2026-08-28T08:26:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 72,
+    "gender": "Male",
+    "phone": "+91 00000 00822",
+    "email": "victim-822@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 822",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1121",
+      "ifsc_code": "SYNTHETIC-KM-122",
+      "upi_id": "account-account-000122@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "remote_access",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (remote access). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 00822",
+      "email": "synthetic-fraud-822@example.invalid",
+      "whatsapp_number": "+91 00000 00822"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000822-01",
+        "date": "2026-08-28T08:10:00Z",
+        "amount": 34400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000122@cashnet.invalid",
+        "to_account": "mule-account-000995@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 34400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-28T08:00:00Z",
+    "fraud_end_time": "2026-08-28T08:20:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

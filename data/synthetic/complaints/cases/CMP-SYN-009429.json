@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009429",
+  "complaint_date": "2026-07-28T11:09:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 50,
+    "gender": "Male",
+    "phone": "+91 00000 09429",
+    "email": "victim-9429@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9429",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1183",
+      "ifsc_code": "SYNTHETIC-IB-184",
+      "upi_id": "account-account-000184@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "wallet_transfer",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (wallet transfer). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09429",
+      "email": "synthetic-fraud-9429@example.invalid",
+      "whatsapp_number": "+91 00000 09429"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009429-01",
+        "date": "2026-07-28T10:53:00Z",
+        "amount": 99800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1183",
+        "to_account": "XXXXXXXXX1885",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 99800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-28T10:43:00Z",
+    "fraud_end_time": "2026-07-28T11:03:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

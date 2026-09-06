@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-004706",
+  "complaint_date": "2026-07-15T18:09:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 28,
+    "gender": "Other",
+    "phone": "+91 00000 04706",
+    "email": "victim-4706@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4706",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1187",
+      "ifsc_code": "SYNTHETIC-SB-188",
+      "upi_id": "account-account-000188@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "romance_scam",
+    "sub_type": "emergency_payment",
+    "description": "Synthetic CASHNET training complaint: victim reported a romance scam (emergency payment). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04706",
+      "email": "synthetic-fraud-4706@example.invalid",
+      "whatsapp_number": "+91 00000 04706"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004706-01",
+        "date": "2026-07-14T17:49:00Z",
+        "amount": 14800,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1187",
+        "to_account": "XXXXXXXXX2913",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-004706-02",
+        "date": "2026-07-14T17:59:00Z",
+        "amount": 85000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000188@cashnet.invalid",
+        "to_account": "mule-account-001914@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 99800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-14T17:39:00Z",
+    "fraud_end_time": "2026-07-14T18:09:00Z",
+    "reporting_delay_hours": 24
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003538",
+  "complaint_date": "2026-08-23T04:55:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 18,
+    "gender": "Other",
+    "phone": "+91 00000 03538",
+    "email": "victim-3538@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3538",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX2355",
+      "ifsc_code": "SYNTHETIC-AB-1356",
+      "upi_id": "account-account-001356@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "non_delivery",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (non delivery). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 03538",
+      "email": "synthetic-fraud-3538@example.invalid",
+      "whatsapp_number": "+91 00000 03538"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003538-01",
+        "date": "2026-08-22T22:45:00Z",
+        "amount": 86000,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2355",
+        "to_account": "XXXXXXXXX1959",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 86000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-22T22:35:00Z",
+    "fraud_end_time": "2026-08-22T22:55:00Z",
+    "reporting_delay_hours": 6
+  }
+}

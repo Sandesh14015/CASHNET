@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003611",
+  "complaint_date": "2026-06-08T04:09:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 67,
+    "gender": "Male",
+    "phone": "+91 00000 03611",
+    "email": "victim-3611@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3611",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1239",
+      "ifsc_code": "SYNTHETIC-AB-240",
+      "upi_id": "account-account-000240@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "fake_support",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (fake support). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03611",
+      "email": "synthetic-fraud-3611@example.invalid",
+      "whatsapp_number": "+91 00000 03611"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003611-01",
+        "date": "2026-06-07T15:59:00Z",
+        "amount": 40900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000240@cashnet.invalid",
+        "to_account": "mule-account-000995@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 40900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-07T15:49:00Z",
+    "fraud_end_time": "2026-06-07T16:09:00Z",
+    "reporting_delay_hours": 12
+  }
+}

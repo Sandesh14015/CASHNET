@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001745",
+  "complaint_date": "2026-08-11T19:49:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 33,
+    "gender": "Female",
+    "phone": "+91 00000 01745",
+    "email": "victim-1745@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1745",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1164",
+      "ifsc_code": "SYNTHETIC-CB-165",
+      "upi_id": "account-account-000165@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "fake_seller",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (fake seller). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01745",
+      "email": "synthetic-fraud-1745@example.invalid",
+      "whatsapp_number": "+91 00000 01745"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001745-01",
+        "date": "2026-08-11T19:09:00Z",
+        "amount": 27700,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1164",
+        "to_account": "XXXXXXXXX2713",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 27700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-11T18:59:00Z",
+    "fraud_end_time": "2026-08-11T19:19:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

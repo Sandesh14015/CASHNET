@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-006678",
+  "complaint_date": "2026-07-21T18:15:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 37,
+    "gender": "Male",
+    "phone": "+91 00000 06678",
+    "email": "victim-6678@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6678",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1894",
+      "ifsc_code": "SYNTHETIC-PN-895",
+      "upi_id": "account-account-000895@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "security_deposit",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (security deposit). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06678",
+      "email": "synthetic-fraud-6678@example.invalid",
+      "telegram_id": "@synthetic_offer_6678",
+      "whatsapp_number": "+91 00000 06678"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006678-01",
+        "date": "2026-07-21T17:35:00Z",
+        "amount": 62000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000895@cashnet.invalid",
+        "to_account": "mule-account-001837@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 62000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-21T17:25:00Z",
+    "fraud_end_time": "2026-07-21T17:45:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

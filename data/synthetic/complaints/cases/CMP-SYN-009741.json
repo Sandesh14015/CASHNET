@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009741",
+  "complaint_date": "2026-07-13T23:18:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 62,
+    "gender": "Male",
+    "phone": "+91 00000 09741",
+    "email": "victim-9741@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9741",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX1625",
+      "ifsc_code": "SYNTHETIC-IB-626",
+      "upi_id": "account-account-000626@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09741",
+      "email": "synthetic-fraud-9741@example.invalid",
+      "whatsapp_number": "+91 00000 09741"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009741-01",
+        "date": "2026-07-12T23:08:00Z",
+        "amount": 4900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000626@cashnet.invalid",
+        "to_account": "mule-account-001246@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 4900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-12T22:58:00Z",
+    "fraud_end_time": "2026-07-12T23:18:00Z",
+    "reporting_delay_hours": 24
+  }
+}

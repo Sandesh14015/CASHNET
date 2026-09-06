@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-006899",
+  "complaint_date": "2026-06-28T13:17:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 30,
+    "gender": "Other",
+    "phone": "+91 00000 06899",
+    "email": "victim-6899@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6899",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1367",
+      "ifsc_code": "SYNTHETIC-PN-368",
+      "upi_id": "account-account-000368@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "fake_seller",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (fake seller). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 06899",
+      "email": "synthetic-fraud-6899@example.invalid",
+      "whatsapp_number": "+91 00000 06899"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006899-01",
+        "date": "2026-06-28T06:57:00Z",
+        "amount": 94700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000368@cashnet.invalid",
+        "to_account": "mule-account-001427@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-006899-02",
+        "date": "2026-06-28T07:07:00Z",
+        "amount": 26300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000368@cashnet.invalid",
+        "to_account": "mule-account-001427@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 121000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-28T06:47:00Z",
+    "fraud_end_time": "2026-06-28T07:17:00Z",
+    "reporting_delay_hours": 6
+  }
+}

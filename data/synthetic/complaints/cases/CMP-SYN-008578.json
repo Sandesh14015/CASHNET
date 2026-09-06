@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-008578",
+  "complaint_date": "2026-08-23T03:25:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 61,
+    "gender": "Female",
+    "phone": "+91 00000 08578",
+    "email": "victim-8578@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8578",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1652",
+      "ifsc_code": "SYNTHETIC-IB-653",
+      "upi_id": "account-account-000653@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 08578",
+      "email": "synthetic-fraud-8578@example.invalid",
+      "whatsapp_number": "+91 00000 08578"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008578-01",
+        "date": "2026-08-22T03:15:00Z",
+        "amount": 30100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1652",
+        "to_account": "XXXXXXXXX2380",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 30100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-22T03:05:00Z",
+    "fraud_end_time": "2026-08-22T03:25:00Z",
+    "reporting_delay_hours": 24
+  }
+}

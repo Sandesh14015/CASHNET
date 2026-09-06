@@ -1,0 +1,15 @@
+{
+    "framework":  null,
+    "buildCommand":  "pnpm --filter @workspace/cashnet run build",
+    "installCommand":  "pnpm install",
+    "outputDirectory":  "artifacts/cashnet/dist/public",
+    "routes":  [
+                   {
+                       "handle":  "filesystem"
+                   },
+                   {
+                       "src":  "/(.*)",
+                       "dest":  "/index.html"
+                   }
+               ]
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005863",
+  "complaint_date": "2026-06-08T07:04:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 21,
+    "gender": "Male",
+    "phone": "+91 00000 05863",
+    "email": "victim-5863@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5863",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX1852",
+      "ifsc_code": "SYNTHETIC-IB-853",
+      "upi_id": "account-account-000853@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "account_takeover",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (account takeover). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05863",
+      "email": "synthetic-fraud-5863@example.invalid",
+      "whatsapp_number": "+91 00000 05863"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005863-01",
+        "date": "2026-06-07T18:54:00Z",
+        "amount": 98700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000853@cashnet.invalid",
+        "to_account": "mule-account-001947@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 98700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-07T18:44:00Z",
+    "fraud_end_time": "2026-06-07T19:04:00Z",
+    "reporting_delay_hours": 12
+  }
+}

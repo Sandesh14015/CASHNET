@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009591",
+  "complaint_date": "2026-08-13T10:29:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 46,
+    "gender": "Other",
+    "phone": "+91 00000 09591",
+    "email": "victim-9591@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9591",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1172",
+      "ifsc_code": "SYNTHETIC-CB-173",
+      "upi_id": "account-account-000173@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "collect_request",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (collect request). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 09591",
+      "email": "synthetic-fraud-9591@example.invalid",
+      "whatsapp_number": "+91 00000 09591"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009591-01",
+        "date": "2026-08-12T22:19:00Z",
+        "amount": 55300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000173@cashnet.invalid",
+        "to_account": "mule-account-001512@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 55300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-12T22:09:00Z",
+    "fraud_end_time": "2026-08-12T22:29:00Z",
+    "reporting_delay_hours": 12
+  }
+}

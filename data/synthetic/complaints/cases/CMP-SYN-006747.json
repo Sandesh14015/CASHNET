@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006747",
+  "complaint_date": "2026-06-06T01:34:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 62,
+    "gender": "Female",
+    "phone": "+91 00000 06747",
+    "email": "victim-6747@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6747",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1142",
+      "ifsc_code": "SYNTHETIC-BO-143",
+      "upi_id": "account-account-000143@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "SIM_swap",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (SIM swap). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06747",
+      "email": "synthetic-fraud-6747@example.invalid",
+      "whatsapp_number": "+91 00000 06747"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006747-01",
+        "date": "2026-06-06T00:54:00Z",
+        "amount": 88500,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1142",
+        "to_account": "XXXXXXXXX2112",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 88500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-06T00:44:00Z",
+    "fraud_end_time": "2026-06-06T01:04:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

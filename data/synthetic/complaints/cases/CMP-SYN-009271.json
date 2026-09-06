@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009271",
+  "complaint_date": "2026-07-11T18:56:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 51,
+    "gender": "Female",
+    "phone": "+91 00000 09271",
+    "email": "victim-9271@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9271",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1511",
+      "ifsc_code": "SYNTHETIC-IB-512",
+      "upi_id": "account-account-000512@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "fake_website",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (fake website). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09271",
+      "email": "synthetic-fraud-9271@example.invalid",
+      "whatsapp_number": "+91 00000 09271"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009271-01",
+        "date": "2026-07-11T17:46:00Z",
+        "amount": 48300,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1511",
+        "to_account": "XXXXXXXXX2570",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 48300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-11T17:36:00Z",
+    "fraud_end_time": "2026-07-11T17:56:00Z",
+    "reporting_delay_hours": 1
+  }
+}

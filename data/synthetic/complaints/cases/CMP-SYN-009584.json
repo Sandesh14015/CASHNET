@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009584",
+  "complaint_date": "2026-06-22T16:07:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 38,
+    "gender": "Female",
+    "phone": "+91 00000 09584",
+    "email": "victim-9584@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9584",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1354",
+      "ifsc_code": "SYNTHETIC-PN-355",
+      "upi_id": "account-account-000355@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09584",
+      "email": "synthetic-fraud-9584@example.invalid",
+      "whatsapp_number": "+91 00000 09584"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009584-01",
+        "date": "2026-06-21T15:57:00Z",
+        "amount": 92500,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1354",
+        "to_account": "XXXXXXXXX2164",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 92500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-21T15:47:00Z",
+    "fraud_end_time": "2026-06-21T16:07:00Z",
+    "reporting_delay_hours": 24
+  }
+}

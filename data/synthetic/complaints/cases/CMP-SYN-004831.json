@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004831",
+  "complaint_date": "2026-06-20T06:20:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 42,
+    "gender": "Female",
+    "phone": "+91 00000 04831",
+    "email": "victim-4831@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4831",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1688",
+      "ifsc_code": "SYNTHETIC-BO-689",
+      "upi_id": "account-account-000689@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "video_call_threat",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (video call threat). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04831",
+      "email": "synthetic-fraud-4831@example.invalid",
+      "whatsapp_number": "+91 00000 04831"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004831-01",
+        "date": "2026-06-19T18:10:00Z",
+        "amount": 71800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000689@cashnet.invalid",
+        "to_account": "mule-account-001433@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 71800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-19T18:00:00Z",
+    "fraud_end_time": "2026-06-19T18:20:00Z",
+    "reporting_delay_hours": 12
+  }
+}

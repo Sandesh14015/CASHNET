@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000942",
+  "complaint_date": "2026-07-15T23:17:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 29,
+    "gender": "Female",
+    "phone": "+91 00000 00942",
+    "email": "victim-942@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 942",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1745",
+      "ifsc_code": "SYNTHETIC-IB-746",
+      "upi_id": "account-account-000746@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00942",
+      "email": "synthetic-fraud-942@example.invalid",
+      "whatsapp_number": "+91 00000 00942"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000942-01",
+        "date": "2026-07-15T22:07:00Z",
+        "amount": 87100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1745",
+        "to_account": "XXXXXXXXX2029",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 87100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-15T21:57:00Z",
+    "fraud_end_time": "2026-07-15T22:17:00Z",
+    "reporting_delay_hours": 1
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-002177",
+  "complaint_date": "2026-08-28T05:15:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 32,
+    "gender": "Male",
+    "phone": "+91 00000 02177",
+    "email": "victim-2177@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2177",
+      "city": "New Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1240",
+      "ifsc_code": "SYNTHETIC-AB-241",
+      "upi_id": "account-account-000241@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "fake_summons",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (fake summons). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02177",
+      "email": "synthetic-fraud-2177@example.invalid",
+      "whatsapp_number": "+91 00000 02177"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002177-01",
+        "date": "2026-08-27T16:55:00Z",
+        "amount": 34400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000241@cashnet.invalid",
+        "to_account": "mule-account-001871@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002177-02",
+        "date": "2026-08-27T17:05:00Z",
+        "amount": 5800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1240",
+        "to_account": "XXXXXXXXX2870",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 40200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-27T16:45:00Z",
+    "fraud_end_time": "2026-08-27T17:15:00Z",
+    "reporting_delay_hours": 12
+  }
+}

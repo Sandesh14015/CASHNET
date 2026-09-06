@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003143",
+  "complaint_date": "2026-06-13T01:09:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 35,
+    "gender": "Male",
+    "phone": "+91 00000 03143",
+    "email": "victim-3143@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3143",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX1859",
+      "ifsc_code": "SYNTHETIC-IB-860",
+      "upi_id": "account-account-000860@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "police_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (police impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03143",
+      "email": "synthetic-fraud-3143@example.invalid",
+      "whatsapp_number": "+91 00000 03143"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003143-01",
+        "date": "2026-06-12T12:59:00Z",
+        "amount": 10800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1859",
+        "to_account": "XXXXXXXXX2560",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 10800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-12T12:49:00Z",
+    "fraud_end_time": "2026-06-12T13:09:00Z",
+    "reporting_delay_hours": 12
+  }
+}

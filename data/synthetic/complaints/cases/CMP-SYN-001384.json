@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001384",
+  "complaint_date": "2026-07-08T09:06:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 44,
+    "gender": "Female",
+    "phone": "+91 00000 01384",
+    "email": "victim-1384@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1384",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX2381",
+      "ifsc_code": "SYNTHETIC-IB-1382",
+      "upi_id": "account-account-001382@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "urgent_verification",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (urgent verification). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 01384",
+      "email": "synthetic-fraud-1384@example.invalid",
+      "whatsapp_number": "+91 00000 01384"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001384-01",
+        "date": "2026-07-08T08:26:00Z",
+        "amount": 57100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2381",
+        "to_account": "XXXXXXXXX2924",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 57100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-08T08:16:00Z",
+    "fraud_end_time": "2026-07-08T08:36:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

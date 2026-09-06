@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009080",
+  "complaint_date": "2026-06-14T03:01:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 28,
+    "gender": "Other",
+    "phone": "+91 00000 09080",
+    "email": "victim-9080@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9080",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1586",
+      "ifsc_code": "SYNTHETIC-AB-587",
+      "upi_id": "account-account-000587@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "urgent_verification",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (urgent verification). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09080",
+      "email": "synthetic-fraud-9080@example.invalid",
+      "whatsapp_number": "+91 00000 09080"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009080-01",
+        "date": "2026-06-14T02:21:00Z",
+        "amount": 64700,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1586",
+        "to_account": "XXXXXXXXX2053",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 64700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-14T02:11:00Z",
+    "fraud_end_time": "2026-06-14T02:31:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

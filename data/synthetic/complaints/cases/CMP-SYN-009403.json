@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009403",
+  "complaint_date": "2026-06-07T06:29:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 74,
+    "gender": "Other",
+    "phone": "+91 00000 09403",
+    "email": "victim-9403@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9403",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX2207",
+      "ifsc_code": "SYNTHETIC-IB-1208",
+      "upi_id": "account-account-001208@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09403",
+      "email": "synthetic-fraud-9403@example.invalid",
+      "whatsapp_number": "+91 00000 09403"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009403-01",
+        "date": "2026-06-06T18:19:00Z",
+        "amount": 75700,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2207",
+        "to_account": "XXXXXXXXX2510",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 75700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-06T18:09:00Z",
+    "fraud_end_time": "2026-06-06T18:29:00Z",
+    "reporting_delay_hours": 12
+  }
+}

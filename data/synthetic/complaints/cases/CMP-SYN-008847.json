@@ -1,0 +1,71 @@
+{
+  "complaint_id": "CMP-SYN-008847",
+  "complaint_date": "2026-08-23T20:42:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 63,
+    "gender": "Male",
+    "phone": "+91 00000 08847",
+    "email": "victim-8847@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8847",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1432",
+      "ifsc_code": "SYNTHETIC-BO-433",
+      "upi_id": "account-account-000433@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "investment_scam",
+    "sub_type": "fake_trading_platform",
+    "description": "Synthetic CASHNET training complaint: victim reported a investment scam (fake trading platform). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08847",
+      "email": "synthetic-fraud-8847@example.invalid",
+      "telegram_id": "@synthetic_offer_8847",
+      "whatsapp_number": "+91 00000 08847"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008847-01",
+        "date": "2026-08-23T18:22:00Z",
+        "amount": 24000,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1432",
+        "to_account": "XXXXXXXXX2624",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-008847-02",
+        "date": "2026-08-23T18:32:00Z",
+        "amount": 53500,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000433@cashnet.invalid",
+        "to_account": "mule-account-001625@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 77500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-23T18:12:00Z",
+    "fraud_end_time": "2026-08-23T18:42:00Z",
+    "reporting_delay_hours": 2
+  }
+}

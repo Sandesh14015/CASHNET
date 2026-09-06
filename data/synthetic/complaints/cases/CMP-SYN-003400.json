@@ -1,0 +1,80 @@
+{
+  "complaint_id": "CMP-SYN-003400",
+  "complaint_date": "2026-08-21T03:56:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 67,
+    "gender": "Other",
+    "phone": "+91 00000 03400",
+    "email": "victim-3400@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3400",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1408",
+      "ifsc_code": "SYNTHETIC-SB-409",
+      "upi_id": "account-account-000409@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 03400",
+      "email": "synthetic-fraud-3400@example.invalid",
+      "whatsapp_number": "+91 00000 03400"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003400-01",
+        "date": "2026-08-21T01:26:00Z",
+        "amount": 16800,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1408",
+        "to_account": "XXXXXXXXX2877",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-003400-02",
+        "date": "2026-08-21T01:36:00Z",
+        "amount": 29100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1408",
+        "to_account": "XXXXXXXXX2877",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-003400-03",
+        "date": "2026-08-21T01:46:00Z",
+        "amount": 68600,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1408",
+        "to_account": "XXXXXXXXX2877",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 114500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-21T01:16:00Z",
+    "fraud_end_time": "2026-08-21T01:56:00Z",
+    "reporting_delay_hours": 2
+  }
+}

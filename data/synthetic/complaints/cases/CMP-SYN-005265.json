@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005265",
+  "complaint_date": "2026-07-25T21:11:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 42,
+    "gender": "Male",
+    "phone": "+91 00000 05265",
+    "email": "victim-5265@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5265",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1637",
+      "ifsc_code": "SYNTHETIC-CB-638",
+      "upi_id": "account-account-000638@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "remote_access",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (remote access). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05265",
+      "email": "synthetic-fraud-5265@example.invalid",
+      "whatsapp_number": "+91 00000 05265"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005265-01",
+        "date": "2026-07-25T09:01:00Z",
+        "amount": 92000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000638@cashnet.invalid",
+        "to_account": "mule-account-001594@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 92000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-25T08:51:00Z",
+    "fraud_end_time": "2026-07-25T09:11:00Z",
+    "reporting_delay_hours": 12
+  }
+}

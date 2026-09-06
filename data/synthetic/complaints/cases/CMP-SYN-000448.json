@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-000448",
+  "complaint_date": "2026-06-24T16:54:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 40,
+    "gender": "Female",
+    "phone": "+91 00000 00448",
+    "email": "victim-448@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 448",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1156",
+      "ifsc_code": "SYNTHETIC-BO-157",
+      "upi_id": "account-account-000157@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "training_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (training fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00448",
+      "email": "synthetic-fraud-448@example.invalid",
+      "telegram_id": "@synthetic_offer_448",
+      "whatsapp_number": "+91 00000 00448"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000448-01",
+        "date": "2026-06-24T10:44:00Z",
+        "amount": 48500,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1156",
+        "to_account": "XXXXXXXXX1908",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 48500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-24T10:34:00Z",
+    "fraud_end_time": "2026-06-24T10:54:00Z",
+    "reporting_delay_hours": 6
+  }
+}

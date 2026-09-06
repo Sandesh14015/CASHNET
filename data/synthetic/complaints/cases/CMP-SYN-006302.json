@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006302",
+  "complaint_date": "2026-08-06T01:23:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 31,
+    "gender": "Other",
+    "phone": "+91 00000 06302",
+    "email": "victim-6302@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6302",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX1852",
+      "ifsc_code": "SYNTHETIC-IB-853",
+      "upi_id": "account-account-000853@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "non_delivery",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (non delivery). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 06302",
+      "email": "synthetic-fraud-6302@example.invalid",
+      "whatsapp_number": "+91 00000 06302"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006302-01",
+        "date": "2026-08-05T01:13:00Z",
+        "amount": 59100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1852",
+        "to_account": "XXXXXXXXX2072",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 59100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-05T01:03:00Z",
+    "fraud_end_time": "2026-08-05T01:23:00Z",
+    "reporting_delay_hours": 24
+  }
+}

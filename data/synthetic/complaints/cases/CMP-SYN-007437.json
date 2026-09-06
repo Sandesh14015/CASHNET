@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007437",
+  "complaint_date": "2026-06-21T22:13:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 71,
+    "gender": "Male",
+    "phone": "+91 00000 07437",
+    "email": "victim-7437@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7437",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1607",
+      "ifsc_code": "SYNTHETIC-SB-608",
+      "upi_id": "account-account-000608@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07437",
+      "email": "synthetic-fraud-7437@example.invalid",
+      "whatsapp_number": "+91 00000 07437"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007437-01",
+        "date": "2026-06-21T16:03:00Z",
+        "amount": 50000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000608@cashnet.invalid",
+        "to_account": "mule-account-001620@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 50000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-21T15:53:00Z",
+    "fraud_end_time": "2026-06-21T16:13:00Z",
+    "reporting_delay_hours": 6
+  }
+}

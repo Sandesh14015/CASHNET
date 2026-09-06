@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001811",
+  "complaint_date": "2026-07-31T04:17:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 38,
+    "gender": "Male",
+    "phone": "+91 00000 01811",
+    "email": "victim-1811@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1811",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1414",
+      "ifsc_code": "SYNTHETIC-IB-415",
+      "upi_id": "account-account-000415@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01811",
+      "email": "synthetic-fraud-1811@example.invalid",
+      "whatsapp_number": "+91 00000 01811"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001811-01",
+        "date": "2026-07-31T03:07:00Z",
+        "amount": 4000,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1414",
+        "to_account": "XXXXXXXXX2505",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 4000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-31T02:57:00Z",
+    "fraud_end_time": "2026-07-31T03:17:00Z",
+    "reporting_delay_hours": 1
+  }
+}

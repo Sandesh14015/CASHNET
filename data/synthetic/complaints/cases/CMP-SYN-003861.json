@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003861",
+  "complaint_date": "2026-08-08T15:56:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 36,
+    "gender": "Male",
+    "phone": "+91 00000 03861",
+    "email": "victim-3861@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3861",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1114",
+      "ifsc_code": "SYNTHETIC-IB-115",
+      "upi_id": "account-account-000115@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "account_takeover",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (account takeover). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03861",
+      "email": "synthetic-fraud-3861@example.invalid",
+      "whatsapp_number": "+91 00000 03861"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003861-01",
+        "date": "2026-08-08T15:40:00Z",
+        "amount": 87900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000115@cashnet.invalid",
+        "to_account": "mule-account-001057@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 87900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-08T15:30:00Z",
+    "fraud_end_time": "2026-08-08T15:50:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

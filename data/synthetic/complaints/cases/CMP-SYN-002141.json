@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002141",
+  "complaint_date": "2026-07-19T08:20:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 24,
+    "gender": "Female",
+    "phone": "+91 00000 02141",
+    "email": "victim-2141@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2141",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1247",
+      "ifsc_code": "SYNTHETIC-IB-248",
+      "upi_id": "account-account-000248@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02141",
+      "email": "synthetic-fraud-2141@example.invalid",
+      "whatsapp_number": "+91 00000 02141"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002141-01",
+        "date": "2026-07-18T20:10:00Z",
+        "amount": 85800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000248@cashnet.invalid",
+        "to_account": "mule-account-001343@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 85800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-18T20:00:00Z",
+    "fraud_end_time": "2026-07-18T20:20:00Z",
+    "reporting_delay_hours": 12
+  }
+}

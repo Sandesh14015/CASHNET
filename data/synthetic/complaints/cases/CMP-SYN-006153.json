@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006153",
+  "complaint_date": "2026-06-24T23:56:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 70,
+    "gender": "Male",
+    "phone": "+91 00000 06153",
+    "email": "victim-6153@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6153",
+      "city": "New Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1240",
+      "ifsc_code": "SYNTHETIC-AB-241",
+      "upi_id": "account-account-000241@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "KYC_update",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (KYC update). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06153",
+      "email": "synthetic-fraud-6153@example.invalid",
+      "whatsapp_number": "+91 00000 06153"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006153-01",
+        "date": "2026-06-24T21:46:00Z",
+        "amount": 21200,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1240",
+        "to_account": "XXXXXXXXX2415",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 21200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-24T21:36:00Z",
+    "fraud_end_time": "2026-06-24T21:56:00Z",
+    "reporting_delay_hours": 2
+  }
+}

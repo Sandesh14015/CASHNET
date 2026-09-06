@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006507",
+  "complaint_date": "2026-07-04T11:58:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 65,
+    "gender": "Female",
+    "phone": "+91 00000 06507",
+    "email": "victim-6507@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6507",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1626",
+      "ifsc_code": "SYNTHETIC-IB-627",
+      "upi_id": "account-account-000627@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "collect_request",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (collect request). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06507",
+      "email": "synthetic-fraud-6507@example.invalid",
+      "whatsapp_number": "+91 00000 06507"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006507-01",
+        "date": "2026-07-04T11:42:00Z",
+        "amount": 28000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000627@cashnet.invalid",
+        "to_account": "mule-account-001050@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 28000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-04T11:32:00Z",
+    "fraud_end_time": "2026-07-04T11:52:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

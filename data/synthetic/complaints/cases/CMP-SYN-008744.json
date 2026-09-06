@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-008744",
+  "complaint_date": "2026-06-13T07:28:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 40,
+    "gender": "Female",
+    "phone": "+91 00000 08744",
+    "email": "victim-8744@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8744",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX2437",
+      "ifsc_code": "SYNTHETIC-IB-1438",
+      "upi_id": "account-account-001438@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "KYC_update",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (KYC update). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 08744",
+      "email": "synthetic-fraud-8744@example.invalid",
+      "whatsapp_number": "+91 00000 08744"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008744-01",
+        "date": "2026-06-12T07:18:00Z",
+        "amount": 62000,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2437",
+        "to_account": "XXXXXXXXX2252",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 62000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-12T07:08:00Z",
+    "fraud_end_time": "2026-06-12T07:28:00Z",
+    "reporting_delay_hours": 24
+  }
+}

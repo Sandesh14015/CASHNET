@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001347",
+  "complaint_date": "2026-08-04T09:30:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 36,
+    "gender": "Other",
+    "phone": "+91 00000 01347",
+    "email": "victim-1347@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1347",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1039",
+      "ifsc_code": "SYNTHETIC-BO-040",
+      "upi_id": "account-account-000040@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "urgent_verification",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (urgent verification). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01347",
+      "email": "synthetic-fraud-1347@example.invalid",
+      "whatsapp_number": "+91 00000 01347"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001347-01",
+        "date": "2026-08-04T09:14:00Z",
+        "amount": 91900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000040@cashnet.invalid",
+        "to_account": "mule-account-001327@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 91900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-04T09:04:00Z",
+    "fraud_end_time": "2026-08-04T09:24:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

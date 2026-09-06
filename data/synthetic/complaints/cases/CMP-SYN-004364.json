@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004364",
+  "complaint_date": "2026-06-02T13:16:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 35,
+    "gender": "Female",
+    "phone": "+91 00000 04364",
+    "email": "victim-4364@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4364",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1585",
+      "ifsc_code": "SYNTHETIC-IB-586",
+      "upi_id": "account-account-000586@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "collect_request",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (collect request). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04364",
+      "email": "synthetic-fraud-4364@example.invalid",
+      "whatsapp_number": "+91 00000 04364"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004364-01",
+        "date": "2026-06-02T07:06:00Z",
+        "amount": 49200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1585",
+        "to_account": "XXXXXXXXX1812",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 49200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-02T06:56:00Z",
+    "fraud_end_time": "2026-06-02T07:16:00Z",
+    "reporting_delay_hours": 6
+  }
+}

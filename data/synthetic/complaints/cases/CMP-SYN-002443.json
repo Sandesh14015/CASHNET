@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002443",
+  "complaint_date": "2026-08-12T04:40:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 44,
+    "gender": "Male",
+    "phone": "+91 00000 02443",
+    "email": "victim-2443@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2443",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1500",
+      "ifsc_code": "SYNTHETIC-IB-501",
+      "upi_id": "account-account-000501@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 02443",
+      "email": "synthetic-fraud-2443@example.invalid",
+      "whatsapp_number": "+91 00000 02443"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002443-01",
+        "date": "2026-08-12T03:30:00Z",
+        "amount": 16300,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1500",
+        "to_account": "XXXXXXXXX2096",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 16300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-12T03:20:00Z",
+    "fraud_end_time": "2026-08-12T03:40:00Z",
+    "reporting_delay_hours": 1
+  }
+}

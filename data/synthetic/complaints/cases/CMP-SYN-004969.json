@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004969",
+  "complaint_date": "2026-07-11T04:53:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 19,
+    "gender": "Other",
+    "phone": "+91 00000 04969",
+    "email": "victim-4969@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4969",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1251",
+      "ifsc_code": "SYNTHETIC-CB-252",
+      "upi_id": "account-account-000252@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "OTP_fraud",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (OTP fraud). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 04969",
+      "email": "synthetic-fraud-4969@example.invalid",
+      "whatsapp_number": "+91 00000 04969"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004969-01",
+        "date": "2026-07-11T04:13:00Z",
+        "amount": 9800,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1251",
+        "to_account": "XXXXXXXXX2707",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 9800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-11T04:03:00Z",
+    "fraud_end_time": "2026-07-11T04:23:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

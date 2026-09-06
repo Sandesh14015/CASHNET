@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-008526",
+  "complaint_date": "2026-07-28T17:11:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 18,
+    "gender": "Male",
+    "phone": "+91 00000 08526",
+    "email": "victim-8526@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8526",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX2639",
+      "ifsc_code": "SYNTHETIC-IB-1640",
+      "upi_id": "account-account-001640@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08526",
+      "email": "synthetic-fraud-8526@example.invalid",
+      "whatsapp_number": "+91 00000 08526"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008526-01",
+        "date": "2026-07-28T16:21:00Z",
+        "amount": 78500,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001640@cashnet.invalid",
+        "to_account": "mule-account-001476@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-008526-02",
+        "date": "2026-07-28T16:31:00Z",
+        "amount": 56000,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2639",
+        "to_account": "XXXXXXXXX2475",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 134500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-28T16:11:00Z",
+    "fraud_end_time": "2026-07-28T16:41:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

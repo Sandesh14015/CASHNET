@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009624",
+  "complaint_date": "2026-06-29T18:31:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 58,
+    "gender": "Male",
+    "phone": "+91 00000 09624",
+    "email": "victim-9624@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9624",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1892",
+      "ifsc_code": "SYNTHETIC-UB-893",
+      "upi_id": "account-account-000893@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "SIM_swap",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (SIM swap). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09624",
+      "email": "synthetic-fraud-9624@example.invalid",
+      "whatsapp_number": "+91 00000 09624"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009624-01",
+        "date": "2026-06-28T18:21:00Z",
+        "amount": 72700,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1892",
+        "to_account": "XXXXXXXXX2364",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 72700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-28T18:11:00Z",
+    "fraud_end_time": "2026-06-28T18:31:00Z",
+    "reporting_delay_hours": 24
+  }
+}

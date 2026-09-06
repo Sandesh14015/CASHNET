@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005540",
+  "complaint_date": "2026-08-05T00:14:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 22,
+    "gender": "Male",
+    "phone": "+91 00000 05540",
+    "email": "victim-5540@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5540",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1362",
+      "ifsc_code": "SYNTHETIC-AB-363",
+      "upi_id": "account-account-000363@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "bank_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (bank impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05540",
+      "email": "synthetic-fraud-5540@example.invalid",
+      "whatsapp_number": "+91 00000 05540"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005540-01",
+        "date": "2026-08-04T18:04:00Z",
+        "amount": 43400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000363@cashnet.invalid",
+        "to_account": "mule-account-001139@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 43400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-04T17:54:00Z",
+    "fraud_end_time": "2026-08-04T18:14:00Z",
+    "reporting_delay_hours": 6
+  }
+}

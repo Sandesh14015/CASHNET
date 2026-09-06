@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-001221",
+  "complaint_date": "2026-06-07T17:36:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 30,
+    "gender": "Female",
+    "phone": "+91 00000 01221",
+    "email": "victim-1221@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1221",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1835",
+      "ifsc_code": "SYNTHETIC-BO-836",
+      "upi_id": "account-account-000836@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "bank_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (bank impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01221",
+      "email": "synthetic-fraud-1221@example.invalid",
+      "whatsapp_number": "+91 00000 01221"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001221-01",
+        "date": "2026-06-07T11:16:00Z",
+        "amount": 94000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000836@cashnet.invalid",
+        "to_account": "mule-account-001599@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-001221-02",
+        "date": "2026-06-07T11:26:00Z",
+        "amount": 76300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000836@cashnet.invalid",
+        "to_account": "mule-account-001599@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 170300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-07T11:06:00Z",
+    "fraud_end_time": "2026-06-07T11:36:00Z",
+    "reporting_delay_hours": 6
+  }
+}

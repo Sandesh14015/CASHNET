@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-000679",
+  "complaint_date": "2026-06-19T20:35:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 21,
+    "gender": "Female",
+    "phone": "+91 00000 00679",
+    "email": "victim-679@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 679",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1451",
+      "ifsc_code": "SYNTHETIC-IB-452",
+      "upi_id": "account-account-000452@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "fake_summons",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (fake summons). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 00679",
+      "email": "synthetic-fraud-679@example.invalid",
+      "whatsapp_number": "+91 00000 00679"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000679-01",
+        "date": "2026-06-19T14:15:00Z",
+        "amount": 54900,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1451",
+        "to_account": "XXXXXXXXX2280",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-000679-02",
+        "date": "2026-06-19T14:25:00Z",
+        "amount": 33600,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1451",
+        "to_account": "XXXXXXXXX2280",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 88500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-19T14:05:00Z",
+    "fraud_end_time": "2026-06-19T14:35:00Z",
+    "reporting_delay_hours": 6
+  }
+}

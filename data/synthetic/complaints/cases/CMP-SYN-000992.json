@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000992",
+  "complaint_date": "2026-07-29T01:37:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 64,
+    "gender": "Male",
+    "phone": "+91 00000 00992",
+    "email": "victim-992@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 992",
+      "city": "Jaipur",
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "coordinates": {
+        "latitude": 26.9124,
+        "longitude": 75.7873
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1384",
+      "ifsc_code": "SYNTHETIC-HB-385",
+      "upi_id": "account-account-000385@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "OTP_fraud",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (OTP fraud). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00992",
+      "email": "synthetic-fraud-992@example.invalid",
+      "whatsapp_number": "+91 00000 00992"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000992-01",
+        "date": "2026-07-28T19:27:00Z",
+        "amount": 15400,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1384",
+        "to_account": "XXXXXXXXX2134",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 15400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-28T19:17:00Z",
+    "fraud_end_time": "2026-07-28T19:37:00Z",
+    "reporting_delay_hours": 6
+  }
+}

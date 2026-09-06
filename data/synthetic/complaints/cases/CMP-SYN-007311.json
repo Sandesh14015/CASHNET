@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007311",
+  "complaint_date": "2026-08-20T12:23:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 52,
+    "gender": "Other",
+    "phone": "+91 00000 07311",
+    "email": "victim-7311@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7311",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1313",
+      "ifsc_code": "SYNTHETIC-IB-314",
+      "upi_id": "account-account-000314@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "bank_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (bank impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 07311",
+      "email": "synthetic-fraud-7311@example.invalid",
+      "whatsapp_number": "+91 00000 07311"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007311-01",
+        "date": "2026-08-20T12:07:00Z",
+        "amount": 53400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000314@cashnet.invalid",
+        "to_account": "mule-account-000982@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 53400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-20T11:57:00Z",
+    "fraud_end_time": "2026-08-20T12:17:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

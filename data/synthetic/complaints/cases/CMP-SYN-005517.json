@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005517",
+  "complaint_date": "2026-08-15T09:50:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 69,
+    "gender": "Male",
+    "phone": "+91 00000 05517",
+    "email": "victim-5517@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5517",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1250",
+      "ifsc_code": "SYNTHETIC-HB-251",
+      "upi_id": "account-account-000251@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "ransomware",
+    "sub_type": "personal_data_ransom",
+    "description": "Synthetic CASHNET training complaint: victim reported a ransomware (personal data ransom). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05517",
+      "email": "synthetic-fraud-5517@example.invalid",
+      "whatsapp_number": "+91 00000 05517"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005517-01",
+        "date": "2026-08-15T07:40:00Z",
+        "amount": 55300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000251@cashnet.invalid",
+        "to_account": "mule-account-001462@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 55300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-15T07:30:00Z",
+    "fraud_end_time": "2026-08-15T07:50:00Z",
+    "reporting_delay_hours": 2
+  }
+}

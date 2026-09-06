@@ -1,0 +1,208 @@
+# ============================================================================
+# CashNet Blockchain Configuration
+# ============================================================================
+
+# Default chain settings
+default_chain: ethereum
+
+# Chain-specific configurations
+chains:
+  ethereum:
+    enabled: true
+    rpc_url: "https://eth.llamarpc.com"
+    ws_url: "wss://eth.llamarpc.com"
+    chain_id: 1
+    block_time: 12  # seconds
+    native_currency: "ETH"
+    decimals: 18
+    
+    # Etherscan API (for enhanced data)
+    etherscan_api_url: "https://api.etherscan.io/api"
+    etherscan_api_key: "${ETHERSCAN_API_KEY}"
+    
+    # Rate limiting
+    rate_limit:
+      requests_per_second: 5
+      burst_size: 10
+    
+    # Monitoring thresholds
+    monitoring:
+      lag_warning_seconds: 300
+      lag_critical_seconds: 3600
+      health_check_interval: 60
+    
+    # Known contract addresses
+    known_contracts:
+      # DEX Routers
+      "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": "uniswap_v2_router"
+      "0xe592427a0aece92de3edee1f18e0157c05861564": "uniswap_v3_router"
+      
+      # Stablecoins
+      "0xdac17f958d2ee523a2206206994597c13d831ec7": "usdt"
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": "usdc"
+      
+      # Wrapped tokens
+      "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": "weth"
+    
+    # Risk scoring weights
+    risk_weights:
+      mixer_interaction: 0.8
+      large_value_threshold: 100  # ETH
+      large_value_score: 0.3
+      rapid_movement_score: 0.4
+      unknown_recipient_score: 0.1
+
+  bitcoin:
+    enabled: false
+    rpc_url: "http://localhost:8332"
+    rpc_user: "${BITCOIN_RPC_USER}"
+    rpc_password: "${BITCOIN_RPC_PASSWORD}"
+    block_time: 600  # seconds (10 minutes)
+    native_currency: "BTC"
+    decimals: 8
+    
+    # Blockstream API
+    blockstream_api_url: "https://blockstream.info/api"
+    
+    monitoring:
+      lag_warning_seconds: 3600
+      lag_critical_seconds: 7200
+      health_check_interval: 300
+
+  tron:
+    enabled: false
+    api_url: "https://api.trongrid.io"
+    api_key: "${TRONGRID_API_KEY}"
+    block_time: 3  # seconds
+    native_currency: "TRX"
+    decimals: 6
+    
+    monitoring:
+      lag_warning_seconds: 60
+      lag_critical_seconds: 600
+      health_check_interval: 30
+
+  bnb:
+    enabled: false
+    rpc_url: "https://bsc-dataseed.binance.org/"
+    chain_id: 56
+    block_time: 3  # seconds
+    native_currency: "BNB"
+    decimals: 18
+    
+    # BscScan API
+    bscscan_api_url: "https://api.bscscan.com/api"
+    bscscan_api_key: "${BSCSCAN_API_KEY}"
+    
+    monitoring:
+      lag_warning_seconds: 60
+      lag_critical_seconds: 600
+      health_check_interval: 30
+
+  solana:
+    enabled: false
+    rpc_url: "https://api.mainnet-beta.solana.com"
+    rpc_websocket: "wss://api.mainnet-beta.solana.com"
+    block_time: 0.4  # seconds
+    native_currency: "SOL"
+    decimals: 9
+    
+    monitoring:
+      lag_warning_seconds: 10
+      lag_critical_seconds: 60
+      health_check_interval: 10
+
+  polygon:
+    enabled: false
+    rpc_url: "https://polygon-rpc.com/"
+    chain_id: 137
+    block_time: 2  # seconds
+    native_currency: "MATIC"
+    decimals: 18
+    
+    # Polygonscan API
+    polygonscan_api_url: "https://api.polygonscan.com/api"
+    polygonscan_api_key: "${POLYGONSCAN_API_KEY}"
+    
+    monitoring:
+      lag_warning_seconds: 30
+      lag_critical_seconds: 300
+      health_check_interval: 30
+
+# Graph database configuration
+graph:
+  neo4j:
+    uri: "bolt://localhost:7687"
+    user: "neo4j"
+    password: "${NEO4J_PASSWORD}"
+    database: "cashnet"
+    
+    # Connection pool
+    max_connection_pool_size: 50
+    connection_timeout: 30
+    
+    # Query limits
+    max_path_length: 10
+    max_results: 1000
+
+# Transaction normalization
+normalization:
+  # Address classification
+  address_classification:
+    enabled: true
+    use_external_apis: false  # Enable for better classification
+    
+  # Risk scoring
+  risk_scoring:
+    enabled: true
+    threshold_for_suspicious: 0.7
+    
+    weights:
+      mixer_interaction: 0.8
+      large_value: 0.2
+      failed_transaction: 0.1
+      unknown_recipient: 0.1
+      contract_interaction: 0.1
+
+# Monitoring configuration
+monitoring:
+  enabled: true
+  interval_seconds: 60
+  
+  # Alert thresholds
+  alerts:
+    lag_warning_seconds: 300
+    lag_critical_seconds: 3600
+    error_rate_warning: 0.1
+    error_rate_critical: 0.5
+  
+  # Metrics export
+  metrics:
+    enabled: true
+    port: 9090
+    path: "/metrics"
+  
+  # Alert destinations
+  alert_destinations:
+    - type: "log"
+      enabled: true
+    - type: "webhook"
+      enabled: false
+      url: "${ALERT_WEBHOOK_URL}"
+    - type: "email"
+      enabled: false
+      recipients: ["alerts@cashnet.gov.in"]
+
+# Data retention
+retention:
+  # How long to keep transaction data
+  transactions_days: 365
+  
+  # How long to keep metrics
+  metrics_days: 90
+  
+  # How long to keep alerts
+  alerts_days: 30
+  
+  # Cleanup schedule
+  cleanup_cron: "0 2 * * *"  # Daily at 2 AM

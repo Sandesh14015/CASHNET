@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003658",
+  "complaint_date": "2026-06-07T08:18:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 18,
+    "gender": "Female",
+    "phone": "+91 00000 03658",
+    "email": "victim-3658@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3658",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX2815",
+      "ifsc_code": "SYNTHETIC-IB-1816",
+      "upi_id": "account-account-001816@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "police_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (police impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03658",
+      "email": "synthetic-fraud-3658@example.invalid",
+      "whatsapp_number": "+91 00000 03658"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003658-01",
+        "date": "2026-06-06T20:08:00Z",
+        "amount": 93800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2815",
+        "to_account": "XXXXXXXXX2674",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 93800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-06T19:58:00Z",
+    "fraud_end_time": "2026-06-06T20:18:00Z",
+    "reporting_delay_hours": 12
+  }
+}

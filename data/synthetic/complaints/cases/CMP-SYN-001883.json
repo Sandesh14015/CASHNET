@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001883",
+  "complaint_date": "2026-08-15T19:48:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 37,
+    "gender": "Other",
+    "phone": "+91 00000 01883",
+    "email": "victim-1883@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1883",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1048",
+      "ifsc_code": "SYNTHETIC-KM-049",
+      "upi_id": "account-account-000049@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "OTP_fraud",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (OTP fraud). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01883",
+      "email": "synthetic-fraud-1883@example.invalid",
+      "whatsapp_number": "+91 00000 01883"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001883-01",
+        "date": "2026-08-15T19:08:00Z",
+        "amount": 22200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1048",
+        "to_account": "XXXXXXXXX2722",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 22200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-15T18:58:00Z",
+    "fraud_end_time": "2026-08-15T19:18:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

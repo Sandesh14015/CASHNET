@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002076",
+  "complaint_date": "2026-08-25T00:49:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 56,
+    "gender": "Female",
+    "phone": "+91 00000 02076",
+    "email": "victim-2076@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2076",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1508",
+      "ifsc_code": "SYNTHETIC-BO-509",
+      "upi_id": "account-account-000509@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02076",
+      "email": "synthetic-fraud-2076@example.invalid",
+      "whatsapp_number": "+91 00000 02076"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002076-01",
+        "date": "2026-08-24T23:39:00Z",
+        "amount": 73700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000509@cashnet.invalid",
+        "to_account": "mule-account-001635@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 73700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-24T23:29:00Z",
+    "fraud_end_time": "2026-08-24T23:49:00Z",
+    "reporting_delay_hours": 1
+  }
+}

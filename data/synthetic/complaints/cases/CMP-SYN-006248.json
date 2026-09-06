@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006248",
+  "complaint_date": "2026-06-17T16:53:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 28,
+    "gender": "Male",
+    "phone": "+91 00000 06248",
+    "email": "victim-6248@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6248",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX2058",
+      "ifsc_code": "SYNTHETIC-HB-1059",
+      "upi_id": "account-account-001059@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 06248",
+      "email": "synthetic-fraud-6248@example.invalid",
+      "whatsapp_number": "+91 00000 06248"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006248-01",
+        "date": "2026-06-16T16:43:00Z",
+        "amount": 41300,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2058",
+        "to_account": "XXXXXXXXX2500",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 41300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-16T16:33:00Z",
+    "fraud_end_time": "2026-06-16T16:53:00Z",
+    "reporting_delay_hours": 24
+  }
+}

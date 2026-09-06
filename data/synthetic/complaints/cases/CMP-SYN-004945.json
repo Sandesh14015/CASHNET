@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-004945",
+  "complaint_date": "2026-08-22T00:28:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 40,
+    "gender": "Other",
+    "phone": "+91 00000 04945",
+    "email": "victim-4945@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4945",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX2270",
+      "ifsc_code": "SYNTHETIC-BO-1271",
+      "upi_id": "account-account-001271@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "part_time_job",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (part time job). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 04945",
+      "email": "synthetic-fraud-4945@example.invalid",
+      "telegram_id": "@synthetic_offer_4945",
+      "whatsapp_number": "+91 00000 04945"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004945-01",
+        "date": "2026-08-22T00:12:00Z",
+        "amount": 18200,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001271@cashnet.invalid",
+        "to_account": "mule-account-001655@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 18200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-22T00:02:00Z",
+    "fraud_end_time": "2026-08-22T00:22:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

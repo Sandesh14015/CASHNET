@@ -1,0 +1,64 @@
+# ============================================================================
+# CashNet Prometheus Configuration
+# ============================================================================
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+# ============================================================================
+# Alert Rules
+# ============================================================================
+rule_files:
+  - "rules/*.yml"
+
+# ============================================================================
+# Scrape Configurations
+# ============================================================================
+scrape_configs:
+  # CashNet API Server
+  - job_name: 'cashnet-api'
+    static_configs:
+      - targets: ['api:9090']
+    metrics_path: '/metrics'
+    scrape_interval: 10s
+  
+  # CashNet Geospatial Service
+  - job_name: 'cashnet-geospatial'
+    static_configs:
+      - targets: ['geospatial:9090']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+  
+  # PostgreSQL
+  - job_name: 'postgres'
+    static_configs:
+      - targets: ['postgres:9187']
+    scrape_interval: 30s
+  
+  # Redis
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['redis:9121']
+    scrape_interval: 30s
+  
+  # Nginx
+  - job_name: 'nginx'
+    static_configs:
+      - targets: ['nginx:9113']
+    scrape_interval: 30s
+  
+  # Node Exporter (System Metrics)
+  - job_name: 'node'
+    static_configs:
+      - targets: ['node-exporter:9100']
+    scrape_interval: 30s
+
+# ============================================================================
+# Alertmanager Configuration
+# ============================================================================
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          - alertmanager:9093

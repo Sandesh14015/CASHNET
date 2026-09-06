@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005094",
+  "complaint_date": "2026-06-30T08:14:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 53,
+    "gender": "Other",
+    "phone": "+91 00000 05094",
+    "email": "victim-5094@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5094",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1445",
+      "ifsc_code": "SYNTHETIC-KM-446",
+      "upi_id": "account-account-000446@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05094",
+      "email": "synthetic-fraud-5094@example.invalid",
+      "whatsapp_number": "+91 00000 05094"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005094-01",
+        "date": "2026-06-29T20:04:00Z",
+        "amount": 53300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000446@cashnet.invalid",
+        "to_account": "mule-account-001432@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 53300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-29T19:54:00Z",
+    "fraud_end_time": "2026-06-29T20:14:00Z",
+    "reporting_delay_hours": 12
+  }
+}

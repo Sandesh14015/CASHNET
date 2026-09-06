@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-000514",
+  "complaint_date": "2026-06-22T10:50:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 26,
+    "gender": "Male",
+    "phone": "+91 00000 00514",
+    "email": "victim-514@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 514",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1955",
+      "ifsc_code": "SYNTHETIC-BO-956",
+      "upi_id": "account-account-000956@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "collect_request",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (collect request). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00514",
+      "email": "synthetic-fraud-514@example.invalid",
+      "whatsapp_number": "+91 00000 00514"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000514-01",
+        "date": "2026-06-21T10:40:00Z",
+        "amount": 40800,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1955",
+        "to_account": "XXXXXXXXX1938",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 40800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-21T10:30:00Z",
+    "fraud_end_time": "2026-06-21T10:50:00Z",
+    "reporting_delay_hours": 24
+  }
+}

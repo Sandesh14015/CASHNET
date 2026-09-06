@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007038",
+  "complaint_date": "2026-06-02T14:08:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 64,
+    "gender": "Male",
+    "phone": "+91 00000 07038",
+    "email": "victim-7038@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7038",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1332",
+      "ifsc_code": "SYNTHETIC-KM-333",
+      "upi_id": "account-account-000333@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "fake_support",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (fake support). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07038",
+      "email": "synthetic-fraud-7038@example.invalid",
+      "whatsapp_number": "+91 00000 07038"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007038-01",
+        "date": "2026-06-02T11:58:00Z",
+        "amount": 26700,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1332",
+        "to_account": "XXXXXXXXX2351",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 26700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-02T11:48:00Z",
+    "fraud_end_time": "2026-06-02T12:08:00Z",
+    "reporting_delay_hours": 2
+  }
+}

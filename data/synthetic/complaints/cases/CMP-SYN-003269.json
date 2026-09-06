@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-003269",
+  "complaint_date": "2026-07-20T14:23:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 70,
+    "gender": "Female",
+    "phone": "+91 00000 03269",
+    "email": "victim-3269@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3269",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1865",
+      "ifsc_code": "SYNTHETIC-CB-866",
+      "upi_id": "account-account-000866@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "online_shopping_fraud",
+    "sub_type": "non_delivery",
+    "description": "Synthetic CASHNET training complaint: victim reported a online shopping fraud (non delivery). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03269",
+      "email": "synthetic-fraud-3269@example.invalid",
+      "whatsapp_number": "+91 00000 03269"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003269-01",
+        "date": "2026-07-20T13:57:00Z",
+        "amount": 51400,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1865",
+        "to_account": "XXXXXXXXX2189",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-003269-02",
+        "date": "2026-07-20T14:07:00Z",
+        "amount": 36700,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1865",
+        "to_account": "XXXXXXXXX2189",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 88100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-20T13:47:00Z",
+    "fraud_end_time": "2026-07-20T14:17:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

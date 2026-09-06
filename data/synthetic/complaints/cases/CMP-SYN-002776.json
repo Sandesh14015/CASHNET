@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002776",
+  "complaint_date": "2026-07-10T10:40:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 57,
+    "gender": "Female",
+    "phone": "+91 00000 02776",
+    "email": "victim-2776@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2776",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1008",
+      "ifsc_code": "SYNTHETIC-BO-009",
+      "upi_id": "account-account-000009@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 02776",
+      "email": "synthetic-fraud-2776@example.invalid",
+      "whatsapp_number": "+91 00000 02776"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002776-01",
+        "date": "2026-07-10T08:30:00Z",
+        "amount": 16900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000009@cashnet.invalid",
+        "to_account": "mule-account-001947@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 16900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-10T08:20:00Z",
+    "fraud_end_time": "2026-07-10T08:40:00Z",
+    "reporting_delay_hours": 2
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-009127",
+  "complaint_date": "2026-06-02T23:10:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 54,
+    "gender": "Female",
+    "phone": "+91 00000 09127",
+    "email": "victim-9127@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9127",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX2171",
+      "ifsc_code": "SYNTHETIC-BO-1172",
+      "upi_id": "account-account-001172@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "sextortion",
+    "sub_type": "video_call_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a sextortion (video call scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09127",
+      "email": "synthetic-fraud-9127@example.invalid",
+      "video_call_platform": "Synthetic Video Platform",
+      "whatsapp_number": "+91 00000 09127"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009127-01",
+        "date": "2026-06-02T21:00:00Z",
+        "amount": 87900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001172@cashnet.invalid",
+        "to_account": "mule-account-001582@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 87900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-02T20:50:00Z",
+    "fraud_end_time": "2026-06-02T21:10:00Z",
+    "reporting_delay_hours": 2
+  }
+}

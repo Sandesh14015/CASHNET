@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-008780",
+  "complaint_date": "2026-07-25T05:01:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 52,
+    "gender": "Male",
+    "phone": "+91 00000 08780",
+    "email": "victim-8780@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8780",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX2135",
+      "ifsc_code": "SYNTHETIC-BO-1136",
+      "upi_id": "account-account-001136@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "sextortion",
+    "sub_type": "image_blackmail",
+    "description": "Synthetic CASHNET training complaint: victim reported a sextortion (image blackmail). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08780",
+      "email": "synthetic-fraud-8780@example.invalid",
+      "video_call_platform": "Synthetic Video Platform",
+      "whatsapp_number": "+91 00000 08780"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008780-01",
+        "date": "2026-07-24T04:51:00Z",
+        "amount": 86900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001136@cashnet.invalid",
+        "to_account": "mule-account-001805@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 86900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-24T04:41:00Z",
+    "fraud_end_time": "2026-07-24T05:01:00Z",
+    "reporting_delay_hours": 24
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004524",
+  "complaint_date": "2026-08-28T04:39:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 58,
+    "gender": "Other",
+    "phone": "+91 00000 04524",
+    "email": "victim-4524@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4524",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1005",
+      "ifsc_code": "SYNTHETIC-AB-006",
+      "upi_id": "account-account-000006@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "fake_exchange",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (fake exchange). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04524",
+      "email": "synthetic-fraud-4524@example.invalid",
+      "whatsapp_number": "+91 00000 04524"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004524-01",
+        "date": "2026-08-28T04:23:00Z",
+        "amount": 71000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000006@cashnet.invalid",
+        "to_account": "mule-account-001193@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 71000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-28T04:13:00Z",
+    "fraud_end_time": "2026-08-28T04:33:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

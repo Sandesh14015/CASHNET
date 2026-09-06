@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-004404",
+  "complaint_date": "2026-07-19T20:47:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 25,
+    "gender": "Male",
+    "phone": "+91 00000 04404",
+    "email": "victim-4404@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4404",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX2775",
+      "ifsc_code": "SYNTHETIC-IB-1776",
+      "upi_id": "account-account-001776@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "ransomware",
+    "sub_type": "company_data_ransom",
+    "description": "Synthetic CASHNET training complaint: victim reported a ransomware (company data ransom). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04404",
+      "email": "synthetic-fraud-4404@example.invalid",
+      "whatsapp_number": "+91 00000 04404"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004404-01",
+        "date": "2026-07-19T18:27:00Z",
+        "amount": 47500,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2775",
+        "to_account": "XXXXXXXXX2534",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-004404-02",
+        "date": "2026-07-19T18:37:00Z",
+        "amount": 66700,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX2775",
+        "to_account": "XXXXXXXXX2534",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 114200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-19T18:17:00Z",
+    "fraud_end_time": "2026-07-19T18:47:00Z",
+    "reporting_delay_hours": 2
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-009967",
+  "complaint_date": "2026-06-23T10:16:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 40,
+    "gender": "Female",
+    "phone": "+91 00000 09967",
+    "email": "victim-9967@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 9967",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1175",
+      "ifsc_code": "SYNTHETIC-CB-176",
+      "upi_id": "account-account-000176@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "remote_access",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (remote access). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 09967",
+      "email": "synthetic-fraud-9967@example.invalid",
+      "whatsapp_number": "+91 00000 09967"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-009967-01",
+        "date": "2026-06-23T08:06:00Z",
+        "amount": 83400,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1175",
+        "to_account": "XXXXXXXXX2257",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 83400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-23T07:56:00Z",
+    "fraud_end_time": "2026-06-23T08:16:00Z",
+    "reporting_delay_hours": 2
+  }
+}

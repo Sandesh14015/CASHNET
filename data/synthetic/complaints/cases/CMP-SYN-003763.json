@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-003763",
+  "complaint_date": "2026-07-19T23:33:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 18,
+    "gender": "Female",
+    "phone": "+91 00000 03763",
+    "email": "victim-3763@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3763",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1080",
+      "ifsc_code": "SYNTHETIC-IB-081",
+      "upi_id": "account-account-000081@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "security_deposit",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (security deposit). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03763",
+      "email": "synthetic-fraud-3763@example.invalid",
+      "telegram_id": "@synthetic_offer_3763",
+      "whatsapp_number": "+91 00000 03763"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003763-01",
+        "date": "2026-07-19T21:23:00Z",
+        "amount": 76000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000081@cashnet.invalid",
+        "to_account": "mule-account-001937@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 76000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-19T21:13:00Z",
+    "fraud_end_time": "2026-07-19T21:33:00Z",
+    "reporting_delay_hours": 2
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005108",
+  "complaint_date": "2026-06-13T12:02:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 74,
+    "gender": "Female",
+    "phone": "+91 00000 05108",
+    "email": "victim-5108@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5108",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1191",
+      "ifsc_code": "SYNTHETIC-IB-192",
+      "upi_id": "account-account-000192@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "wallet_transfer",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (wallet transfer). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05108",
+      "email": "synthetic-fraud-5108@example.invalid",
+      "whatsapp_number": "+91 00000 05108"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005108-01",
+        "date": "2026-06-13T11:22:00Z",
+        "amount": 64900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000192@cashnet.invalid",
+        "to_account": "mule-account-001167@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 64900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-13T11:12:00Z",
+    "fraud_end_time": "2026-06-13T11:32:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

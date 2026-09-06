@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-000141",
+  "complaint_date": "2026-08-19T15:17:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 22,
+    "gender": "Other",
+    "phone": "+91 00000 00141",
+    "email": "victim-141@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 141",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1376",
+      "ifsc_code": "SYNTHETIC-HB-377",
+      "upi_id": "account-account-000377@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "training_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (training fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00141",
+      "email": "synthetic-fraud-141@example.invalid",
+      "telegram_id": "@synthetic_offer_141",
+      "whatsapp_number": "+91 00000 00141"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000141-01",
+        "date": "2026-08-19T03:07:00Z",
+        "amount": 43200,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000377@cashnet.invalid",
+        "to_account": "mule-account-000799@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 43200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-19T02:57:00Z",
+    "fraud_end_time": "2026-08-19T03:17:00Z",
+    "reporting_delay_hours": 12
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002968",
+  "complaint_date": "2026-07-09T19:21:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 54,
+    "gender": "Other",
+    "phone": "+91 00000 02968",
+    "email": "victim-2968@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2968",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1636",
+      "ifsc_code": "SYNTHETIC-HB-637",
+      "upi_id": "account-account-000637@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "romance_scam",
+    "sub_type": "gift_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a romance scam (gift scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02968",
+      "email": "synthetic-fraud-2968@example.invalid",
+      "whatsapp_number": "+91 00000 02968"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002968-01",
+        "date": "2026-07-09T18:11:00Z",
+        "amount": 52400,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000637@cashnet.invalid",
+        "to_account": "mule-account-001442@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 52400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-09T18:01:00Z",
+    "fraud_end_time": "2026-07-09T18:21:00Z",
+    "reporting_delay_hours": 1
+  }
+}

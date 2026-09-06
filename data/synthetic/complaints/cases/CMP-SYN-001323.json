@@ -1,0 +1,71 @@
+{
+  "complaint_id": "CMP-SYN-001323",
+  "complaint_date": "2026-06-09T17:34:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 64,
+    "gender": "Other",
+    "phone": "+91 00000 01323",
+    "email": "victim-1323@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1323",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX2159",
+      "ifsc_code": "SYNTHETIC-CB-1160",
+      "upi_id": "account-account-001160@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "training_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (training fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01323",
+      "email": "synthetic-fraud-1323@example.invalid",
+      "telegram_id": "@synthetic_offer_1323",
+      "whatsapp_number": "+91 00000 01323"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001323-01",
+        "date": "2026-06-09T11:14:00Z",
+        "amount": 78800,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX2159",
+        "to_account": "XXXXXXXXX1904",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-001323-02",
+        "date": "2026-06-09T11:24:00Z",
+        "amount": 37300,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2159",
+        "to_account": "XXXXXXXXX1904",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 116100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-09T11:04:00Z",
+    "fraud_end_time": "2026-06-09T11:34:00Z",
+    "reporting_delay_hours": 6
+  }
+}

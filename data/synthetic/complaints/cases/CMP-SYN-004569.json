@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-004569",
+  "complaint_date": "2026-08-03T00:19:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 58,
+    "gender": "Female",
+    "phone": "+91 00000 04569",
+    "email": "victim-4569@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4569",
+      "city": "New Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1663",
+      "ifsc_code": "SYNTHETIC-IB-664",
+      "upi_id": "account-account-000664@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "video_call_threat",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (video call threat). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04569",
+      "email": "synthetic-fraud-4569@example.invalid",
+      "whatsapp_number": "+91 00000 04569"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004569-01",
+        "date": "2026-08-01T23:59:00Z",
+        "amount": 89500,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1663",
+        "to_account": "XXXXXXXXX1910",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-004569-02",
+        "date": "2026-08-02T00:09:00Z",
+        "amount": 98900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000664@cashnet.invalid",
+        "to_account": "mule-account-000911@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 188400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-01T23:49:00Z",
+    "fraud_end_time": "2026-08-02T00:19:00Z",
+    "reporting_delay_hours": 24
+  }
+}

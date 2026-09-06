@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-005816",
+  "complaint_date": "2026-08-28T15:50:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 58,
+    "gender": "Male",
+    "phone": "+91 00000 05816",
+    "email": "victim-5816@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5816",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX1150",
+      "ifsc_code": "SYNTHETIC-KM-151",
+      "upi_id": "account-account-000151@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05816",
+      "email": "synthetic-fraud-5816@example.invalid",
+      "whatsapp_number": "+91 00000 05816"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005816-01",
+        "date": "2026-08-28T15:24:00Z",
+        "amount": 10900,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1150",
+        "to_account": "XXXXXXXXX2379",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-005816-02",
+        "date": "2026-08-28T15:34:00Z",
+        "amount": 27300,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1150",
+        "to_account": "XXXXXXXXX2379",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 38200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-28T15:14:00Z",
+    "fraud_end_time": "2026-08-28T15:44:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

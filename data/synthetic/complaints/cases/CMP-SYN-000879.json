@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-000879",
+  "complaint_date": "2026-08-28T03:21:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 24,
+    "gender": "Male",
+    "phone": "+91 00000 00879",
+    "email": "victim-879@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 879",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1000",
+      "ifsc_code": "SYNTHETIC-HB-001",
+      "upi_id": "account-account-000001@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "investment_scam",
+    "sub_type": "guaranteed_returns",
+    "description": "Synthetic CASHNET training complaint: victim reported a investment scam (guaranteed returns). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00879",
+      "email": "synthetic-fraud-879@example.invalid",
+      "telegram_id": "@synthetic_offer_879",
+      "whatsapp_number": "+91 00000 00879"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000879-01",
+        "date": "2026-08-27T15:11:00Z",
+        "amount": 32000,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000001@cashnet.invalid",
+        "to_account": "mule-account-000826@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 32000,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-27T15:01:00Z",
+    "fraud_end_time": "2026-08-27T15:21:00Z",
+    "reporting_delay_hours": 12
+  }
+}

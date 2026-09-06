@@ -1,0 +1,81 @@
+{
+  "complaint_id": "CMP-SYN-000817",
+  "complaint_date": "2026-08-10T22:03:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 45,
+    "gender": "Other",
+    "phone": "+91 00000 00817",
+    "email": "victim-817@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 817",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "Kotak Mahindra Bank",
+      "account_number": "XXXXXXXXX2447",
+      "ifsc_code": "SYNTHETIC-KM-1448",
+      "upi_id": "account-account-001448@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "security_deposit",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (security deposit). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 00817",
+      "email": "synthetic-fraud-817@example.invalid",
+      "telegram_id": "@synthetic_offer_817",
+      "whatsapp_number": "+91 00000 00817"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000817-01",
+        "date": "2026-08-10T21:27:00Z",
+        "amount": 7600,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX2447",
+        "to_account": "XXXXXXXXX2433",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-000817-02",
+        "date": "2026-08-10T21:37:00Z",
+        "amount": 29200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2447",
+        "to_account": "XXXXXXXXX2433",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-000817-03",
+        "date": "2026-08-10T21:47:00Z",
+        "amount": 98000,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX2447",
+        "to_account": "XXXXXXXXX2433",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 134800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-10T21:17:00Z",
+    "fraud_end_time": "2026-08-10T21:57:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

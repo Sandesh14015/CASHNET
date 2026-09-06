@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-008045",
+  "complaint_date": "2026-08-08T06:02:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 71,
+    "gender": "Other",
+    "phone": "+91 00000 08045",
+    "email": "victim-8045@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8045",
+      "city": "Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "Indian Bank",
+      "account_number": "XXXXXXXXX1943",
+      "ifsc_code": "SYNTHETIC-IB-944",
+      "upi_id": "account-account-000944@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08045",
+      "email": "synthetic-fraud-8045@example.invalid",
+      "whatsapp_number": "+91 00000 08045"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008045-01",
+        "date": "2026-08-08T05:22:00Z",
+        "amount": 45500,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1943",
+        "to_account": "XXXXXXXXX2364",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 45500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-08T05:12:00Z",
+    "fraud_end_time": "2026-08-08T05:32:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

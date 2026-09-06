@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-008245",
+  "complaint_date": "2026-07-10T17:44:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 33,
+    "gender": "Male",
+    "phone": "+91 00000 08245",
+    "email": "victim-8245@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8245",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX2579",
+      "ifsc_code": "SYNTHETIC-UB-1580",
+      "upi_id": "account-account-001580@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "wallet_transfer",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (wallet transfer). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08245",
+      "email": "synthetic-fraud-8245@example.invalid",
+      "whatsapp_number": "+91 00000 08245"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008245-01",
+        "date": "2026-07-10T15:34:00Z",
+        "amount": 83800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2579",
+        "to_account": "XXXXXXXXX1960",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 83800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-10T15:24:00Z",
+    "fraud_end_time": "2026-07-10T15:44:00Z",
+    "reporting_delay_hours": 2
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001352",
+  "complaint_date": "2026-08-24T07:20:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 56,
+    "gender": "Male",
+    "phone": "+91 00000 01352",
+    "email": "victim-1352@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1352",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1744",
+      "ifsc_code": "SYNTHETIC-BO-745",
+      "upi_id": "account-account-000745@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "wallet_transfer",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (wallet transfer). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01352",
+      "email": "synthetic-fraud-1352@example.invalid",
+      "whatsapp_number": "+91 00000 01352"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001352-01",
+        "date": "2026-08-23T07:10:00Z",
+        "amount": 58800,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1744",
+        "to_account": "XXXXXXXXX1995",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 58800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-23T07:00:00Z",
+    "fraud_end_time": "2026-08-23T07:20:00Z",
+    "reporting_delay_hours": 24
+  }
+}

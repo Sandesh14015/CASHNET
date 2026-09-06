@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-008507",
+  "complaint_date": "2026-08-19T20:04:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 53,
+    "gender": "Male",
+    "phone": "+91 00000 08507",
+    "email": "victim-8507@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8507",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1084",
+      "ifsc_code": "SYNTHETIC-BO-085",
+      "upi_id": "account-account-000085@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "banking_fraud",
+    "sub_type": "OTP_fraud",
+    "description": "Synthetic CASHNET training complaint: victim reported a banking fraud (OTP fraud). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08507",
+      "email": "synthetic-fraud-8507@example.invalid",
+      "whatsapp_number": "+91 00000 08507"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008507-01",
+        "date": "2026-08-19T17:54:00Z",
+        "amount": 6800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1084",
+        "to_account": "XXXXXXXXX2842",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 6800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-19T17:44:00Z",
+    "fraud_end_time": "2026-08-19T18:04:00Z",
+    "reporting_delay_hours": 2
+  }
+}

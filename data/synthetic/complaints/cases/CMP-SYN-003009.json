@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003009",
+  "complaint_date": "2026-07-21T17:13:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 43,
+    "gender": "Other",
+    "phone": "+91 00000 03009",
+    "email": "victim-3009@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3009",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1283",
+      "ifsc_code": "SYNTHETIC-BO-284",
+      "upi_id": "account-account-000284@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "urgent_verification",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (urgent verification). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 03009",
+      "email": "synthetic-fraud-3009@example.invalid",
+      "whatsapp_number": "+91 00000 03009"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003009-01",
+        "date": "2026-07-21T16:57:00Z",
+        "amount": 42600,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1283",
+        "to_account": "XXXXXXXXX2912",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 42600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-21T16:47:00Z",
+    "fraud_end_time": "2026-07-21T17:07:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

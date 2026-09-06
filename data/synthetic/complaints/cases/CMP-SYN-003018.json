@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003018",
+  "complaint_date": "2026-07-15T18:09:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 42,
+    "gender": "Female",
+    "phone": "+91 00000 03018",
+    "email": "victim-3018@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3018",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1213",
+      "ifsc_code": "SYNTHETIC-IB-214",
+      "upi_id": "account-account-000214@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "SMS_link",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (SMS link). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03018",
+      "email": "synthetic-fraud-3018@example.invalid",
+      "whatsapp_number": "+91 00000 03018"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003018-01",
+        "date": "2026-07-15T05:59:00Z",
+        "amount": 66300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000214@cashnet.invalid",
+        "to_account": "mule-account-001000@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 66300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-15T05:49:00Z",
+    "fraud_end_time": "2026-07-15T06:09:00Z",
+    "reporting_delay_hours": 12
+  }
+}

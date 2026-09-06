@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-008348",
+  "complaint_date": "2026-08-19T21:31:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 43,
+    "gender": "Other",
+    "phone": "+91 00000 08348",
+    "email": "victim-8348@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8348",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1595",
+      "ifsc_code": "SYNTHETIC-PN-596",
+      "upi_id": "account-account-000596@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "KYC_fraud",
+    "sub_type": "urgent_verification",
+    "description": "Synthetic CASHNET training complaint: victim reported a KYC fraud (urgent verification). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 08348",
+      "email": "synthetic-fraud-8348@example.invalid",
+      "whatsapp_number": "+91 00000 08348"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008348-01",
+        "date": "2026-08-18T21:21:00Z",
+        "amount": 98500,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1595",
+        "to_account": "XXXXXXXXX2519",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 98500,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-18T21:11:00Z",
+    "fraud_end_time": "2026-08-18T21:31:00Z",
+    "reporting_delay_hours": 24
+  }
+}

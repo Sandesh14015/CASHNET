@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-004027",
+  "complaint_date": "2026-08-05T10:15:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 27,
+    "gender": "Female",
+    "phone": "+91 00000 04027",
+    "email": "victim-4027@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4027",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "Axis Bank",
+      "account_number": "XXXXXXXXX1583",
+      "ifsc_code": "SYNTHETIC-AB-584",
+      "upi_id": "account-account-000584@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 04027",
+      "email": "synthetic-fraud-4027@example.invalid",
+      "whatsapp_number": "+91 00000 04027"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004027-01",
+        "date": "2026-08-05T07:55:00Z",
+        "amount": 64900,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1583",
+        "to_account": "XXXXXXXXX1940",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-004027-02",
+        "date": "2026-08-05T08:05:00Z",
+        "amount": 35300,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1583",
+        "to_account": "XXXXXXXXX1940",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 100200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-05T07:45:00Z",
+    "fraud_end_time": "2026-08-05T08:15:00Z",
+    "reporting_delay_hours": 2
+  }
+}

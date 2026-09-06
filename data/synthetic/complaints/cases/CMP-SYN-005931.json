@@ -1,0 +1,71 @@
+{
+  "complaint_id": "CMP-SYN-005931",
+  "complaint_date": "2026-08-13T17:29:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 71,
+    "gender": "Male",
+    "phone": "+91 00000 05931",
+    "email": "victim-5931@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5931",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1579",
+      "ifsc_code": "SYNTHETIC-BO-580",
+      "upi_id": "account-account-000580@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "training_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (training fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05931",
+      "email": "synthetic-fraud-5931@example.invalid",
+      "telegram_id": "@synthetic_offer_5931",
+      "whatsapp_number": "+91 00000 05931"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005931-01",
+        "date": "2026-08-13T16:39:00Z",
+        "amount": 73600,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000580@cashnet.invalid",
+        "to_account": "mule-account-001925@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-005931-02",
+        "date": "2026-08-13T16:49:00Z",
+        "amount": 49300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000580@cashnet.invalid",
+        "to_account": "mule-account-001925@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 122900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-13T16:29:00Z",
+    "fraud_end_time": "2026-08-13T16:59:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

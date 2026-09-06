@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-000001",
+  "complaint_date": "2026-07-28T23:12:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 55,
+    "gender": "Female",
+    "phone": "+91 00000 00001",
+    "email": "victim-1@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1228",
+      "ifsc_code": "SYNTHETIC-UB-229",
+      "upi_id": "account-account-000229@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "investment_scam",
+    "sub_type": "guaranteed_returns",
+    "description": "Synthetic CASHNET training complaint: victim reported a investment scam (guaranteed returns). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 00001",
+      "email": "synthetic-fraud-1@example.invalid",
+      "telegram_id": "@synthetic_offer_1",
+      "whatsapp_number": "+91 00000 00001"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000001-01",
+        "date": "2026-07-28T17:02:00Z",
+        "amount": 70200,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1228",
+        "to_account": "XXXXXXXXX2147",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 70200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-28T16:52:00Z",
+    "fraud_end_time": "2026-07-28T17:12:00Z",
+    "reporting_delay_hours": 6
+  }
+}

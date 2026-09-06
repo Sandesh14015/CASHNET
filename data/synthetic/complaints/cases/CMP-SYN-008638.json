@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-008638",
+  "complaint_date": "2026-08-25T21:22:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 68,
+    "gender": "Other",
+    "phone": "+91 00000 08638",
+    "email": "victim-8638@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8638",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1701",
+      "ifsc_code": "SYNTHETIC-CB-702",
+      "upi_id": "account-account-000702@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "collect_request",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (collect request). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 08638",
+      "email": "synthetic-fraud-8638@example.invalid",
+      "whatsapp_number": "+91 00000 08638"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008638-01",
+        "date": "2026-08-24T21:12:00Z",
+        "amount": 59800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000702@cashnet.invalid",
+        "to_account": "mule-account-001738@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 59800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-24T21:02:00Z",
+    "fraud_end_time": "2026-08-24T21:22:00Z",
+    "reporting_delay_hours": 24
+  }
+}

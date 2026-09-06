@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-007747",
+  "complaint_date": "2026-08-07T23:47:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 19,
+    "gender": "Male",
+    "phone": "+91 00000 07747",
+    "email": "victim-7747@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7747",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1324",
+      "ifsc_code": "SYNTHETIC-BO-325",
+      "upi_id": "account-account-000325@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07747",
+      "email": "synthetic-fraud-7747@example.invalid",
+      "whatsapp_number": "+91 00000 07747"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007747-01",
+        "date": "2026-08-06T23:27:00Z",
+        "amount": 58900,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1324",
+        "to_account": "XXXXXXXXX2516",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-007747-02",
+        "date": "2026-08-06T23:37:00Z",
+        "amount": 26500,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1324",
+        "to_account": "XXXXXXXXX2516",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 85400,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-06T23:17:00Z",
+    "fraud_end_time": "2026-08-06T23:47:00Z",
+    "reporting_delay_hours": 24
+  }
+}

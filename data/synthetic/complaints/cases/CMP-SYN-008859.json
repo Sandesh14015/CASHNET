@@ -1,0 +1,70 @@
+{
+  "complaint_id": "CMP-SYN-008859",
+  "complaint_date": "2026-06-25T06:46:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 25,
+    "gender": "Other",
+    "phone": "+91 00000 08859",
+    "email": "victim-8859@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 8859",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "coordinates": {
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1169",
+      "ifsc_code": "SYNTHETIC-SB-170",
+      "upi_id": "account-account-000170@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "fake_exchange",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (fake exchange). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 08859",
+      "email": "synthetic-fraud-8859@example.invalid",
+      "whatsapp_number": "+91 00000 08859"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-008859-01",
+        "date": "2026-06-24T18:26:00Z",
+        "amount": 6300,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1169",
+        "to_account": "XXXXXXXXX1777",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-008859-02",
+        "date": "2026-06-24T18:36:00Z",
+        "amount": 59400,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1169",
+        "to_account": "XXXXXXXXX1777",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 65700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-24T18:16:00Z",
+    "fraud_end_time": "2026-06-24T18:46:00Z",
+    "reporting_delay_hours": 12
+  }
+}

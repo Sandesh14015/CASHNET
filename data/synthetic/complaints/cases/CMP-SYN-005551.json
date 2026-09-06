@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005551",
+  "complaint_date": "2026-07-09T20:28:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 75,
+    "gender": "Female",
+    "phone": "+91 00000 05551",
+    "email": "victim-5551@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5551",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of Baroda",
+      "account_number": "XXXXXXXXX1733",
+      "ifsc_code": "SYNTHETIC-BO-734",
+      "upi_id": "account-account-000734@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "phishing",
+    "sub_type": "fake_website",
+    "description": "Synthetic CASHNET training complaint: victim reported a phishing (fake website). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 05551",
+      "email": "synthetic-fraud-5551@example.invalid",
+      "whatsapp_number": "+91 00000 05551"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005551-01",
+        "date": "2026-07-09T19:18:00Z",
+        "amount": 63200,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000734@cashnet.invalid",
+        "to_account": "mule-account-001158@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 63200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-09T19:08:00Z",
+    "fraud_end_time": "2026-07-09T19:28:00Z",
+    "reporting_delay_hours": 1
+  }
+}

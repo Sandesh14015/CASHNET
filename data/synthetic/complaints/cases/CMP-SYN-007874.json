@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007874",
+  "complaint_date": "2026-06-13T20:29:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 35,
+    "gender": "Female",
+    "phone": "+91 00000 07874",
+    "email": "victim-7874@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7874",
+      "city": "Lucknow",
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "coordinates": {
+        "latitude": 26.8467,
+        "longitude": 80.9462
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX2867",
+      "ifsc_code": "SYNTHETIC-IB-1868",
+      "upi_id": "account-account-001868@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "fake_support",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (fake support). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 07874",
+      "email": "synthetic-fraud-7874@example.invalid",
+      "whatsapp_number": "+91 00000 07874"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007874-01",
+        "date": "2026-06-13T18:19:00Z",
+        "amount": 84900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-001868@cashnet.invalid",
+        "to_account": "mule-account-001345@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 84900,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-13T18:09:00Z",
+    "fraud_end_time": "2026-06-13T18:29:00Z",
+    "reporting_delay_hours": 2
+  }
+}

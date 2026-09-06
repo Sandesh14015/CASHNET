@@ -1,0 +1,81 @@
+{
+  "complaint_id": "CMP-SYN-005481",
+  "complaint_date": "2026-06-12T12:52:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 66,
+    "gender": "Other",
+    "phone": "+91 00000 05481",
+    "email": "victim-5481@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5481",
+      "city": "Bengaluru",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "coordinates": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1142",
+      "ifsc_code": "SYNTHETIC-BO-143",
+      "upi_id": "account-account-000143@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "security_deposit",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (security deposit). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05481",
+      "email": "synthetic-fraud-5481@example.invalid",
+      "telegram_id": "@synthetic_offer_5481",
+      "whatsapp_number": "+91 00000 05481"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005481-01",
+        "date": "2026-06-12T06:22:00Z",
+        "amount": 36500,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1142",
+        "to_account": "XXXXXXXXX2932",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-005481-02",
+        "date": "2026-06-12T06:32:00Z",
+        "amount": 48300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000143@cashnet.invalid",
+        "to_account": "mule-account-001933@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-005481-03",
+        "date": "2026-06-12T06:42:00Z",
+        "amount": 69400,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1142",
+        "to_account": "XXXXXXXXX2932",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 154200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-12T06:12:00Z",
+    "fraud_end_time": "2026-06-12T06:52:00Z",
+    "reporting_delay_hours": 6
+  }
+}

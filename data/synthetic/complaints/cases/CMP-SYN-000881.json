@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-000881",
+  "complaint_date": "2026-08-08T00:13:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 35,
+    "gender": "Male",
+    "phone": "+91 00000 00881",
+    "email": "victim-881@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 881",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1419",
+      "ifsc_code": "SYNTHETIC-HB-420",
+      "upi_id": "account-account-000420@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "sextortion",
+    "sub_type": "video_call_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a sextortion (video call scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 00881",
+      "email": "synthetic-fraud-881@example.invalid",
+      "video_call_platform": "Synthetic Video Platform",
+      "whatsapp_number": "+91 00000 00881"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-000881-01",
+        "date": "2026-08-07T00:03:00Z",
+        "amount": 75200,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000420@cashnet.invalid",
+        "to_account": "mule-account-001433@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 75200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-06T23:53:00Z",
+    "fraud_end_time": "2026-08-07T00:13:00Z",
+    "reporting_delay_hours": 24
+  }
+}

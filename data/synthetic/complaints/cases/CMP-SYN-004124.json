@@ -1,0 +1,80 @@
+{
+  "complaint_id": "CMP-SYN-004124",
+  "complaint_date": "2026-07-07T00:02:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 30,
+    "gender": "Female",
+    "phone": "+91 00000 04124",
+    "email": "victim-4124@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4124",
+      "city": "Kolkata",
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "coordinates": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1344",
+      "ifsc_code": "SYNTHETIC-UB-345",
+      "upi_id": "account-account-000345@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "romance_scam",
+    "sub_type": "gift_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a romance scam (gift scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 04124",
+      "email": "synthetic-fraud-4124@example.invalid",
+      "whatsapp_number": "+91 00000 04124"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004124-01",
+        "date": "2026-07-06T17:32:00Z",
+        "amount": 10800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1344",
+        "to_account": "XXXXXXXXX2001",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-004124-02",
+        "date": "2026-07-06T17:42:00Z",
+        "amount": 72300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000345@cashnet.invalid",
+        "to_account": "mule-account-001002@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-004124-03",
+        "date": "2026-07-06T17:52:00Z",
+        "amount": 74100,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1344",
+        "to_account": "XXXXXXXXX2001",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 157200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-06T17:22:00Z",
+    "fraud_end_time": "2026-07-06T18:02:00Z",
+    "reporting_delay_hours": 6
+  }
+}

@@ -1,0 +1,92 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cashnet"
+version = "0.1.0"
+description = "CASHNET synthetic-data cybercrime financial intelligence platform for authorized investigators"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    # for data collection
+    "requests",
+    "kaggle",
+    "kagglehub", 
+    # for the model
+    "scipy>=1.10.0",
+    "scikit-learn>=1.2.0",
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "seaborn",
+    "pillow",
+    # additional dependencies found in imports
+    "pydantic",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov", 
+    "pytest-asyncio",
+    "httpx",
+    "factory-boy",
+    "ruff",
+    "black",
+    "mypy",
+    "bandit",
+    "safety",
+    "pip-audit",
+]
+
+[tool.setuptools.packages.find]
+include = ["lib*", "services*"]
+exclude = ["tests*", "scripts*"]
+
+[tool.setuptools.package-data]
+"*" = ["data/reference/*.json", "data/reference/osm-atms/*.json"]
+
+[tool.ruff]
+# Import configuration from existing ruff.toml
+extend = "ruff.toml"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.pytest_cache
+  | \.ruff_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "-ra"
+]
+filterwarnings = [
+    "ignore::UserWarning",
+    "ignore::DeprecationWarning",
+]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+packages = ["lib"]

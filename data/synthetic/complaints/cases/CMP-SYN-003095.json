@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-003095",
+  "complaint_date": "2026-07-07T09:51:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 42,
+    "gender": "Other",
+    "phone": "+91 00000 03095",
+    "email": "victim-3095@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 3095",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "HDFC Bank",
+      "account_number": "XXXXXXXXX1010",
+      "ifsc_code": "SYNTHETIC-HB-011",
+      "upi_id": "account-account-000011@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "impersonation_fraud",
+    "sub_type": "police_impersonation",
+    "description": "Synthetic CASHNET training complaint: victim reported a impersonation fraud (police impersonation). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 03095",
+      "email": "synthetic-fraud-3095@example.invalid",
+      "whatsapp_number": "+91 00000 03095"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-003095-01",
+        "date": "2026-07-07T07:41:00Z",
+        "amount": 32700,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1010",
+        "to_account": "XXXXXXXXX2224",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 32700,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-07T07:31:00Z",
+    "fraud_end_time": "2026-07-07T07:51:00Z",
+    "reporting_delay_hours": 2
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-002072",
+  "complaint_date": "2026-06-25T10:02:00Z",
+  "victim_details": {
+    "name": "Arjun Das",
+    "age": 50,
+    "gender": "Other",
+    "phone": "+91 00000 02072",
+    "email": "victim-2072@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2072",
+      "city": "Hyderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "coordinates": {
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1672",
+      "ifsc_code": "SYNTHETIC-IB-673",
+      "upi_id": "account-account-000673@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02072",
+      "email": "synthetic-fraud-2072@example.invalid",
+      "whatsapp_number": "+91 00000 02072"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002072-01",
+        "date": "2026-06-25T09:46:00Z",
+        "amount": 70100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1672",
+        "to_account": "XXXXXXXXX2812",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 70100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-25T09:36:00Z",
+    "fraud_end_time": "2026-06-25T09:56:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

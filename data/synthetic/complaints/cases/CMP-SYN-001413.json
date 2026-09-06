@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001413",
+  "complaint_date": "2026-08-03T05:10:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 32,
+    "gender": "Female",
+    "phone": "+91 00000 01413",
+    "email": "victim-1413@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1413",
+      "city": "Ahmedabad",
+      "district": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "coordinates": {
+        "latitude": 23.0225,
+        "longitude": 72.5714
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1106",
+      "ifsc_code": "SYNTHETIC-IB-107",
+      "upi_id": "account-account-000107@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01413",
+      "email": "synthetic-fraud-1413@example.invalid",
+      "whatsapp_number": "+91 00000 01413"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001413-01",
+        "date": "2026-08-03T04:00:00Z",
+        "amount": 51800,
+        "currency": "INR",
+        "method": "RTGS",
+        "from_account": "XXXXXXXXX1106",
+        "to_account": "XXXXXXXXX2462",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 51800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-03T03:50:00Z",
+    "fraud_end_time": "2026-08-03T04:10:00Z",
+    "reporting_delay_hours": 1
+  }
+}

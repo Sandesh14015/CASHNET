@@ -1,0 +1,80 @@
+{
+  "complaint_id": "CMP-SYN-004366",
+  "complaint_date": "2026-08-05T10:04:00Z",
+  "victim_details": {
+    "name": "Rohan Singh",
+    "age": 44,
+    "gender": "Male",
+    "phone": "+91 00000 04366",
+    "email": "victim-4366@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4366",
+      "city": "New Delhi",
+      "district": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001",
+      "coordinates": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "bank_details": {
+      "bank_name": "ICICI Bank",
+      "account_number": "XXXXXXXXX1160",
+      "ifsc_code": "SYNTHETIC-IB-161",
+      "upi_id": "account-account-000161@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "video_call_threat",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (video call threat). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 04366",
+      "email": "synthetic-fraud-4366@example.invalid",
+      "whatsapp_number": "+91 00000 04366"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004366-01",
+        "date": "2026-08-05T09:04:00Z",
+        "amount": 20000,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1160",
+        "to_account": "XXXXXXXXX2686",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-004366-02",
+        "date": "2026-08-05T09:14:00Z",
+        "amount": 47300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000161@cashnet.invalid",
+        "to_account": "mule-account-001687@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-004366-03",
+        "date": "2026-08-05T09:24:00Z",
+        "amount": 88500,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1160",
+        "to_account": "XXXXXXXXX2686",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 155800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-05T08:54:00Z",
+    "fraud_end_time": "2026-08-05T09:34:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}

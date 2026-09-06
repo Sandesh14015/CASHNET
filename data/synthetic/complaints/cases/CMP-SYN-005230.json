@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005230",
+  "complaint_date": "2026-08-08T23:37:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 36,
+    "gender": "Other",
+    "phone": "+91 00000 05230",
+    "email": "victim-5230@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5230",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1167",
+      "ifsc_code": "SYNTHETIC-CB-168",
+      "upi_id": "account-account-000168@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "advance_fee",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (advance fee). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Cyber Crime Cell",
+    "fraudster_contact": {
+      "phone": "+91 00000 05230",
+      "email": "synthetic-fraud-5230@example.invalid",
+      "whatsapp_number": "+91 00000 05230"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005230-01",
+        "date": "2026-08-08T17:27:00Z",
+        "amount": 49200,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000168@cashnet.invalid",
+        "to_account": "mule-account-001747@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 49200,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-08T17:17:00Z",
+    "fraud_end_time": "2026-08-08T17:37:00Z",
+    "reporting_delay_hours": 6
+  }
+}

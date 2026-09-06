@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-006855",
+  "complaint_date": "2026-06-12T10:50:00Z",
+  "victim_details": {
+    "name": "Diya Patel",
+    "age": 44,
+    "gender": "Male",
+    "phone": "+91 00000 06855",
+    "email": "victim-6855@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 6855",
+      "city": "Gurugram",
+      "district": "Gurugram",
+      "state": "Haryana",
+      "pincode": "122001",
+      "coordinates": {
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1039",
+      "ifsc_code": "SYNTHETIC-BO-040",
+      "upi_id": "account-account-000040@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "collect_request",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (collect request). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 06855",
+      "email": "synthetic-fraud-6855@example.invalid",
+      "whatsapp_number": "+91 00000 06855"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-006855-01",
+        "date": "2026-06-11T10:40:00Z",
+        "amount": 84800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1039",
+        "to_account": "XXXXXXXXX2512",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 84800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-11T10:30:00Z",
+    "fraud_end_time": "2026-06-11T10:50:00Z",
+    "reporting_delay_hours": 24
+  }
+}

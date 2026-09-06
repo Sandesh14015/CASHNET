@@ -1,0 +1,61 @@
+{
+  "complaint_id": "CMP-SYN-005163",
+  "complaint_date": "2026-06-21T15:34:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 42,
+    "gender": "Male",
+    "phone": "+91 00000 05163",
+    "email": "victim-5163@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5163",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "Canara Bank",
+      "account_number": "XXXXXXXXX1426",
+      "ifsc_code": "SYNTHETIC-CB-427",
+      "upi_id": "account-account-000427@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "security_deposit",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (security deposit). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05163",
+      "email": "synthetic-fraud-5163@example.invalid",
+      "telegram_id": "@synthetic_offer_5163",
+      "whatsapp_number": "+91 00000 05163"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005163-01",
+        "date": "2026-06-21T15:18:00Z",
+        "amount": 6800,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1426",
+        "to_account": "XXXXXXXXX2754",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 6800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-21T15:08:00Z",
+    "fraud_end_time": "2026-06-21T15:28:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

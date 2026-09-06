@@ -1,0 +1,71 @@
+{
+  "complaint_id": "CMP-SYN-004342",
+  "complaint_date": "2026-07-11T06:02:00Z",
+  "victim_details": {
+    "name": "Meera Gupta",
+    "age": 59,
+    "gender": "Other",
+    "phone": "+91 00000 04342",
+    "email": "victim-4342@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4342",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001",
+      "coordinates": {
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1479",
+      "ifsc_code": "SYNTHETIC-IB-480",
+      "upi_id": "account-account-000480@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "job_fraud",
+    "sub_type": "part_time_job",
+    "description": "Synthetic CASHNET training complaint: victim reported a job fraud (part time job). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 04342",
+      "email": "synthetic-fraud-4342@example.invalid",
+      "telegram_id": "@synthetic_offer_4342",
+      "whatsapp_number": "+91 00000 04342"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004342-01",
+        "date": "2026-07-10T05:42:00Z",
+        "amount": 86900,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000480@cashnet.invalid",
+        "to_account": "mule-account-000903@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-004342-02",
+        "date": "2026-07-10T05:52:00Z",
+        "amount": 97700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000480@cashnet.invalid",
+        "to_account": "mule-account-000903@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 184600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-10T05:32:00Z",
+    "fraud_end_time": "2026-07-10T06:02:00Z",
+    "reporting_delay_hours": 24
+  }
+}

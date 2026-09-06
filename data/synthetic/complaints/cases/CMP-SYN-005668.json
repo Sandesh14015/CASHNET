@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005668",
+  "complaint_date": "2026-08-12T14:28:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 44,
+    "gender": "Male",
+    "phone": "+91 00000 05668",
+    "email": "victim-5668@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5668",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX1201",
+      "ifsc_code": "SYNTHETIC-UB-202",
+      "upi_id": "account-account-000202@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "wallet_transfer",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (wallet transfer). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 05668",
+      "email": "synthetic-fraud-5668@example.invalid",
+      "whatsapp_number": "+91 00000 05668"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005668-01",
+        "date": "2026-08-12T14:12:00Z",
+        "amount": 78800,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000202@cashnet.invalid",
+        "to_account": "mule-account-000868@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 78800,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-12T14:02:00Z",
+    "fraud_end_time": "2026-08-12T14:22:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

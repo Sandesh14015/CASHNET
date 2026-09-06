@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001562",
+  "complaint_date": "2026-06-19T03:21:00Z",
+  "victim_details": {
+    "name": "Sana Iyer",
+    "age": 72,
+    "gender": "Male",
+    "phone": "+91 00000 01562",
+    "email": "victim-1562@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1562",
+      "city": "Chandigarh",
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "pincode": "160017",
+      "coordinates": {
+        "latitude": 30.7333,
+        "longitude": 76.7794
+      }
+    },
+    "bank_details": {
+      "bank_name": "Punjab National Bank",
+      "account_number": "XXXXXXXXX1401",
+      "ifsc_code": "SYNTHETIC-PN-402",
+      "upi_id": "account-account-000402@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "loan_fraud",
+    "sub_type": "fake_loan_app",
+    "description": "Synthetic CASHNET training complaint: victim reported a loan fraud (fake loan app). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 01562",
+      "email": "synthetic-fraud-1562@example.invalid",
+      "whatsapp_number": "+91 00000 01562"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001562-01",
+        "date": "2026-06-19T01:11:00Z",
+        "amount": 30300,
+        "currency": "INR",
+        "method": "NEFT",
+        "from_account": "XXXXXXXXX1401",
+        "to_account": "XXXXXXXXX2414",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 30300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-19T01:01:00Z",
+    "fraud_end_time": "2026-06-19T01:21:00Z",
+    "reporting_delay_hours": 2
+  }
+}

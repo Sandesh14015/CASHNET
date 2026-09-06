@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-001938",
+  "complaint_date": "2026-08-22T14:27:00Z",
+  "victim_details": {
+    "name": "Kavya Nair",
+    "age": 62,
+    "gender": "Other",
+    "phone": "+91 00000 01938",
+    "email": "victim-1938@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 1938",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Bank of India",
+      "account_number": "XXXXXXXXX1478",
+      "ifsc_code": "SYNTHETIC-BO-479",
+      "upi_id": "account-account-000479@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "crypto_investment",
+    "sub_type": "fake_exchange",
+    "description": "Synthetic CASHNET training complaint: victim reported a crypto investment (fake exchange). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 01938",
+      "email": "synthetic-fraud-1938@example.invalid",
+      "whatsapp_number": "+91 00000 01938"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-001938-01",
+        "date": "2026-08-22T14:11:00Z",
+        "amount": 94300,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000479@cashnet.invalid",
+        "to_account": "mule-account-001455@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 94300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-22T14:01:00Z",
+    "fraud_end_time": "2026-08-22T14:21:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "complaint_id": "CMP-SYN-002293",
+  "complaint_date": "2026-08-22T04:42:00Z",
+  "victim_details": {
+    "name": "Aarav Sharma",
+    "age": 42,
+    "gender": "Other",
+    "phone": "+91 00000 02293",
+    "email": "victim-2293@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 2293",
+      "city": "Mumbai",
+      "district": "Mumbai City",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "coordinates": {
+        "latitude": 19.076,
+        "longitude": 72.8777
+      }
+    },
+    "bank_details": {
+      "bank_name": "State Bank of India",
+      "account_number": "XXXXXXXXX1893",
+      "ifsc_code": "SYNTHETIC-SB-894",
+      "upi_id": "account-account-000894@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "UPI_fraud",
+    "sub_type": "QR_code_scam",
+    "description": "Synthetic CASHNET training complaint: victim reported a UPI fraud (QR code scam). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 02293",
+      "email": "synthetic-fraud-2293@example.invalid",
+      "whatsapp_number": "+91 00000 02293"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-002293-01",
+        "date": "2026-08-22T04:06:00Z",
+        "amount": 65700,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000894@cashnet.invalid",
+        "to_account": "mule-account-001047@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002293-02",
+        "date": "2026-08-22T04:16:00Z",
+        "amount": 44500,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000894@cashnet.invalid",
+        "to_account": "mule-account-001047@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      },
+      {
+        "transaction_id": "TXN-SYN-002293-03",
+        "date": "2026-08-22T04:26:00Z",
+        "amount": 77100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1893",
+        "to_account": "XXXXXXXXX2046",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 187300,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-08-22T03:56:00Z",
+    "fraud_end_time": "2026-08-22T04:36:00Z",
+    "reporting_delay_hours": 0.1
+  }
+}

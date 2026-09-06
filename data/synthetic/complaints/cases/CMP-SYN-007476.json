@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-007476",
+  "complaint_date": "2026-06-03T09:38:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 67,
+    "gender": "Other",
+    "phone": "+91 00000 07476",
+    "email": "victim-7476@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 7476",
+      "city": "Surat",
+      "district": "Surat",
+      "state": "Gujarat",
+      "pincode": "395003",
+      "coordinates": {
+        "latitude": 21.1702,
+        "longitude": 72.8311
+      }
+    },
+    "bank_details": {
+      "bank_name": "Union Bank of India",
+      "account_number": "XXXXXXXXX2843",
+      "ifsc_code": "SYNTHETIC-UB-1844",
+      "upi_id": "account-account-001844@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "other",
+    "sub_type": "other",
+    "description": "Synthetic CASHNET training complaint: victim reported a other (other). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "NCRP Portal",
+    "fraudster_contact": {
+      "phone": "+91 00000 07476",
+      "email": "synthetic-fraud-7476@example.invalid",
+      "whatsapp_number": "+91 00000 07476"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-007476-01",
+        "date": "2026-06-03T03:28:00Z",
+        "amount": 30100,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX2843",
+        "to_account": "XXXXXXXXX2851",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 30100,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-03T03:18:00Z",
+    "fraud_end_time": "2026-06-03T03:38:00Z",
+    "reporting_delay_hours": 6
+  }
+}

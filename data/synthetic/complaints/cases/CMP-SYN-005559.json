@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-005559",
+  "complaint_date": "2026-06-22T10:17:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 32,
+    "gender": "Female",
+    "phone": "+91 00000 05559",
+    "email": "victim-5559@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 5559",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "IDBI Bank",
+      "account_number": "XXXXXXXXX1020",
+      "ifsc_code": "SYNTHETIC-IB-021",
+      "upi_id": "account-account-000021@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "digital_arrest_scam",
+    "sub_type": "fake_summons",
+    "description": "Synthetic CASHNET training complaint: victim reported a digital arrest scam (fake summons). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Bank Report",
+    "fraudster_contact": {
+      "phone": "+91 00000 05559",
+      "email": "synthetic-fraud-5559@example.invalid",
+      "whatsapp_number": "+91 00000 05559"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-005559-01",
+        "date": "2026-06-22T08:07:00Z",
+        "amount": 63600,
+        "currency": "INR",
+        "method": "UPI",
+        "from_account": "account-account-000021@cashnet.invalid",
+        "to_account": "mule-account-001137@cashnet.invalid",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 63600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-06-22T07:57:00Z",
+    "fraud_end_time": "2026-06-22T08:17:00Z",
+    "reporting_delay_hours": 2
+  }
+}

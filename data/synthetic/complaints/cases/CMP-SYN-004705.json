@@ -1,0 +1,60 @@
+{
+  "complaint_id": "CMP-SYN-004705",
+  "complaint_date": "2026-07-21T01:36:00Z",
+  "victim_details": {
+    "name": "Ishaan Khan",
+    "age": 42,
+    "gender": "Female",
+    "phone": "+91 00000 04705",
+    "email": "victim-4705@cashnet.example.invalid",
+    "address": {
+      "street": "Synthetic Address 4705",
+      "city": "Noida",
+      "district": "Gautam Buddh Nagar",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "coordinates": {
+        "latitude": 28.5355,
+        "longitude": 77.391
+      }
+    },
+    "bank_details": {
+      "bank_name": "IndusInd Bank",
+      "account_number": "XXXXXXXXX1711",
+      "ifsc_code": "SYNTHETIC-IB-712",
+      "upi_id": "account-account-000712@cashnet.invalid"
+    }
+  },
+  "fraud_details": {
+    "type": "technical_support_fraud",
+    "sub_type": "fake_support",
+    "description": "Synthetic CASHNET training complaint: victim reported a technical support fraud (fake support). Funds were sent to a synthetic recipient for controlled evaluation.",
+    "reported_through": "Police Station",
+    "fraudster_contact": {
+      "phone": "+91 00000 04705",
+      "email": "synthetic-fraud-4705@example.invalid",
+      "whatsapp_number": "+91 00000 04705"
+    }
+  },
+  "transaction_details": {
+    "transactions": [
+      {
+        "transaction_id": "TXN-SYN-004705-01",
+        "date": "2026-07-21T00:56:00Z",
+        "amount": 70600,
+        "currency": "INR",
+        "method": "IMPS",
+        "from_account": "XXXXXXXXX1711",
+        "to_account": "XXXXXXXXX2642",
+        "reference": "Synthetic CASHNET reported payment"
+      }
+    ],
+    "total_amount_lost": 70600,
+    "currency": "INR"
+  },
+  "time_details": {
+    "fraud_start_time": "2026-07-21T00:46:00Z",
+    "fraud_end_time": "2026-07-21T01:06:00Z",
+    "reporting_delay_hours": 0.5
+  }
+}
