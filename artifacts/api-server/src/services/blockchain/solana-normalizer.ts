@@ -1,4 +1,4 @@
-import { BlockchainTransactionSchema, TokenTransferSchema, WalletSchema, type BlockchainTransaction, type TokenTransfer, type Wallet } from "../../schemas/models";
+import { BlockchainTransactionSchema, ContractInteractionSchema, TokenTransferSchema, WalletSchema, type BlockchainTransaction, type ContractInteraction, type TokenTransfer, type Wallet } from "../../schemas/models";
 import type { NormalizedTransactionBundle } from "./types";
 import { apiProvenance } from "./normalizers";
 
@@ -120,7 +120,29 @@ export function solanaTransaction(result: SolanaTransactionResult, signature: st
     });
   });
 
+  const contractInteractions: ContractInteraction[] = [];
+
   for (const { instruction: inst, instrIndex, innerIndex } of allInstructions) {
+    const programId = inst.programId ?? inst.program;
+    if (programId) {
+      contractInteractions.push(ContractInteractionSchema.parse({
+        id: id("interaction", `${signature}:${instrIndex}:${innerIndex ?? "top"}`),
+        chain: "SOLANA",
+        transactionHash: signature,
+        contractAddress: programId,
+        methodSelector: inst.parsed?.type,
+        input: inst.data, // raw instruction data if available
+        createdAt: isoNow(),
+        provenance: apiProvenance("solana-rpc", `solana://instruction/${signature}/${instrIndex}/${innerIndex ?? "top"}`, {
+          program_id: programId,
+          instruction_index: instrIndex,
+          inner_instruction_index: innerIndex,
+          parsed_type: inst.parsed?.type,
+          parsed_info: inst.parsed?.info,
+        }),
+      }));
+    }
+
     if (!inst.parsed) continue;
     const info = inst.parsed.info;
     const type = inst.parsed.type;
@@ -181,7 +203,7 @@ export function solanaTransaction(result: SolanaTransactionResult, signature: st
     }
   }
 
-  return { transaction: tx, tokenTransfers, contractInteractions: [] };
+  return { transaction: tx, tokenTransfers, contractInteractions };
 }
 
 /** Extract token transfers from a Solana transaction result (convenience). */

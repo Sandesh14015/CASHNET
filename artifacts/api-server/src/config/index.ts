@@ -11,10 +11,12 @@ const EnvironmentSchema = z.object({
   BITCOIN_ESPLORA_BASE_URL: z.string().url().optional(),
   TRONGRID_API_KEY: z.string().min(1).optional(),
   TRONGRID_BASE_URL: z.string().url().optional(),
-  BSCSCAN_API_KEY: z.string().min(1).optional(),
-  POLYGONSCAN_API_KEY: z.string().min(1).optional(),
+  POLYGON_BLOCKSCOUT_BASE_URL: z.string().url().optional(),
+  POLYGON_BLOCKSCOUT_API_KEY: z.string().min(1).optional(),
   SOLANA_RPC_URL: z.string().url().optional(),
   SOLANA_API_KEY: z.string().min(1).optional(),
+  BNB_NODEREAL_BASE_URL: z.string().url().optional(),
+  BNB_NODEREAL_API_KEY: z.string().min(1).optional(),
   CASHNET_PROVIDER_TIMEOUT_MS: z.string().regex(/^\d+$/).optional(),
   CASHNET_PROVIDER_MAX_RETRIES: z.string().regex(/^\d+$/).optional(),
   CASHNET_DEV_AUTH_ENABLED: z.enum(["true", "false"]).optional(),
@@ -38,9 +40,9 @@ export type CashnetConfig = {
     etherscan: { configured: boolean; chainId: string };
     bitcoinEsplora: { baseUrl?: string };
     trongrid: { configured: boolean; baseUrl: string };
-    bscscan: { configured: boolean };
-    polygonscan: { configured: boolean };
-    solana: { rpcUrl?: string; configured: boolean };
+    noderealBnb: { baseUrl: string; apiKey?: string; configured: boolean };
+    polygon: { baseUrl?: string; apiKey?: string; configured: boolean };
+    solana: { rpcUrl?: string; apiKey?: string; configured: boolean };
   };
   providerRequest: { timeoutMs: number; maxRetries: number };
   intelligence: { approvedDataset?: { path: string; name: string; version: string; license: string } };
@@ -64,9 +66,9 @@ export function createConfig(environment: NodeJS.ProcessEnv = process.env): Cash
       etherscan: { configured: Boolean(parsed.ETHERSCAN_API_KEY), chainId: parsed.ETHERSCAN_CHAIN_ID ?? "1" },
       bitcoinEsplora: { baseUrl: parsed.BITCOIN_ESPLORA_BASE_URL },
       trongrid: { configured: Boolean(parsed.TRONGRID_API_KEY), baseUrl: parsed.TRONGRID_BASE_URL ?? "https://api.trongrid.io" },
-      bscscan: { configured: Boolean(parsed.BSCSCAN_API_KEY) },
-      polygonscan: { configured: Boolean(parsed.POLYGONSCAN_API_KEY) },
-      solana: { rpcUrl: parsed.SOLANA_RPC_URL, configured: Boolean(parsed.SOLANA_RPC_URL) },
+      noderealBnb: { configured: Boolean(parsed.BNB_NODEREAL_API_KEY), apiKey: parsed.BNB_NODEREAL_API_KEY, baseUrl: parsed.BNB_NODEREAL_BASE_URL ?? "https://bsc-mainnet.nodereal.io/v1" },
+      polygon: { baseUrl: parsed.POLYGON_BLOCKSCOUT_BASE_URL, apiKey: parsed.POLYGON_BLOCKSCOUT_API_KEY, configured: true },
+      solana: { rpcUrl: parsed.SOLANA_RPC_URL, apiKey: parsed.SOLANA_API_KEY, configured: Boolean(parsed.SOLANA_RPC_URL) },
     },
     providerRequest: { timeoutMs: Number(parsed.CASHNET_PROVIDER_TIMEOUT_MS ?? "10000"), maxRetries: Number(parsed.CASHNET_PROVIDER_MAX_RETRIES ?? "2") },
     intelligence: { approvedDataset },

@@ -126,7 +126,7 @@ export class SolanaRpcProvider implements BlockchainFactProvider {
     this.requestId += 1;
     const body = JSON.stringify({ jsonrpc: "2.0", id: this.requestId, method, params });
     const headers: Record<string, string> = { "Content-Type": "application/json" };
-    const apiKey = process.env.SOLANA_API_KEY;
+    const apiKey = this.config.providers.solana.apiKey;
     if (apiKey) headers["Authorization"] = `Bearer ${apiKey}`;
 
     try {

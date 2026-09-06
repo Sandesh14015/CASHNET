@@ -9,7 +9,7 @@ import { ProviderHttpClient } from "./services/blockchain/http-client";
 import { ProviderRouter } from "./services/blockchain/provider-router";
 import { TronGridProvider } from "./services/blockchain/trongrid-provider";
 
-const authorized = () => createConfig({ CASHNET_DATA_MODE: "authorized", ETHERSCAN_API_KEY: "configured", BITCOIN_ESPLORA_BASE_URL: "https://example.invalid/api", TRONGRID_API_KEY: "configured", CASHNET_PROVIDER_MAX_RETRIES: "0" });
+const authorized = () => createConfig({ CASHNET_DATA_MODE: "authorized", ETHERSCAN_API_KEY: "configured", BITCOIN_ESPLORA_BASE_URL: "https://example.invalid/api", TRONGRID_API_KEY: "configured", POLYGONSCAN_API_KEY: "configured", BNB_NODEREAL_API_KEY: "configured", CASHNET_PROVIDER_MAX_RETRIES: "0" });
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json" } });
 
 test("Etherscan V2 normalizes native transactions and preserves raw provenance", async () => {
@@ -19,6 +19,46 @@ test("Etherscan V2 normalizes native transactions and preserves raw provenance",
   if (result.status !== "SUCCESS") throw new Error("expected success");
   assert.equal(result.data[0].transaction.fee, "63000");
   assert.equal(result.data[0].transaction.provenance.provider, "etherscan-v2");
+});
+  test("BNB uses NodeReal MegaNode endpoint and normalizes properly", async () => {
+    const { NodeRealBnbProvider } = await import("./services/blockchain/nodereal-provider");
+    let interceptedUrl = "";
+    let interceptedBody = "";
+    const provider = new NodeRealBnbProvider(authorized(), async (url, init) => {
+        interceptedUrl = url.toString();
+        interceptedBody = String(init?.body || "");
+        return json({ jsonrpc: "2.0", id: 1, result: { transfers: [{ hash: "0xabc", blockNum: "0x1", blockTimestamp: "0x654321", from: "0x11", to: "0x22", value: "0xc", gasUsed: "0x15", gasPrice: "0x3", receiptsStatus: 1 }] } });
+    });
+    const result = await provider.getTransactions("0x11");
+    assert.equal(result.status, "SUCCESS");
+    if (result.status !== "SUCCESS") throw new Error("expected success");
+    assert.equal(interceptedUrl.includes("bsc-mainnet.nodereal.io"), true);
+    assert.equal(result.data[0].transaction.provenance.provider, "nodereal");
+    assert.equal(result.data[0].transaction.chain, "BNB_CHAIN");
+    assert.equal(result.data[0].transaction.value, "12");
+  });
+
+test("PolygonBlockscout normalizes correctly and sets provenance", async () => {
+  const { PolygonBlockscoutProvider } = await import("./services/blockchain/blockscout-provider");
+  let interceptedUrl = "";
+  const provider = new PolygonBlockscoutProvider(authorized(), async (url) => {
+    interceptedUrl = url.toString();
+    if (interceptedUrl.includes("v2/blocks")) {
+      return json({ hash: "0xpoly", height: 1 });
+    }
+    return json({ status: "1", result: [{ hash: "0xpoly", blockNumber: "1", timeStamp: "1700000000", from: "0x11", to: "0x22", value: "12", gas: "21", gasPrice: "3", gasUsed: "21", input: "0x", isError: "0" }] });
+  });
+  const txs = await provider.getTransactions("0x11");
+  assert.equal(txs.status, "SUCCESS");
+  if (txs.status !== "SUCCESS") throw new Error("expected success");
+  assert.equal(interceptedUrl.includes("polygon.blockscout.com/api"), true);
+  assert.equal(txs.data[0].transaction.provenance.provider, "blockscout");
+
+  const block = await provider.getBlock("1");
+  assert.equal(block.status, "SUCCESS");
+  if (block.status === "SUCCESS" && block.data) {
+    assert.equal(block.data.hash, "0xpoly");
+  }
 });
 
 test("Esplora preserves Bitcoin UTXO input and output semantics", async () => {
