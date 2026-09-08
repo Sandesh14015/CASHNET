@@ -39,14 +39,14 @@ export const apiErrorHandler: ErrorRequestHandler = async (error, req, res, _nex
       ? error
       : new AppError("INTERNAL_ERROR", "An unexpected error occurred", 500);
 
-  req.log?.error({ err: operationalErrorDetails(error), code: appError.code, statusCode: appError.statusCode }, "API request failed");
+  console.error("RAW ERROR", error); req.log?.error({ err: operationalErrorDetails(error), code: appError.code, statusCode: appError.statusCode }, "API request failed");
   if (appError.code === "INTERNAL_ERROR") {
     try {
       const { getDatabaseRuntimeIdentity } = await import("@workspace/db");
       const database = await getDatabaseRuntimeIdentity();
       req.log?.error({ database, requestId: req.id }, "Database runtime identity for unexpected API error");
     } catch (diagnosticError) {
-      req.log?.error({ err: operationalErrorDetails(diagnosticError), requestId: req.id }, "Database runtime identity query failed");
+      console.error("RAW ERROR", error); req.log?.error({ err: operationalErrorDetails(diagnosticError), requestId: req.id }, "Database runtime identity query failed");
     }
   }
   res.status(appError.statusCode).json({

@@ -1,5 +1,6 @@
 import { Router, type IRouter } from "express";
 import { HealthCheckResponse } from "@workspace/api-zod";
+import { sql } from "drizzle-orm";
 import { getDatabase } from "@workspace/db";
 import { config } from "../config";
 import { renderMetrics } from "../observability/metrics";
@@ -13,22 +14,26 @@ router.get("/healthz", (_req, res) => {
 
 router.get("/readyz", async (_req, res) => {
   const checks: Record<string, string> = { process: "ok" };
+
   if (process.env.DATABASE_URL) {
     try {
-      await getDatabase().db.execute("select 1");
+      await getDatabase().db.execute(sql`select 1`);
       checks.database = "ok";
-    } catch {
+    } catch (error) {
+      console.error("DATABASE READINESS ERROR:", error);
       checks.database = "unavailable";
       res.status(503).json({ status: "not_ready", checks });
       return;
     }
   } else {
     checks.database = "not_configured";
+
     if (config.environment === "production") {
       res.status(503).json({ status: "not_ready", checks });
       return;
     }
   }
+
   res.json({ status: "ok", checks });
 });
 

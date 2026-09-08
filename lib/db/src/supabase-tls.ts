@@ -64,6 +64,16 @@ export function createVerifiedSupabaseConnectionConfig(databaseUrl: string): Cli
   return {
     connectionString: parsed.toString(),
     connectionTimeoutMillis: 10_000,
+    // -- Pool health for remote Supabase connections --
+    // TCP keepalive prevents silent connection death through NAT/firewalls.
+    keepAlive: true,
+    keepAliveInitialDelayMillis: 10_000,
+    // Reap idle connections before the Supabase pooler or network kills them.
+    idleTimeoutMillis: 20_000,
+    // Bound the pool to avoid exhausting Supabase connection limits.
+    max: 5,
+    // Allow the Node process to exit when the pool is idle (graceful shutdown).
+    allowExitOnIdle: true,
     ssl: {
       ca: loadSupabaseCa(),
       rejectUnauthorized: true,

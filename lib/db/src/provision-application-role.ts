@@ -44,7 +44,16 @@ try {
     `);
     console.log("Provisioned the least-privilege CASHNET application role.");
   } else {
-    console.log("CASHNET application role already exists; its credentials and attributes were not changed.");
+    await admin.query("select set_config('cashnet.bootstrap_password', $1, true)", [applicationPassword]);
+    await admin.query(`
+      do $provision$
+      begin
+        execute 'alter role cashnet login password '
+          || quote_literal(current_setting('cashnet.bootstrap_password'));
+      end
+      $provision$;
+    `);
+    console.log("CASHNET application role already exists; updated its password and ensured LOGIN privilege.");
   }
   await admin.query("commit");
 } catch (error) {
