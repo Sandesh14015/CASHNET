@@ -143,7 +143,7 @@ jobs:
 
       - name: Run Python tests
         env:
-          DATABASE_URL: postgresql://test:test@localhost:5432/cashnet_test
+          DATABASE_URL: postgresql://test:test@127.0.0.1:5432/cashnet_test
           ENVIRONMENT: test
         run: |
           pytest tests/ \
@@ -199,7 +199,7 @@ jobs:
 
       - name: Test schema application
         env:
-          DATABASE_URL: postgresql://test:test@localhost:5432/cashnet_migration_test
+          DATABASE_URL: postgresql://test:test@127.0.0.1:5432/cashnet_migration_test
         run: |
           echo "Testing schema application..."
           psql "$DATABASE_URL" -f database/schema.sql
